@@ -1,13 +1,13 @@
 <h1 align="center"> Documentação - Doutorado </h1>
 
-# Item 1
-Descrição do Item 1
+# Objetivo geral
+- ( ... )
 
-# Item 2
-Descrição do Item 2
+# Baselines Utilizadas
+- ( ... )
 
-# Item 3
-Descrição do Item 3
+# Métricas Utilizadas
+- ( ... )
 
 # Autores da Pesquisa
 - Reinaldo de Souza Júnior: reinaldo.junior@discente.ufg.br
