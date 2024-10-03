@@ -10,5 +10,5 @@ Descrição do Item 2
 Descrição do Item 3
 
 # Autores da Pesquisa
-Reinaldo de Souza Júnior: reinaldo.junior@discente.ufg.br
-Plínio Sa Leitão Júnior: plinio.sa.leitao.junior@ufg.br
+- Reinaldo de Souza Júnior: reinaldo.junior@discente.ufg.br
+- Plínio Sa Leitão Júnior: plinio.sa.leitao.junior@ufg.br
