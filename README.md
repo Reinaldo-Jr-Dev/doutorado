@@ -20,7 +20,7 @@ As técnicas de localização de defeitos baseada em espectro (SBFL - Spectrum-b
 - M3
   - (...)
 
-# Referências da Pesquisa
+# Referências
 - [(Zhuo et al. 2022)](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/artigos/IEEE-Improving_Fault_Localization_Using_Model-domain_Synthesized_Failing_Test_Generation.pdf) Improving Fault Localization Using Model-domain Synthesized Failing Test Generation
 
 # Autores da Pesquisa
