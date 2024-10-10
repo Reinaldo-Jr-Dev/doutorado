@@ -12,14 +12,15 @@ As técnicas de localização de defeitos baseada em espectro (SBFL - Spectrum-b
 - ( ... )
 
 # Métricas Utilizadas
-- Top-N
-  - (...)
-- Mean Average Rank (MAR)
-  - (...)
-- Mean First Rank (MFR)
-  - (...)
-- Relative Improvement (RImp)
-  - (...)
+Conforme descrito no artigo [1], objeto de análise profunda dessa documentação, segue a métricas a serem utilizadas: 
+- **Top-N**
+  - Representa a porcentagem de defeitos localizadas na posição N de uma lista classificada de todas as declarações em ordem decrescente de suspeita retornadas por uma abordagem de localização. Para valores de n iguais a 1 e 10, top-1 e top-10 contabilizam quantas vezes o defeito da versão defeituosa ficou na primeira posição e nas dez primeiras posições na lista de suspeita, respectivamente.
+- **Mean Average Rank (MAR)**
+  - É a classificação média de todos os defeitos usando uma abordagem de localização.
+- **Mean First Rank (MFR)**
+  - Para um defeito com múltiplas declarações defeituosas, localizar a primeira é fundamental, uma vez que as outras podem ser localizadas depois dela. MFR é a média da classificação de todas as falhas da primeira instrução defeituosa usando uma abordagem de localização.
+- **Relative Improvement (RImp)**
+  - É comparar o número total de instruções que precisam ser examinadas para encontrar todos os defeitos utilizando uma abordagem de localização de defeitos.
 
 # Referências
 - [1] [Zhuo Zhang, Yan Lei, Xiaoguang Mao, Meng Yan, Xin Xia Improving Fault Localization Using Model-domain Synthesized Failing Test Generation, 2022.](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/artigos/IEEE-Improving_Fault_Localization_Using_Model-domain_Synthesized_Failing_Test_Generation.pdf)
