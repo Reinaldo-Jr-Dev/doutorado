@@ -8,10 +8,22 @@ As técnicas de localização de defeitos baseada em espectro (SBFL - Spectrum-b
   - [SMOTE I](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/smote/smote-v1.py)
   - [SMOTE II](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/smote/smote-v2.py)
 
-# Baselines Utilizadas
-- ( ... )
+# Benchmark
+- O artigo em questão [1], escolheu como benchmarks, as seguintes bases de dados: Defects4J (http://defects4j.org), ManyBugs (http://repairbenchmarks.cs.umass.edu/ManyBugs/) e SIR (http://sir.unl.edu/portal/index.php). O artigo escolheu esses programas em questão por três razões:
+  - (1) eles são os programas de grande porte amplamente utilizados na localização de defeitos.
+  - (2) são programas de grande porte com pelo menos mais de 5 KLOC.
+  - (3) são fáceis de serem adquiridos por permitirem estudos comparáveis e reprodutíveis.
+- Para a realização deste projeto, utilizaremos os dados referentes ao espectro da execução gerados previamente no trabalho realizado por Pearson et al. (2017). O espectro foi construído com a utilização da ferramenta GZoltar, descrita previamente, para o critério de cobertura de nós. O trabalho foi conduzido utilizando uma versão anterior do repositório Defects4J, responsável por conter 438 bugs reais, distribuídos em um total de seis programas open-source escritos em Java, conforme demonstrado na Tabela a baixo. Portanto, foi escolhido o benchmark Defects4J, para essa documentação, pelo fato da mesma já se encontar disponibilizada e de fácil acesso, conforme será explicado a seguir.
+![Captura de Tela 2024-10-10 às 17 16 45](https://github.com/user-attachments/assets/4b031250-cac6-45b6-9bef-11f9f83c8b98)
+- Para evitar que pessoas interessadas no experimento precisassem replicar o processo de geração dos espectros a partir da execução dos testes, os dados gerados foram disponibilizados para utilização e estão disponíveis em http://fault-localization.cs.washington.edu/. Para cada versão defeituosa presente no conjunto de dados baixado, foram disponibilizados três arquivos referentes aos dados da execução dos casos de testes:
+  - Um arquivo denominado **log.txt** responsável por armazenar todas as informações de depuração geradas pela execução da Gzoltar.
+  - Um arquivo denominado **spectra** responsável por armazenar uma lista com informações de todas as linhas de código das classes cobertas pelos respectivos casos de testes. A Figura a baixo demonstra um exemplo de arquivo de espectro gerada para a versão 8b do programa Chart da Defects4J.    
+    ![Captura de Tela 2024-10-10 às 17 10 32](https://github.com/user-attachments/assets/e5e0e774-0c22-41f4-8cbe-0b5b00c044ff)    
+  - Um arquivo denominado **matrix** que representa a matriz de cobertura binária produzida pela GZoltar. Cada linha da matriz representa uma abstração do caso de teste executado sob a versão defeituosa. Cada linha contém o respectivo resultado da execução do teste (sinal - representa a falha do teste e o sinal + representa um execução bem-sucedida).
+![Captura de Tela 2024-10-10 às 17 18 22](https://github.com/user-attachments/assets/5afa3930-6bb1-438a-80e1-4d30d3af9b1c)
 
-# Métricas Utilizadas
+
+# Métricas
 Conforme descrito no artigo [1], objeto de análise profunda dessa documentação, segue a métricas a serem utilizadas: 
 - **Top-N**
   - Representa a porcentagem de defeitos localizadas na posição N de uma lista classificada de todas as declarações em ordem decrescente de suspeita retornadas por uma abordagem de localização. Para valores de n iguais a 1 e 10, top-1 e top-10 contabilizam quantas vezes o defeito da versão defeituosa ficou na primeira posição e nas dez primeiras posições na lista de suspeita, respectivamente.
