@@ -20,4 +20,4 @@ jobs:
 
     - name: Run script
       run: |
-        python smote-v1.py  # Substitua pelo nome do seu arquivo Python
+        python smote/smote-v1.py  # Substitua pelo nome do seu arquivo Python
