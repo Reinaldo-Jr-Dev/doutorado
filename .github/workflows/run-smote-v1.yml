@@ -20,4 +20,4 @@ jobs:
 
     - name: Run script
       run: |
-        python 
+        python smote/smote-v1.python
