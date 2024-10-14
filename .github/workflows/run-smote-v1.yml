@@ -1,13 +1,23 @@
-name: Run Python Script
+name: Python application
 
 on:
   push:
-    branches:
-      - main  # ou a branch que você deseja monitorar
+    branches: [main]
+
 jobs:
-  run:
+  build:
+
     runs-on: ubuntu-latest
 
     steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'  # ou a versão que você preferir
+
     - name: Run script
-      run: python https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/smote/smote-v1.py  # substitua pelo caminho do seu script
+      run: |
+        python smote-v1.py  # Substitua pelo nome do seu arquivo Python
