@@ -22,4 +22,4 @@ jobs:
 
     - name: Run script
       run: |
-        python smote/smote-v1.python
+        ls -la  #python smote/smote-v1.python        
