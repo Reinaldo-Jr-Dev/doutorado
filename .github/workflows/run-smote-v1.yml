@@ -1,0 +1,13 @@
+name: Run Python Script
+
+on:
+  push:
+    branches:
+      - main  # ou a branch que você deseja monitorar
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Run script
+      run: python path/to/your_script.py  # substitua pelo caminho do seu script
