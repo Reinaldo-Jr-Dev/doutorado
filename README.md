@@ -5,11 +5,12 @@ As técnicas de localização de defeitos baseada em espectro (SBFL - Spectrum-b
 
 # Implementações
 - Um conjunto de dados está desbalanceado se as categorias de classificação não forem representadas de forma aproximadamente igual. Muitas vezes, os conjuntos de dados do mundo real são predominantemente compostos por exemplos “normais”, com apenas uma pequena percentagem de exemplos “anormais”. A técnica de balancemaento de dados Smote, propoem uma abordagem de sobreamostragem em que a classe minoritária é sobreamostrada através da criação de exemplos “sintéticos” em vez de sobreamostragem com substituição. Sendo assim, foi implementado dois formatos da técnica SMOTE, uma delas foi utilizado a técnica importada da biblioteca "imblearn.over_sampling" (SMOTE I), já a outra implementação todo o algoritmo foi codificado, conforme instruções do artigo [2] (SMOTE II).
-  - Algoritmos - Códigos 
-    - [SMOTE I](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/smote/smote-v1.py)
-    - [SMOTE II](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/smote/smote-v2.py)
-  - Algoritmos - Execução
-    - [Ambiente de Execução](https://github.com/Reinaldo-Jr-Dev/doutorado/tree/main/.github/workflows)
+  - Algoritmos
+    - Códigos
+      - [SMOTE I](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/smote/smote-v1.py)
+      - [SMOTE II](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/smote/smote-v2.py)
+    - Execução
+      - [Ambiente de Execução](https://github.com/Reinaldo-Jr-Dev/doutorado/tree/main/.github/workflows)
 
 # Benchmark
 - O artigo em questão [1], escolheu como benchmarks, as seguintes bases de dados: Defects4J (http://defects4j.org), ManyBugs (http://repairbenchmarks.cs.umass.edu/ManyBugs/) e SIR (http://sir.unl.edu/portal/index.php). O artigo escolheu esses benchmarks por três razões principais:
