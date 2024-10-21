@@ -3,15 +3,6 @@
 # Introdução
 As técnicas de localização de defeitos baseada em espectro (SBFL - Spectrum-based Fault Localization) compõem uma das principais vertentes de pesquisa quanto à automatização do processo de localização de defeitos de software. Como parte essencial do teste de software, a qualidade dos dados de teste afeta diretamente a eficacia das técnicas de localização de defeitos de software. Dessa forma, existem algums estudos direcionados a melhorar a qualidade dos dados de teste, que é o foco principal dessa pesquisa.
 
-# Implementações
-- Um conjunto de dados está desbalanceado se as categorias de classificação não forem representadas de forma aproximadamente igual. Muitas vezes, os conjuntos de dados do mundo real são predominantemente compostos por exemplos “normais”, com apenas uma pequena percentagem de exemplos “anormais”. A técnica de balancemaento de dados Smote, propoem uma abordagem de sobreamostragem em que a classe minoritária é sobreamostrada através da criação de exemplos “sintéticos” em vez de sobreamostragem com substituição. Sendo assim, foi implementado dois formatos da técnica SMOTE, uma delas foi utilizado a técnica importada da biblioteca "imblearn.over_sampling" (SMOTE I), já a outra implementação todo o algoritmo foi codificado, conforme instruções do artigo [2] (SMOTE II).
-  - Algoritmos
-    - Códigos
-      - [SMOTE I](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/smote/smote-v1.py)
-      - [SMOTE II](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/smote/smote-v2.py)
-    - Execução
-      - [Ambiente de Execução](https://github.com/Reinaldo-Jr-Dev/doutorado/tree/main/.github/workflows)
-
 # Localização de Defeitos em Software - Espectro de Fluxo de Controle
 - As principais propostas de automatização de FL (Fault Localization) se baseiam na execução dos casos de teste, para então calcular uma medida que traduz a probabilidade de cada elemento do programa ser defeituoso. O espectro de cobertura é definido como um conjunto de dados que expressam o comportamento de execução do programa. Nesse sentido ele permite a visualização de quais elementos de programa são executados (cobertos) pelos casos de teste e como eles podem estar relacionados ao defeito. O espectro de fluxo de controle é definido como uma matriz M × N, obtida a partir de M execuções que podem cobrir N elementos de programa: a informação de sucesso ou falha da execução pode ser representada como uma coluna à parte da matriz. A partir dos dados desta matriz de cobertura, é possível medir a propensão a defeito (ou suspeita) S para qualquer elemento Ni.
 ![Captura de Tela 2024-10-21 às 00 05 37](https://github.com/user-attachments/assets/4f4bdf4e-5891-49f7-a79f-f4d5979abb51)
@@ -48,6 +39,19 @@ Conforme descrito no artigo [1], objeto de análise profunda dessa documentaçã
   - Para um defeito com múltiplas declarações defeituosas, localizar a primeira é fundamental, uma vez que as outras podem ser localizadas depois dela. MFR é a média da classificação de todas as falhas da primeira instrução defeituosa usando uma abordagem de localização.
 - **Relative Improvement (RImp)**
   - É comparar o número total de instruções que precisam ser examinadas para encontrar todos os defeitos utilizando uma abordagem de localização de defeitos.
+
+# Implementações
+- Heurísticas de localização de defeitos baseadas em espectro de fluxo de controle
+  - Códigos
+    - Ochiai e Tarantula
+    - Arquivo de parametrização para execução do algoritmo
+- Um conjunto de dados está desbalanceado se as categorias de classificação não forem representadas de forma aproximadamente igual. Muitas vezes, os conjuntos de dados do mundo real são predominantemente compostos por exemplos “normais”, com apenas uma pequena percentagem de exemplos “anormais”. A técnica de balancemaento de dados Smote, propoem uma abordagem de sobreamostragem em que a classe minoritária é sobreamostrada através da criação de exemplos “sintéticos” em vez de sobreamostragem com substituição. Sendo assim, foi implementado dois formatos da técnica SMOTE, uma delas foi utilizado a técnica importada da biblioteca "imblearn.over_sampling" (SMOTE I), já a outra implementação todo o algoritmo foi codificado, conforme instruções do artigo [2] (SMOTE II).
+  - Algoritmos
+    - Códigos
+      - [SMOTE I](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/smote/smote-v1.py)
+      - [SMOTE II](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/smote/smote-v2.py)
+    - Execução
+      - [Ambiente de Execução](https://github.com/Reinaldo-Jr-Dev/doutorado/tree/main/.github/workflows)
 
 # Referências
 - [1] [Zhuo Zhang, Yan Lei, Xiaoguang Mao, Meng Yan, Xin Xia Improving Fault Localization Using Model-domain Synthesized Failing Test Generation, 2022.](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/artigos/IEEE-Improving_Fault_Localization_Using_Model-domain_Synthesized_Failing_Test_Generation.pdf)
