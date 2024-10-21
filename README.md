@@ -43,8 +43,8 @@ Conforme descrito no artigo [1], objeto de análise profunda dessa documentaçã
 # Implementações
 - Heurísticas de localização de defeitos baseadas em espectro de fluxo de controle
   - Códigos
-    - Ochiai e Tarantula
-    - Arquivo de parametrização para execução do algoritmo
+    - [Ochiai e Tarantula](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/técnicas-fl/tecnicas-fl.py)
+    - [Arquivo de parametrização para execução do algoritmo](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/técnicas-fl/config.ini)
 - Um conjunto de dados está desbalanceado se as categorias de classificação não forem representadas de forma aproximadamente igual. Muitas vezes, os conjuntos de dados do mundo real são predominantemente compostos por exemplos “normais”, com apenas uma pequena percentagem de exemplos “anormais”. A técnica de balancemaento de dados Smote, propoem uma abordagem de sobreamostragem em que a classe minoritária é sobreamostrada através da criação de exemplos “sintéticos” em vez de sobreamostragem com substituição. Sendo assim, foi implementado dois formatos da técnica SMOTE, uma delas foi utilizado a técnica importada da biblioteca "imblearn.over_sampling" (SMOTE I), já a outra implementação todo o algoritmo foi codificado, conforme instruções do artigo [2] (SMOTE II).
   - Algoritmos
     - Códigos
