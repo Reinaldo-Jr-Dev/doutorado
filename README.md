@@ -32,7 +32,8 @@ As técnicas de localização de defeitos baseada em espectro (SBFL - Spectrum-b
 # Métricas
 Conforme descrito no artigo [1], objeto de análise profunda dessa documentação, segue a métricas a serem utilizadas: 
 - **Top-N**
-  - Representa a porcentagem de defeitos localizadas na posição N de uma lista classificada de todas as declarações em ordem decrescente de suspeita retornadas por uma abordagem de localização. Para valores de n iguais a 1 e 10, top-1 e top-10 contabilizam quantas vezes o defeito da versão defeituosa ficou na primeira posição e nas dez primeiras posições na lista de suspeita, respectivamente.
+  - Representa a porcentagem de defeitos localizadas na posição N de uma lista classificada de todas as declarações em ordem decrescente de suspeita retornadas por uma abordagem de localização. Dessa forma, a métrica TOP-N refere-se ao número de elementos (geralmente linhas de código ou blocos) que você precisa inspecionar para encontrar um defeito, com base nas pontuações geradas pelas heurísticas de localização de defeitos. A ideia é que a heurística classifica todas as partes do código de acordo com a probabilidade de conterem defeitos, e a métrica TOP-N verifica quantos dos itens classificados você teria que examinar até localizar um defeito.
+  - A métrica TOP-N ajuda a quantificar o esforço necessário para encontrar um defeito com base na ordenação gerada pelas heurísticas. Quanto menor for o valor de N, mais eficaz é a heurística (Ex: TOP-3 significa que você precisaria inspecionar as 3 linhas mais suspeitas para encontrar o defeito, o que indica uma boa eficiência para as heurísticas).
 - **Mean Average Rank (MAR)**
   - É a classificação média de todos os defeitos usando uma abordagem de localização.
 - **Mean First Rank (MFR)**
