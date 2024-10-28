@@ -1,6 +1,7 @@
 import math
 import configparser
 import numpy as np
+import logging
 
 # - TRANSFORMAR ARQUIVO TXT EM MATRIZ DE ESPECTRO E VETOR DE RESULTADOS  ------------------------------------------------------------------------------
 def transformar_arquivo_txt_matriz(arquivo):
@@ -20,19 +21,15 @@ def transformar_arquivo_txt_matriz(arquivo):
             # Adiciona os valores da linha (exceto a última coluna) à matriz
             matriz.append(list(map(int, valores[:-1])))
 
-    # Exibe a matriz e o vetor
-    #print("Matriz:")
-    #print(np.array(matriz))
-    #print("Vetor:")
-    #print(vetor)
-
     return np.array(matriz), vetor
 
 # - OCHIAI --------------------------------------------------------------------------------------------------------------------------------------------
 def calcular_ochiai(matriz_cobertura, resultados_testes):
+    logging.info("Aplicando a técnica Ochiai ...")
+    # Definição da quantidade de elementos(linhas) a ser analisado
     num_linhas = matriz_cobertura.shape[1]
     resultados = {}
-    # Leitura de todos os Statements (Colunas) [1 até N]
+    # Leitura de todos os elementos [1 até N]
     for linha in range(num_linhas):
         # A: Número de testes que falharam e cobriram a linha (defeito).
         # Leitura de todas as linhas para cada coluna da matriz para realizar o cálculo por coluna que seria o statement (elemento analisado / linha)
@@ -43,7 +40,7 @@ def calcular_ochiai(matriz_cobertura, resultados_testes):
         C = sum(1 for i in range(len(resultados_testes)) if resultados_testes[i] == '-' and matriz_cobertura[i][linha] == 0)
         
         # Aplicar a Fórmula
-        denom = math.sqrt((A + B) * (A + C))
+        denom = math.sqrt((A + C) * (A + B))
         if denom == 0:
             resultados[linha] = 0
         else:
@@ -53,10 +50,13 @@ def calcular_ochiai(matriz_cobertura, resultados_testes):
 
 # - TARANTULA --------------------------------------------------------------------------------------------------------------------------------------------
 def calcular_tarantula(matriz_cobertura, resultados_testes):
+    logging.info("Aplicando a técnica Tarantula ...")
+    # Definição da quantidade de elementos(linhas) a ser analisado
     num_linhas = matriz_cobertura.shape[1]
     resultados = {}
-    # Leitura de todos os Statements (Colunas) [1 até N]
+    # Leitura de todos os elementos [1 até N]
     for linha in range(num_linhas):
+        logging.info("Lendo Elemento {0} ".format(linha + 1))
         # A: Número de testes que falharam e cobriram a linha.
         # Leitura de todas as linhas para cada coluna da matriz para realizar o cálculo por coluna que seria o statement (elemento analisado / linha)
         A = sum(1 for i in range(len(resultados_testes)) if resultados_testes[i] == '-' and matriz_cobertura[i][linha] == 1)
@@ -87,24 +87,36 @@ def calcular_tarantula(matriz_cobertura, resultados_testes):
 
 # - Mostrar Resultados ---------------------------------------------------------------------------------------------------------------------------------------
 def mostrar_resultados(tecnica, resultados):
-    print(f"Técnica Aplicada: {tecnica}")
+    logging.info("Tabela de Scores {0} ".format(tecnica))
     for linha, resultado in resultados.items():
-        print(f"Resultado para a linha {linha + 1}: {resultado:.2f}")
+        logging.info(" Elemento {0}: {1} ".format(linha + 1, resultado))
 
-# - Inicialização da Matriz de Espectro ----------------------------------------------------------------------------------------------------------------------
-#matriz_cobertura = np.array([
-#    [1, 0, 1],  # Teste 1
-#    [1, 1, 0],  # Teste 2
-#   [0, 1, 1],  # Teste 3
-#    [0, 0, 1],  # Teste 4
-#    [1, 0, 1],  # Teste 5
-#])
+# - Calcular Métrica TOP-N -----------------------------------------------------------------------------------------------------------------------------------
+def calcular_metrica_top_n(resultados, linhas_defeituosas):
+    logging.info(" Calculando a métrica TOP-N ... ")
+    # Alimenta vetor de resultados
+    vetor_resultados = []
+    for linha, resultado in resultados.items():
+        vetor_resultados.append(resultado)
+    # Transforma vetor em numpy para a aplicação da ordenação    
+    np_vetor_resultados = np.array(vetor_resultados)    
+    # Classificamos as linhas em ordem decrescente com base nos resultados da heurística retornando seus índices ordenados
+    vetor_classificado_indices = np.argsort(vetor_resultados)[::-1]
+    logging.info("##@###")
+    logging.info(resultados)
+    logging.info("##@###")
+    logging.info(vetor_classificado_indices)    
+    # Encontrar a posição da linha defeituosa na classificação e add e vetor_posicoes
+    vetor_posicoes = []    
+    for posicao_i in range(len(linhas_defeituosas)):        
+        posicao = np.where(vetor_classificado_indices == linhas_defeituosas[posicao_i])[0][0] + 1  # +1 porque queremos TOP-1, TOP-2, etc.
+        vetor_posicoes.append(posicao)
 
-# Resultados dos testes (P = Passou, F = Falhou)
-#resultados_testes = ['F', 'P', 'F', 'F', 'P']
+    return max(vetor_posicoes) # considerar a maior posição (TOP-N)
 
 # - SETUP (Leitura de Arquivo de Configuração) ----------------------------------------------------------------------------------------------------------------
 # Criar um objeto ConfigParser
+print('Iniciando ...')
 config = configparser.ConfigParser()
 
 # Ler o arquivo de configuração
@@ -113,20 +125,39 @@ config.read('config.ini')
 # Acessar os dados (metadados)
 # Técnica
 tecnica = config['tecnica']['nome']
+
+# Configurando o logging
+logging.basicConfig(filename='informacoes_'+tecnica+'.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 # Nome do arquivo TXT que possui a matriz de espectro de cobertura
 arquivo_matriz_cobertura = config['matriz_espectro']['nome_arquivo']
-
 matriz_cobertura, resultados_testes = transformar_arquivo_txt_matriz(arquivo_matriz_cobertura)
-print(matriz_cobertura)
-print(resultados_testes)
+#print('Matriz de Cobertura e Vetor de Resultados dos Testes -----------------------')
+#print(matriz_cobertura)
+#print(resultados_testes)
+
+# Elementos com defeito
+elementos_com_defeito = config['defeito']['lista_elementos']
+vetor_elementos_com_defeito = [int(value) for value in elementos_com_defeito.split(',')]
 
 # - Chamada das Técnicas --------------------------------------------------------------------------------------------------------------------------------------
 if tecnica == 'ochiai':
+    # Chamar a técnica
     resultados = calcular_ochiai(matriz_cobertura, resultados_testes)
+    # Mostrar resultados (Tabelas de Scores)
     mostrar_resultados(tecnica, resultados)
-elif tecnica == 'tarantula':
+    # Mostrar resultado da métrica (TOP-N)
+    logging.info("Métricas ")
+    logging.info(" Top-{0}".format(calcular_metrica_top_n(resultados, vetor_elementos_com_defeito)))
+elif tecnica == 'tarantula':    
+    # Chamar a técnica
     resultados = calcular_tarantula(matriz_cobertura, resultados_testes)
+    # Mostrar resultados (Tabelas de Scores)
     mostrar_resultados(tecnica, resultados)
+    # Mostrar resultado da métrica (TOP-N)
+    logging.info("Métricas ")
+    logging.info(" Top-{0}".format(calcular_metrica_top_n(resultados, vetor_elementos_com_defeito)))
 else:
-    print(f"A técnica {tecnica} não foi implementada!")
+    logging.info("A técnica {0} não foi implementada!".format(tecnica))
 
+print('O processamento finalizou! Avalie o arquivo informacoes_'+tecnica+'.log')
