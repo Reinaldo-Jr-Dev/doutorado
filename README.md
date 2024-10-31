@@ -41,7 +41,7 @@ Conforme descrito no artigo [1], objeto de análise profunda dessa documentaçã
 - **Relative Improvement (RImp)**
   - É comparar o número total de instruções que precisam ser examinadas para encontrar todos os defeitos utilizando uma abordagem de localização de defeitos.
 
-# Implementações
+# Implementações   
 - Heurísticas de localização de defeitos baseadas em espectro de fluxo de controle
   - Códigos
     - [Ochiai e Tarantula](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/técnicas-fl/tecnicas-fl.py)
@@ -53,6 +53,15 @@ Conforme descrito no artigo [1], objeto de análise profunda dessa documentaçã
       - [SMOTE II](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/smote/smote-v2.py)
     - Execução
       - [Ambiente de Execução](https://github.com/Reinaldo-Jr-Dev/doutorado/tree/main/.github/workflows)
+
+# Resultados
+- Foi realizado a aplicação das heurísticas Ochiai e Tarantula, utilizando o projeto Chart (versão 400483), onde foi considerando a aplicação da heurística na matriz de cobertura obtida em (http://fault-localization.cs.washington.edu/) e a mesma com a aplicação da técnica de balanceamento de dados (SMOTE). Veja um resumo dos resultados na imagem a baixo.
+- Características do projeto analisado
+  -   425 Casos de teste
+  -   25180 elementos (linhas de código)
+![Captura de Tela 2024-10-30 às 22 27 01](https://github.com/user-attachments/assets/d31c2dc7-d880-4b19-8928-ed7ca82af2f4)
+- Conforme tabela mostra à cima, quando as heurísticas foram aplicadas na matriz balanceada, os resultados foram melhores.
+- Foi identificado que para projetos com apenas um casos de teste com defeito (considerando a matriz de cobertura), a técnica de balanceamento não conseguiu efetuar o balancenamento por não ter o número mínimo de amostras vizinhas. Como exemplo desse caso, temos o projeto Chart (versão 1).
 
 # Referências
 - [1] [Zhuo Zhang, Yan Lei, Xiaoguang Mao, Meng Yan, Xin Xia Improving Fault Localization Using Model-domain Synthesized Failing Test Generation, 2022.](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/artigos/IEEE-Improving_Fault_Localization_Using_Model-domain_Synthesized_Failing_Test_Generation.pdf)
