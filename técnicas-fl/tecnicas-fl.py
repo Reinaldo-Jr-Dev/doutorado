@@ -1,3 +1,4 @@
+from imblearn.over_sampling import SMOTE
 import math
 import configparser
 import numpy as np
@@ -102,9 +103,7 @@ def calcular_metrica_top_n(resultados, linhas_defeituosas):
     np_vetor_resultados = np.array(vetor_resultados)    
     # Classificamos as linhas em ordem decrescente com base nos resultados da heurística retornando seus índices ordenados
     vetor_classificado_indices = np.argsort(vetor_resultados)[::-1]
-    logging.info("##@###")
     logging.info(resultados)
-    logging.info("##@###")
     logging.info(vetor_classificado_indices)    
     # Encontrar a posição da linha defeituosa na classificação e add e vetor_posicoes
     vetor_posicoes = []    
@@ -113,6 +112,30 @@ def calcular_metrica_top_n(resultados, linhas_defeituosas):
         vetor_posicoes.append(posicao)
 
     return max(vetor_posicoes) # considerar a maior posição (TOP-N)
+
+def balanceamento_dados_smote(k, matriz_cobertura, resultados_testes):
+    # Exemplo de matriz de dados (features) e rótulos (labels)
+    X = matriz_cobertura
+    # definição de rótulos da matriz de dados: 1 (minoritaria - 2 amostras) e 0 (majoritaria - 3 amostras)
+    y = np.array(resultados_testes)  
+    # Criar uma instância do SMOTE com um vizinho (k = 1)
+    smote = SMOTE(k_neighbors=k)
+    # Aplicar SMOTE
+    X_resampled, y_resampled = smote.fit_resample(X, y)
+    # Mostrar dados Balanceados
+    # Observe que no resultado final (X_resampled) é criado um novo vetor duplicando a amostra de equilíbrio ([0 0 0 1])
+    #print("-----------------------------")
+    #print("Matriz não balanceada:")
+    #print(X)
+    #print("Rótulos não balanceados:")
+    #print(y)
+    #print("-----------------------------")
+    #print("Matriz de dados balanceada:")
+    #print(X_resampled)
+    #print("Rótulos balanceados:")
+    #print(y_resampled)
+    #print("-----------------------------")
+    return X_resampled, y_resampled
 
 # - SETUP (Leitura de Arquivo de Configuração) ----------------------------------------------------------------------------------------------------------------
 # Criar um objeto ConfigParser
@@ -126,19 +149,26 @@ config.read('config.ini')
 # Técnica
 tecnica = config['tecnica']['nome']
 
+# Acessar os dados (metadados)
+# Técnica
+tecnica_balanceamento = config['tecnica_tratamento_matriz']['nome']
+
 # Configurando o logging
 logging.basicConfig(filename='informacoes_'+tecnica+'.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Nome do arquivo TXT que possui a matriz de espectro de cobertura
 arquivo_matriz_cobertura = config['matriz_espectro']['nome_arquivo']
 matriz_cobertura, resultados_testes = transformar_arquivo_txt_matriz(arquivo_matriz_cobertura)
-#print('Matriz de Cobertura e Vetor de Resultados dos Testes -----------------------')
-#print(matriz_cobertura)
-#print(resultados_testes)
 
 # Elementos com defeito
 elementos_com_defeito = config['defeito']['lista_elementos']
 vetor_elementos_com_defeito = [int(value) for value in elementos_com_defeito.split(',')]
+
+# - Balanceamento dos Dados -----------------------------------------------------------------------------------------------------------------------------------
+if tecnica_balanceamento == 'smote':  
+    logging.info("(SMOTE) Iniciando balanceamento dos dados")
+    matriz_cobertura, resultados_testes = balanceamento_dados_smote(1, matriz_cobertura, resultados_testes)
+    logging.info("(SMOTE) Finalizando balanceamento dos dados")
 
 # - Chamada das Técnicas --------------------------------------------------------------------------------------------------------------------------------------
 if tecnica == 'ochiai':
@@ -148,7 +178,7 @@ if tecnica == 'ochiai':
     mostrar_resultados(tecnica, resultados)
     # Mostrar resultado da métrica (TOP-N)
     logging.info("Métricas ")
-    logging.info(" Top-{0}".format(calcular_metrica_top_n(resultados, vetor_elementos_com_defeito)))
+    logging.info(" Top-{0}".format(calcular_metrica_top_n(resultados, vetor_elementos_com_defeito)))  
 elif tecnica == 'tarantula':    
     # Chamar a técnica
     resultados = calcular_tarantula(matriz_cobertura, resultados_testes)
