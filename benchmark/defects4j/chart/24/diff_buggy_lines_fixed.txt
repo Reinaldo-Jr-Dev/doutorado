@@ -1,0 +1,5 @@
+analysis/pipeline-scripts/buggy-lines/Chart-24.buggy.lines
+org/jfree/chart/renderer/GrayPaintScale.java#126#        int g = (int) ((value - this.lowerBound) / (this.upperBound 
+
+analysis/pipeline-scripts/fixed-lines/Chart-24.fixed.lines
+org/jfree/chart/renderer/GrayPaintScale.java#126#        int g = (int) ((v - this.lowerBound) / (this.upperBound 

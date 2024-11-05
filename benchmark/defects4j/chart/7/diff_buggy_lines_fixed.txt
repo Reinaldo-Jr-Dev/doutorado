@@ -1,0 +1,7 @@
+analysis/pipeline-scripts/buggy-lines/Chart-7.buggy.lines
+org/jfree/data/time/TimePeriodValues.java#300#            long s = getDataItem(this.minMiddleIndex).getPeriod().getStart()
+org/jfree/data/time/TimePeriodValues.java#302#            long e = getDataItem(this.minMiddleIndex).getPeriod().getEnd()
+
+analysis/pipeline-scripts/fixed-lines/Chart-7.fixed.lines
+org/jfree/data/time/TimePeriodValues.java#300#            long s = getDataItem(this.maxMiddleIndex).getPeriod().getStart()
+org/jfree/data/time/TimePeriodValues.java#302#            long e = getDataItem(this.maxMiddleIndex).getPeriod().getEnd()

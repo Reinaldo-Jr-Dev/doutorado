@@ -1,0 +1,5 @@
+analysis/pipeline-scripts/buggy-lines/Chart-8.buggy.lines
+org/jfree/data/time/Week.java#175#        this(time, RegularTimePeriod.DEFAULT_TIME_ZONE, Locale.getDefault());
+
+analysis/pipeline-scripts/fixed-lines/Chart-8.fixed.lines
+org/jfree/data/time/Week.java#175#        this(time, zone, Locale.getDefault());

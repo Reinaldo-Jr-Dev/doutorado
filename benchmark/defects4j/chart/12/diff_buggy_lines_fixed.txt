@@ -1,0 +1,5 @@
+analysis/pipeline-scripts/buggy-lines/Chart-12.buggy.lines
+org/jfree/chart/plot/MultiplePiePlot.java#145#        this.dataset = dataset;
+
+analysis/pipeline-scripts/fixed-lines/Chart-12.fixed.lines
+org/jfree/chart/plot/MultiplePiePlot.java#145#        setDataset(dataset);

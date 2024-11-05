@@ -1,0 +1,22 @@
+analysis/pipeline-scripts/buggy-lines/Chart-18.buggy.lines
+org/jfree/data/DefaultKeyedValues.java#318#        if (index < this.keys.size()) {
+org/jfree/data/DefaultKeyedValues.java#320#        }
+org/jfree/data/DefaultKeyedValues.java#335#			return;
+org/jfree/data/DefaultKeyedValues2D.java#455#FAULT_OF_OMISSION
+org/jfree/data/DefaultKeyedValues2D.java#458#FAULT_OF_OMISSION
+org/jfree/data/DefaultKeyedValues2D.java#459#FAULT_OF_OMISSION
+
+analysis/pipeline-scripts/fixed-lines/Chart-18.fixed.lines
+org/jfree/data/DefaultKeyedValues.java#333#            throw new UnknownKeyException("The key (" + key 
+org/jfree/data/DefaultKeyedValues.java#334#                    + ") is not recognised.");
+org/jfree/data/DefaultKeyedValues2D.java#455#    	if (columnKey == null) {
+org/jfree/data/DefaultKeyedValues2D.java#456#    		throw new IllegalArgumentException("Null 'columnKey' argument.");
+org/jfree/data/DefaultKeyedValues2D.java#457#    	}
+org/jfree/data/DefaultKeyedValues2D.java#458#    	if (!this.columnKeys.contains(columnKey)) {
+org/jfree/data/DefaultKeyedValues2D.java#459#    		throw new UnknownKeyException("Unknown key: " + columnKey);
+org/jfree/data/DefaultKeyedValues2D.java#460#    	}
+org/jfree/data/DefaultKeyedValues2D.java#464#            int index = rowData.getIndex(columnKey);
+org/jfree/data/DefaultKeyedValues2D.java#465#            if (index >= 0) {
+org/jfree/data/DefaultKeyedValues2D.java#467#            }
+org/jfree/data/DefaultKeyedValues.java#318#FIX_OF_OMISSION
+org/jfree/data/DefaultKeyedValues.java#319#FIX_OF_OMISSION

@@ -1,0 +1,5 @@
+analysis/pipeline-scripts/buggy-lines/Chart-20.buggy.lines
+org/jfree/chart/plot/ValueMarker.java#95#        super(paint, stroke, paint, stroke, alpha);
+
+analysis/pipeline-scripts/fixed-lines/Chart-20.fixed.lines
+org/jfree/chart/plot/ValueMarker.java#95#        super(paint, stroke, outlinePaint, outlineStroke, alpha);

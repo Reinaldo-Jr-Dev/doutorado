@@ -1,0 +1,5 @@
+analysis/pipeline-scripts/buggy-lines/Chart-13.buggy.lines
+org/jfree/chart/block/BorderArrangement.java#455#                    new Range(0.0, constraint.getWidth() - w[2]),
+
+analysis/pipeline-scripts/fixed-lines/Chart-13.fixed.lines
+org/jfree/chart/block/BorderArrangement.java#455#                    new Range(0.0, Math.max(constraint.getWidth() - w[2], 0.0)),

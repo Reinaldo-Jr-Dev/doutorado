@@ -1,0 +1,23 @@
+analysis/pipeline-scripts/buggy-lines/Chart-25.buggy.lines
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#315#            double valueDelta = dataset.getStdDevValue(row, column).doubleValue();
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#459#            double valueDelta = dataset.getStdDevValue(row, column).doubleValue();
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#259#FAULT_OF_OMISSION
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#344#FAULT_OF_OMISSION
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#403#FAULT_OF_OMISSION
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#487#FAULT_OF_OMISSION
+
+analysis/pipeline-scripts/fixed-lines/Chart-25.fixed.lines
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#259#        if (meanValue == null) {
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#260#            return;
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#261#        }
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#318#        Number n = dataset.getStdDevValue(row, column);
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#319#        if (n != null) {
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#320#            double valueDelta = n.doubleValue();
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#349#        }
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#409#        if (meanValue == null) {
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#410#            return;
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#411#        }
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#468#        Number n = dataset.getStdDevValue(row, column);
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#469#        if (n != null) {
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#470#            double valueDelta = n.doubleValue();
+org/jfree/chart/renderer/category/StatisticalBarRenderer.java#498#        }

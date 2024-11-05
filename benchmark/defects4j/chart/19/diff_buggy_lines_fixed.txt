@@ -1,0 +1,11 @@
+analysis/pipeline-scripts/buggy-lines/Chart-19.buggy.lines
+org/jfree/chart/plot/CategoryPlot.java#698#FAULT_OF_OMISSION
+org/jfree/chart/plot/CategoryPlot.java#973#FAULT_OF_OMISSION
+
+analysis/pipeline-scripts/fixed-lines/Chart-19.fixed.lines
+org/jfree/chart/plot/CategoryPlot.java#698#        if (axis == null) {
+org/jfree/chart/plot/CategoryPlot.java#699#            throw new IllegalArgumentException("Null 'axis' argument.");
+org/jfree/chart/plot/CategoryPlot.java#700#        }
+org/jfree/chart/plot/CategoryPlot.java#976#        if (axis == null) {
+org/jfree/chart/plot/CategoryPlot.java#977#            throw new IllegalArgumentException("Null 'axis' argument.");
+org/jfree/chart/plot/CategoryPlot.java#978#        }

@@ -1,0 +1,5 @@
+analysis/pipeline-scripts/buggy-lines/Chart-11.buggy.lines
+org/jfree/chart/util/ShapeUtilities.java#275#        PathIterator iterator2 = p1.getPathIterator(null);
+
+analysis/pipeline-scripts/fixed-lines/Chart-11.fixed.lines
+org/jfree/chart/util/ShapeUtilities.java#275#        PathIterator iterator2 = p2.getPathIterator(null);

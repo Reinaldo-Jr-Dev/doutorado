@@ -1,0 +1,7 @@
+analysis/pipeline-scripts/buggy-lines/Chart-26.buggy.lines
+org/jfree/chart/axis/Axis.java#1192#FAULT_OF_OMISSION
+org/jfree/chart/axis/Axis.java#1197#FAULT_OF_OMISSION
+
+analysis/pipeline-scripts/fixed-lines/Chart-26.fixed.lines
+org/jfree/chart/axis/Axis.java#1192#            if (owner != null) {
+org/jfree/chart/axis/Axis.java#1198#            }

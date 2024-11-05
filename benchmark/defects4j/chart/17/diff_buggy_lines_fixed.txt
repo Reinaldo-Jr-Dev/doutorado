@@ -1,0 +1,6 @@
+analysis/pipeline-scripts/buggy-lines/Chart-17.buggy.lines
+org/jfree/data/time/TimeSeries.java#857#        Object clone = createCopy(0, getItemCount() - 1);
+
+analysis/pipeline-scripts/fixed-lines/Chart-17.fixed.lines
+org/jfree/data/time/TimeSeries.java#857#        TimeSeries clone = (TimeSeries) super.clone();
+org/jfree/data/time/TimeSeries.java#858#        clone.data = (List) ObjectUtilities.deepClone(this.data);
