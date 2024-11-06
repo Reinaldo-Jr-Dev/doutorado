@@ -14,6 +14,8 @@
 
 # Dados da matriz de espectro de cobertura
   - 428 Casos de Teste (quantidade de linhas)
+    - 1 Caso de Test Negativo
+    - 427 Casos de Teste Positivos
   - 7057 Elementos (quantidade de colunas)
 
 # Quantidade de componentes com defeito
