@@ -25,7 +25,7 @@
   - 1 elemento
 
 # Resultados
-  - Percebeu-se que em ambas as heurísticas tiverem melhores resultados, depois que a matriz de espectro de cobertura foi manipulada.
+  - Percebeu-se que em ambas as heurísticas houveram melhores resultados, depois que a matriz de espectro de cobertura foi manipulada pela técnica da balanceamento de dados SMOTE.
     - Tarantula (sem manipulação da matriz): TOP-102
     - Tarantula (com manipulação da matriz): TOP-28
     - Ochiai (sem manipulação da matriz): TOP-57
