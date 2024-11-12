@@ -13,6 +13,9 @@
   - [matriz de espectro de cobertura](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/benchmark/benchmark/defects4j/Chart/6/matrix.txt).
   - [elementos da matriz](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/benchmark/benchmark/defects4j/Chart/6/spectra.txt).
 
+# Implementação
+  - [Código implementado](https://colab.research.google.com/drive/1dsdp2uVLX-LYYmg6msFTWxhjR68pBiAk)
+
 # Dados da matriz de espectro de cobertura
   - 479 Casos de Teste (quantidade de linhas)
     - 2 Casos de Teste Negativos
