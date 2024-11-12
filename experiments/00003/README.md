@@ -10,7 +10,8 @@
 # Artefatos do experimento
   - [config.ini](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/experiments/00003/config.ini): arquivo de configuração.
   - arquivos de log (log_*.txt).
-  - matriz_Chart_v6.txt: matriz de espectro de cobertura.
+  - [matriz de espectro de cobertura](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/benchmark/benchmark/defects4j/Chart/6/matrix.txt).
+  - [elementos da matriz](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/benchmark/benchmark/defects4j/Chart/6/spectra.tx).
 
 # Dados da matriz de espectro de cobertura
   - 479 Casos de Teste (quantidade de linhas)
