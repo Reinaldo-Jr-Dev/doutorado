@@ -4,7 +4,7 @@
   - Benchmark: Defects4j
   - Projeto: Chart (versão 6)
   - Heurísticas: Ochiai e Tarantula
-  - Técnica de Tratamento de Dados: SMOTE
+  - Técnica de Balanceamento de Dados: SMOTE
   - Métrica: Top-N
 
 # Artefatos do experimento
