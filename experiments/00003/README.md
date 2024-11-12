@@ -8,11 +8,8 @@
   - Métrica: Top-N
 
 # Artefatos do experimento
-  - config.ini: arquivo de configuração, utilizado pelo algoritmo implementado.
-  - sem_smote_informacoes_ochiai.log: informações de log da heurística Ochiai (sem a manipulação da matriz de espectro de cobertura).
-  - com_smote_informacoes_ochiai.log: informações de log da heurística Ochiai (com a manipulação da matriz de espectro de cobertura)..
-  - sem_smote_informacoes_tarantula.log: informações de log da heurística Tarantula (sem a manipulação da matriz de espectro de cobertura)..
-  - com_smote_informacoes_tarantula.log: informações de log da heurística Tarantula (com a manipulação da matriz de espectro de cobertura)..
+  - [config.ini](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/experiments/00003/config.ini): arquivo de configuração.
+  - arquivos de log (log_*.txt).
   - matriz_Chart_v6.txt: matriz de espectro de cobertura.
 
 # Dados da matriz de espectro de cobertura
