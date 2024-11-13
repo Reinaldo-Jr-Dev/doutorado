@@ -25,7 +25,7 @@
   - 676 Elementos (quantidade de colunas)
 
 # Quantidade de componentes com defeito real
-  - 1 elemento
+  - [1 elemento](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/benchmark/benchmark/defects4j/Chart/6/Chart-6.buggy.lines)
 
 # Resultados
   - Percebeu-se que em ambas as heurísticas houveram melhores resultados, depois que a matriz de espectro de cobertura foi manipulada pela técnica da balanceamento de dados SMOTE.
