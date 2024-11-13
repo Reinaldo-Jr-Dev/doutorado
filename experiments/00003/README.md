@@ -12,6 +12,8 @@
   - arquivos de log (log_*.txt).
   - [matriz de espectro de cobertura](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/benchmark/benchmark/defects4j/Chart/6/matrix.txt).
   - [elementos da matriz](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/benchmark/benchmark/defects4j/Chart/6/spectra.txt).
+  - [Chart-6.buggy.lines](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/benchmark/benchmark/defects4j/Chart/6/Chart-6.buggy.lines): arquivo contendo os elementos com defeito.
+  - [Chart-6.fixed.lines](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/benchmark/benchmark/defects4j/Chart/6/Chart-6.fixed.lines): arquivo contendo os elementos corrigidos.
 
 # Implementação
   - [Código implementado](https://colab.research.google.com/drive/1dsdp2uVLX-LYYmg6msFTWxhjR68pBiAk)
