@@ -41,28 +41,11 @@ Conforme descrito no artigo [1], objeto de análise profunda dessa documentaçã
 - **Relative Improvement (RImp)**
   - É comparar o número total de instruções que precisam ser examinadas para encontrar todos os defeitos utilizando uma abordagem de localização de defeitos.
 
-# Implementações   
-- Heurísticas de localização de defeitos baseadas em espectro de fluxo de controle
-  - Códigos
-    - [Ochiai e Tarantula](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/técnicas-fl/tecnicas-fl.py)
-    - [Arquivo de parametrização para execução do algoritmo](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/técnicas-fl/config.ini)
-- Um conjunto de dados está desbalanceado se as categorias de classificação não forem representadas de forma aproximadamente igual. Muitas vezes, os conjuntos de dados do mundo real são predominantemente compostos por exemplos “normais”, com apenas uma pequena percentagem de exemplos “anormais”. A técnica de balancemaento de dados Smote, propoem uma abordagem de sobreamostragem em que a classe minoritária é sobreamostrada através da criação de exemplos “sintéticos” em vez de sobreamostragem com substituição. Sendo assim, foi implementado dois formatos da técnica SMOTE, uma delas foi utilizado a técnica importada da biblioteca "imblearn.over_sampling" (SMOTE I), já a outra implementação todo o algoritmo foi codificado, conforme instruções do artigo [2] (SMOTE II).
-  - Algoritmos
-    - Códigos
-      - [SMOTE I](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/smote/smote-v1.py)
-      - [SMOTE II](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/smote/smote-v2.py)
-    - Execução
-      - [Ambiente de Execução](https://github.com/Reinaldo-Jr-Dev/doutorado/tree/main/.github/workflows)
+# Experimentos
+- [Experimento 3](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/experiments/00003/README.md)
 
-# Resultados
-- Foi realizado a aplicação das heurísticas Ochiai e Tarantula, utilizando o projeto Chart (versão 400483), onde foi considerando a aplicação da heurística na matriz de cobertura obtida em (http://fault-localization.cs.washington.edu/) e a mesma com a aplicação da técnica de balanceamento de dados (SMOTE). Veja um resumo dos resultados na imagem a baixo.
-- Características do projeto analisado
-  -   425 Casos de teste
-  -   25180 elementos (linhas de código)
-- Conforme tabela mostra à baixo, quando as heurísticas foram aplicadas na matriz balanceada, os resultados foram melhores.
-- Foi identificado que para projetos com apenas um casos de teste com defeito (considerando a matriz de cobertura), a técnica de balanceamento não conseguiu efetuar o balancenamento por não ter o número mínimo de amostras vizinhas. Como exemplo desse caso, temos o projeto Chart (versão 1).
-  
-  ![Captura de Tela 2024-10-30 às 22 27 01](https://github.com/user-attachments/assets/d31c2dc7-d880-4b19-8928-ed7ca82af2f4)
+# Implementações   
+- [Ambiente de execução](https://colab.research.google.com/drive/1dsdp2uVLX-LYYmg6msFTWxhjR68pBiAk?authuser=2)
 
 # Referências
 - [1] [Zhuo Zhang, Yan Lei, Xiaoguang Mao, Meng Yan, Xin Xia Improving Fault Localization Using Model-domain Synthesized Failing Test Generation, 2022.](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/artigos/IEEE-Improving_Fault_Localization_Using_Model-domain_Synthesized_Failing_Test_Generation.pdf)
