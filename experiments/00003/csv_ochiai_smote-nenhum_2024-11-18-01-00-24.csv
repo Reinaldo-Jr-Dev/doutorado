@@ -1,0 +1,3 @@
+metric;heuristic;benchmark;program;version;balancing;value
+topn;ochiai;defects4j;Chart;6;smote-nenhum;16
+topn;ochiai;defects4j;Chart;6;smote-nenhum;57
