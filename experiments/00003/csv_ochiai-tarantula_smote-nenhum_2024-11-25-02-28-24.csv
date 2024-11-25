@@ -1,0 +1,5 @@
+metric;heuristic;benchmark;program;version;balancing;value;total_test_case;total_statement;total_test_positive;total_test_negative;total_test_equal;total_test_dif
+topn;ochiai;defects4j;Chart;6;smote;14;100;677;98;2;0;100
+topn;tarantula;defects4j;Chart;6;smote;28;100;677;98;2;0;100
+topn;ochiai;defects4j;Chart;6;nenhum;57;100;677;98;2;0;100
+topn;tarantula;defects4j;Chart;6;nenhum;102;100;677;98;2;0;100
