@@ -8,7 +8,7 @@
   - Um conjunto de testes é indispensável para conduzir uma localização eficaz de defeitos e existem duas classes de testes: testes aprovados e testes reprovados. No entanto, na prática, a quantidade de testes aprovados superam em muito a quantidade de testes reprovados, fazendo com que os testes reprovados sejam uma classe minoritária em contraste aos testes aprovados. Trabalhos anteriores mostraram empiricamente que a falta de testes com defeito leva a um conjunto de testes com balanceamento de classe, o que tende a prejudicar a eficácia da localização de defeitos. Trabalhos anteriores mostraram empiricamente que a falta de testes com defeito, tendem a prejudicar a eficácia das técnicas de localização de defeitos.
 
 # Objetivo geral
-- MSGen utiliza o modelo de informação amplamente utilizado de localização de defeitos (matriz de espectro de cobertura) e usa a variação do espaço de recursos minoritários para criar novas amostras de testes com defeito no domínio do modelo sintetizado.
+- A técnica proposta (MSGen - Model-domain Synthesized Failing Test Generation) utiliza o modelo de informação amplamente utilizado de localização de defeitos (matriz de espectro de cobertura) e usa a variação do espaço de recursos minoritários para criar novas amostras de testes com defeito no domínio do modelo sintetizado.
 - O MSGen é aplicado a 12 abordagens de localização de defeito referente ao estado da arte e também comparamos o MSGen a 2 abordagens representativas de otimização de dados.
 
 # Técnica proposta
