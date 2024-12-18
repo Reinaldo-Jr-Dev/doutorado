@@ -1,7 +1,7 @@
 <h1 align="center"> DOCUMENTAÇÃO - DOUTORADO </h1>
 
 # Artigo de Referência
-Improving Fault Localization Using Model-domain Synthesized Failing Test Generation
+Improving Fault Localization Using Model-domain Synthesized Failing Test Generation [1]
 
 # Problema a ser Resolvido
 Um conjunto de testes é indispensável para conduzir uma localização eficaz de defeitos e existem duas classes de testes: testes aprovados e testes reprovados. No entanto, na prática, a quantidade de testes aprovados superam em muito a quantidade de testes reprovados, fazendo com que os testes reprovados sejam uma classe minoritária em contraste aos testes aprovados. Trabalhos anteriores mostraram empiricamente que a falta de testes com falha em relação a uma falha leva a um conjunto de testes com balanceamento de classe, o que tende a prejudicar a eficácia da localização de falhas. Trabalhos anteriores mostraram empiricamente que a falta de testes com defeito com relação a um determinado defeito, tendem a prejudicar a eficácia das técnicas de localização de defeitos.
@@ -41,6 +41,9 @@ Um conjunto de testes é indispensável para conduzir uma localização eficaz d
 - MSGen identifica os vizinhos mais próximos das amostras de teste com defeito no domínio do modelo existente e calcula a diferença entre cada teste com defeito e seu vizinho mais próximo para gerar novas amostras de teste no domínio do modelo sintetizadas.
 - Os resultados experimentais em 12 localizações de defeitos e duas abordagens de otimização/balanceamento de dados mostram que o MSGen pode melhorar significativamente a eficácia da localização de falhas em até 51,22%.
 - No futuro, planejamos estender nossa abordagem MSGen ao cenário de defeitos múltiplos. Também pode-se explorar mais o domínio do modelo para geração de testes sintetizados.
+
+# Referências
+- [1] [Zhuo Zhang, Yan Lei, Xiaoguang Mao, Meng Yan, Xin Xia Improving Fault Localization Using Model-domain Synthesized Failing Test Generation, 2022.](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/artigos/
 
 # Autores da Pesquisa
 - Reinaldo de Souza Júnior: reinaldo.junior@discente.ufg.br
