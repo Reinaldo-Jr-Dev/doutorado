@@ -1,7 +1,7 @@
 <h1 align="center"> DOCUMENTAÇÃO - DOUTORADO </h1>
 
 # Artigo de Referência
-[Improving Fault Localization Using Model-domain Synthesized Failing Test Generation](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/artigos/
+[Improving Fault Localization Using Model-domain Synthesized Failing Test Generation](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/IEEE-Improving_Fault_Localization_Using_Model-domain_Synthesized_Failing_Test_Generation.pdf)
 
 # Problema a ser Resolvido
 Um conjunto de testes é indispensável para conduzir uma localização eficaz de defeitos e existem duas classes de testes: testes aprovados e testes reprovados. No entanto, na prática, a quantidade de testes aprovados superam em muito a quantidade de testes reprovados, fazendo com que os testes reprovados sejam uma classe minoritária em contraste aos testes aprovados. Trabalhos anteriores mostraram empiricamente que a falta de testes com falha em relação a uma falha leva a um conjunto de testes com balanceamento de classe, o que tende a prejudicar a eficácia da localização de falhas. Trabalhos anteriores mostraram empiricamente que a falta de testes com defeito com relação a um determinado defeito, tendem a prejudicar a eficácia das técnicas de localização de defeitos.
