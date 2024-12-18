@@ -1,7 +1,7 @@
 <h1 align="center"> DOCUMENTAÇÃO - DOUTORADO </h1>
 
 # Artigo de Referência
-Improving Fault Localization Using Model-domain Synthesized Failing Test Generation [1]
+[Improving Fault Localization Using Model-domain Synthesized Failing Test Generation](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/artigos/
 
 # Problema a ser Resolvido
 Um conjunto de testes é indispensável para conduzir uma localização eficaz de defeitos e existem duas classes de testes: testes aprovados e testes reprovados. No entanto, na prática, a quantidade de testes aprovados superam em muito a quantidade de testes reprovados, fazendo com que os testes reprovados sejam uma classe minoritária em contraste aos testes aprovados. Trabalhos anteriores mostraram empiricamente que a falta de testes com falha em relação a uma falha leva a um conjunto de testes com balanceamento de classe, o que tende a prejudicar a eficácia da localização de falhas. Trabalhos anteriores mostraram empiricamente que a falta de testes com defeito com relação a um determinado defeito, tendem a prejudicar a eficácia das técnicas de localização de defeitos.
@@ -18,9 +18,9 @@ Um conjunto de testes é indispensável para conduzir uma localização eficaz d
 
 # Benchmark
 - Justificativa:
-	- São programas amplamente utilizados na localização de defeitos;
-	- São programas com mais de 5 KLOCs;
-	- São fáceis de serem adquiridos por permitirem estudos comparáveis ​​e reprodutíveis.
+  - São programas amplamente utilizados na localização de defeitos;
+  - São programas com mais de 5 KLOCs;
+  - São fáceis de serem adquiridos por permitirem estudos comparáveis ​​e reprodutíveis.
 - Projetos
   - Defects4J (chart, math, lang, closure, mockito, and time) - http://defects4j.org; 
   - ManyBugs (python, gzip and libtiff) - http://repairbenchmarks.cs.umass.edu/ManyBugs/; 
@@ -42,8 +42,27 @@ Um conjunto de testes é indispensável para conduzir uma localização eficaz d
 - Os resultados experimentais em 12 localizações de defeitos e duas abordagens de otimização/balanceamento de dados mostram que o MSGen pode melhorar significativamente a eficácia da localização de falhas em até 51,22%.
 - No futuro, planejamos estender nossa abordagem MSGen ao cenário de defeitos múltiplos. Também pode-se explorar mais o domínio do modelo para geração de testes sintetizados.
 
+# Proposta de Exploração:
+- ???
+
 # Referências
-- [1] [Zhuo Zhang, Yan Lei, Xiaoguang Mao, Meng Yan, Xin Xia Improving Fault Localization Using Model-domain Synthesized Failing Test Generation, 2022.](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/master/artigos/
+- [2] C. Parnin and A. Orso, “Are automated debugging techniques actually helping programmers?” in International Symposium on Software Testing and Analysis(ISSTA 2011), 2011, pp. 199–209.
+- [11] Z. Zhang, Y. Lei, X. Mao, and P. Li, “CNN-FL: An effective approach for localizing faults using convolutional neural networks,” in the 26th International Conference on Software Analysis, Evolution and Reengi- neering (SANER 2019). IEEE, 2019, pp. 445–455.
+- [12] Z. Zhang, Y. Lei, X. Mao, M. Yan, L. Xu, and J. Wen, “Improving deep- learning-based fault localization with resampling,” Journal of Software: Evolution and Process, vol. 33, no. 3, p. e2312, 2021.
+- [13] X. Li, W. Li, Y. Zhang, and L. Zhang, “DeepFL: Integrating multiple fault diagnosis dimensions for deep fault localization,” in Proceedings of the 28th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2019), 2019, pp. 169–180.
+- [14] J. Sohn and S. Yoo, “Fluccs: Using code and change metrics to improve fault localization,” in Proceedings of the 26th ACM SIGSOFT Interna- tional Symposium on Software Testing and Analysis (ISSTA 2017), 2017, pp. 273–283.
+- [15] Z. Zhang, Y. Lei, X. Mao, M. Yan, L. Xu, and X. Zhang, “A study of effectiveness of deep learning in locating real faults,” Information and Software Technology, vol. 131, p. 106486, 2021.
+- [12] Z. Zhang, Y. Lei, X. Mao, M. Yan, L. Xu, and J. Wen, “Improving deep- learning-based fault localization with resampling,” Journal of Software: Evolution and Process, vol. 33, no. 3, p. e2312, 2021.
+- [21] L. Zhang, L. Yan, Z. Zhang, J. Zhang, W. Chan, and Z. Zheng, “A theoretical analysis on cloning the failed test cases to improve spectrum- based fault localization,” Journal of Systems and Software, vol. 129, pp. 35–57, 2017.
+- [30] Y. Lei, C. Sun, X. Mao, and Z. Su, “How test suites impact fault localization starting from the size,” IET Software, vol. 12, no. 3, pp. 190–205, 2018.
+- [31] H. He and E. A. Garcia, “Learning from imbalanced data,” IEEE Transactions on Knowledge and Data Engineering(TKDE), no. 9, pp. 1263–1284, 2008.	
+- [32] B. Krawczyk, “Learning from imbalanced data: open challenges and future directions,” Progress in Artificial Intelligence, vol. 5, no. 4, pp. 221–232, 2016.
+- [38] H. Wang, B. Du, J. He, Y. Liu, and X. Chen, “Ietcr: An information entropy based test case reduction strategy for mutation-based fault localization,” IEEE Access, vol. 8, pp. 124 297–124 310, 2020.
+- [45] N.V.Chawla,K.W.Bowyer,L.O.Hall,andW.P.Kegelmeyer,“Smote: Synthetic minority over-sampling technique,” 2011.
+- [46] V. Debroy, W. E. Wong, X. Xu, and B. Choi, “A grouping-based
+strategy to improve the effectiveness of fault localization techniques,” in International Conference on Quality Software(QSIC 2010), 2010, pp. 13–22.
+- [47] L.C.Briand,Y.Labiche,andX.Liu,“Usingmachinelearningtosupport debugging with tarantula,” in The IEEE International Symposium on Software Reliability(ISSRE 2007), 2007, pp. 137–146.
+- [48] Y. Lei, X. Mao, Z. Dai, and C. Wang, “Effective statistical fault local- ization using program slices,” in Computer Software and Applications Conference(COMPSAC 2012), 2012, pp. 1–10.
 
 # Autores da Pesquisa
 - Reinaldo de Souza Júnior: reinaldo.junior@discente.ufg.br
