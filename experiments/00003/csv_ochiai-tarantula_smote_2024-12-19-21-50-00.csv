@@ -1,0 +1,3 @@
+benchmark;program;version;test;statement;balancing;ntest-pos; ntest-neg; coverage; heuristic; fault-pos
+defects4j;Chart;6;954;676;smote;477;477;0.54;ochiai;16
+defects4j;Chart;6;954;676;smote;477;477;0.54;tarantula;30
