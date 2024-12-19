@@ -8,14 +8,13 @@
   - Um conjunto de testes é indispensável para conduzir uma localização eficaz de defeitos e existem duas classes de testes: testes aprovados e testes reprovados. No entanto, na prática, a quantidade de testes aprovados superam em muito a quantidade de testes reprovados, fazendo com que os testes reprovados sejam uma classe minoritária em contraste aos testes aprovados. Trabalhos anteriores mostraram empiricamente que a falta de testes com defeito leva a um conjunto de testes com balanceamento de classe, o que tende a prejudicar a eficácia da localização de defeitos. Trabalhos anteriores mostraram empiricamente que a falta de testes com defeito, tendem a prejudicar a eficácia das técnicas de localização de defeitos.
 
 # Objetivo geral
-- A técnica proposta (MSGen - Model-domain Synthesized Failing Test Generation) utiliza o modelo de informação amplamente utilizado de localização de defeitos (matriz de espectro de cobertura) e usa a variação do espaço de recursos minoritários para criar novas amostras de testes com defeito no domínio do modelo sintetizado.
-- O MSGen é aplicado a 12 abordagens de localização de defeito referente ao estado da arte e também comparamos o MSGen a 2 abordagens representativas de otimização de dados.
+- A técnica proposta (MSGen - Model-domain Synthesized Failing Test Generation) utiliza o modelo de informação amplamente utilizado de localização de defeitos (matriz de espectro de cobertura) e usa a variação do espaço de recursos minoritários para criar novas amostras de testes com defeito.
 
 # Técnica proposta
-- É proposto o MSGen para sintetizar amostras de teste com defeito no domínio do modelo (isto é, vetores sintetizados com rótulos com defeito) do domínio do modelo (matriz de espectro), em vez do domínio de entrada, para melhorar a localização de defeitos.
-- A pesquisa anterior [30] identificou que os dados que cobrem as características de todos os testes com defeito (ou seja, conjunto mínimo suspeito) são benéficos para localização de defeitos. O conjunto mínimo suspeito é definido como o conjunto dessas instruções executadas por todos os testes que falharam. A localização da defeito aumentará a suspeita da declaração defeituosa se a declaração defeituosa estiver nos vetores com um rótulo de falha.
+- É proposto o MSGen (Model-domain Synthesized Failing Test Generation) para sintetizar amostras de teste com defeito no domínio do modelo (isto é, vetores sintetizados de rótulos com defeito) do domínio do modelo (matriz de espectro), em vez do domínio de entrada, para melhorar a localização de defeitos.
+- A pesquisa anterior [30] identificou que os dados que cobrem as características de todos os testes com defeito (ou seja, conjunto mínimo suspeito) são benéficos para localização de defeitos. O conjunto mínimo suspeito é definido como o conjunto dessas instruções executadas por todos os testes que falharam. A localização da defeito aumentará a suspeita da declaração defeituosa se a declaração defeituosa estiver nos vetores com um rótulo de defeito.
 - MSGen utiliza a técnica SMOTE (synthetic minority over-sampling technique) [45] para sintetizar seus k vizinhos mais próximos a partir de outras amostras de teste com defeito no domínio do modelo. Assim, a interseção (isto é, características comuns) da amostra de teste que falhou no domínio do modelo e seus vizinhos mais próximos cobrem o conjunto mínimo suspeito. Para preservar as características comuns, o MSGen calcula a subtração (ou seja, a diferença) da amostra de teste com defeito no domínio do modelo de seu vetor mais próximo para gerar um novo vetor. Como o novo vetor cobre os recursos comuns, o MSGen considera o novo vetor como uma nova amostra de teste com defeito no domínio do modelo e adiciona a nova amostra com defeito ao modelo de informação original.
-- MSGen deve identificar a quantidade de amostras de teste com defeito no domínio do modelo sintetizadas a serem criadas. Muitos estudos descobriram que um conjunto de testes com classe balanceada é útil para localização de defeitos [12], [21], e algoritmos com dados balanceados geralmente devem superar aqueles com dados desequilibrados em desempenho [31], [32]. Portanto, o MSGen produz amostras de teste com defeito no domínio do modelo sintetizadas até obtermos um conjunto de testes balanceado, no qual o número de amostras de teste que passam no domínio do modelo e de amostras com defeito no domínio do modelo são iguais. Isso significa que os vetores com rótulo de defeito têm o mesmo número daqueles vetores com rótulo sem defeito.
+- MSGen deve identificar a quantidade de amostras de teste com defeito no domínio do modelo sintetizadas a serem criadas. Muitos estudos descobriram que um conjunto de testes com classe balanceada é útil para localização de defeitos [12], [21], e algoritmos com dados balanceados geralmente devem superar aqueles com dados desequilibrados em desempenho [31], [32]. Portanto, o MSGen produz amostras de teste com defeito no domínio do modelo sintetizadas até obtermos um conjunto de testes balanceado, no qual o número de amostras de teste que passam e de amostras com defeito no domínio do modelo são iguais.
 
 # Benchmark
 - Justificativa:
@@ -28,8 +27,7 @@
   - SIR (space e 4 versões do nanoxml) - http://sir.unl.edu/portal/index.php. 
 
 # Baseline
-- Portanto, os experimentos usam 12 abordagens de localização de defeitos do estado do arte para avaliar a eficácia em dois cenários: usando nossa abordagem MSGen e sem usá-la. Além disso, utilizamos 2 abordagens de otimização de dados representativas e eficazes (undersampling and resampling) [12], [21], [38] para melhorar a localização de defeitos, onde um [38] utiliza undersampling removendo as amostras da classe majoritária e o outro [12], [21] utiliza resampling replicando a classe minoritária. 
-- Para sete técnicas SBFL, foram implementadas com base no código-fonte SBFL amplamente utilizado, GZoltar; para cinco técnicas DLFL, essas foram implementadas com base no código-fonte dos estudos [11]–[15].
+- Os experimentos demonstrados utilizam doze abordagens de localização de defeitos do estado do arte para avaliar a eficácia em dois cenários: usando a abordagem MSGen e sem usá-la. Além disso, é utilizado duas abordagens de balanceamento de dados representativas e eficazes (undersampling and resampling) [12], [21], [38] para melhorar a localização de defeitos, onde um [38] utiliza undersampling removendo as amostras da classe majoritária e o outro [12], [21] utiliza resampling replicando a classe minoritária. 
 
 # Métricas de Avaliação:
 - Top-N [2]: Denota a porcentagem de defeitos localizados na posição N de uma lista classificada de todas as declarações em ordem decrescente de suspeita retornadas por uma abordagem de localização de defeitos.
@@ -38,13 +36,14 @@
 - Relative Improvement (RImp) [46]–[48]: É o número total de statements que precisam ser examinados para encontrar todos os defeitos.
 
 # Conclusão:
-- Neste artigo, propomos o MSGen que gera amostras de teste sintetizadas a partir do domínio do modelo, em vez de gerar testes reais a partir do domínio de entrada, para melhorar a localização de defeitos.
+- Neste artigo, é proposto o MSGen que gera amostras de teste sintetizadas a partir do domínio do modelo, em vez de gerar testes reais a partir do domínio de entrada, para melhorar a localização de defeitos.
 - MSGen identifica os vizinhos mais próximos das amostras de teste com defeito no domínio do modelo existente e calcula a diferença entre cada teste com defeito e seu vizinho mais próximo para gerar novas amostras de teste no domínio do modelo sintetizadas.
-- Os resultados experimentais em 12 localizações de defeitos e duas abordagens de otimização/balanceamento de dados mostram que o MSGen pode melhorar significativamente a eficácia da localização de falhas em até 51,22%.
+- Os resultados experimentais em doze técnicas de localização de defeitos e duas abordagens de balanceamento de dados mostram que o MSGen pode melhorar significativamente a eficácia da localização de defeitos em até 51,22%.
 - No futuro, planejamos estender nossa abordagem MSGen ao cenário de defeitos múltiplos. Também pode-se explorar mais o domínio do modelo para geração de testes sintetizados.
 
-# Proposta de Exploração:
-- ???
+# Propostas de Exploração:
+- A proposta de utilização da técnica MSGen que utiliza o SMOTE, se mostrou eficiente quanto ao procedimento de balanceamento dos dados. Sendo assim, proponho a implementação das variações existentes na biblioteca "imblearn.over_sampling" da técnica SMOTE (KMeansSMOTE, ADASYN, SVMSMOTE, BorderlineSMOTE e SMOTENC), como forma de tentar melhorar ainda mais o procedimento de balanceamento dos dados.
+- Ao avaliar os dados gerados pela técnica SMOTE, percebeu-se a geração de muitos dados repetidos, devido a pequena quantidade de dados da classe minoritária. Sendo assim, proponho a implementação de alguma técnica de clonagem dos dados da classe minoritária (A theoretical analysis on cloning the failed test cases to improve spectrum-based fault localization), para que o SMOTE e suas variações tenham um melhor funcionamento.
 
 # Referências
 - [2] C. Parnin and A. Orso, “Are automated debugging techniques actually helping programmers?” in International Symposium on Software Testing and Analysis(ISSTA 2011), 2011, pp. 199–209.
