@@ -1,5 +1,0 @@
-analysis/pipeline-scripts/buggy-lines/Chart-9.buggy.lines
-org/jfree/data/time/TimeSeries.java#944#        if (endIndex < 0) {
-
-analysis/pipeline-scripts/fixed-lines/Chart-9.fixed.lines
-org/jfree/data/time/TimeSeries.java#944#        if ((endIndex < 0)  || (endIndex < startIndex)) {

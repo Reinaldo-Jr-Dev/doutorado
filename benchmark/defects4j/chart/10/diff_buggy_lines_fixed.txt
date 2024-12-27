@@ -1,5 +1,0 @@
-analysis/pipeline-scripts/buggy-lines/Chart-10.buggy.lines
-org/jfree/chart/imagemap/StandardToolTipTagFragmentGenerator.java#65#        return " title=\"" + toolTipText
-
-analysis/pipeline-scripts/fixed-lines/Chart-10.fixed.lines
-org/jfree/chart/imagemap/StandardToolTipTagFragmentGenerator.java#65#        return " title=\"" + ImageMapUtilities.htmlEscape(toolTipText) 
