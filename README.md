@@ -10,7 +10,7 @@
 # Objetivo geral
 - Aplicar a técnica de balanceamento de dados SMOTE (Synthetic Minority Over-Sampling Technique) [45], como proposta para balanceamento do conjunto de dados, com o objetivo principal de melhorar os resultados das heurísticas de localização de defeitos (Tarantula e Ochiai).
 
-# Conceitos iniciais
+# Conceitos iniciais (Tópico ainda em construção)
 - Matriz de espectro, heurísticas de localzação de defeito, etc.
 
 # Técnica proposta
