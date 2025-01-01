@@ -27,26 +27,30 @@
 ![Captura de Tela 2025-01-01 às 18 41 59](https://github.com/user-attachments/assets/9ce6d70f-b436-4d6f-8234-2a4ceb837f92)
 
 # Baseline
-- Dados sem a aplicação do balanceamento e dados balanceados (SMOTE - Synthetic Minority Over-Sampling Technique) [45].
-
-# Experimento
-- Aplicação da técnica de balanceamento de dados para os projetos do benchmark Defects4J (Chart e mockito), aplicação das heurísticas Tarantula e Ochiai e avaliação do resultados, através das seguintes métricas: Top-N (Top-1, Top-5, Top-10 e Top-20), MFR e MAR.
-  
-![Captura de Tela 2025-01-01 às 18 43 54](https://github.com/user-attachments/assets/485c889a-492c-45f2-9edc-1ae4fd9a722a)
-  
-![Captura de Tela 2025-01-01 às 18 44 25](https://github.com/user-attachments/assets/a905fe58-f8a0-4d56-bc59-0c364b1de2ce)
+- Dados sem a aplicação do balanceamento de dados e dados balanceados (SMOTE - Synthetic Minority Over-Sampling Technique) [45].
 
 # Métricas de Avaliação
 - Top-N [2]: Denota a porcentagem de defeitos localizados na posição N de uma lista classificada de todas as declarações em ordem decrescente de suspeita retornadas por uma abordagem de localização de defeitos.
 - Mean Average Rank (MAR) [13]: É a média da classificação de todos os defeitos usando uma abordagem de localização de defeitos. Quanto menor for esse valor, melhor ranqueado estão sendo atribuídos a maioria dos defeitos;
 - Mean First Rank (MFR) [13]: É a média da classificação de todas os defeitos da primeira instrução defeituosa usando uma abordagem de localização de defeitos. Quanto menor for esse valor, melhor ranqueado estão sendo atribuídos a maioria dos defeitos;
 
-# Conclusão e Resultados Gerais
-- A aplicação da técnica de balanceamento de dados teve melhores resultados para a métrica de avaliação Top-N, para a heurística Tarantula.
+# Experimento
+- Aplicação da técnica de balanceamento de dados SMOTE para os projetos do benchmark Defects4J (Chart e mockito), aplicação das heurísticas Tarantula e Ochiai e avaliação do resultados, através das seguintes métricas: Top-N (Top-1, Top-5, Top-10 e Top-20), MFR e MAR.
+  
+![Captura de Tela 2025-01-01 às 18 43 54](https://github.com/user-attachments/assets/485c889a-492c-45f2-9edc-1ae4fd9a722a)
+  
+![Captura de Tela 2025-01-01 às 18 44 25](https://github.com/user-attachments/assets/a905fe58-f8a0-4d56-bc59-0c364b1de2ce)
+
+- Durante a aplicação desse experimento, algumas versões foram descartadas, pelo fato do defeito real não ter sido encontrado. Segue a lista das versões descartadas de cada programa.
+  - Chart (versões 13 e 23)
+  - Mockito (versões 7, 8, 15, 30 e 31)
+
+# Resultados Gerais
+- A aplicação da técnica de balanceamento de dados SMOTE obteve melhores resultados (métrica de avaliação Top-N), para a heurística Tarantula.
 
 # Propostas de Exploração
-- A proposta de utilização da técnica SMOTE, se mostrou eficiente quanto ao procedimento de balanceamento dos dados, para alguns cenários. Sendo assim, é proposto a implementação das diversas variações existentes da biblioteca "imblearn.over_sampling" da técnica SMOTE (KMeansSMOTE, ADASYN, SVMSMOTE, BorderlineSMOTE e SMOTENC), como forma de tentar melhorar ainda mais o procedimento de balanceamento dos dados.
-- Ao avaliar os dados gerados pela técnica SMOTE, percebeu-se a geração de muitos dados repetidos, para as amostras com pouca quantidade de dados da classe minoritária e isso não foi investigado pelo artigo em questão. O artigo apenas faz um destaque, relatando que o MSGen, considera apenas as amostras que possuem dois casos de teste com defeito no conjunto de testes original. Atualmente, ao considerar o benchmark Defects4J (projeto Char) em todas as suas 26 versões, 16 delas possuem apenas um caso de teste com defeito. Sendo assim, é proposto o uso de alguma técnica de clonagem dos dados da classe minoritária ([A theoretical analysis on cloning the failed test cases to improve spectrum-based fault localization](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/A%20Theoretical%20Analysis%20on%20Cloning%20the%20Failed%20Test%20Cases%20to%20Improve%20Spectrum-based%20Fault%20Localization.pdf)), para que o SMOTE e suas variações tenham um melhor funcionamento.
+- A proposta de utilização da técnica SMOTE, se mostrou eficiente quanto ao procedimento de balanceamento dos dados, para alguns cenários (heurística Tarantula). Sendo assim, é proposto a implementação das diversas variações existentes da biblioteca "imblearn.over_sampling" da técnica SMOTE (KMeansSMOTE, ADASYN, SVMSMOTE, BorderlineSMOTE e SMOTENC), como forma de tentar melhorar ainda mais o procedimento de balanceamento dos dados.
+- Ao avaliar os dados gerados pela técnica SMOTE, percebeu-se a geração de muitos dados repetidos, para as amostras com pouca quantidade de dados da classe minoritária e isso não foi investigado pelo artigo de referência em questão. Sendo assim, é proposto o uso de alguma técnica de clonagem dos dados da classe minoritária ([A theoretical analysis on cloning the failed test cases to improve spectrum-based fault localization](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/A%20Theoretical%20Analysis%20on%20Cloning%20the%20Failed%20Test%20Cases%20to%20Improve%20Spectrum-based%20Fault%20Localization.pdf)), para que o SMOTE e suas variações tenham um melhor funcionamento.
 
 # Referências
 - [2] C. Parnin and A. Orso, “Are automated debugging techniques actually helping programmers?” in International Symposium on Software Testing and Analysis(ISSTA 2011), 2011, pp. 199–209.
