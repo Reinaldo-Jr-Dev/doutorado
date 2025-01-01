@@ -5,7 +5,7 @@
 
 # Problema a ser Resolvido
 - Amostra de dados desbalanceada
-  - Um conjunto de testes é indispensável para conduzir uma localização eficaz de defeitos. Considerando o conjunto de testes em sua totalidade, existem duas classes de testes: testes aprovados e testes reprovados. No entanto, na prática, a quantidade de testes aprovados superam em muito a quantidade de testes reprovados, fazendo com que os testes reprovados sejam uma classe minoritária em contraste aos testes aprovados. Trabalhos anteriores mostraram empiricamente que a falta de testes com defeito, tendem a prejudicar a eficácia da localização de defeitos [??]. 
+  - Um conjunto de testes é indispensável para conduzir uma localização eficaz de defeitos. Considerando o conjunto de testes em sua totalidade, existem duas classes de testes: testes aprovados e testes reprovados. No entanto, na prática, a quantidade de testes aprovados superam em muito a quantidade de testes reprovados, fazendo com que os testes reprovados sejam uma classe minoritária em contraste aos testes aprovados. Trabalhos anteriores mostraram empiricamente que a falta de testes com defeito, tendem a prejudicar a eficácia da localização de defeitos [20] [21]. 
 
 # Objetivo geral
 - Aplicar a técnica de balanceamento de dados SMOTE (Synthetic Minority Over-Sampling Technique) [45], como proposta para balanceamento do conjunto de dados, com o objetivo principal de melhorar os resultados das heurísticas de localização de defeitos (Tarantula e Ochiai).
@@ -60,6 +60,7 @@
 - [14] J. Sohn and S. Yoo, “Fluccs: Using code and change metrics to improve fault localization,” in Proceedings of the 26th ACM SIGSOFT Interna- tional Symposium on Software Testing and Analysis (ISSTA 2017), 2017, pp. 273–283.
 - [15] Z. Zhang, Y. Lei, X. Mao, M. Yan, L. Xu, and X. Zhang, “A study of effectiveness of deep learning in locating real faults,” Information and Software Technology, vol. 131, p. 106486, 2021.
 - [12] Z. Zhang, Y. Lei, X. Mao, M. Yan, L. Xu, and J. Wen, “Improving deep- learning-based fault localization with resampling,” Journal of Software: Evolution and Process, vol. 33, no. 3, p. e2312, 2021.
+- [20] C. Gong, Z. Zheng, W. Li, and P. Hao, “Effects of class imbalance in test suites: An empirical study of spectrum-based fault localization,” in Proceedings of the 36th Annual Computer Software and Applications Conference Workshops, 2012, pp. 470–475.
 - [21] L. Zhang, L. Yan, Z. Zhang, J. Zhang, W. Chan, and Z. Zheng, “A theoretical analysis on cloning the failed test cases to improve spectrum- based fault localization,” Journal of Systems and Software, vol. 129, pp. 35–57, 2017.
 - [30] Y. Lei, C. Sun, X. Mao, and Z. Su, “How test suites impact fault localization starting from the size,” IET Software, vol. 12, no. 3, pp. 190–205, 2018.
 - [31] H. He and E. A. Garcia, “Learning from imbalanced data,” IEEE Transactions on Knowledge and Data Engineering(TKDE), no. 9, pp. 1263–1284, 2008.	
