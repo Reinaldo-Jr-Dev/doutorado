@@ -5,12 +5,13 @@
 
 # Problema a ser Resolvido
 - Amostra de dados desbalanceada
-  - Um conjunto de testes é indispensável para conduzir uma localização eficaz de defeitos. Considerando o conjunto de testes em sua totalidade, existem duas classes de testes: testes aprovados e testes reprovados. No entanto, na prática, a quantidade de testes aprovados superam em muito a quantidade de testes reprovados, fazendo com que os testes reprovados sejam uma classe minoritária em contraste aos testes aprovados. Trabalhos anteriores mostraram empiricamente que a falta de testes com defeito leva a um conjunto de testes com balanceamento de classe, o que tende a prejudicar a eficácia da localização de defeitos [??]. 
+  - Um conjunto de testes é indispensável para conduzir uma localização eficaz de defeitos. Considerando o conjunto de testes em sua totalidade, existem duas classes de testes: testes aprovados e testes reprovados. No entanto, na prática, a quantidade de testes aprovados superam em muito a quantidade de testes reprovados, fazendo com que os testes reprovados sejam uma classe minoritária em contraste aos testes aprovados. Trabalhos anteriores mostraram empiricamente que a falta de testes com defeito, tendem a prejudicar a eficácia da localização de defeitos [??]. 
 
 # Objetivo geral
-- Aplicar a técnica de balanceamento de dados SMOTE (Synthetic Minority Over-Sampling Technique) [45], como proposta para balenceamento do conjunto de dados, com o objetivo principal de melhorar os resultados das heurísticas de localização de defeitos.
+- Aplicar a técnica de balanceamento de dados SMOTE (Synthetic Minority Over-Sampling Technique) [45], como proposta para balanceamento do conjunto de dados, com o objetivo principal de melhorar os resultados das heurísticas de localização de defeitos.
 
 # Conceitos iniciais
+- Matriz de espectro, heurísticas de localzação de defeito, etc.
 
 # Técnica proposta
 - A técnica SMOTE (synthetic minority over-sampling technique) [45] criar novos dados (testes/linhas da matriz de espectro) através da busca de vizinhos mais próximos a partir de outras amostras de teste com defeito no domínio do modelo.
@@ -24,7 +25,7 @@
   - Defects4J (chart, math, lang, closure, mockito, and time) - http://defects4j.org; 
 
 # Baseline
-- ???
+- Dados sem a aplicação do balanceamento e dados balanceados (SMOTE - Synthetic Minority Over-Sampling Technique).
 
 # Métricas de Avaliação
 - Top-N [2]: Denota a porcentagem de defeitos localizados na posição N de uma lista classificada de todas as declarações em ordem decrescente de suspeita retornadas por uma abordagem de localização de defeitos.
@@ -33,13 +34,10 @@
 - Relative Improvement (RImp) [46]–[48]: É o número total de statements que precisam ser examinados para encontrar todos os defeitos.
 
 # Conclusão e Resultados Gerais
-- Neste artigo, é proposto o MSGen que gera amostras de teste sintetizadas a partir do domínio do modelo, em vez de gerar testes reais a partir do domínio de entrada, para melhorar a localização de defeitos.
-- MSGen identifica os vizinhos mais próximos das amostras de teste com defeito no domínio do modelo existente e calcula a diferença entre cada teste com defeito e seu vizinho mais próximo para gerar novas amostras de teste no domínio do modelo sintetizadas.
-- Os resultados experimentais em doze técnicas de localização de defeitos e duas abordagens de balanceamento de dados mostram que o MSGen pode melhorar significativamente a eficácia da localização de defeitos em até 51,22%.
-- No futuro, planejamos estender nossa abordagem MSGen ao cenário de defeitos múltiplos. Também pode-se explorar mais o domínio do modelo para geração de testes sintetizados.
+- A aplicação da técnica de balanceamento de dados teve melhores resultados para a métrica de avaliação Top-N, para a heurística Tarantula.
 
 # Propostas de Exploração
-- A proposta de utilização da técnica MSGen que utiliza o SMOTE, se mostrou eficiente quanto ao procedimento de balanceamento dos dados. Sendo assim, é proposto a implementação das diversas variações existentes da biblioteca "imblearn.over_sampling" da técnica SMOTE (KMeansSMOTE, ADASYN, SVMSMOTE, BorderlineSMOTE e SMOTENC), como forma de tentar melhorar ainda mais o procedimento de balanceamento dos dados.
+- A proposta de utilização da técnica SMOTE, se mostrou eficiente quanto ao procedimento de balanceamento dos dados, para alguns cenários. Sendo assim, é proposto a implementação das diversas variações existentes da biblioteca "imblearn.over_sampling" da técnica SMOTE (KMeansSMOTE, ADASYN, SVMSMOTE, BorderlineSMOTE e SMOTENC), como forma de tentar melhorar ainda mais o procedimento de balanceamento dos dados.
 - Ao avaliar os dados gerados pela técnica SMOTE, percebeu-se a geração de muitos dados repetidos, para as amostras com pouca quantidade de dados da classe minoritária e isso não foi investigado pelo artigo em questão. O artigo apenas faz um destaque, relatando que o MSGen, considera apenas as amostras que possuem dois casos de teste com defeito no conjunto de testes original. Atualmente, ao considerar o benchmark Defects4J (projeto Char) em todas as suas 26 versões, 16 delas possuem apenas um caso de teste com defeito. Sendo assim, é proposto o uso de alguma técnica de clonagem dos dados da classe minoritária ([A theoretical analysis on cloning the failed test cases to improve spectrum-based fault localization](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/A%20Theoretical%20Analysis%20on%20Cloning%20the%20Failed%20Test%20Cases%20to%20Improve%20Spectrum-based%20Fault%20Localization.pdf)), para que o SMOTE e suas variações tenham um melhor funcionamento.
 
 # Referências
