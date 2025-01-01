@@ -18,20 +18,28 @@
 
 # Benchmark
 - Justificativa:
-  - São programas amplamente utilizados na localização de defeitos;
-  - São programas com mais de 5 KLOCs;
+  - São programas amplamente utilizados na localização de defeitos.
+  - São programas com mais de 5 KLOCs.
   - São fáceis de serem adquiridos por permitirem estudos comparáveis ​​e reprodutíveis.
 - Projetos
-  - Defects4J (chart, math, lang, closure, mockito, and time) - http://defects4j.org; 
+  - Defects4J (chart, math, lang, closure, mockito, and time) - http://defects4j.org.
+    
+![Captura de Tela 2025-01-01 às 18 41 59](https://github.com/user-attachments/assets/9ce6d70f-b436-4d6f-8234-2a4ceb837f92)
 
 # Baseline
-- Dados sem a aplicação do balanceamento e dados balanceados (SMOTE - Synthetic Minority Over-Sampling Technique).
+- Dados sem a aplicação do balanceamento e dados balanceados (SMOTE - Synthetic Minority Over-Sampling Technique) [45].
+
+# Experimento
+- Aplicação da técnica de balanceamento de dados para os projetos do benchmark Defects4J (Chart e mockito), aplicação das heurísticas Tarantula e Ochiai e avaliação do resultados, através das seguintes métricas: Top-N (Top-1, Top-5, Top-10 e Top-20), MFR e MAR.
+  
+![Captura de Tela 2025-01-01 às 18 43 54](https://github.com/user-attachments/assets/485c889a-492c-45f2-9edc-1ae4fd9a722a)
+  
+![Captura de Tela 2025-01-01 às 18 44 25](https://github.com/user-attachments/assets/a905fe58-f8a0-4d56-bc59-0c364b1de2ce)
 
 # Métricas de Avaliação
 - Top-N [2]: Denota a porcentagem de defeitos localizados na posição N de uma lista classificada de todas as declarações em ordem decrescente de suspeita retornadas por uma abordagem de localização de defeitos.
 - Mean Average Rank (MAR) [13]: É a média da classificação de todos os defeitos usando uma abordagem de localização de defeitos. Quanto menor for esse valor, melhor ranqueado estão sendo atribuídos a maioria dos defeitos;
 - Mean First Rank (MFR) [13]: É a média da classificação de todas os defeitos da primeira instrução defeituosa usando uma abordagem de localização de defeitos. Quanto menor for esse valor, melhor ranqueado estão sendo atribuídos a maioria dos defeitos;
-- Relative Improvement (RImp) [46]–[48]: É o número total de statements que precisam ser examinados para encontrar todos os defeitos.
 
 # Conclusão e Resultados Gerais
 - A aplicação da técnica de balanceamento de dados teve melhores resultados para a métrica de avaliação Top-N, para a heurística Tarantula.
