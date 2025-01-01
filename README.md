@@ -14,7 +14,7 @@
 - Matriz de espectro, heurísticas de localzação de defeito, etc.
 
 # Técnica proposta
-- A técnica SMOTE (synthetic minority over-sampling technique) [45] criar novos dados (testes/linhas da matriz de espectro) através da busca de vizinhos mais próximos a partir de outras amostras de teste com defeito no domínio do modelo.
+- A técnica SMOTE (synthetic minority over-sampling technique) [45] possui como objetivo principal, criar novos dados (testes/linhas da matriz de espectro), a partir da classe de dados minoritária, através da busca de vizinhos mais próximos.
 
 # Benchmark
 - Justificativa:
