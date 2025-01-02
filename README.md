@@ -47,7 +47,7 @@
   
 ![Captura de Tela 2025-01-01 às 18 44 25](https://github.com/user-attachments/assets/a905fe58-f8a0-4d56-bc59-0c364b1de2ce)
 
-- Durante a aplicação desse experimento, algumas versões foram descartadas, pelo fato do defeito presente no arquivo <Program>-<Version>.buggy.lines não ter sido encontrado no arquivo spectra.txt. Segue a lista das versões descartadas de cada programa.
+- Durante a aplicação desse experimento, algumas versões foram descartadas, pelo fato do defeito presente no arquivo Program-Version.buggy.lines não ter sido encontrado no arquivo spectra.txt. Segue a lista das versões descartadas de cada programa.
   - Chart (versões 13 e 23)
   - Mockito (versões 7, 8, 15, 30 e 31)
 
