@@ -28,9 +28,10 @@
   - São programas com mais de 5 KLOCs.
   - São fáceis de serem adquiridos por permitirem estudos comparáveis ​​e reprodutíveis.
 - Projetos
-  - Defects4J (chart, math, lang, closure, mockito, and time) - http://defects4j.org.
+  - Defects4J (chart, math, lang, closure, mockito e time) - http://defects4j.org.
     
-![Captura de Tela 2025-01-01 às 18 41 59](https://github.com/user-attachments/assets/9ce6d70f-b436-4d6f-8234-2a4ceb837f92)
+![Captura de Tela 2025-01-27 às 20 30 22](https://github.com/user-attachments/assets/2df4cf39-09b3-4f6c-b18d-5a638adb43e2)
+
 
 # Baseline
 - Dados sem a aplicação do balanceamento de dados e dados balanceados (SMOTE - Synthetic Minority Over-Sampling Technique) [45].
@@ -39,20 +40,33 @@
 - Top-N [4]: Denota a porcentagem de defeitos localizados na posição N de uma lista classificada de todas as declarações em ordem decrescente de suspeita retornadas por uma abordagem de localização de defeitos.
 - Mean Average Rank (MAR) [5]: É a média da classificação de todos os defeitos usando uma abordagem de localização de defeitos. Quanto menor for esse valor, melhor ranqueado estão sendo atribuídos a maioria dos defeitos;
 - Mean First Rank (MFR) [5]: É a média da classificação de todas os defeitos da primeira instrução defeituosa usando uma abordagem de localização de defeitos. Quanto menor for esse valor, melhor ranqueado estão sendo atribuídos a maioria dos defeitos;
+- RIMP (???)
 
 # Experimento
-- Aplicação da técnica de balanceamento de dados SMOTE para os projetos do benchmark Defects4J (Chart e mockito), aplicação das heurísticas Tarantula e Ochiai e avaliação do resultados, através das seguintes métricas: Top-N (Top-1, Top-5, Top-10 e Top-20), MFR e MAR.
+- Aplicação da técnica de balanceamento de dados SMOTE para os projetos do benchmark Defects4J (chart, math, lang, closure, mockito e time), aplicação das heurísticas Tarantula e Ochiai e avaliação do resultados, através das seguintes métricas: Top-N (Top-1, Top-5, Top-10 e Top-20), MFR, MAR e RIMP.
+- URLs de extração dos dados do experimento
+  - Arquivo da matriz de espectro (matrix) e arquivo contendo a descrição dos statements/colunas da matriz (spectra): https://fault-localization.cs.washington.edu/
+  - Arquivo contendo o statement com o defeito (Exemplo de nome do arquivo: Chart-1.buggy.lines): https://bitbucket.org/rjust/fault-localization-data/src/master/analysis/pipeline-scripts/buggy-lines/
+- Pontos de destaque dos experimentos
+  - Para a aplicação da técnica SMOTE, foi utilizado o algoritmo SMOTE do pacote "imblearn.over_sampling" do Python.
+  - O programa implementado ficou extremamente lento no momento da aplicação do SMOTE em matrizes maiores do projeto Closure (o projeto todo possui 2199420 colunas), o que inviabilizou a execução do mesmo para esse projeto específico.
+  - Em todos os projetos do benchmark utilizado (Time, Chart, Lang, Math, Mockito e Closure), houveram casos em que o defeito apontado no arquivo <Projeto>-<Versão>.buggy.lines não foi encontrado no arquivo spectra.txt. Esses projetos foram desconsiderados para efeito de cálculo das métricas. Veja maiores detalhes na tabela a seguir.
   
-![Captura de Tela 2025-01-01 às 18 43 54](https://github.com/user-attachments/assets/485c889a-492c-45f2-9edc-1ae4fd9a722a)
-  
-![Captura de Tela 2025-01-01 às 18 44 25](https://github.com/user-attachments/assets/a905fe58-f8a0-4d56-bc59-0c364b1de2ce)
-
-- Durante a aplicação desse experimento, algumas versões foram descartadas, pelo fato do defeito presente no arquivo Program-Version.buggy.lines não ter sido encontrado no arquivo spectra.txt. Segue a lista das versões descartadas de cada programa.
-  - Chart (versões 13 e 23)
-  - Mockito (versões 7, 8, 15, 30 e 31)
+![Captura de Tela 2025-01-27 às 20 36 17](https://github.com/user-attachments/assets/8bb4244c-5d7a-4a78-952c-bde7fcb6eac9)
 
 # Resultados Gerais
 - A aplicação da técnica de balanceamento de dados SMOTE obteve melhores resultados (métrica de avaliação Top-N), para a heurística Tarantula.
+![Captura de Tela 2025-01-27 às 20 32 28](https://github.com/user-attachments/assets/467c4514-5797-4a08-9b04-fe4fec31c6fd)
+
+- Pontos a serem destacados:
+  - ??
+  - ??
+ 
+![Captura de Tela 2025-01-27 às 20 33 43](https://github.com/user-attachments/assets/c88cfdf4-b198-4b59-b594-ecae709c2d93)
+
+- Pontos a serem destacados:
+  - ??
+  - ??
 
 # Propostas de Exploração
 - A proposta de utilização da técnica SMOTE, se mostrou eficiente quanto ao procedimento de balanceamento dos dados, para alguns cenários (heurística Tarantula). Sendo assim, é proposto a implementação das diversas variações existentes da biblioteca "imblearn.over_sampling" da técnica SMOTE (KMeansSMOTE, ADASYN, SVMSMOTE, BorderlineSMOTE e SMOTENC), como forma de tentar melhorar ainda mais o procedimento de balanceamento dos dados.
