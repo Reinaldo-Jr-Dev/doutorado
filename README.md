@@ -32,15 +32,18 @@
     
 ![Captura de Tela 2025-01-27 às 20 30 22](https://github.com/user-attachments/assets/2df4cf39-09b3-4f6c-b18d-5a638adb43e2)
 
+- Ponto a ser destacado:
+  - A quantidade de casos de testes negativos é muito pequena (média de 0,93% de casos de teste negativos, levando em consideração todos os projetos).
 
 # Baseline
 - Dados sem a aplicação do balanceamento de dados e dados balanceados (SMOTE - Synthetic Minority Over-Sampling Technique) [45].
 
 # Métricas de Avaliação
-- Top-N [4]: Denota a porcentagem de defeitos localizados na posição N de uma lista classificada de todas as declarações em ordem decrescente de suspeita retornadas por uma abordagem de localização de defeitos.
-- Mean Average Rank (MAR) [5]: É a média da classificação de todos os defeitos usando uma abordagem de localização de defeitos. Quanto menor for esse valor, melhor ranqueado estão sendo atribuídos a maioria dos defeitos;
-- Mean First Rank (MFR) [5]: É a média da classificação de todas os defeitos da primeira instrução defeituosa usando uma abordagem de localização de defeitos. Quanto menor for esse valor, melhor ranqueado estão sendo atribuídos a maioria dos defeitos;
-- RIMP (???)
+- Foram considerados todas as métricas descritas no artigo de referência dessa pesquisa.
+  - Top-N [4]: Denota a porcentagem de defeitos localizados na posição N de uma lista classificada de todas as declarações em ordem decrescente de suspeita retornadas por uma abordagem de localização de defeitos.
+  - Mean Average Rank (MAR) [5]: É a média da classificação de todos os defeitos usando uma abordagem de localização de defeitos. Quanto menor for esse valor, melhor ranqueado estão sendo atribuídos a maioria dos defeitos;
+  - Mean First Rank (MFR) [5]: É a média da classificação de todas os defeitos da primeira instrução defeituosa usando uma abordagem de localização de defeitos. Quanto menor for esse valor, melhor ranqueado estão sendo atribuídos a maioria dos defeitos;
+  - RIMP (???)
 
 # Experimento
 - Aplicação da técnica de balanceamento de dados SMOTE para os projetos do benchmark Defects4J (chart, math, lang, closure, mockito e time), aplicação das heurísticas Tarantula e Ochiai e avaliação do resultados, através das seguintes métricas: Top-N (Top-1, Top-5, Top-10 e Top-20), MFR, MAR e RIMP.
@@ -56,13 +59,15 @@
 
 # Resultados Gerais
 - A aplicação da técnica de balanceamento de dados SMOTE obteve melhores resultados (métrica de avaliação Top-N), para a heurística Tarantula.
+  
 ![Captura de Tela 2025-01-27 às 20 32 28](https://github.com/user-attachments/assets/467c4514-5797-4a08-9b04-fe4fec31c6fd)
 
 - Pontos a serem destacados:
-  - ??
-  - ??
+  - Tarantula (Smote), obteve melhores resultados em Top-1, Top-5, MFR e MAR.
+  - Ochiai (Smote), obteve melhores resultados somente para MFR e MAR.
  
 ![Captura de Tela 2025-01-27 às 20 33 43](https://github.com/user-attachments/assets/c88cfdf4-b198-4b59-b594-ecae709c2d93)
+![Captura de Tela 2025-01-27 às 21 20 53](https://github.com/user-attachments/assets/00355814-d26d-42aa-b1cf-0847f1d24940)
 
 - Pontos a serem destacados:
   - ??
