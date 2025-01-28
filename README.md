@@ -43,7 +43,7 @@
   - Top-N [4]: Denota a porcentagem de defeitos localizados na posição N de uma lista classificada de todas as declarações em ordem decrescente de suspeita retornadas por uma abordagem de localização de defeitos.
   - Mean Average Rank (MAR) [5]: É a média da classificação de todos os defeitos usando uma abordagem de localização de defeitos. Quanto menor for esse valor, melhor ranqueado estão sendo atribuídos a maioria dos defeitos;
   - Mean First Rank (MFR) [5]: É a média da classificação de todas os defeitos da primeira instrução defeituosa usando uma abordagem de localização de defeitos. Quanto menor for esse valor, melhor ranqueado estão sendo atribuídos a maioria dos defeitos;
-  - RIMP (???)
+  - RIMP [6] - [8]: Percentual de instruções que precisam ser examinadas para encontrar todos os defeitos usando alguma heurística de localização de defeito.
 
 # Experimento
 - Aplicação da técnica de balanceamento de dados SMOTE para os projetos do benchmark Defects4J (chart, math, lang, closure, mockito e time), aplicação das heurísticas Tarantula e Ochiai e avaliação do resultados, através das seguintes métricas: Top-N (Top-1, Top-5, Top-10 e Top-20), MFR, MAR e RIMP.
@@ -88,6 +88,9 @@ Comparação das heurísticas Tarantula e Ochiai com e sem a aplicação da téc
 - [3] N.V.Chawla,K.W.Bowyer,L.O.Hall,andW.P.Kegelmeyer,“Smote: Synthetic minority over-sampling technique,” 2011.
 - [4] C. Parnin and A. Orso, “Are automated debugging techniques actually helping programmers?” in International Symposium on Software Testing and Analysis(ISSTA 2011), 2011, pp. 199–209.
 - [5] X. Li, W. Li, Y. Zhang, and L. Zhang, “DeepFL: Integrating multiple fault diagnosis dimensions for deep fault localization,” in Proceedings of the 28th ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA 2019), 2019, pp. 169–180.
+- [6] V. Debroy, W. E. Wong, X. Xu, and B. Choi, “A grouping-based strategy to improve the effectiveness of fault localization techniques,” in International Conference on Quality Software(QSIC 2010), 2010, pp. 13–22.
+- [7] L.C.Briand,Y.Labiche,andX.Liu,“Using machine learning to support debugging with tarantula,” in The IEEE International Symposium on Software Reliability (ISSRE 2007), 2007, pp. 137–146.
+- [8] Y. Lei, X. Mao, Z. Dai, and C. Wang, “Effective statistical fault local- ization using program slices,” in Computer Software and Applications Conference (COMPSAC 2012), 2012, pp. 1–10.
 
 # Autores da Pesquisa
 - Reinaldo de Souza Júnior: reinaldo.junior@discente.ufg.br
