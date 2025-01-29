@@ -33,7 +33,7 @@
   - Destaca-se a quantidade de casos de testes negativos, que é pequena (média de 0,93% de casos de teste negativos, levando em consideração todos os projetos com todos os seus casos de teste).
 
 # Baseline
-- Dados (matriz de espectro) com e sem a aplicação do balanceamento de dados pela técnica SMOTE (Synthetic Minority Over-Sampling Technique) [45].
+- Dados (matriz de espectro) com e sem a aplicação do balanceamento de dados pela técnica SMOTE (Synthetic Minority Over-Sampling Technique) [45]. Aplicação de 2 heuristicas de localização de defeitos (Tarantula e Ochiai).
 
 # Métricas de Avaliação
 - Foram considerados todas as métricas descritas no artigo de referência dessa pesquisa.
