@@ -17,7 +17,7 @@ Segundo [10], as heurísticas de localização de defeitos baseadas em espectro 
   - ef: Numero de casos de teste negativos que executam o elemento observado.
   - nf: Numero de casos de teste negativos que não executam o elemento observado.
 
-Os resultados obtidos por esta heurística podem ser utilizados como um “guia” para a localização de defeitos. Assim, diversas outras heurísticas passaram a ser apresentadas objetivando uma melhor precisão. Segue exemplos de heurísticas para a localização de defeitos.
+Os resultados obtidos por essas heurísticas podem ser utilizados como um “guia” para a localização de defeitos. Assim, diversas outras heurísticas passaram a ser apresentadas objetivando uma melhor precisão. Segue exemplos de heurísticas para a localização de defeitos.
 
 ![Captura de Tela 2025-01-29 às 15 55 35](https://github.com/user-attachments/assets/45b8f281-06f8-456b-9533-84a174af5598)
 
