@@ -84,10 +84,11 @@ Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a apl
 - Ao avaliar os dados gerados pela técnica SMOTE, percebeu-se a geração de muitos dados repetidos, para as amostras com pouca quantidade de dados da classe minoritária e isso não foi investigado pelo artigo de referência em questão. Sendo assim, é proposto o uso de alguma técnica de clonagem dos dados da classe minoritária ([A theoretical analysis on cloning the failed test cases to improve spectrum-based fault localization](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/A%20Theoretical%20Analysis%20on%20Cloning%20the%20Failed%20Test%20Cases%20to%20Improve%20Spectrum-based%20Fault%20Localization.pdf)), para que ao aplicar a técnica SMOTE e suas variações, seja gerado novas amostras com menos repetição.
 
 # Comparação com o artigo de referência
-- Foi realizado a comparação entre o artigo de referência com esse estudo em questão. Para essa comparação, foi levado em conta os seguintes itens: Benckmark, Baseline, Métricas e Resultados Gerais. Para maiores detalhes, segue a tabela comparativa.
+- Foi realizado a comparação entre o artigo de referência com essa pesquisa. Para essa comparação, foi levado em conta os seguintes itens: Benckmark, Baseline, Métricas e Resultados Gerais. Para maiores detalhes, segue a tabela comparativa.
 
 ![Captura de Tela 2025-01-28 às 22 30 27](https://github.com/user-attachments/assets/b6cb739a-287e-4b44-841b-135dfc84844c)
 
+- De forma geral, a aplicação da técnica de balanceamento de dados SMOTE na matriz de espectro, melhorou a eficiência das heurísticas utilizadas em ambos os experimentos.
 
 # Referências
 - [1] C. Gong, Z. Zheng, W. Li, and P. Hao, “Effects of class imbalance in test suites: An empirical study of spectrum-based fault localization,” in Proceedings of the 36th Annual Computer Software and Applications Conference Workshops, 2012, pp. 470–475.
