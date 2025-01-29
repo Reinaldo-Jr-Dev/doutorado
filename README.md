@@ -4,13 +4,25 @@
 [Improving Fault Localization Using Model-domain Synthesized Failing Test Generation](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/IEEE-Improving_Fault_Localization_Using_Model-domain_Synthesized_Failing_Test_Generation.pdf)
 
 # Conceitos iniciais (TÓPICO EM ANDAMENTO ...)
-- Testes
-- Heurísticas de localização de defeitos
-- Matriz de espectro
-- Balanceamento de dados
+Teste de Software consiste na verificação dinâmica de que um programa fornece comportamentos esperados em um conjunto finito de casos de teste, adequadamente selecionados no domínio de execução geralmente infinito [11]. Para isso, o software é executado com entradas predefinidas, verificando se a saída obtida esta de acordo com o a saída esperada. Se essa confirmação não acontece, pode-se afirmar que uma falha foi identificada. Sendo assim, o teste é  uma ferramenta para alcançar maior confiança no funcionamento do software. Além de servirem para indicar a presença de um defeito, as informações de execução do teste também podem servir como apoio para a localização e a correção do defeito encontrado [12].
 
-# Problemática da pesquisa
-- Amostra de dados desbalanceada
+O espectro de fluxo de controle é definido como uma matriz M × N, obtida a partir de M execuções que podem cobrir N elementos de programa: a informação de sucesso ou falha da execução pode ser representada como uma coluna a parte da matriz. A partir dos dados desta matriz de cobertura, e possível medir a propensão a defeito (ou suspeita) S para qualquer elemento N [9], como pode ser visto na figura a seguir.
+
+![Captura de Tela 2025-01-29 às 15 32 36](https://github.com/user-attachments/assets/b17f7428-9cbb-41e0-a23d-ee4c5051825b)
+
+Segundo [10], as heurísticas de localização de defeitos baseadas em espectro de fluxo de controle (SBFL), sao equações que utilizam os valores de variaveis obtidas da matriz de fluxo de controle para atribuir aos elementos de programa um valor de propensão a ser o elemento defeituoso. Utilizaremos a seguinte notação para indicar estas variáveis, que podem ser obtidas para cada elemento de programa N:
+
+  - es: Numero de casos de teste positivos que executam o elemento observado.
+  - ns: Numero de casos de teste positivos que não executam o elemento observado.
+  - ef: Numero de casos de teste negativos que executam o elemento observado.
+  - nf: Numero de casos de teste negativos que não executam o elemento observado.
+
+Os resultados obtidos por esta heurística podem ser utilizados como um “guia” para a localização de defeitos. Assim, diversas outras heurísticas passaram a ser apresentadas objetivando uma melhor precisão. Segue exemplos de heurísticas para a localização de defeitos.
+
+![Captura de Tela 2025-01-29 às 15 55 35](https://github.com/user-attachments/assets/45b8f281-06f8-456b-9533-84a174af5598)
+
+# Motivação
+ - As técnicas de localização de defeitos baseada em espectro (SBFL - Spectrum-based Fault Localization) compõem uma das principais vertentes de pesquisa quanto à automatização do processo de localização de defeitos de software. Como parte essencial do processo de teste de software, a qualidade dos dados de teste afeta diretamente a eficacia das técnicas de localização de defeitos de software. Dessa forma, existem algums estudos direcionados a melhorar a qualidade dos dados de teste.
   - Um conjunto de testes é indispensável para conduzir uma localização eficaz de defeitos. Considerando o conjunto de testes em sua totalidade, existem duas classes de testes: testes aprovados e testes reprovados. No entanto, na prática, a quantidade de testes aprovados superam em muito a quantidade de testes reprovados, fazendo com que os testes reprovados sejam uma classe minoritária em contraste aos testes aprovados. Trabalhos anteriores mostraram empiricamente que a falta de testes com defeito, tendem a prejudicar a eficácia da localização de defeitos [1] [2]. 
 
 # Objetivo geral
@@ -99,6 +111,11 @@ Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a apl
 - [6] V. Debroy, W. E. Wong, X. Xu, and B. Choi, “A grouping-based strategy to improve the effectiveness of fault localization techniques,” in International Conference on Quality Software(QSIC 2010), 2010, pp. 13–22.
 - [7] L.C.Briand,Y.Labiche,andX.Liu,“Using machine learning to support debugging with tarantula,” in The IEEE International Symposium on Software Reliability (ISSRE 2007), 2007, pp. 137–146.
 - [8] Y. Lei, X. Mao, Z. Dai, and C. Wang, “Effective statistical fault local- ization using program slices,” in Computer Software and Applications Conference (COMPSAC 2012), 2012, pp. 1–10.
+- [9] Abreu, R., Zoeteweij, P., Golsteijn, R., Gemund, V., and C, A. J. (2009). A practical evaluation of spectrum-based fault localization. J. Syst. Software - Pages 1780–1792.
+- [10] Silva-Junior, D. and Leitao-Junior, P. S. (2020). Localização de defeitos evolucionária baseada em fluxo de dados. UFG - Dissertação de Mestrado.
+- [11] Society, I. C., Bourque, P., and Fairley, R. E. (2014). Guide to the software engineering body of knowledge swebok version 3.0. IEEE Computer Society Press.
+- [12] Delamaro, M. E., Maldonado, J. C., and Jino, M. (2007). Introduc¸ao ao teste de software. Elsevier Editora Ltda.
+
 
 # Autores da Pesquisa
 - Reinaldo de Souza Júnior: reinaldo.junior@discente.ufg.br
