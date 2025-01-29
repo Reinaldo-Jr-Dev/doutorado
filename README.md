@@ -3,7 +3,7 @@
 # Artigo de Referência
 [Improving Fault Localization Using Model-domain Synthesized Failing Test Generation](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/IEEE-Improving_Fault_Localization_Using_Model-domain_Synthesized_Failing_Test_Generation.pdf)
 
-# Conceitos iniciais (TÓPICO EM ANDAMENTO ...)
+# Conceitos iniciais
 Teste de Software consiste na verificação dinâmica de que um programa fornece comportamentos esperados em um conjunto finito de casos de teste, adequadamente selecionados no domínio de execução geralmente infinito [11]. Para isso, o software é executado com entradas predefinidas, verificando se a saída obtida esta de acordo com o a saída esperada. Se essa confirmação não acontece, pode-se afirmar que uma falha foi identificada. Sendo assim, o teste é  uma ferramenta para alcançar maior confiança no funcionamento do software. Além de servirem para indicar a presença de um defeito, as informações de execução do teste também podem servir como apoio para a localização e a correção do defeito encontrado [12].
 
 O espectro de fluxo de controle é definido como uma matriz M × N, obtida a partir de M execuções que podem cobrir N elementos de programa: a informação de sucesso ou falha da execução pode ser representada como uma coluna a parte da matriz. A partir dos dados desta matriz de cobertura, e possível medir a propensão a defeito (ou suspeita) S para qualquer elemento N [9], como pode ser visto na figura a seguir.
