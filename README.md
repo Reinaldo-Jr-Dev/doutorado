@@ -68,7 +68,8 @@ Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a apl
 # Análise II
 Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a aplicação da técnica de balanceamento de dados (Smote), considerando a análise de cada projeto do benchmark Defects4J (chart, math, lang, closure, mockito e time). As cores das células da tabela apresentada a baixo se refere a comparação entre os resultados da heurística sem e com a aplicação da técnica de balanceamento de dados.
 
-![Captura de Tela 2025-01-27 às 20 33 43](https://github.com/user-attachments/assets/c88cfdf4-b198-4b59-b594-ecae709c2d93)
+![Captura de Tela 2025-01-28 às 22 35 38](https://github.com/user-attachments/assets/0a106239-3532-4cb5-a3c2-0dda5a0e2280)
+
 ![Captura de Tela 2025-01-27 às 21 20 53](https://github.com/user-attachments/assets/00355814-d26d-42aa-b1cf-0847f1d24940)
 
 - Pontos a serem destacados para cada métrica:
@@ -83,7 +84,7 @@ Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a apl
 - Ao avaliar os dados gerados pela técnica SMOTE, percebeu-se a geração de muitos dados repetidos, para as amostras com pouca quantidade de dados da classe minoritária e isso não foi investigado pelo artigo de referência em questão. Sendo assim, é proposto o uso de alguma técnica de clonagem dos dados da classe minoritária ([A theoretical analysis on cloning the failed test cases to improve spectrum-based fault localization](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/A%20Theoretical%20Analysis%20on%20Cloning%20the%20Failed%20Test%20Cases%20to%20Improve%20Spectrum-based%20Fault%20Localization.pdf)), para que ao aplicar a técnica SMOTE e suas variações, seja gerado novas amostras com menos repetição.
 
 # Comparação com o artigo de referência
-- Foi realizado a comparação entre o artigo de referência com esse estudo em questão. Para essa comparação foi levado em conta os seguintes itens: Benckmark,  Baseline, Métricas e Resultados Gerais.
+- Foi realizado a comparação entre o artigo de referência com esse estudo em questão. Para essa comparação, foi levado em conta os seguintes itens: Benckmark, Baseline, Métricas e Resultados Gerais. Para maiores detalhes, segue a tabela comparativa.
 
 ![Captura de Tela 2025-01-28 às 22 30 27](https://github.com/user-attachments/assets/b6cb739a-287e-4b44-841b-135dfc84844c)
 
