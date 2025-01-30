@@ -99,7 +99,7 @@ Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a apl
 # Comparação com o artigo de referência
 - Foi realizado a comparação entre o artigo de referência com essa pesquisa. Para essa comparação, foi levado em conta os seguintes itens: Benckmark, Baseline, Métricas e Resultados Gerais. Para maiores detalhes, segue a tabela comparativa.
 
-![Captura de Tela 2025-01-28 às 22 30 27](https://github.com/user-attachments/assets/b6cb739a-287e-4b44-841b-135dfc84844c)
+![Captura de Tela 2025-01-30 às 14 43 42](https://github.com/user-attachments/assets/8b919dcf-33ea-4b27-b6a7-ac83704930fe)
 
 - De forma geral, a aplicação da técnica de balanceamento de dados SMOTE na matriz de espectro, melhorou a eficiência das heurísticas utilizadas em ambos os experimentos.
 
