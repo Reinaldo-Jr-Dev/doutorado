@@ -22,14 +22,15 @@ Os resultados obtidos por essas heurísticas podem ser utilizados como um “gui
 ![Captura de Tela 2025-01-29 às 15 55 35](https://github.com/user-attachments/assets/45b8f281-06f8-456b-9533-84a174af5598)
 
 # Motivação
- - As técnicas de localização de defeitos baseada em espectro (SBFL - Spectrum-based Fault Localization) compõem uma das principais vertentes de pesquisa quanto à automatização do processo de localização de defeitos de software. Como parte essencial do processo de teste de software, a qualidade dos dados de teste afeta diretamente a eficacia das técnicas de localização de defeitos de software. Dessa forma, existem algums estudos direcionados a melhorar a qualidade dos dados de teste.
-  - Um conjunto de testes é indispensável para conduzir uma localização eficaz de defeitos. Considerando o conjunto de testes em sua totalidade, existem duas classes de testes: testes aprovados e testes reprovados. No entanto, na prática, a quantidade de testes aprovados superam em muito a quantidade de testes reprovados, fazendo com que os testes reprovados sejam uma classe minoritária em contraste aos testes aprovados. Trabalhos anteriores mostraram empiricamente que a falta de testes com defeito, tendem a prejudicar a eficácia da localização de defeitos [1] [2]. 
+As técnicas de localização de defeitos baseada em espectro (SBFL - Spectrum-based Fault Localization) compõem uma das principais vertentes de pesquisa quanto à automatização do processo de localização de defeitos de software. Como parte essencial do processo de teste de software, a qualidade dos dados de teste afetam diretamente a eficacia das técnicas de localização de defeitos de software. Dessa forma, existem algums estudos direcionados para melhorar a qualidade dos dados de teste.
+
+Um conjunto de testes é indispensável para conduzir uma localização eficaz de defeitos. Considerando o conjunto de testes em sua totalidade, existem duas classes de testes: testes aprovados e testes reprovados. No entanto, na prática, a quantidade de testes aprovados superam em muito a quantidade de testes reprovados, fazendo com que os testes reprovados sejam uma classe minoritária em contraste aos testes aprovados. Trabalhos anteriores mostraram empiricamente que a falta de testes com defeito, tendem a prejudicar a eficácia da localização de defeitos [1] [2]. 
 
 # Objetivo geral
-- Aplicar a técnica de balanceamento de dados SMOTE (Synthetic Minority Over-Sampling Technique) [3], como proposta para balanceamento do conjunto de dados, possui como objetivo principal melhorar os resultados das heurísticas de localização de defeitos (Tarantula e Ochiai).
+Aplicar a técnica de balanceamento de dados SMOTE (Synthetic Minority Over-Sampling Technique) [3], como proposta para balanceamento do conjunto de dados (matriz de espectro), possui como objetivo principal melhorar os resultados das heurísticas de localização de defeitos (Tarantula e Ochiai).
 
 # Técnica proposta
-- A técnica SMOTE [3] possui como objetivo principal, criar novos dados (testes/linhas da matriz de espectro), a partir da classe de dados minoritária, através da busca de vizinhos mais próximos.
+A técnica SMOTE [3] possui como objetivo principal, criar novos dados (testes/linhas da matriz de espectro), a partir da classe de dados minoritária, através da busca de vizinhos mais próximos.
 
 # Benchmark
 - Justificativa:
@@ -42,10 +43,10 @@ Os resultados obtidos por essas heurísticas podem ser utilizados como um “gui
 ![Captura de Tela 2025-01-27 às 20 30 22](https://github.com/user-attachments/assets/2df4cf39-09b3-4f6c-b18d-5a638adb43e2)
 
 - Ponto a ser destacado:
-  - Destaca-se a quantidade de casos de testes negativos, que é pequena (média de 0,93% de casos de teste negativos, levando em consideração todos os projetos com todos os seus casos de teste).
+  - Destaca-se a quantidade de casos de testes negativos, que é muito pequena (média de 0,93% de casos de teste negativos, levando em consideração todos os projetos com todos os seus casos de teste).
 
 # Baseline
-- Dados (matriz de espectro) com e sem a aplicação do balanceamento de dados pela técnica SMOTE (Synthetic Minority Over-Sampling Technique) [45]. Aplicação de 2 heuristicas de localização de defeitos (Tarantula e Ochiai).
+Dados (matriz de espectro) com e sem a aplicação do balanceamento de dados pela técnica SMOTE (Synthetic Minority Over-Sampling Technique) [45]. Aplicação de 2 heuristicas de localização de defeitos (Tarantula e Ochiai).
 
 # Métricas de Avaliação
 - Foram considerados todas as métricas descritas no artigo de referência dessa pesquisa.
@@ -62,7 +63,7 @@ Os resultados obtidos por essas heurísticas podem ser utilizados como um “gui
 - Pontos de destaque do experimento
   - Para a aplicação da técnica SMOTE, foi utilizado o algoritmo SMOTE do pacote "imblearn.over_sampling" do Python.
   - O programa implementado ficou extremamente lento no momento da aplicação do SMOTE em matrizes maiores do projeto Closure (considerando todas as matrizes de espectro do projeto, existem 2199420 colunas), o que inviabilizou a execução do mesmo para esse projeto em específico.
-  - Em todos os projetos do benchmark utilizado, houveram casos em que o defeito apontado no arquivo <Projeto>-<Versão>.buggy.lines não foi encontrado no arquivo spectra.txt. Essas versões desses projetos foram desconsiderados para efeito de cálculo das métricas. Veja maiores detalhes na tabela a seguir.
+  - Em todos os projetos do benchmark utilizado, houveram casos em que o defeito apontado no arquivo <Projeto-Versão>.buggy.lines não foi encontrado no arquivo spectra.txt. Essas versões desses projetos foram desconsiderados para efeito de cálculo das métricas. Veja maiores detalhes na tabela a seguir.
   
 ![Captura de Tela 2025-01-27 às 20 36 17](https://github.com/user-attachments/assets/8bb4244c-5d7a-4a78-952c-bde7fcb6eac9)
 
@@ -70,8 +71,8 @@ Os resultados obtidos por essas heurísticas podem ser utilizados como um “gui
 
 # Análise I
 Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a aplicação da técnica de balanceamento de dados (Smote). Essa tabela de resultados considerou a média dos valores calculados considerando todos os projetos e suas versões do benchmark dessa pesquisa. As cores das células da tabela apresentada a baixo se refere a comparação entre os resultados da heurística sem e com a aplicação da técnica de balanceamento de dados.
-  
-![Captura de Tela 2025-01-27 às 20 32 28](https://github.com/user-attachments/assets/467c4514-5797-4a08-9b04-fe4fec31c6fd)
+
+  ![Captura de Tela 2025-01-29 às 22 16 02](https://github.com/user-attachments/assets/ac8efd9d-bb2b-4de2-ad9d-492e5fab9858)
 
 - Pontos a serem destacados:
   - A heurística Tarantula com o Smote, obteve melhores resultados em relação a aplicação da mesma heurística sem o Smote, para as métricas Top-1, Top-5, MFR e MAR.
