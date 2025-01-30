@@ -72,7 +72,7 @@ Dados (matriz de espectro) com e sem a aplicação do balanceamento de dados pel
 # Análise I
 Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a aplicação da técnica de balanceamento de dados (Smote). Essa tabela de resultados considerou a média dos valores calculados considerando todos os projetos e suas versões do benchmark dessa pesquisa. As cores das células da tabela apresentada a baixo se refere a comparação entre os resultados da heurística sem e com a aplicação da técnica de balanceamento de dados.
 
-  ![Captura de Tela 2025-01-29 às 22 16 02](https://github.com/user-attachments/assets/ac8efd9d-bb2b-4de2-ad9d-492e5fab9858)
+  ![Captura de Tela 2025-01-30 às 15 04 28](https://github.com/user-attachments/assets/b968b422-72b0-46a8-86c6-b6ad85b880cb)
 
 - Pontos a serem destacados:
   - De uma forma geral, após a aplicação do balanceamento dos dados, considerando a métrica TOP-N, houve a melhora na eficácia da heurística Tarantula para Top-1 e Top-5. Já com relação a heurística Ochiai, a mesma não obteve melhores resultados. As métricas MFR, MAR e RIMP não serão avaliadas nesse momento devido ao não término do processamento do projeto Clousure.
