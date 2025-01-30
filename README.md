@@ -70,24 +70,24 @@ Dados (matriz de espectro) com e sem a aplicação do balanceamento de dados pel
 # Resultados Gerais
 
 # Análise I
-Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a aplicação da técnica de balanceamento de dados (Smote). Essa tabela de resultados considerou a média dos valores calculados considerando todos os projetos e suas versões do benchmark dessa pesquisa. As cores das células da tabela apresentada a baixo se refere a comparação entre os resultados da heurística sem e com a aplicação da técnica de balanceamento de dados.
+Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a aplicação da técnica de balanceamento de dados (Smote). Essa tabela de resultados considerou a média dos valores calculados considerando todos os projetos e suas versões do benchmark dessa pesquisa. As cores das células da tabela apresentada a baixo se referem a comparação entre os resultados da heurística sem e com a aplicação da técnica de balanceamento de dados.
 
   ![Captura de Tela 2025-01-30 às 15 04 28](https://github.com/user-attachments/assets/b968b422-72b0-46a8-86c6-b6ad85b880cb)
 
 - Pontos a serem destacados:
-  - De uma forma geral, após a aplicação do balanceamento dos dados, considerando a métrica TOP-N, houve a melhora na eficácia da heurística Tarantula para Top-1 e Top-5. Já com relação a heurística Ochiai, a mesma não obteve melhores resultados. As métricas MFR, MAR e RIMP não serão avaliadas nesse momento devido ao não término do processamento do projeto Clousure.
+  - De uma forma geral, após a aplicação do balanceamento dos dados e considerando a métrica TOP-N, houve a melhora na eficácia da heurística Tarantula para Top-1 e Top-5. Já com relação a heurística Ochiai, a mesma não obteve melhores resultados. As métricas MFR, MAR e RIMP não serão avaliadas nesse momento devido ao não término do processamento do projeto Clousure.
 
 # Análise II
-Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a aplicação da técnica de balanceamento de dados (Smote), considerando a análise de cada projeto do benchmark Defects4J (chart, math, lang, closure, mockito e time). As cores das células da tabela apresentada a baixo se refere a comparação entre os resultados da heurística sem e com a aplicação da técnica de balanceamento de dados.
+Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a aplicação da técnica de balanceamento de dados (Smote), considerando a análise de cada projeto do benchmark Defects4J (chart, math, lang, closure, mockito e time). As cores das células da tabela apresentada a baixo se referem a comparação entre os resultados da heurística sem e com a aplicação da técnica de balanceamento de dados.
 
 ![Captura de Tela 2025-01-28 às 22 35 38](https://github.com/user-attachments/assets/0a106239-3532-4cb5-a3c2-0dda5a0e2280)
 
 ![Captura de Tela 2025-01-27 às 21 20 53](https://github.com/user-attachments/assets/00355814-d26d-42aa-b1cf-0847f1d24940)
 
 - Pontos a serem destacados para cada métrica:
-  - Top-N: exceto a métrica Top-20 e Top-10 (heurística Ochiai), todas as outras aplicações tiveram algum ponto de melhora ao considerar a aplicação da técnica de balanceamento de dados (Smote) para as heurísticas Tarantula e Ochiai.
+  - Top-N: obtiveram melhores resultados para as métricas Top-1, Top5, heurística Tarantula com a aplicação da técnica de balancemento de dados, para os projetos Mockito e Closure. Ao levar em consideração essas mesmas métricas, considerando a heurística Ochiai com a aplicação da técnica de balancemento de dados, os projetos Closure, Math e Time obtiveram bons resultados.
   - MAR: todas as aplicações das heurísticas com balanceamento de dados obtiveram melhores resultados se comparado as heurísticas sem a aplicação do balanceamento de dados.
-  - MFR: a mesma obteve melhores resultados ao aplicar a técnica de balancamento de dados para a heurísticas Tarantula.
+  - MFR: a mesma obteve melhores resultados ao aplicar a técnica de balancamento de dados considerando a heurísticas Tarantula, exceto para os seguintes projetos: Closure, Lang e Math.
   - RIMP: a mesma obteve um melhor resultado ao aplicar a técnica de balancamento de dados, apenas para a heurísticas Tarantula e para o projeto Chart.
   - As métricas MFR, MAR e RIMP não serão avaliadas nesse momento considerando o projeto Closure, devido ao não término do processamento desse projeto.
 
