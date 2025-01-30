@@ -75,8 +75,7 @@ Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a apl
   ![Captura de Tela 2025-01-29 às 22 16 02](https://github.com/user-attachments/assets/ac8efd9d-bb2b-4de2-ad9d-492e5fab9858)
 
 - Pontos a serem destacados:
-  - A heurística Tarantula com o Smote, obteve melhores resultados em relação a aplicação da mesma heurística sem o Smote, para as métricas Top-1, Top-5, MFR e MAR.
-  - A heurística Ochiai com o Smote, obteve melhores resultados em relação a aplicação da mesma heurística sem o Smote, para as métricas MFR e MAR.
+  - De uma forma geral, após a aplicação do balanceamento dos dados, considerando a métrica TOP-N, houve a melhora na eficácia da heurística Tarantula para Top-1 e Top-5. Já com relação a heurística Ochiai, a mesma não obteve melhores resultados. As métricas MFR, MAR e RIMP não serão avaliadas nesse momento devido ao não término do processamento do projeto Clousure.
 
 # Análise II
 Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a aplicação da técnica de balanceamento de dados (Smote), considerando a análise de cada projeto do benchmark Defects4J (chart, math, lang, closure, mockito e time). As cores das células da tabela apresentada a baixo se refere a comparação entre os resultados da heurística sem e com a aplicação da técnica de balanceamento de dados.
@@ -90,6 +89,7 @@ Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a apl
   - MAR: todas as aplicações das heurísticas com balanceamento de dados obtiveram melhores resultados se comparado as heurísticas sem a aplicação do balanceamento de dados.
   - MFR: a mesma obteve melhores resultados ao aplicar a técnica de balancamento de dados para a heurísticas Tarantula.
   - RIMP: a mesma obteve um melhor resultado ao aplicar a técnica de balancamento de dados, apenas para a heurísticas Tarantula e para o projeto Chart.
+  - As métricas MFR, MAR e RIMP não serão avaliadas nesse momento considerando o projeto Closure, devido ao não término do processamento desse projeto.
 
 # Propostas de Exploração
 - A proposta de utilização da técnica SMOTE, se mostrou eficiente quanto ao procedimento de balanceamento dos dados, para alguns cenários considerando a heurística Tarantula). Sendo assim, é proposto a implementação das diversas variações existentes da biblioteca "imblearn.over_sampling" da técnica SMOTE (KMeansSMOTE, ADASYN, SVMSMOTE, BorderlineSMOTE e SMOTENC), como forma de tentar melhorar ainda mais o procedimento de balanceamento dos dados.
@@ -98,8 +98,8 @@ Foi realizado a comparação das heurísticas Tarantula e Ochiai com e sem a apl
 
 # Comparação com o artigo de referência
 - Foi realizado a comparação entre o artigo de referência com essa pesquisa. Para essa comparação, foi levado em conta os seguintes itens: Benckmark, Baseline, Métricas e Resultados Gerais. Para maiores detalhes, segue a tabela comparativa.
-
-![Captura de Tela 2025-01-30 às 14 43 42](https://github.com/user-attachments/assets/8b919dcf-33ea-4b27-b6a7-ac83704930fe)
+  
+![Captura de Tela 2025-01-30 às 14 57 36](https://github.com/user-attachments/assets/eea097b6-2877-4f0a-aea7-c0a2609e1926)
 
 - De forma geral, a aplicação da técnica de balanceamento de dados SMOTE na matriz de espectro, melhorou a eficiência das heurísticas utilizadas em ambos os experimentos.
 
