@@ -18,8 +18,6 @@ A localização de defeitos baseada no espectro utiliza informações de cobertu
 - Balanceamento de casos de teste
 - Cobertura de casos de teste
 
-🛠 **Objetivo**: Mapear e analisar criticamente os principais trabalhos relacionados ao tema da pesquisa, identificando lacunas e oportunidades de exploração.
-
 📅 **Status atual**: Pesquisa em andamento, com atualizações constantes à medida que novos artigos são estudados.
 
 ---
