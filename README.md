@@ -2,11 +2,10 @@
 Este repositório tem como objetivo documentar os principais artigos científicos estudados ao longo dessa pesquisa. Para cada artigo, estão disponíveis:
 
 - 📌 Título
-- 📝 Breve descrição
-- 📖 Descrição detalhada
 - 🔗 DOI
 - 📥 Link para o artigo (PDF ou página oficial)
-
+- 📝 Breve descrição
+- 📖 Descrição detalhada
 ---
 ## 🧭 Resumo Geral da Pesquisa
 
