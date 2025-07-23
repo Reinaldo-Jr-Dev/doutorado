@@ -3,7 +3,7 @@ Este repositório tem como objetivo documentar os principais artigos científico
 
 - 📌 Título
 - 🔗 DOI
-- 📥 Link para o artigo (PDF ou página oficial)
+- 📥 Link para o artigo
 - 📝 Breve descrição
 - 📖 Descrição detalhada
 ---
