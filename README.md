@@ -1,5 +1,5 @@
 # 📚 Painel de Estudos - Doutorado
-Este repositório tem como objetivo documentar os principais artigos científicos estudados ao longo da minha pesquisa. Para cada artigo, estão disponíveis:
+Este repositório tem como objetivo documentar os principais artigos científicos estudados ao longo dessa pesquisa. Para cada artigo, estão disponíveis:
 
 - 📌 Título
 - 📝 Breve descrição
@@ -29,9 +29,9 @@ A localização de defeitos baseada no espectro utiliza informações de cobertu
 
 ## 📄 Lista de Artigos
 
-### 1. **Título do Artigo Aqui**
+### 1. **Improving Fault Localization Using Model-domain Synthesized Failing Test Generation**
 - **DOI**: [10.xxxx/yyyy](https://doi.org/10.xxxx/yyyy)
-- **Link para o artigo**: [Download ou Acesso Online](https://link-para-o-pdf-ou-página)
+- **Link para o artigo**: [Download ou Acesso Online]([https://link-para-o-pdf-ou-página](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/IEEE-Improving_Fault_Localization_Using_Model-domain_Synthesized_Failing_Test_Generation.pdf))
 - **Breve descrição**: Uma breve explicação sobre o objetivo ou resultados principais do artigo.
 <details>
   <summary><strong>Descrição detalhada</strong></summary>
@@ -47,9 +47,9 @@ A localização de defeitos baseada no espectro utiliza informações de cobertu
 
 ---
 
-### 2. **Título do Segundo Artigo**
+### 2. **A Theoretical Analysis on Cloning the Failed Test Cases to Improve Spectrum-based Fault Localization**
 - **DOI**: [10.xxxx/zzzz](https://doi.org/10.xxxx/zzzz)
-- **Link para o artigo**: [Download ou Acesso Online](https://outro-link.com)
+- **Link para o artigo**: [Download ou Acesso Online]([https://outro-link.com](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/A%20Theoretical%20Analysis%20on%20Cloning%20the%20Failed%20Test%20Cases%20to%20Improve%20Spectrum-based%20Fault%20Localization.pdf))
 - **Breve descrição**: Um resumo rápido com os principais insights.
 <details>
   <summary><strong>Descrição detalhada</strong></summary>
