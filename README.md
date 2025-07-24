@@ -48,10 +48,14 @@ A localização de defeitos baseada no espectro utiliza informações de cobertu
 ### 2. **A Theoretical Analysis on Cloning the Failed Test Cases to Improve Spectrum-based Fault Localization**
 - **DOI**: [10.1016/j.jss.2017.04.017](https://doi.org/10.1016/j.jss.2017.04.017)
 - **Link para o artigo**: [A Theoretical Analysis on Cloning the Failed Test Cases to Improve Spectrum-based Fault Localization](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/A%20Theoretical%20Analysis%20on%20Cloning%20the%20Failed%20Test%20Cases%20to%20Improve%20Spectrum-based%20Fault%20Localization.pdf)
-- **Breve descrição**: Um resumo rápido com os principais insights.
+- **Breve descrição**: Realizar a investigação se a clonagem de casos de teste com defeito pode melhorar a eficácia das heurísticas de localização de defeitos baseadas em espectro de fluxo de controle (SBFL – Spectrum-Based Fault Localization), especialmente em cenários em que há poucos testes com defeito.
 <details>
   <summary><strong>Descrição detalhada</strong></summary>
 
-  Análise aprofundada sobre o artigo. Pode incluir também tabelas, imagens ou citações diretas, se desejar.
-
+  - Contribuições
+    - A proposta de clonagem dos casos de teste com defeito melhorou a precisão das principais heurísticas SBFL (de 33 heurísticas avaliadas, 22 heurísticas no cenário de um defeito, 21 em dois defeitos e 23 em três defeitos obtiveram melhores resultados), com base na métrica AVG Expense (quanto esforço é necessário para localizar o defeito na lista de suspeitos).
+    - É apresentado de maneira empírica que a clonagem dos testes com defeito pode melhorar as heurísticas de localização de defeitos.
+    - A proposta apresentada é uma abordagem simples e eficiente (em termos computacionais) para lidar com amostras desbalanceadas.
+  - Importância do trabalho para a pesquisa
+    - Demonstra que a clonagem de casos de testes com defeito é uma estratégia eficaz e de baixo custo computacional para melhorar a eficácia das heurísticas de localização de defeitos, especialmente quando há poucos testes com defeito disponíveis.
 </details>
