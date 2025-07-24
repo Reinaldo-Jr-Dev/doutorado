@@ -32,17 +32,15 @@ A localização de defeitos baseada no espectro utiliza informações de cobertu
 - **DOI**: [10.1109/ICSME55016.2022.00026](https://doi.org/10.1109/ICSME55016.2022.00026)
 - **Link para o artigo**: [Improving Fault Localization Using Model-domain Synthesized Failing Test Generation](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/IEEE-Improving_Fault_Localization_Using_Model-domain_Synthesized_Failing_Test_Generation.pdf)
 
-- **Breve descrição**: Uma breve explicação sobre o objetivo ou resultados principais do artigo.
+- **Breve descrição**: É proposto uma abordagem para a geração de casos de teste, a partir de amostras defeituosas com o objetivo de aprimorar a precisão das heurísticas utilizadas na localização de defeitos.
 <details>
   <summary><strong>Descrição detalhada</strong></summary>
   
-  Aqui você pode escrever uma análise mais profunda do artigo, incluindo:
-  - Objetivos
-  - Metodologia
-  - Resultados
   - Contribuições
-  - Críticas ou observações pessoais
-  
+    - É proposto uma abordagem (técnica de over-sampling SMOTE) para a geração de casos de teste com defeitos sintetizados, a partir de amostras defeituosas extraídas do modelo de domínio (matriz de espectro de fluxo de controle). O objetivo é aprimorar a precisão das heurísticas utilizadas na localização de defeitos.
+    - Os experimentos de criação das amostras de testes com defeitos, melhorou significamente as heurísticas de localização de defeitos.
+  - Importância do trabalho para a pesquisa
+    - Foi demonstrado que o procedimento de geração de casos de teste com defeitos sintetizados representa uma estratégia eficaz para aprimorar os dados originais do modelo de domínio. Essa melhoria contribui diretamente para o aumento da precisão das heurísticas de localização de defeitos.
 </details>
 
 ---
