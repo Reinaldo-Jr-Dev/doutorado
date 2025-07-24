@@ -39,7 +39,7 @@ A localização de defeitos baseada no espectro utiliza informações de cobertu
   - Contribuições
     - É proposto uma abordagem (técnica de over-sampling SMOTE) para a geração de casos de teste com defeitos sintetizados, a partir de amostras defeituosas extraídas do modelo de domínio (matriz de espectro de fluxo de controle). O objetivo é aprimorar a precisão das heurísticas utilizadas na localização de defeitos.
     - Os experimentos de criação das amostras de testes com defeitos, melhorou significamente as heurísticas de localização de defeitos.
-  - Importância do trabalho para a pesquisa
+  - Importância do artigo para a pesquisa
     - Foi demonstrado que o procedimento de geração de casos de teste com defeitos sintetizados representa uma estratégia eficaz para aprimorar os dados originais do modelo de domínio. Essa melhoria contribui diretamente para o aumento da precisão das heurísticas de localização de defeitos.
 </details>
 
@@ -56,6 +56,6 @@ A localização de defeitos baseada no espectro utiliza informações de cobertu
     - A proposta de clonagem dos casos de teste com defeito melhorou a precisão das principais heurísticas SBFL (de 33 heurísticas avaliadas, 22 heurísticas no cenário de um defeito, 21 em dois defeitos e 23 em três defeitos obtiveram melhores resultados), com base na métrica AVG Expense (quanto esforço é necessário para localizar o defeito na lista de suspeitos).
     - É apresentado de maneira empírica que a clonagem dos testes com defeito pode melhorar as heurísticas de localização de defeitos.
     - A proposta apresentada é uma abordagem simples e eficiente (em termos computacionais) para lidar com amostras desbalanceadas.
-  - Importância do trabalho para a pesquisa
+  - Importância do artigo para a pesquisa
     - Demonstra que a clonagem de casos de testes com defeito é uma estratégia eficaz e de baixo custo computacional para melhorar a eficácia das heurísticas de localização de defeitos, especialmente quando há poucos testes com defeito disponíveis.
 </details>
