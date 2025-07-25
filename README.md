@@ -41,6 +41,7 @@ A localização de defeitos baseada no espectro utiliza informações de cobertu
     - Os experimentos de criação das amostras de testes com defeitos, melhorou significamente as heurísticas de localização de defeitos.
   - Importância do artigo para a pesquisa
     - Foi demonstrado que o procedimento de geração de casos de teste com defeitos sintetizados representa uma estratégia eficaz para aprimorar os dados originais do modelo de domínio. Essa melhoria contribui diretamente para o aumento da precisão das heurísticas de localização de defeitos.
+    - As métricas utilizadas foram: Mean Average Rank (MAR), Mean First Rank (MFR) e Relative Improvement (RImp).
 </details>
 
 ---
