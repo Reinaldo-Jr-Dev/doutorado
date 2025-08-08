@@ -34,13 +34,13 @@ A localização de defeitos baseada no espectro utiliza informações de cobertu
 
 <p align="center">
   <a href="artigos_importantes.md">
-    <img src="https://img.shields.io/badge/Artigos%20Importantes-1976D2?style=for-the-badge&logo=read-the-docs&logoColor=white" alt="Artigos Importantes"/>
+    <img src="https://img.shields.io/badge/📝%20Artigos%20Importantes-1976D2?style=for-the-badge" alt="Artigos Importantes"/>
   </a>
   <a href="estudos.md">
-    <img src="https://img.shields.io/badge/Estudos-2E7D32?style=for-the-badge&logo=bookstack&logoColor=white" alt="Estudos"/>
+    <img src="https://img.shields.io/badge/📚%20Estudos-2E7D32?style=for-the-badge" alt="Estudos"/>
   </a>
   <a href="propostas_exploracao.md">
-    <img src="https://img.shields.io/badge/Propostas%20de%20Exploração-F57C00?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Propostas de Exploração"/>
+    <img src="https://img.shields.io/badge/🔬%20Propostas%20de%20Exploração-F57C00?style=for-the-badge" alt="Propostas de Exploração"/>
   </a>
 </p>
 
