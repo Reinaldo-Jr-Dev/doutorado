@@ -42,7 +42,7 @@ A localização de defeitos baseada no espectro utiliza informações de cobertu
   <a href="propostas_exploracao.md">
     <img src="https://img.shields.io/badge/🔬%20Propostas%20de%20Exploração-F57C00?style=for-the-badge" alt="Propostas de Exploração"/>
   </a>
-  <a href="artigos_produzidoss">
+  <a href="artigos_produzidos">
     <img src="https://img.shields.io/badge/📄%20Artigos%20Produzidos-FFD700?style=for-the-badge" alt="Propostas de Exploração"/>
 </a>
 </p>
