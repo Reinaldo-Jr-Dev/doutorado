@@ -13,7 +13,7 @@ A localização de defeitos baseada no espectro utiliza informações de cobertu
 - Balanceamento de casos de teste
 - Cobertura de casos de teste
 
-📅 **Status atual**: Pesquisa em andamento, com atualizações constantes à medida que novos artigos são estudados.
+📅 **Status atual**: Pesquisa em andamento, com atualizações constantes à medida que novos estudos são realizados.
 
 
 ---
