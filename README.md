@@ -5,10 +5,16 @@
 
 ## 📝 Resumo Geral
 
-<p align="center">
-Esta pesquisa tem como objetivo investigar <strong>[descreva aqui o foco principal da sua pesquisa]</strong>, buscando compreender e propor soluções inovadoras para <strong>[área de aplicação]</strong>.<br>
-Ao longo do estudo, serão abordados <strong>[principais tópicos/metodologias]</strong> e discutidos resultados obtidos em experimentos e análises.
-</p>
+A localização de defeitos baseada no espectro utiliza informações de cobertura de código obtidas durante a execução dos testes para abstrair padrões que auxiliem na identificação de statements defeituosos. Como, tipicamente, o número de casos de teste que revelam a presença de defeitos é inferior àqueles que não revelam, esse desbalanceamento dificulta a descoberta de padrões relevantes e, consequentemente, aumenta o custo da localização de defeitos. O foco central desta pesquisa é explorar técnicas de melhoria de um determinado conjunto de casos de teste (balanceamento, etc), de modo a melhorar a efetividade das heurísticas utilizadas na localização de defeitos em software.
+
+🔍 **Áreas de interesse**:
+- Localização de defeitos em software
+- Geração de dados de teste
+- Balanceamento de casos de teste
+- Cobertura de casos de teste
+
+📅 **Status atual**: Pesquisa em andamento, com atualizações constantes à medida que novos artigos são estudados.
+
 
 ---
 
@@ -16,12 +22,10 @@ Ao longo do estudo, serão abordados <strong>[principais tópicos/metodologias]<
 
 <p align="center">
 
-| Nome            | E-mail                   |
-|-----------------|--------------------------|
-| Reinaldo Jr.    | reinaldo@example.com      |
-| [Coautor 1]     | coautor1@example.com      |
-| [Coautor 2]     | coautor2@example.com      |
-
+| Nome                        | E-mail                            |
+|-----------------------------|-----------------------------------|
+| Reinaldo de Souza Júnior    | reinaldo.junior@discente.ufg.br   |
+| Plínio de Sá Leitão Júnior  | plinio@inf.ufg.br                 |
 </p>
 
 ---
