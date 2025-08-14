@@ -7,6 +7,7 @@ Este documento irá abordar os detalhes dos tópicos de estudo.
 ## Distância de Hamming
 
 - Objetivo: A distância de Hamming mede o número de posições em que dois vetores (ou cadeias de caracteres) são diferentes.
+- Artigo de origem: [Error Detecting and Error Correcting Codes](https://ieeexplore.ieee.org/document/6772729)
 - Algumas propostas práticas de solução:
 	- [Comparison of genomic sequences using the Hamming distance](https://www.sciencedirect.com/science/article/abs/pii/S037837580400268X)
 	- [Fingerprint - Iris Fusion Based Identification System Using a Single Hamming Distance Matcher](https://ieeexplore.ieee.org/abstract/document/5376876)
