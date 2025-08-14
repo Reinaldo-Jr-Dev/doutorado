@@ -16,3 +16,5 @@ Este documento irá abordar os detalhes dos tópicos de estudo.
 	- Vetores binários: Onde um '1' indica a presença de um item em um conjunto e '0' a ausência.
 	- Bags de palavras - "Bag Words" (em processamento de linguagem natural): Conjuntos de palavras únicas de um documento.
 	- Listas de atributos: Onde cada lista representa um conjunto de características.
+
+![Exemplo de cálculo da distância de Jaccard](img/explicacao_distancia_jaccard.png "Calculo da distância")
