@@ -1,13 +1,10 @@
-# 🔍 Estudos
+# 🔍 Tópicos de Estudo e Pesquisa
 
-Nesta seção serão apresentados estudos desenvolvidos durante a pesquisa, incluindo metodologias, dados e análises.
+Este documento serve como um índice centralizado para organizar meus tópicos de estudo.
 
-## Estudo 1
-- **Objetivo:** ...
-- **Metodologia:** ...
-- **Resultados:** ...
+---
 
-## Estudo 2
-- **Objetivo:** ...
-- **Metodologia:** ...
-- **Resultados:** ...
+## Detalhes dos Tópicos
+
+### Técnicas de cálculo de distância
+- [Distância de Jaccard e Hamming](estudos/ia/ml/fundamentos.md)
