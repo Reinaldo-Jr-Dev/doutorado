@@ -6,5 +6,6 @@ Este documento serve como um índice centralizado para organizar meus tópicos d
 
 ## Detalhes dos Tópicos
 
-### Técnicas de cálculo de distância
-- [Distância de Jaccard e Hamming](estudos/ia/ml/fundamentos.md)
+### Técnicas de cálculo de distâncias
+- [Distância de Jaccard](doutorado/distancia_jaccard.md)
+- [Distância de Hamming](doutorado/distancia_hamming.md)
