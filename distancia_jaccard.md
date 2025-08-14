@@ -7,6 +7,7 @@ Este documento irá abordar os detalhes dos tópicos de estudo.
 ## Distância de Jaccard
 
 - Objetivo: Distância de Jaccard (ou o Coeficiente de Similaridade de Jaccard, do qual a distância é 1 menos a similaridade) mede a dissimilaridade entre dois conjuntos.
+- Artigo de origem: [Nouvelles recherches sur la distribution florale](https://www.researchgate.net/publication/242013831_Nouvelles_Recherches_Sur_la_Distribution_Florale)
 - Algumas propostas práticas de solução:
 	- [Measurement of Text Similarity: A Survey](https://www.mdpi.com/2078-2489/11/9/421)
 	- [Introducing mothur: Open-Source, Platform-Independent, Community-Supported Software for Describing and Comparing Microbial Communities](https://journals.asm.org/doi/full/10.1128/aem.01541-09)
