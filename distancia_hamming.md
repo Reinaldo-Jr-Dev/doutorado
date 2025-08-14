@@ -17,3 +17,5 @@ Este documento irá abordar os detalhes dos tópicos de estudo.
 	- Sequências de caracteres de comprimento fixo para comparação de palavras ou cadeias de texto de mesmo tamanho.
 	- Sequências de DNA/RNA: Representadas como sequências de nucleotídeos (A, T, C, G).
 	- Vetores de características (feature vectors) de tamanho fixo, onde cada posição representa uma característica específica e o valor pode ser binário (presença/ausência).
+
+ ![Exemplo de cálculo da distância de Hamming](img/explicacao_distancia_hamming.png "Calculo da distância")
