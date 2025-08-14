@@ -1,4 +1,4 @@
-# 🔍 Tópicos de Estudo e Pesquisa
+# 🔍 Tópicos de Estudo
 
 Este documento serve como um índice centralizado para organizar meus tópicos de estudo.
 
