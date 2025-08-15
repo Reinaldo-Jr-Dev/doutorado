@@ -1,4 +1,4 @@
-# 🚀 Propostas de Exploração
+# 🔬 Propostas de Exploração
 
 Aqui serão descritas possíveis novas frentes e ideias para expandir ou aprofundar a pesquisa.
 
