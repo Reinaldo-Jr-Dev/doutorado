@@ -1,4 +1,4 @@
-# 📚 Artigos Produzidos
+# 📄 Artigos Produzidos
 Este repositório tem como objetivo documentar os principais artigos produzidos e publicados ao longo dessa pesquisa. Para cada artigo, estão disponíveis:
 
 - 📌 Título
