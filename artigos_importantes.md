@@ -1,4 +1,4 @@
-# 📚 Artigos Importantes
+# 📝 Artigos Importantes
 Este repositório tem como objetivo documentar os principais artigos científicos estudados ao longo dessa pesquisa. Para cada artigo, estão disponíveis:
 
 - 📌 Título
