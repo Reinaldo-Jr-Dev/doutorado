@@ -10,6 +10,7 @@ Este documento irá abordar os detalhes dos tópicos de estudo.
 - Artigo de origem: [Error Detecting and Error Correcting Codes](https://ieeexplore.ieee.org/document/6772729)
 - Algumas propostas práticas de solução:
 	- [Comparison of genomic sequences using the Hamming distance](https://www.sciencedirect.com/science/article/abs/pii/S037837580400268X)
+ 		- Objetivo Geral: Este artigo se debruça sobre o problema da homogeneidade entre grupos, especificamente através da comparação de sequências genômicas. O cerne da questão é determinar se diferentes grupos de sequências genômicas são semelhantes ou diferentes. A técnica proposta utiliza a distância de Hamming para determinar a similaridade ou dissimilaridade entre as sequências genômicas.
 	- [Fingerprint - Iris Fusion Based Identification System Using a Single Hamming Distance Matcher](https://ieeexplore.ieee.org/abstract/document/5376876)
 	- [Hamming distance based approximate similarity text search algorithm](https://ieeexplore.ieee.org/abstract/document/7184772?casa_token=owHLjvbsgGMAAAAA:ASPc-NJa4u9XsrGbfOdo3RAF3VSeWPMmg_evoBfM8NBa3mW25ABwS3xHnHKPyTiaiYbUiG6FpA)
 - É utilizado em quais estruturas de dados?
