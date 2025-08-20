@@ -41,3 +41,17 @@ Este repositório tem como objetivo documentar os principais artigos científico
   - Importância do artigo para a pesquisa
     - Demonstra que a clonagem de casos de testes com defeito é uma estratégia eficaz e de baixo custo computacional para melhorar a eficácia das heurísticas de localização de defeitos, especialmente quando há poucos testes com defeito disponíveis.
 </details>
+
+---
+
+### 3. **A Theoretical Analysis on Cloning the Failed Test Cases to Improve Spectrum-based Fault Localization**
+- **DOI**: [10.14257/ijca.2013.6.5.11](http://dx.doi.org/10.14257/ijca.2013.6.5.11)
+- **Link para o artigo**: [A Theoretical Analysis on Cloning the Failed Test Cases to Improve Spectrum-based Fault Localization](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/A%20Theoretical%20Analysis%20on%20Cloning%20the%20Failed%20Test%20Cases%20to%20Improve%20Spectrum-based%20Fault%20Localization.pdf)
+- **Breve descrição**: ???.
+<details>
+  <summary><strong>Descrição detalhada</strong></summary>
+
+  - Contribuições
+    - ???
+    - ???
+</details>
