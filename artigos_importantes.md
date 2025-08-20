@@ -47,11 +47,13 @@ Este repositório tem como objetivo documentar os principais artigos científico
 ### 3. **Noise Reduction for Spectrum-based Fault Localization**
 - **DOI**: [10.14257/ijca.2013.6.5.11](http://dx.doi.org/10.14257/ijca.2013.6.5.11)
 - **Link para o artigo**: [Noise Reduction for Spectrum-based Fault Localization](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/Noise_Reduction_for_Spectrum_based_Fault_Localization.pdf)
-- **Breve descrição**: ???.
+- **Breve descrição**: Spectrum-based Fault Localization (SBFL) provou ser uma técnica eficaz para localizar declarações defeituosas no código do programa. As heurísticas SBFL exploram os registros de execução de instruções (espectros) independente se os casos de teste forem aprovados ou reprovados para classificar a probabilidade de uma instrução ser defeituosa. No entanto, em alguns casos, estes espectros contêm informações ou ruído duplicados e ambíguos que podem deteriorar o desempenho das heurísticas SBFL. Esse artigo propoem sete esquemas de redução de ruído para eliminar casos de teste que fornecem informações duplicadas e ambíguas e avaliar as melhorias de desempenho resultantes nas métricas SBFL. Com base nessas explorações, é fornecido um guia para os profissionais de SBFL selecionarem o esquema de redução de ruído com melhor desempenho para determinadas heurísticas SBFL.
 <details>
   <summary><strong>Descrição detalhada</strong></summary>
 
   - Contribuições
-    - ???
-    - ???
+    - É proposto sete esquemas de redução de ruído para remover e eliminar casos de teste que forneçam informações duplicadas e ambíguas e avaliar as melhorias de desempenho resultantes em mais de 30 heurísticas SBFL estudadas;
+    - A partir dos experimentos realizados em 62 versões defeituosas de programas no Siemens Test Suite, foi descoberto que os casos de teste com espectros idênticos podem chegar a 27% no Siemens Test Suite;
+    - A percentagem significativa elevada de casos de teste com espectros idênticos é essencialmente ruído para as heurísticas SBFL, o que podem deteriorar o seu desempenho;
+
 </details>
