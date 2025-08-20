@@ -1,6 +1,13 @@
 # 🔬 Propostas de Exploração
 
 Aqui serão descritas possíveis novas frentes e ideias para expandir ou aprofundar a pesquisa.
+Priorizar as versões com > 10 casos de teste negativo
+
+## Proposta 1 - e001_smote_interpolation
+- **Descrição:** ...
+  - Método SmoteInterpolation: ...
+  - Baselines: original e SmoteEuclidian.
+- **Resultados:** ...
 
 ## Proposta 1 - e001_smote_distancia_jaccard
 - **Descrição:** ...
