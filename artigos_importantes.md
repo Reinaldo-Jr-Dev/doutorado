@@ -46,7 +46,7 @@ Este repositório tem como objetivo documentar os principais artigos científico
 
 ### 3. **A Theoretical Analysis on Cloning the Failed Test Cases to Improve Spectrum-based Fault Localization**
 - **DOI**: [10.14257/ijca.2013.6.5.11](http://dx.doi.org/10.14257/ijca.2013.6.5.11)
-- **Link para o artigo**: [A Theoretical Analysis on Cloning the Failed Test Cases to Improve Spectrum-based Fault Localization](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/Noise Reduction for Spectrum-based Fault Localization.pdf)
+- **Link para o artigo**: [A Theoretical Analysis on Cloning the Failed Test Cases to Improve Spectrum-based Fault Localization](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/Noise_Reduction_for_Spectrum_based Fault_Localization.pdf)
 - **Breve descrição**: ???.
 <details>
   <summary><strong>Descrição detalhada</strong></summary>
