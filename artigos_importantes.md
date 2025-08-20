@@ -55,5 +55,7 @@ Este repositório tem como objetivo documentar os principais artigos científico
     - É proposto sete esquemas de redução de ruído para remover e eliminar casos de teste que forneçam informações duplicadas e ambíguas e avaliar as melhorias de desempenho resultantes em mais de 30 heurísticas SBFL estudadas;
     - A partir dos experimentos realizados em 62 versões defeituosas de programas no Siemens Test Suite, foi descoberto que os casos de teste com espectros idênticos podem chegar a 27% no Siemens Test Suite;
     - A percentagem significativa elevada de casos de teste com espectros idênticos é essencialmente ruído para as heurísticas SBFL, o que podem deteriorar o seu desempenho;
+  - Importância do artigo para a pesquisa
+    - Foi demonstrado que o procedimento de eliminação dos ruídos da matriz de espectro poderá contribuir de forma significativa com a eficácia das heurísticas SBFL. 
 
 </details>
