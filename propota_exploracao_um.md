@@ -1,4 +1,4 @@
-# 🔬 Detalhamento das Propostas de Exploração I
+# 🔬 Detalhamento da Proposta de Exploração I
 
 ## Características do ambiente de execução
 - Projeto: Defects4J.
