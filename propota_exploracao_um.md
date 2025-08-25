@@ -10,6 +10,8 @@
 
 ![Resumo geral dos casos de teste da Proposta de Exploração I](img/Tab_1_Proposta_Exploracao_I.png "Resumo geral dos casos de teste da Proposta de Exploração I")
 
+**Figura 1:** Resumo geral dos casos de teste da Proposta de Exploração I
+
 ## Proposta 1 - e001_smote_interpolation
 - **Descrição:** ...
   - Método SmoteInterpolation: ...
@@ -35,3 +37,5 @@
 - **Resultados:** ...
 
 ![Resultado do Experimento da Proposta de Exploração I](img/Tab_2_Proposta_Exploracao_I.png "Resultado do Experimento da Proposta de Exploração I")
+
+**Figura 2:** Resultado do Experimento da Proposta de Exploração I
