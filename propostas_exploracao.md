@@ -4,7 +4,7 @@ Aqui serão descritas propostas de exploração com o objetivo de aprofundar a p
 
 ---
 
-## Propostas de pesquisa
+## Propostas de Exploração
 
-- [Proposta de Pesquisa I](propota_pesquisa_um.md)
+- [Proposta de Exploração I](propota_exploracao_um.md)
 	- Objetivo geral: ????
