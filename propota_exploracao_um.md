@@ -1,5 +1,6 @@
 # 🔬 Detalhamento das Propostas de Exploração I
 
+## Características do ambiente de execução
 - Projeto: Defects4J.
 - Programas: Chart, Lang, Math, Mockito e Time.
 - Métricas: ACC@N.
@@ -16,9 +17,9 @@
 - **e001_original**
   - Execução das heurísticas sem a aplicação de qualquer tipo de balanceamento de dados.
 - **e002_smote_euclidian**
-  - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância Euclidiana.
+  - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância Euclidiana. É importante destacar que essa execução foi realizada com o uso da biblioteca "imblearn.over_sampling".
 - **e003_smote_interpolation**
-  - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância Euclidiana. É importante destacar que essa execução foi realizada com o algoritmo original do Smote (sem uso da biblioteca "imblearn.over_sampling").
+  - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância Euclidiana. É importante destacar que essa execução foi realizada com o algoritmo original do Smote (sem uso da biblioteca "imblearn.over_sampling") e a geração das novas amostras sintéticas incluiu o arredondamento dos valores dos atributos, em vez do truncamento.
 - **e004_smote_jaccard**
   - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância de Jaccard. É importante destacar que essa execução foi realizada com o algoritmo original do Smote (sem uso da biblioteca "imblearn.over_sampling").
 - **e005_smote_hamming**
