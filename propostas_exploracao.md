@@ -1,6 +1,6 @@
 # 🔬 Propostas de Exploração
 
-Aqui serão descritas propostas de exploração com o objetivo de aprofundar a pesquisa.
+Nesta seção, serão apresentadas propostas de exploração com o objetivo de aprofundar a presente pesquisa.
 
 ---
 
