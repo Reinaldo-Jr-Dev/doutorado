@@ -39,4 +39,7 @@ return np.round(X_new).astype(X.dtype)
 **Figura 2:** Resultado do Experimento da Proposta de Exploração I
 
 ## Análise dos Resultados
-- Observou-se que os valores de cada heurística exibiram uniformidade ao longo de todos os experimentos simulados. Presume-se que tal ocorrência esteja diretamente ligado à limitada quantidade de casos de teste remanescentes após a aplicação dos critérios de seleção, que precederam a fase de simulação.
+- Observou-se que os valores de cada heurística exibiram uniformidade ao longo de todos os experimentos simulados. Presume-se que tal ocorrência esteja diretamente relacionada à limitada quantidade de casos de teste remanescentes após a aplicação dos critérios de seleção, que precederam a fase de simulação. Como próximas etapas, propõe-se:
+  - Aumentar a quantidade de casos de teste remanescentes através da alteração dos critérios de seleção (Quantidade mínima de casos de teste: 10, Quantidade mínima de casos de teste "+": 5 e Quantidade mínima de casos de teste "-": 5), a fim de investigar se a uniformidade dos dados será atenuada.
+  - Avaliar para cada experimento, o volume de casos de teste não duplicados gerados pelo balanceador. Acredita-se que a geração de um maior número de casos de teste não duplicados promoverá um melhor desempenho das heurísticas."
+
