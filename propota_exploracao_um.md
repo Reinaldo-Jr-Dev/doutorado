@@ -20,6 +20,11 @@
   - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância Euclidiana. É importante destacar que essa execução foi realizada com o uso da biblioteca "imblearn.over_sampling".
 - **e003_smote_interpolation**
   - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância Euclidiana. É importante destacar que essa execução foi realizada com o algoritmo original do Smote (sem uso da biblioteca "imblearn.over_sampling") e a geração das novas amostras sintéticas incluiu o arredondamento dos valores dos atributos, em vez do truncamento.
+      
+```python
+#return X_new.astype(X.dtype)        
+return np.round(X_new).astype(X.dtype)
+```    
 - **e004_smote_jaccard**
   - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância de Jaccard. É importante destacar que essa execução foi realizada com o algoritmo original do Smote (sem uso da biblioteca "imblearn.over_sampling").
 - **e005_smote_hamming**
