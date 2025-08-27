@@ -11,7 +11,7 @@
 
 ![Resumo geral dos casos de teste da Proposta de Exploração I](img/Tab_1_Proposta_Exploracao_I.png "Resumo geral dos casos de teste da Proposta de Exploração I")
 
-**Figura 1:** Resumo geral dos casos de teste da Proposta de Exploração I
+**Figura 1:** Resumo geral dos casos de teste
 
 ## Descrição dos Experimentos
 - **e001_original**
