@@ -9,9 +9,11 @@
 - Quantidade mínima de casos de teste "+": 11.
 - Quantidade mínima de casos de teste "-": 11.
 
-![Resumo geral dos casos de teste da Proposta de Exploração I](img/Tab_1_Proposta_Exploracao_I.png "Resumo geral dos casos de teste da Proposta de Exploração I")
-
+![Resumo geral dos casos de teste](img/Tab_1_Proposta_Exploracao_I.png "Resumo geral dos casos de teste")
 **Figura 1:** Resumo geral dos casos de teste
+
+![Resumo geral dos casos de teste negativos](img/Tab_Resumo_Casos_Teste_Negativos.png "Resumo geral dos casos de teste negativos")
+**Figura 2:** Resumo geral dos casos de teste negativos
 
 ## Descrição dos Experimentos
 - **e001_original**
@@ -36,7 +38,7 @@ return np.round(X_new).astype(X.dtype)
 
 ![Resultado do Experimento da Proposta de Exploração I](img/Tab_2_Proposta_Exploracao_I.png "Resultado do Experimento da Proposta de Exploração I")
 
-**Figura 2:** Resultado do Experimento da Proposta de Exploração I
+**Figura 3:** Resultado do Experimento da Proposta de Exploração I
 
 ## Análise dos Resultados
 - Observou-se que os valores de cada heurística exibiram uniformidade ao longo de todos os experimentos simulados. Presume-se que tal ocorrência esteja diretamente relacionada à limitada quantidade de casos de teste remanescentes após a aplicação dos critérios de seleção, que precederam a fase de simulação. Como próximas etapas, propõe-se:
