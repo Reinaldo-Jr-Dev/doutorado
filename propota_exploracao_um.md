@@ -10,9 +10,11 @@
 - Quantidade mínima de casos de teste "-": 11.
 
 ![Resumo geral dos casos de teste](img/Tab_1_Proposta_Exploracao_I.png "Resumo geral dos casos de teste")
+
 **Figura 1:** Resumo geral dos casos de teste
 
 ![Resumo geral dos casos de teste negativos](img/Tab_Resumo_Casos_Teste_Negativos.png "Resumo geral dos casos de teste negativos")
+
 **Figura 2:** Resumo geral dos casos de teste negativos
 
 ## Descrição dos Experimentos
