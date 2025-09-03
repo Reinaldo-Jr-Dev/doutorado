@@ -40,9 +40,11 @@ return np.round(X_new).astype(X.dtype)
 
 ![Resultado do Experimento da Proposta de Exploração I](img/Tab_2_Proposta_Exploracao_I.png "Resultado do Experimento da Proposta de Exploração I")
 
+**Figura 3:** Resultado do Experimento da Proposta de Exploração I (ACC)
+
 ![Resultado do Experimento da Proposta de Exploração I - Fault-Pos](img/Tab_3_Proposta_Exploracao_I.png "Resultado do Experimento da Proposta de Exploração I - Fault-Pos")
 
-**Figura 3:** Resultado do Experimento da Proposta de Exploração I
+**Figura 4:** Resultado do Experimento da Proposta de Exploração I (FAULT-POS)
 
 ## Análise dos Resultados
 - Observou-se que os valores de cada heurística exibiram uniformidade ao longo de todos os experimentos simulados. Presume-se que tal ocorrência esteja diretamente relacionada à limitada quantidade de casos de teste remanescentes após a aplicação dos critérios de seleção, que precederam a fase de simulação. Como próximas etapas, propõe-se:
