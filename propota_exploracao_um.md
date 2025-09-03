@@ -1,6 +1,6 @@
 # 🔬 Detalhamento da Proposta de Exploração I
 
-## Características do ambiente de execução
+## Características do ambiente de execução I
 - Projeto: Defects4J.
 - Programas: Chart, Lang, Math, Mockito e Time.
 - Métricas: ACC@N e Fault-Pos.
@@ -47,14 +47,12 @@ return np.round(X_new).astype(X.dtype)
 **Figura 4:** Resultado do Experimento da Proposta de Exploração I (FAULT-POS)
 
 ## Análise dos Resultados
-- Observou-se que os valores de cada heurística exibiram uniformidade ao longo de todos os experimentos simulados. Presume-se que tal ocorrência esteja diretamente relacionada à limitada quantidade de casos de teste remanescentes após a aplicação dos critérios de seleção, que precederam a fase de simulação. Como próximas etapas, propõe-se:
-  - Aumentar a quantidade de casos de teste remanescentes através da alteração dos critérios de seleção (Quantidade mínima de casos de teste: 10, Quantidade mínima de casos de teste "+": 5 e Quantidade mínima de casos de teste "-": 5), a fim de investigar se a uniformidade dos dados será atenuada.
-  - Avaliar para cada experimento, o volume de casos de teste não duplicados gerados pelo balanceador. Acredita-se que a geração de um maior número de casos de teste não duplicados promoverá um melhor desempenho das heurísticas."
+- Observou-se que os valores de cada heurística exibiram uniformidade ao longo de todos os experimentos simulados. Presume-se que tal ocorrência esteja diretamente relacionada à limitada quantidade de casos de teste remanescentes após a aplicação dos critérios de seleção, que precederam a fase de simulação. 
 - A aplicação da métrica Fault-Pos revelou, com maior precisão, que os experimentos que incorporam técnicas de balanceamento demonstram eficácia superior no processo de priorização de defeitos. Dentre as abordagens de balanceamento avaliadas, destaca-se o experimento "e002_smote_euclidian", que obteve os resultados mais promissores.
 
 ---
 
-## Características do ambiente de execução
+## Características do ambiente de execução II
 - Projeto: Defects4J.
 - Programas: Chart, Lang, Math, Mockito e Time.
 - Métricas: ACC@N-RAW.
@@ -68,4 +66,4 @@ return np.round(X_new).astype(X.dtype)
 **Figura 5:** Resultado do Experimento da Proposta de Exploração I (ACC_RAW)
 
 ## Análise dos Resultados
-- ??
+- Observou-se que os valores de cada heurística exibiram uniformidade ao longo da maioria dos experimentos simulados. Presume-se que tal ocorrência esteja diretamente relacionada à quantidade pequena de casos de teste negativos.
