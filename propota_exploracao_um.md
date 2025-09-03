@@ -67,3 +67,8 @@ return np.round(X_new).astype(X.dtype)
 
 ## Análise dos Resultados
 - Observou-se que os valores de cada heurística exibiram uniformidade ao longo da maioria dos experimentos simulados. Presume-se que tal ocorrência esteja diretamente relacionada à quantidade pequena de casos de teste negativos.
+
+---
+
+## Nova Proposta de Exploração
+- A análise dos resultados desta investigação revelou a ocorrência de um número significativo de casos de teste com cobertura idêntica, manifestada por linhas de statements coincidentes. Adicionalmente, constatou-se que a aplicação de técnicas de balanceamento de casos de teste em múltiplos experimentos não resultou em melhoria significativa da eficácia das heurísticas SBFL. Com base nessas duas evidências, propõe-se explorar o procedimento de eliminação de ruídos na matriz de espectro, especificamente através da remoção de casos de teste de mesma cobertura. Estima-se que tal procedimento possa contribuir significativamente para a eficácia das heurísticas SBFL. Será utilizado o artigo [Noise Reduction for Spectrum-based Fault Localization](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/Noise_Reduction_for_Spectrum_based_Fault_Localization.pdf) para nos guiar nessa nova proposta de exploração.
