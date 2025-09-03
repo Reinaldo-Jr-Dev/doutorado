@@ -52,21 +52,21 @@ Este repositório tem como objetivo documentar os principais artigos científico
   <summary><strong>Descrição detalhada</strong></summary>
 
   - Contribuições
-    - A partir da análise realizada nos espectros de programas defeituosos no Siemens Test Suite, observou-se que, em muitas versões dos programas, existem casos de teste com espectros idênticos (registro de cobertura de execução de instruções), embora as entradas de teste sejam diferentes. Estas observações em casos de teste com espectros idênticos podem ser divididas em três categorias.
+    - <mark>A partir da análise realizada nos espectros de programas defeituosos no Siemens Test Suite, observou-se que, em muitas versões dos programas, existem casos de teste com espectros idênticos (registro de cobertura de execução de instruções), embora as entradas de teste sejam diferentes.</mark> Estas observações em casos de teste com espectros idênticos podem ser divididas em três categorias.
 	    - Um caso de teste com defeito e um caso de teste aprovado compartilham o mesmo espectro.
 	    - Mais de um caso de teste com defeito compartilha o mesmo espectro.
 	    - Mais de um caso de teste aprovado compartilha o mesmo espectro.
-    - É proposto sete esquemas de redução de ruído para remover e eliminar casos de teste que forneçam informações duplicadas e ambíguas e avaliar as melhorias de desempenho resultantes em mais de 30 heurísticas SBFL estudadas.
-      - Noise Reduction Scheme 1 (NRS1): para cada caso de teste reprovado, todos os casos de teste aprovados com espectros idênticos ao caso de teste com defeito serão removidos.
-      - Noise Reduction Scheme 2 (NRS2): para cada caso de teste aprovado, todos os casos de teste reprovados com espectros idênticos ao caso de teste aprovado serão removidos.
-      - Noise Reduction Scheme 3 (NRS3): para cada conjunto de casos de teste aprovados e reprovados com espectros idênticos, todos os casos de teste do conjunto serão removidos. 
-      - Noise Reduction Scheme 4 (NRS4): Para cada conjunto de casos de teste aprovados com espectros idênticos, todos, exceto um caso de teste, serão removidos.
-      - Noise Reduction Scheme 5 (NRS5): Este esquema de redução de ruído é uma combinação de NRS4 e NRS1. 
-      - Noise Reduction Scheme 6 (NRS6): Este esquema de redução de ruído é uma combinação de NRS4 e NRS2.
-      - Noise Reduction Scheme 7 (NRS7): Este esquema de redução de ruído é uma combinação de NRS4 e NRS3.	
+    - É proposto sete esquemas de redução de ruído para remover e eliminar casos de teste que forneçam informações duplicadas e ambíguas e avaliar as melhorias de desempenho resultantes em mais de 30 heurísticas SBFL estudadas.<mark>
+      - <mark>Noise Reduction Scheme 1 (NRS1): para cada caso de teste reprovado, todos os casos de teste aprovados com espectros idênticos ao caso de teste com defeito serão removidos.</mark>
+      - <mark>Noise Reduction Scheme 2 (NRS2): para cada caso de teste aprovado, todos os casos de teste reprovados com espectros idênticos ao caso de teste aprovado serão removidos.</mark>
+      - <mark>Noise Reduction Scheme 3 (NRS3): para cada conjunto de casos de teste aprovados e reprovados com espectros idênticos, todos os casos de teste do conjunto serão removidos.</mark>
+      - <mark>Noise Reduction Scheme 4 (NRS4): Para cada conjunto de casos de teste aprovados com espectros idênticos, todos, exceto um caso de teste, serão removidos.</mark>
+      - <mark>Noise Reduction Scheme 5 (NRS5): Este esquema de redução de ruído é uma combinação de NRS4 e NRS1.</mark>
+      - <mark>Noise Reduction Scheme 6 (NRS6): Este esquema de redução de ruído é uma combinação de NRS4 e NRS2.</mark>
+      - <mark>Noise Reduction Scheme 7 (NRS7): Este esquema de redução de ruído é uma combinação de NRS4 e NRS3.</mark>
     - A partir dos experimentos realizados em 62 versões defeituosas de programas no Siemens Test Suite, foi descoberto que os casos de teste com espectros idênticos podem chegar a 27% no Siemens Test Suite.
     - A percentagem significativa elevada de casos de teste com espectros idênticos é essencialmente ruído para as heurísticas SBFL, o que podem deteriorar o seu desempenho.
   - Importância do artigo para a pesquisa
-    - Foi demonstrado que o procedimento de eliminação dos ruídos da matriz de espectro poderá contribuir de forma significativa com a eficácia das heurísticas SBFL. 
+    - <mark>Foi demonstrado que o procedimento de eliminação dos ruídos da matriz de espectro poderá contribuir de forma significativa com a eficácia das heurísticas SBFL.</mark> 
 
 </details>
