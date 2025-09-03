@@ -14,7 +14,9 @@
 **Figura 1:** Total de Testes Repetidos (mesma cobertura)
 
 ## Descrição dos Experimentos
-- **e001_original**
-  - Execução das heurísticas sem a aplicação de qualquer tipo de balanceamento de dados.
 - **e002_smote_euclidian**
-  - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância Euclidiana. É importante destacar que essa execução foi realizada com o uso da biblioteca "imblearn.over_sampling".
+  - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância Euclidiana. É importante destacar que essa execução foi realizada com o uso da biblioteca "imblearn.over_sampling". Essa execução, foi realizada na matriz de espectro em seu formato original.
+- **e007_smote_euclidian_unique_rows**
+  - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância Euclidiana. É importante destacar que essa execução foi realizada com o uso da biblioteca "imblearn.over_sampling". Essa execução, foi realizada na matriz de espectro em um formato pré-processado, no qual foram eliminados ruídos provenientes de linhas coincidentes.
+- **e008_smote_euclidian_unique_rows_coverage**
+  - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância Euclidiana. É importante destacar que essa execução foi realizada com o uso da biblioteca "imblearn.over_sampling". Essa execução, foi realizada na matriz de espectro em um formato pré-processado, no qual foram eliminados ruídos provenientes de linhas coincidentes (mesma cobertura) e com resultados diferentes ("+" e "-").
