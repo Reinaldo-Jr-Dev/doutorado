@@ -9,13 +9,9 @@
 - Quantidade mínima de casos de teste "+": ??.
 - Quantidade mínima de casos de teste "-": ??.
 
-![Resumo geral dos casos de teste](img/Tab_1_Proposta_Exploracao_I.png "Resumo geral dos casos de teste")
+![Total de Testes Repetidos](img/Tab_1_Proposta_Exploracao_II.png "Total de Testes Repetidos")
 
-**Figura 1:** Resumo geral dos casos de teste
-
-![Resumo geral dos casos de teste negativos](img/Tab_Resumo_Casos_Teste_Negativos.png "Resumo geral dos casos de teste negativos")
-
-**Figura 2:** Resumo geral dos casos de teste negativos
+**Figura 1:** Total de Testes Repetidos (mesma cobertura)
 
 ## Descrição dos Experimentos
 - **e001_original**
