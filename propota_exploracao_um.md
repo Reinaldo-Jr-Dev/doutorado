@@ -52,6 +52,8 @@ return np.round(X_new).astype(X.dtype)
   - Avaliar para cada experimento, o volume de casos de teste não duplicados gerados pelo balanceador. Acredita-se que a geração de um maior número de casos de teste não duplicados promoverá um melhor desempenho das heurísticas."
 - A aplicação da métrica Fault-Pos revelou, com maior precisão, que os experimentos que incorporam técnicas de balanceamento demonstram eficácia superior no processo de priorização de defeitos. Dentre as abordagens de balanceamento avaliadas, destaca-se o experimento "e002_smote_euclidian", que obteve os resultados mais promissores.
 
+---
+
 ## Características do ambiente de execução
 - Projeto: Defects4J.
 - Programas: Chart, Lang, Math, Mockito e Time.
