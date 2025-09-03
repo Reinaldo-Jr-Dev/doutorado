@@ -44,7 +44,7 @@ Este repositório tem como objetivo documentar os principais artigos científico
 
 ---
 
-### 3. **Noise Reduction for Spectrum-based Fault Localization**
+### 3. <mark>**Noise Reduction for Spectrum-based Fault Localization**</mark>
 - **DOI**: [10.14257/ijca.2013.6.5.11](http://dx.doi.org/10.14257/ijca.2013.6.5.11)
 - **Link para o artigo**: [Noise Reduction for Spectrum-based Fault Localization](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/Noise_Reduction_for_Spectrum_based_Fault_Localization.pdf)
 - **Breve descrição**: Spectrum-based Fault Localization (SBFL) provou ser uma técnica eficaz para localizar declarações defeituosas no código do programa. As heurísticas SBFL exploram os registros de execução de instruções (espectros) independente se os casos de teste forem aprovados ou reprovados para classificar a probabilidade de uma instrução ser defeituosa. No entanto, em alguns casos, estes espectros contêm informações ou ruído duplicados e ambíguos que podem deteriorar o desempenho das heurísticas SBFL. Esse artigo propoem sete esquemas de redução de ruído para eliminar casos de teste que fornecem informações duplicadas e ambíguas e avaliar as melhorias de desempenho resultantes nas métricas SBFL. Com base nessas explorações, é fornecido um guia para os profissionais de SBFL selecionarem o esquema de redução de ruído com melhor desempenho para determinadas heurísticas SBFL.
