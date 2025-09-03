@@ -74,6 +74,8 @@ return np.round(X_new).astype(X.dtype)
 - Quantidade mínima de casos de teste "+": 6.
 - Quantidade mínima de casos de teste "-": 6.
 
+## Resultados
+
 ![Resultado do Experimento da Proposta de Exploração I - ACC_RAW](img/Tab_4_Proposta_Exploracao_I.png "Resultado do Experimento da Proposta de Exploração I - ACC_RAW")
 
 **Figura 5:** Resultado do Experimento da Proposta de Exploração I (ACC_RAW)
