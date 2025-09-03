@@ -40,6 +40,8 @@ return np.round(X_new).astype(X.dtype)
 
 ![Resultado do Experimento da Proposta de Exploração I](img/Tab_2_Proposta_Exploracao_I.png "Resultado do Experimento da Proposta de Exploração I")
 
+![Resultado do Experimento da Proposta de Exploração I - Fault-Pos](img/Tab_3_Proposta_Exploracao_I.png "Resultado do Experimento da Proposta de Exploração I - Fault-Pos")
+
 **Figura 3:** Resultado do Experimento da Proposta de Exploração I
 
 ## Análise dos Resultados
