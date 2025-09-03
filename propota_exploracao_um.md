@@ -28,13 +28,26 @@
 ```python
 #return X_new.astype(X.dtype)        
 return np.round(X_new).astype(X.dtype)
-```    
+```
+**Fragmento de Código 1** - Alteração do procedimento da interpolação.
+
 - **e004_smote_jaccard**
   - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância de Jaccard. É importante destacar que essa execução foi realizada com o algoritmo original do Smote (sem uso da biblioteca "imblearn.over_sampling").
 - **e005_smote_hamming**
   - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância de Hamming. É importante destacar que essa execução foi realizada com o algoritmo original do Smote (sem uso da biblioteca "imblearn.over_sampling").
 - **e006_smote_cosine**
   - Execução das heurísticas com a aplicação da técnica de balanceamento de dados SMOTE, utilizando o cálculo de distância de Cosine. É importante destacar que essa execução foi realizada com o algoritmo original do Smote (sem uso da biblioteca "imblearn.over_sampling").
+ 
+```python
+    def _validate_estimator(self):
+        self.nn_k_ = check_neighbors_object(
+            "k_neighbors", self.k_neighbors, additional_neighbor=1, 
+        )
+        self.nn_k_.metric = "cosine"
+        #self.nn_k_.metric = "jaccard"
+        #self.nn_k_.metric = "hamming"
+```
+**Fragmento de Código 2** - Definição das métricas de cálculo dos vizinhos
   
 ## Resultados
 
