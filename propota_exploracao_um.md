@@ -13,7 +13,7 @@
 
 **Figura 1:** Resumo geral dos casos de teste
 
-![Resumo geral dos casos de teste negativos](img/Tab__Resumo_Casos_Teste_Negativos.png "Resumo geral dos casos de teste negativos")
+![Resumo geral dos casos de teste negativos](img/Tab__Resumo_Casos_Teste_Neg.png "Resumo geral dos casos de teste negativos")
 
 **Figura 2:** Resumo geral dos casos de teste negativos
 
