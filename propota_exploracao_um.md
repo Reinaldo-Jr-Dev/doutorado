@@ -60,7 +60,7 @@ return np.round(X_new).astype(X.dtype)
 **Figura 4:** Resultado do Experimento da Proposta de Exploração I (FAULT-POS)
 
 ## Análise dos Resultados
-- Observou-se que os valores de cada heurística exibiram uniformidade ao longo de todos os experimentos simulados. Presume-se que tal ocorrência esteja diretamente relacionada à limitada quantidade de casos de teste remanescentes após a aplicação dos critérios de seleção, que precederam a fase de simulação. 
+- A aplicação da métrica ACC@N, exibiram uniformidades ao longo de todos os experimentos simulados. Presume-se que tal ocorrência esteja diretamente relacionada à limitada quantidade de casos de teste remanescentes após a aplicação dos critérios de seleção, que precederam a fase de simulação. 
 - A aplicação da métrica Fault-Pos revelou, com maior precisão, que os experimentos que incorporam técnicas de balanceamento demonstram eficácia superior no processo de priorização de defeitos. Dentre as abordagens de balanceamento avaliadas, destaca-se o experimento "e002_smote_euclidian", que obteve os resultados mais promissores.
 
 ---
