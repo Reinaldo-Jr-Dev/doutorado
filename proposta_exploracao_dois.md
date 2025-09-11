@@ -23,11 +23,11 @@
 
 ![Tabela 2 - Experimento da Proposta de Exploração II](img/Tab_2_Proposta_Exploracao_II.png "Tabela 2 - Resultado do Experimento da Proposta de Exploração II")
 
-**Figura 2:** Tabela - Rsultado do Experimento da Proposta de Exploração II (MFR)
+**Figura 2:** Tabela - Resultado do Experimento da Proposta de Exploração II (MFR)
 
 ![Tabela 2 - Experimento da Proposta de Exploração II](img/Grafico_1_Proposta_Exploracao_II.png "Tabela 2 - Resultado do Experimento da Proposta de Exploração II")
 
-**Figura 3:** Gráfco - Resultado do Experimento da Proposta de Exploração II (MFR)
+**Figura 3:** Gráfico - Resultado do Experimento da Proposta de Exploração II (MFR)
 
 ## Análise dos Resultados
 - ????
