@@ -3,11 +3,11 @@
 ## Características do ambiente de execução
 - Projeto: Defects4J.
 - Programas: Chart, Lang, Math, Mockito e Time.
-- Métricas: ???.
+- Métricas: MFR.
 - Heurísticas: ochiai, tarantula, jaccard, op2, barinel e dstar.
-- Quantidade mínima de casos de teste: ??.
-- Quantidade mínima de casos de teste "+": ??.
-- Quantidade mínima de casos de teste "-": ??.
+- Quantidade mínima de casos de teste: 6.
+- Quantidade mínima de casos de teste "+": 3.
+- Quantidade mínima de casos de teste "-": 3.
 
 ![Total de Testes Repetidos](img/Tab_1_Proposta_Exploracao_II.png "Total de Testes Repetidos")
 
