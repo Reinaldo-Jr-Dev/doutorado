@@ -3,7 +3,7 @@
 ## Características do ambiente de execução
 - Projeto: Defects4J.
 - Programas: Chart, Lang, Math, Mockito e Time.
-- Métricas: MFR.
+- Métricas: MFR (Mean First Rank).
 - Heurísticas: ochiai, tarantula, jaccard, op2, barinel e dstar.
 - Quantidade mínima de casos de teste: 6.
 - Quantidade mínima de casos de teste "+": 3.
