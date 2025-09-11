@@ -19,3 +19,15 @@
 - **e007_smote_euclidian_NR3**
   - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS3 – Noise Reduction Scheme 3), a qual consiste em remover todos os casos de teste pertencentes a conjuntos de aprovados e reprovados que apresentem espectros idênticos (mesma cobertura).
 
+## Resultados
+
+![Tabela 2 - Experimento da Proposta de Exploração II](img/Tab_2_Proposta_Exploracao_II.png "Tabela 2 - Resultado do Experimento da Proposta de Exploração II")
+
+**Figura 2:** Tabela - Rsultado do Experimento da Proposta de Exploração II (MFR)
+
+![Tabela 2 - Experimento da Proposta de Exploração II](img/Grafico_1_Proposta_Exploracao_II.png "Tabela 2 - Resultado do Experimento da Proposta de Exploração II")
+
+**Figura 3:** Gráfco - Resultado do Experimento da Proposta de Exploração II (MFR)
+
+## Análise dos Resultados
+- ????
