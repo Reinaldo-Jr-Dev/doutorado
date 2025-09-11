@@ -30,4 +30,4 @@
 **Figura 3:** Gráfico - Resultado do Experimento da Proposta de Exploração II (MFR)
 
 ## Análise dos Resultados
-- Observou-se que a aplicação da técnica de eliminação de ruídos (NRS3) à matriz de espectro, na maioria dos casos, não contribuiu para a melhoria da eficácia das heurísticas. Verificou-se que 36,66% dos melhores resultados ocorreram no experimento e007_NRS3, enquanto 56,68% corresponderam ao experimento e001_original. Em 6,66% dos casos, houve empate entre ambos os experimentos.
+- Observou-se que a aplicação da técnica de eliminação de ruídos (NRS3) à matriz de espectro, na maioria dos casos, não contribuiu para a melhoria da eficácia das heurísticas. Verificou-se que 36,66% (representado em verde na Figura 2) dos melhores resultados ocorreram no experimento e007_NRS3, enquanto 56,68% (representado em vermelho na Figura 2) corresponderam ao experimento e001_original. Em 6,66% (representado em amarelo na Figura 2) dos casos, houve empate entre ambos os experimentos.
