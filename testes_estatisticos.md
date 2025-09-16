@@ -7,4 +7,4 @@ Este documento irá abordar os detalhes dos tópicos de estudo.
 ## Testes Estatísticos
 
 - Objetivo Geral: ??
-- Artigo de origem: [Nouvelles recherches sur la distribution florale](https://www.researchgate.net/publication/242013831_Nouvelles_Recherches_Sur_la_Distribution_Florale)
+- Artigo de origem: [Demystifying_Statistics:_How_to_choose_a_statistical_test?](https://www.researchgate.net/publication/242013831_Nouvelles_Recherches_Sur_la_Distribution_Florale)
