@@ -52,19 +52,5 @@ O artigo detalha os tipos de análise que podem ser realizados: univariada, biva
 
 **Tabela 3:** Análise Multivariada
 
-### Como Escolher o Teste Estatístico Mais Apropriado
-
-A essência da escolha do teste estatístico reside em uma tradução precisa da sua questão de pesquisa para os termos estatísticos, focando nas características das suas variáveis e no tipo de relação que você busca investigar.
-
-- Comece pela Questão de Pesquisa (em Linguagem Simples)
-    - Este é o passo mais crucial. Defina claramente o que você quer investigar, comparar ou associar. Uma pergunta de pesquisa bem formulada em termos compreensíveis é o ponto de partida para tudo.
-    - Exemplo: "A idade está relacionada ao risco de infarto do miocárdio?" ou "O novo tratamento reduz a dor de forma significativa?".
-- Identifique as Variáveis (DV - Variável Dependente ou IV - Variável Independente)**
-    - Exemplo: Em "A idade está relacionada ao risco de infarto?", "Risco de infarto" é a DV e "Idade" é a IV.
-- Classifique Suas Variáveis: A forma como suas variáveis são medidas determinará os testes possíveis.
-    - Nominal (NV), Ordinal (OV) ou Contínua (CV).
-- Verifique a Distribuição dos Dados (para Variáveis Contínuas):
-    - Para variáveis contínuas, é fundamental saber se elas seguem uma distribuição normal (dados simétricos, em forma de sino) ou uma distribuição assimétrica (skewed).
-    - Testes Paramétricos: Usados para dados contínuos com distribuição normal. São geralmente mais poderosos.
-    - Testes Não Paramétricos: Usados para dados contínuos com distribuição assimétrica, ou para variáveis ordinais e nominais. Se houver dúvida sobre a normalidade, os testes não paramétricos são a opção mais segura. 
-- Determine o Tipo de Análise: Univariada, Bivariada ou Multivariada.	
+### Teste Estatístico Mais Apropriado
+<mark>A ANOVA Fatorial ( Factorial ANOVA) é um teste estatístico que avalia simultaneamente o impacto de duas ou mais variáveis independentes (fatores) sobre uma variável dependente quantitativa (Variável dependente: MFR e Variável independente: Heurística e Técnica de alteração da matriz de espectro).</mark>
