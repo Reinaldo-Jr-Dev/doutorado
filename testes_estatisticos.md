@@ -53,4 +53,4 @@ O artigo detalha os tipos de análise que podem ser realizados: univariada, biva
 **Tabela 3:** Análise Multivariada
 
 ### Teste Estatístico Mais Apropriado
-<mark>A ANOVA Fatorial ( Factorial ANOVA) é um teste estatístico que avalia simultaneamente o impacto de duas ou mais variáveis independentes (fatores) sobre uma variável dependente quantitativa (Variável dependente: MFR e Variável independente: Heurística e Técnica de alteração da matriz de espectro).</mark>
+<mark>A ANOVA Fatorial (Factorial ANOVA) é um teste estatístico que avalia simultaneamente o impacto de duas ou mais variáveis independentes sobre uma variável dependente (Variável dependente: MFR e Variável independente: Heurísticas e Técnicas de alteração da matriz de espectro).</mark>
