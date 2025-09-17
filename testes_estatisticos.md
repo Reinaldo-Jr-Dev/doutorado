@@ -30,7 +30,7 @@ Os autores dão um exemplo claro: em um estudo sobre múltiplos fatores (idade, 
 - Testes Estatísticos: Paramétricos e Não Paramétricos
   - Testes Paramétricos: São testes estatísticos que fazem suposições específicas sobre a distribuição dos dados na população de onde a amostra foi retirada. A suposição mais comum e crucial é que os dados seguem uma distribuição normal. Além disso, frequentemente assumem homogeneidade de variâncias.
 Exemplos de uso: Teste t de Student (para comparar médias de dois grupos) e ANOVA (Análise de Variância) (para comparar médias de três ou mais grupos).
-  - Testes Não Paramétricos: Também conhecidos como testes "livres de distribuição", são testes estatísticos que não fazem suposições específicas sobre a forma da distribuição dos dados na população. Eles são mais flexíveis e podem ser aplicados a uma gama mais ampla de tipos de dados. Exemplos deuso: Teste de Mann-Whitney, Teste de Kruskal-Wallis e Teste de Wilcoxon.
+  - Testes Não Paramétricos: Também conhecidos como testes "livres de distribuição", são testes estatísticos que não fazem suposições específicas sobre a forma da distribuição dos dados na população. Eles são mais flexíveis e podem ser aplicados a uma gama mais ampla de tipos de dados. Exemplos de uso: Teste de Mann-Whitney, Teste de Kruskal-Wallis e Teste de Wilcoxon.
  
 ### Tipos de Análise e Testes Estatísticos
 O artigo detalha os tipos de análise que podem ser realizados: univariada, bivariada e multivariada.
