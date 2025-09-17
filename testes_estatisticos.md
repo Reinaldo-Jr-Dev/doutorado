@@ -35,10 +35,18 @@ Exemplos de uso: Teste t de Student (para comparar médias de dois grupos) e ANO
 O artigo detalha os tipos de análise que podem ser realizados: univariada, bivariada e multivariada.
 - Análise Univariada
   - Essa análise é usada para descrever as características de base dos pacientes. O foco está em apresentar os dados usando medidas de tendência central e dispersão, sem fazer comparações entre grupos. O artigo fornece exemplos práticos (Tabela 1) que ilustram essas escolhas.
-<< Tabela 1>>
+![Tabela - Análise Univariada](img/Table1_Univariate_Analysis.png "Tabela - Análise Univariada")
+
+**Tabela 1:** Análise Univariada
+
 - Análise Bivariada
   - Este é o tipo de teste mais comum na literatura científica, onde se examina a relação entre duas variáveis (uma DV e uma IV). A complexidade surge porque tanto a DV quanto a IV podem ser nominais, ordinais ou contínuas, resultando em várias combinações possíveis. O artigo apresenta uma matriz útil (Tabela 2) para guiar a escolha:
-<< Tabela 2>>
+![Tabela - Análise Bivariada](img/Table2_Bivariate_Analysis.png "Tabela - Análise Bivariada")
+
+**Tabela 2:** Análise Bivariada
+
 - Análise Multivariada 
   - Em situações clínicas, múltiplos fatores de risco (IVs) podem influenciar um único evento ou resultado (DV). A análise multivariada é uma ferramenta poderosa para determinar as contribuições únicas de cada fator de risco para o resultado, ajustando para a influência de outras variáveis. Por exemplo, ela permite demonstrar que o tabagismo tem uma relação independente com a doença coronariana, mesmo após ajustar para fatores como idade, sexo, diabetes ou sedentarismo. Isso é feito matematicamente por softwares estatísticos que isolam o efeito de um único fator de interesse enquanto controlam os outros. O artigo lista exemplos comuns na Tabela 3.
-<< Tabela 3 >>
+![Tabela - Análise Multivariada](img/Table3_Multivariate_Analysis.png "Tabela - Análise Multivariada")
+
+**Tabela 3:** Análise Multivariada
