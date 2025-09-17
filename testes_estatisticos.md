@@ -7,8 +7,9 @@ Este documento irá abordar os detalhes dos tópicos de estudo.
 ## Testes Estatísticos
 
 - Objetivo Geral: É crucial para profissionais, especialmente na área médica, compreender e analisar criticamente trabalhos de pesquisa, bem como planejar seus próprios estudos. No entanto, a estatística é frequentemente vista como um ponto fraco por muitos pesquisadores. O problema, segundo os autores Subramanian Shankar e Ramakant Singh, não está na complexidade inerente da estatística em si, mas na forma como é ensinada, com excesso de ênfase em detalhes técnicos em vez dos princípios fundamentais. Isso leva a um uso muito comum de testes estatísticos errados ou inadequados em pesquisas publicadas. Esse artigo se propõe a ser um guia prático, focando na pergunta fundamental: "qual teste estatístico deve ser usado em qual situação?".
-- Artigo de origem: [Demystifying Statistics: How to choose a statistical test?](https://www.sciencedirect.com/science/article/abs/pii/S0973369814000545)
-- Acesso direto ao artigo: ??
+- **DOI**: [10.1109/j.injr.2014.04.002](https://journals.sagepub.com/doi/10.1016/j.injr.2014.04.002)
+- **Link para o artigo**: [Demystifying Statistics: How to choose a statistical test](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/Demystifying_Statistics_How_to_choose_a_statistical_test.pdf)
+
 
 ### A Abordagem de Cinco Passos
 O cerne da metodologia proposta reside em uma abordagem sistemática, onde o processo começa com a formulação de uma questão de pesquisa em "linguagem comum". Esta é a etapa mais crítica e frequentemente negligenciada. Uma vez que a pergunta é claramente definida, ela precisa ser traduzida para a "linguagem estatística" (é essencialmente a linguagem das variáveis). Após a aplicação do "teste estatístico apropriado", a resposta obtida é convertida de volta para a linguagem original para fornecer o resultado final.
