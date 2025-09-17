@@ -12,7 +12,7 @@ Este documento irá abordar os detalhes dos tópicos de estudo.
 
 
 ### A Abordagem de Cinco Passos
-O cerne da metodologia proposta reside em uma abordagem sistemática, onde o processo começa com a formulação de uma questão de pesquisa em "linguagem comum". Esta é a etapa mais crítica e frequentemente negligenciada. Uma vez que a pergunta é claramente definida, ela precisa ser traduzida para a "linguagem estatística" (é essencialmente a linguagem das variáveis). Após a aplicação do "teste estatístico apropriado", a resposta obtida é convertida de volta para a linguagem original para fornecer o resultado final.
+O cerne da metodologia proposta reside em uma abordagem sistemática, onde o processo começa com a formulação de uma questão de pesquisa em "linguagem comum" (Passo 1). Esta é a etapa mais crítica e frequentemente negligenciada. Uma vez que a pergunta é claramente definida, ela precisa ser traduzida para a "linguagem estatística" (Passo 2 - é essencialmente a linguagem das variáveis). Após a aplicação do "teste estatístico apropriado" (Passo 3), a "resposta é obtida" (Passo 4) é "convertida para a linguagem original" (Passo 5) para fornecer o resultado final.
 
 ### Entendendo as Variáveis: A Chave para a Tradução Estatística
 Uma variável é definida como qualquer característica ou medição em um estudo que será analisada – desde altura e peso até o status de fumante ou a ocorrência de um AVC.
