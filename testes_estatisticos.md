@@ -17,7 +17,7 @@ O cerne da metodologia proposta reside em uma abordagem sistemática, onde o pro
 ### Entendendo as Variáveis: A Chave para a Tradução Estatística
 Uma variável é definida como qualquer característica ou medição em um estudo que será analisada – desde altura e peso até o status de fumante ou a ocorrência de um AVC.
 As variáveis são classificadas de duas maneiras principais:
-- Baseado na sua natureza inerente/característica:
+- Baseado na sua natureza inerente:
   - Nominal (NV): Categorias sem ordem (exemplos: sexo, estado civil).
   - Ordinal (OV): Categorias com uma ordem natural, mas sem intervalos iguais (exemplos: escalas de dor, classificação de filmes por estrelas).
   - Contínua (CV): Valores numéricos com intervalos iguais e um ponto zero significativo (exemplos: altura, peso, pressão arterial).
