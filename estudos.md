@@ -11,5 +11,6 @@ Este documento serve como um índice centralizado para organizar meus tópicos d
 - [Distância de Hamming](distancia_hamming.md)
 
 ### Testes Estatísticos
-- [Testes Estatísticos](testes_estatisticos.md)
+- [Conceitos Gerais](testes_estatisticos_2.md)
+- [Estudo do artigo Demystifying Statistics: How to choose a statistical test](testes_estatisticos.md)
 
