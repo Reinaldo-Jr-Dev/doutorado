@@ -16,8 +16,6 @@ As pesquisas em SBFL frequentemente empregam testes estatísticos formais para a
 
 Para que o teste estatístico possa analisar a variabilidade e a significância estatística das diferenças, ele precisa de múltiplas observações (ou repetições) para cada combinação única de suas variáveis independentes (projetos + versão, heurísticas e técnica de balanceamento).
 
-<mark>Eu não tenho aleatoriedade</mark>
-
 ### Exemplo de Aplicação
 
 Cenário: Uma equipe de desenvolvimento otimizou um algoritmo de busca (Algoritmo B) e acredita que ele é mais rápido que a versão atual (Algoritmo A). Você decide fazer um experimento para verificar isso. Foi selecionado 20 operações de busca representativas. Para cada operação, você mede o tempo de execução (em milissegundos) tanto com o Algoritmo A quanto com o Algoritmo B.
@@ -56,6 +54,9 @@ else:
 
 ```
 **Fragmento de Código 1** - Teste Estatítico (Teste t Pareado)
+
+<mark>Eu não tenho aleatoriedade - EXPLICAR </mark>
+<mark>Apresentar a interpretação do código</mark>
 
 
 
