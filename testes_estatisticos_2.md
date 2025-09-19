@@ -18,4 +18,13 @@ Para que o teste estatístico possa analisar a variabilidade e a significância 
 
 <mark>Eu não tenho aleatoriedade</mark>
 
+### Exemplo de Aplicação
+
+Cenário: Uma equipe de desenvolvimento otimizou um algoritmo de busca (Algoritmo B) e acredita que ele é mais rápido que a versão atual (Algoritmo A). Você decide fazer um experimento para verificar isso. Foi selecionado 20 operações de busca representativas. Para cada operação, você mede o tempo de execução (em milissegundos) tanto com o Algoritmo A quanto com o Algoritmo B.
+
+![Tabela de Simulações](img/Tabela_Simulacoes.png "Tabela de Simulações")
+
+**Tabela 1:** Tabela de Simulações
+
+
 
