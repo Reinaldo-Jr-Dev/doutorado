@@ -72,5 +72,104 @@ Cenário de dados da proposta de pesquisa:
 
 ### Exemplo de Código
 
+```python
+import numpy as np
+import pandas as pd
+import statsmodels.formula.api as smf
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Dados fornecidos, em formato de string para simular um arquivo CSV
+data_string = """
+Chart_v1; Ochiai, Matriz_I, 480
+Chart_v1; Ochiai, Matriz_2, 98
+Chart_v1; Tarantula, Matriz_I, 234
+Chart_v1; Tarantula, Matriz_2, 217
+Chart_v1; Jaccard, Matriz_I, 481
+Chart_v1; Jaccard, Matriz_2, 133
+Chart_v1; OP2, Matriz_I, 557
+Chart_v1; OP2, Matriz_2, 133
+Chart_v1; Barinel, Matriz_I, 234
+Chart_v1; Barinel, Matriz_2, 219
+Chart_v1; Dstar, Matriz_I, 509
+Chart_v1; Dstar, Matriz_2, 1602
+Chart_v2; Ochiai, Matriz_I, 490
+Chart_v2; Ochiai, Matriz_2, 108
+Chart_v2; Tarantula, Matriz_I, 254
+Chart_v2; Tarantula, Matriz_2, 237
+Chart_v2; Jaccard, Matriz_I, 491
+Chart_v2; Jaccard, Matriz_2, 163
+Chart_v2; OP2, Matriz_I, 587
+Chart_v2; OP2, Matriz_2, 163
+Chart_v2; Barinel, Matriz_I, 264
+Chart_v2; Barinel, Matriz_2, 259
+Chart_v2; Dstar, Matriz_I, 549
+Chart_v2; Dstar, Matriz_2, 1902
+"""
+
+# Processar a string para criar o DataFrame
+data_list = []
+for line in data_string.strip().split('\n'):
+    bug_id_part, rest = line.split(';')
+    heuristic, matrix_format, rank_value = rest.split(',')
+    data_list.append({
+        'Bug_ID': bug_id_part.strip(),
+        'Heuristica': heuristic.strip(),
+        'Formato_Espectro': matrix_format.strip(),
+        'Rank_Value': int(rank_value.strip())
+    })
+
+df = pd.DataFrame(data_list)
+
+# Converter colunas para os tipos corretos
+# Bug_ID, Heuristica e Formato_Espectro devem ser categóricos para o LMM
+df['Bug_ID'] = pd.Categorical(df['Bug_ID'])
+df['Heuristica'] = pd.Categorical(df['Heuristica'])
+df['Formato_Espectro'] = pd.Categorical(df['Formato_Espectro'])
+
+print("DataFrame com os dados:")
+print(df.head())
+print(f"\nTotal de observações: {len(df)}")
+print(f"Número de Bug_IDs únicos: {df['Bug_ID'].nunique()}")
+print(f"Número de Heurísticas únicas: {df['Heuristica'].nunique()}")
+print(f"Número de Formatos de Espectro únicos: {df['Formato_Espectro'].nunique()}\n")
+
+# Gráfico de interação: MFR (Rank_Value) por Heurística e Formato de Espectro
+plt.figure(figsize=(14, 8))
+sns.pointplot(data=df, x='Heuristica', y='Rank_Value', hue='Formato_Espectro', dodge=True, errorbar='sd', palette='viridis')
+plt.title('Rank Value por Heurística e Formato de Espectro')
+plt.xlabel('Heurística')
+plt.ylabel('Rank do Elemento Defeituoso (MFR)') # MFR é uma média de ranks
+plt.xticks(rotation=45, ha='right')
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.tight_layout()
+plt.show()
+
+# Boxplot geral para Heurísticas
+plt.figure(figsize=(12, 6))
+sns.boxplot(data=df, x='Heuristica', y='Rank_Value', palette='coolwarm')
+plt.title('Distribuição do Rank Value por Heurística (Geral)')
+plt.xlabel('Heurística')
+plt.ylabel('Rank do Elemento Defeituoso (MFR)')
+plt.xticks(rotation=45, ha='right')
+plt.grid(axis='y', linestyle='--', alpha=0.6)
+plt.tight_layout()
+plt.show()
+
+try:
+    # Ajustar o Modelo Linear Misto
+    # 'groups=df["Bug_ID"]' especifica a variável de agrupamento para o efeito aleatório
+    model = smf.mixedlm("Rank_Value ~ C(Heuristica) * C(Formato_Espectro)", df, groups=df["Bug_ID"])
+    result = model.fit()
+    
+    print("--- Sumário Detalhado do Modelo Linear Misto (LMM) ---")
+    print(result.summary())
+
+except Exception as e:
+    print(f"Ocorreu um erro ao rodar o mixedlm: {e}")
+    print("Possíveis causas: dados insuficientes para o número de grupos/fatores,")
+    print("ou dados com pouca variabilidade para estimar o modelo.")
+```
+**Fragmento de Código 2** Código - Modelo Linear Misto (LMM)
 
 
