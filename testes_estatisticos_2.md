@@ -55,19 +55,19 @@ else:
 ```
 **Fragmento de Código 1** - Teste Estatítico (Teste t Pareado)
 
-## Testes Estatísticos Aplicado a SBFL
+## Testes Estatísticos aplicado a SBFL
 
-Importância de se trabalhar com Teste Estatítico
-  - Os testes estatísticos permitem que você generalize suas descobertas. Eles ajudam a responder: A diferença que observei nos resultados MFR é apenas uma coincidência para este conjunto limitado de bugs, ou ela é representativa de uma diferença real e consistente que se aplicaria a outros bugs semelhantes que não estavam no Defects4J.
-  - Você provavelmente está comparando sua heurística com outras existentes (benchmarks). Suponha que sua heurística H1 tenha um MFR de 0.20 e uma heurística H2 (baseline) tenha um MFR de 0.25. Numericamente, 0.20 é melhor que 0.25. Mas essa diferença de 0.05 é estatisticamente significativa? Ou ela poderia ser apenas uma variação trivial que não representa uma melhoria substancial ou confiável?
-
+Importância de se trabalhar com Teste Estatíticos em SBFL
+  - Permitem que as descobertas sejam generalizadas.
+  - Ajudam a realizar a comparação entre as variáveis independentes e a análise de sua relevância.
+    
 Cenário de dados da proposta de pesquisa:
   - Variável Dependente: MFR (Mean First Rank) – Uma métrica contínua de desempenho.
   - Fatores Fixos (de Interesse) ou Variáveis Independentes:
     - Heurísticas (6 níveis): Você quer comparar o desempenho médio das 6 heurísticas.
     - Formatos de Espectro (N formatos).
   - Unidades Experimentais: Defects4J (Projetos + Versões).
-  - 
+    
 <mark>De acordo com esse cenário o Modelo Linear Misto (LMM) é a técnica estatística mais indicada.</mark>
 
 ### Exemplo de Código
