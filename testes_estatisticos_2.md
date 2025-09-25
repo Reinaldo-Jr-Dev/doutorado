@@ -172,9 +172,9 @@ except Exception as e:
 ```
 **Fragmento de Código 2** Código - Modelo Linear Misto (LMM)
 
-### Teste Estatístico Wilcoxon Signed Rank
+## Teste Estatístico Wilcoxon Signed Rank
 
-## Exemplo de aplicação (Teste Estatístico Wilcoxon Signed Rank)
+### Exemplo de aplicação (Teste Estatístico Wilcoxon Signed Rank)
 Cenário: Uma empresa de desenvolvimento de software está testando duas ferramentas de análise estática de código (Ferramenta A e Ferramenta B) para identificar vulnerabilidades. Eles aplicam ambas as ferramentas em 7 projetos diferentes e registram o "número de vulnerabilidades críticas não detectadas" por cada ferramenta (um valor menor é melhor).
 
 ![Explicação - Wilcoxon Signed Rank](img/Explicacao_Wilcoxon_Signed_Rank.png "Explicação - Wilcoxon Signed Rank")
