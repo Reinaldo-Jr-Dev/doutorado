@@ -70,7 +70,7 @@ Cenário de dados da proposta de pesquisa:
     
 <mark>De acordo com esse cenário o Modelo Linear Misto (LMM) é a técnica estatística mais indicada.</mark>
 
-### Exemplo de Código
+### Modelo Linear Misto (LMM) - Exemplo de Código
 
 ```python
 import numpy as np
@@ -172,4 +172,13 @@ except Exception as e:
 ```
 **Fragmento de Código 2** Código - Modelo Linear Misto (LMM)
 
+### Teste Estatístico Wilcoxon Signed Rank
 
+## Exemplo de aplicação (Teste Estatístico Wilcoxon Signed Rank)
+Cenário: Uma empresa de desenvolvimento de software está testando duas ferramentas de análise estática de código (Ferramenta A e Ferramenta B) para identificar vulnerabilidades. Eles aplicam ambas as ferramentas em 7 projetos diferentes e registram o "número de vulnerabilidades críticas não detectadas" por cada ferramenta (um valor menor é melhor).
+
+![Explicação - Wilcoxon Signed Rank](img/Explicacao_Wilcoxon_Signed_Rank.png "Explicação - Wilcoxon Signed Rank")
+
+Conclusão ...
+
+Explicação - Wilcoxon Signed Rank
