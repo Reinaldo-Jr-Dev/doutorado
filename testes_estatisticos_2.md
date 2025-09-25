@@ -179,6 +179,9 @@ Cenário: Uma empresa de desenvolvimento de software está testando duas ferrame
 
 ![Explicação - Wilcoxon Signed Rank](img/Explicacao_Wilcoxon_Signed_Rank.png "Explicação - Wilcoxon Signed Rank")
 
-Conclusão ...
+**Imagem 1** Explicação - Wilcoxon Signed Rank
 
-Explicação - Wilcoxon Signed Rank
+Conclusão
+  - Com base neste exemplo, e considerando um nível de significância de 0.05, há evidências estatísticas significativas para rejeitar a hipótese nula. Isso significa que há uma diferença significativa na mediana do número de vulnerabilidades críticas não detectadas entre a Ferramenta A e a Ferramenta B.
+
+Explicar melhor ?????
