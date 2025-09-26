@@ -44,6 +44,7 @@ Cenário: Uma empresa de desenvolvimento de software está testando duas ferrame
 ![Explicação - Wilcoxon Signed Rank](img/Explicacao_Wilcoxon_Signed_Rank.png "Explicação - Wilcoxon Signed Rank")
 
 **Imagem 1** - Explicação do Teste Estatístico Wilcoxon Signed Rank
+**Pode-se também avaliar pelo resultado de valor-p (p-value). Se for menor que o seu nível de significância (geralmente 0.05), pode-se rejeitar a hipótese nula e concluir que há uma diferença estatisticamente significativa entre o desempenho dos Formatos I e II para aquela combinação específica de projeto e heurística.
 
 ```python
   import numpy as np
