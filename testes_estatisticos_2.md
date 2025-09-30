@@ -133,3 +133,33 @@ Cenário: Uma empresa de desenvolvimento de software está testando duas ferrame
 Conclusão
   - Como o valor de W calculado de 1,5 é menor ou igual ao valor crítico 2, rejeitamos a hipótese nula (é a afirmação a ser testada, que geralmente assume que não há efeito, não há diferença ou não há relação entre as variáveis na população).
   - Com base neste exemplo, e considerando um nível de significância de 0.05, há evidências estatísticas significativas para rejeitar a hipótese nula. Isso significa que há uma diferença significativa na mediana do número de vulnerabilidades críticas não detectadas entre a Ferramenta A e a Ferramenta B.
+
+## Teste Estatístico Wilcoxon Signed Rank aplicado ao cenario da pesquisa
+
+  - Proposta: Comparar os formatos I e II da matriz de espectro para cada projeto, agrupando pelas heurísticas.
+  - Objetivo geral: Saber se um formato é geralmente melhor para um projeto específico (considerando todas as heurísticas).
+
+Formato dos dados:
+```csv
+Chart; Heuristica_A, Formato_I, Valor de MFR
+Chart; Heuristica_B, Formato_I, Valor de MFR
+Chart; Heuristica_C, Formato_I, Valor de MFR
+Chart; Heuristica_D, Formato_I, Valor de MFR
+Chart; Heuristica_E, Formato_I, Valor de MFR
+Chart; Heuristica_F, Formato_I, Valor de MFR
+Chart; Heuristica_A, Formato_II, Valor de MFR
+Chart; Heuristica_B, Formato_II, Valor de MFR
+Chart; Heuristica_C, Formato_II, Valor de MFR
+Chart; Heuristica_D, Formato_II, Valor de MFR
+Chart; Heuristica_E, Formato_II, Valor de MFR
+Chart; Heuristica_F, Formato_II, Valor de MFR
+```
+Esse teste será repetido para cada um dos 5 projetos. Isso resultaria em 5 testes de Wilcoxon Signed-Rank, cada um comparando os formatos para um projeto específico. Como estará sendo realizado 5 testes de Wilcoxon Signed-Rank (um para cada projeto), a chance de encontrar um resultado "significativo" por puro acaso aumenta. Para mitigar isso, é altamente recomendável aplicar uma correção para comparações múltiplas, como a correção de Bonferroni ou Holm-Bonferroni (Exemplo: Se você usar Bonferroni para 5 testes e seu α original for 0.05, seu novo α ajustado para cada teste será 0.05/5=0.01).
+
+Forma de Aplicação
+```
+Lista 1 = [MFR_Chart_HeuristicaA_F1, MFR_Chart_HeuristicaB_F1, ..., MFR_Chart_HeuristicaF_F1]
+Lista 2 = [MFR_Chart_HeuristicaA_F2, MFR_Chart_HeuristicaB_F2, ..., MFR_Chart_HeuristicaF_F2]
+** Será utilizado o scipy.stats.wilcoxon(Lista1, Lista2) para obter a estatística W e o p-valor para cada projeto (Chart, etc).
+```
+
