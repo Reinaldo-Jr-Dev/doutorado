@@ -73,7 +73,7 @@ Este repositório tem como objetivo documentar os principais artigos científico
   	- Para determinar a significância dos resultados empíricos, foi empregado o teste de Wilcoxon Signed Rank, com um nível de significância de 0.05.
   - Detalhes do Processo de Clonagem
 	- <mark>A abordagem dos autores é uma estratégia baseada em adição. Eles optaram por adicionar "cópias" dos testes com defeito existentes. É importante notar que essa clonagem é conceitual e matemática, não implicando na criação de inúmeras cópias físicas dos casos de teste e sua reexecução. O artigo enfatiza que o benefício é a manipulação das fórmulas das técnicas SBFL.</mark>
-	- A fórmula para o fator de clonagem c é: c = (P / F) Onde: P (é o número de casos de teste bem-sucedidos) e F (é o número de casos de teste falhos).
+	- A fórmula para o fator de clonagem c é: c = (P / F) Onde: P (é o número de casos de teste bem-sucedidos) e F (é o número de casos de teste falhos). Isso significa que cada um dos F casos de teste falhos serão clonados c vezes.
 	- As fórmulas SBFL dependem de parâmetros como aef (número de casos de teste falhos que executam uma entidade de programa), anf (número de casos de teste falhos que não executam uma entidade de programa), aep (número de casos de teste passados que executam uma entidade de programa) e anp (número de casos de teste passados que não executam uma entidade de programa) e após a clonagem esses parâmatros ficam da seguinte forma: aef, anf, (c * aep) e (c * anp).
   - Por que essa abordagem foi utilizada?
 	- <mark>Eficiência Computacional: É uma operação matemática simples (fator de clonagem * valor da variável) que tem um custo computacional muito baixo. Reexecutar testes ou manipular matrizes gigantescas não seria interessante.</mark>
