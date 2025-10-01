@@ -82,7 +82,7 @@ Este repositório tem como objetivo documentar os principais artigos científico
   - Métricas utilizadas
 	- Avg expense: Custo médio para localizar um defeito.
 	- Max expense: Similar ao Avg, mas considera o defeito como o último a ser encontrado em caso de empate.
-	- Top-5 e Top-5‰: Avaliam se o defeito foi localizada dentro das 5 primeiras posições ou dos 5‰ das entidades com maior suspeita.
+	- Top-5 e Top-5%: Avaliam se o defeito foi localizada dentro das 5 primeiras posições ou dos 5‰ das entidades com maior suspeita.
   - Contribuições:
 	- <mark>O estudo demonstra de forma robusta, que a estratégia de clonagem de casos de teste com defeito é uma abordagem eficaz e benéfica para melhorar (ou, no mínimo, 	preservar) a precisão das fórmulas de localização de defeitos baseada em espectro para a maioria das fórmulas analisadas. Esta técnica oferece um método de baixo custo computacional para lidar com o problema de desequilíbrio de classes em conjuntos de testes.	</mark>	
   - Importância do artigo para a pesquisa
