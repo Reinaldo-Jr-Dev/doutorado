@@ -47,89 +47,6 @@ Cenário: Uma empresa de desenvolvimento de software está testando duas ferrame
 
 **Pode-se também avaliar pelo resultado de valor-p (p-value). Se for menor que o seu nível de significância (geralmente 0.05), pode-se rejeitar a hipótese nula e concluir que há uma diferença estatisticamente significativa entre o desempenho das Ferramentas A e B para aquela combinação específica de projeto e heurística**
 
-```python
-  import numpy as np
-  from scipy import stats
-  
-  # Dados do nosso exemplo didático:
-  # Número de vulnerabilidades críticas não detectadas
-  ferramenta_a = [12, 8, 15, 10, 9, 13, 11]
-  ferramenta_b = [10, 7, 12, 11, 6, 10, 9]
-  n = len(ferramenta_a) # Número de pares
-  
-  print(f"## Cenário: Comparando Ferramenta A vs. Ferramenta B (n={n} pares) ##\n")
-  
-  print("--- Implementação Manual do Wilcoxon Signed-Rank Test (Para fins didáticos) ---\n")
-  
-  # Passo 1: Calcular a Diferença (dᵢ) entre cada par (Ferramenta B - Ferramenta A)
-  diferencas = np.array(ferramenta_b) - np.array(ferramenta_a)
-  print(f"1. Diferenças (B - A): {diferencas}")
-  
-  # Passo 2: Calcular o Valor Absoluto das Diferenças
-  abs_diferencas = np.abs(diferencas)
-  print(f"2. Valores Absolutos das Diferenças: {abs_diferencas}")
-  
-  # Filtrar diferenças zero (se houvesse) - no nosso exemplo não há
-  # A função wilcoxon da scipy lida com isso. Para a manual, vamos considerar que não há zeros.
-  # Se houvesse zeros, eles seriam removidos antes de ranquear e 'n' seria ajustado.
-  # Por clareza, no nosso exemplo, não há diferenças zero.
-  
-  # Passo 3: Ordenar os Valores Absolutos e Atribuir Ranks (tratando empates)
-  # Usaremos stats.rankdata para atribuir ranks médios para empates, conforme explicado.
-  ranks_abs = stats.rankdata(abs_diferencas)
-  print(f"3. Ranks dos Valores Absolutos: {ranks_abs}")
-  
-  # Passo 4: Reatribuir os Sinais Originais aos Ranks (Ranks Sinalizados)
-  # Multiplicamos o rank pelo sinal da diferença original (1 para positivo, -1 para negativo)
-  signed_ranks = ranks_abs * np.sign(diferencas)
-  print(f"4. Ranks Sinalizados: {signed_ranks}")
-  
-  # Passo 5: Calcular a Soma dos Ranks Positivos (W⁺) e a Soma dos Ranks Negativos (W⁻)
-  W_plus_manual = np.sum(signed_ranks[signed_ranks > 0])
-  W_minus_manual = np.sum(signed_ranks[signed_ranks < 0])
-  print(f"5. Soma dos Ranks Positivos (W⁺): {W_plus_manual}")
-  print(f"   Soma dos Ranks Negativos (W⁻): {W_minus_manual} (considerando o sinal)")
-  
-  # Passo 6: Determinar o Valor da Estatística de Teste (W)
-  # W é o menor valor absoluto entre W⁺ e W⁻ (ou T+ e |T-|, dependendo da convenção)
-  # Usaremos o menor entre a soma dos ranks positivos e o valor absoluto da soma dos ranks negativos.
-  W_statistic_manual = min(W_plus_manual, abs(W_minus_manual))
-  print(f"6. Estatística W calculada manualmente: {W_statistic_manual}")
-  
-  print("\n--- Utilizando a biblioteca scipy.stats para o Wilcoxon Signed-Rank Test ---\n")
-  
-  # Utilizando scipy.stats.wilcoxon
-  # Por padrão, é um teste bicaudal (two-sided)
-  # `zero_method='wilcox'` (padrão) exclui as diferenças zero.
-  # `alternative='two-sided'` (padrão) indica teste bicaudal.
-  statistic_scipy, p_value_scipy = stats.wilcoxon(ferramenta_a, ferramenta_b, alternative='two-sided')
-  
-  print(f"Estatística W (Scipy): {statistic_scipy}")
-  print(f"P-valor (Scipy): {p_value_scipy:.5f}") # Formato para melhor leitura
-  
-  # Interpretação dos Resultados
-  alpha = 0.05
-  print(f"\nNível de Significância (alpha) escolhido: {alpha}")
-  
-  print(f"\nComparação com o Valor Crítico (Tabela):")
-  print(f"   Para n={n} e alpha={alpha} (bicaudal), o valor crítico da tabela é 2.")
-  print(f"   Nossa estatística W manual é {W_statistic_manual}.")
-  if W_statistic_manual <= 2:
-      print(f"   Como {W_statistic_manual} é MENOR ou IGUAL ao valor crítico 2, REJEITAMOS a hipótese nula.")
-  else:
-      print(f"   Como {W_statistic_manual} é MAIOR que o valor crítico 2, NÃO REJEITAMOS a hipótese nula.")
-  
-  print(f"\nComparação com o P-valor (Scipy):")
-  if p_value_scipy < alpha:
-      print(f"   Como o P-valor ({p_value_scipy:.5f}) é MENOR que alpha ({alpha}), REJEITAMOS a hipótese nula.")
-      print("   **Conclusão:** Há evidências estatísticas significativas de uma diferença na mediana do número de vulnerabilidades críticas não detectadas entre as Ferramentas A e B.")
-  else:
-      print(f"   Como o P-valor ({p_value_scipy:.5f}) é MAIOR ou IGUAL a alpha ({alpha}), NÃO REJEITAMOS a hipótese nula.")
-      print("   **Conclusão:** Não há evidências estatísticas significativas de uma diferença na mediana do número de vulnerabilidades críticas não detectadas entre as Ferramentas A e B.")
-```
-
-**Código 1** - Implementação do Teste Estatístico Wilcoxon Signed Rank
-
 Conclusão
   - Como o valor de W calculado de 1,5 é menor ou igual ao valor crítico 2, rejeitamos a hipótese nula (é a afirmação a ser testada, que geralmente assume que não há efeito, não há diferença ou não há relação entre as variáveis na população).
   - Com base neste exemplo, e considerando um nível de significância de 0.05, há evidências estatísticas significativas para rejeitar a hipótese nula. Isso significa que há uma diferença significativa na mediana do número de vulnerabilidades críticas não detectadas entre a Ferramenta A e a Ferramenta B.
@@ -137,29 +54,184 @@ Conclusão
 ## Teste Estatístico Wilcoxon Signed Rank aplicado ao cenario da pesquisa
 
   - Proposta: Comparar os formatos I e II da matriz de espectro para cada projeto, agrupando pelas heurísticas.
-  - Objetivo geral: Saber se um formato é geralmente melhor para um projeto específico (considerando todas as heurísticas).
 
 Formato dos dados:
 ```csv
-Chart; Heuristica_A, Formato_I, Valor de MFR
-Chart; Heuristica_B, Formato_I, Valor de MFR
-Chart; Heuristica_C, Formato_I, Valor de MFR
-Chart; Heuristica_D, Formato_I, Valor de MFR
-Chart; Heuristica_E, Formato_I, Valor de MFR
-Chart; Heuristica_F, Formato_I, Valor de MFR
-Chart; Heuristica_A, Formato_II, Valor de MFR
-Chart; Heuristica_B, Formato_II, Valor de MFR
-Chart; Heuristica_C, Formato_II, Valor de MFR
-Chart; Heuristica_D, Formato_II, Valor de MFR
-Chart; Heuristica_E, Formato_II, Valor de MFR
-Chart; Heuristica_F, Formato_II, Valor de MFR
+Projeto,Heuristica,Tipo da Matriz,MFR_Valor
+Chart,Ochiai,e001_original,480.42
+Chart,Ochiai,e007_NRS3,98.85
+Chart,Tarantula,e001_original,234.42
+Chart,Tarantula,e007_NRS3,217.00
+Chart,Jaccard,e001_original,481.57
+Chart,Jaccard,e007_NRS3,133.00
+Chart,Op2,e001_original,557.28
+Chart,Op2,e007_NRS3,133.14
+Chart,Barinel,e001_original,234.42
+Chart,Barinel,e007_NRS3,219.14
+Chart,Dstar,e001_original,509.14
+Chart,Dstar,e007_NRS3,1602.00
+Math,Ochiai,e001_original,206.28
+Math,Ochiai,e007_NRS3,596.85
+Math,Tarantula,e001_original,268.85
+Math,Tarantula,e007_NRS3,658.85
+Math,Jaccard,e001_original,191.57
+Math,Jaccard,e007_NRS3,313.57
+Math,Op2,e001_original,101.28
+Math,Op2,e007_NRS3,469.42
+Math,Barinel,e001_original,268.85
+Math,Barinel,e007_NRS3,362.00
+Math,Dstar,e001_original,320.71
+Math,Dstar,e007_NRS3,421.71
+Time,Ochiai,e001_original,1158.57
+Time,Ochiai,e007_NRS3,1145.14
+Time,Tarantula,e001_original,1193.85
+Time,Tarantula,e007_NRS3,1188.71
+Time,Jaccard,e001_original,1186.14
+Time,Jaccard,e007_NRS3,1188.85
+Time,Op2,e001_original,1034.00
+Time,Op2,e007_NRS3,1050.00
+Time,Barinel,e001_original,1193.85
+Time,Barinel,e007_NRS3,1188.71
+Time,Dstar,e001_original,1156.14
+Time,Dstar,e007_NRS3,1143.14
+Lang,Ochiai,e001_original,36.00
+Lang,Ochiai,e007_NRS3,37.50
+Lang,Tarantula,e001_original,87.00
+Lang,Tarantula,e007_NRS3,79.00
+Lang,Jaccard,e001_original,37.50
+Lang,Jaccard,e007_NRS3,37.50
+Lang,Op2,e001_original,19.00
+Lang,Op2,e007_NRS3,19.00
+Lang,Barinel,e001_original,87.00
+Lang,Barinel,e007_NRS3,79.00
+Lang,Dstar,e001_original,32.00
+Lang,Dstar,e007_NRS3,32.50
+Mockito,Ochiai,e001_original,422.45
+Mockito,Ochiai,e007_NRS3,493.81
+Mockito,Tarantula,e001_original,438.63
+Mockito,Tarantula,e007_NRS3,497.09
+Mockito,Jaccard,e001_original,456.54
+Mockito,Jaccard,e007_NRS3,595.72
+Mockito,Op2,e001_original,373.90
+Mockito,Op2,e007_NRS3,511.09
+Mockito,Barinel,e001_original,438.63
+Mockito,Barinel,e007_NRS3,497.36
+Mockito,Dstar,e001_original,696.18
+Mockito,Dstar,e007_NRS3,849.27
 ```
-Esse teste será repetido para cada um dos 5 projetos. Isso resultaria em 5 testes de Wilcoxon Signed-Rank, cada um comparando os formatos para um projeto específico. Como estará sendo realizado 5 testes de Wilcoxon Signed-Rank (um para cada projeto), a chance de encontrar um resultado "significativo" por puro acaso aumenta. Para mitigar isso, é altamente recomendável aplicar uma correção para comparações múltiplas, como a correção de Bonferroni ou Holm-Bonferroni (Exemplo: Se você usar Bonferroni para 5 testes e seu α original for 0.05, seu novo α ajustado para cada teste será 0.05/5=0.01).
+**Arquivo CSV**
 
-Forma de Aplicação
-```
-Lista 1 = [MFR_Chart_HeuristicaA_F1, MFR_Chart_HeuristicaB_F1, ..., MFR_Chart_HeuristicaF_F1]
-Lista 2 = [MFR_Chart_HeuristicaA_F2, MFR_Chart_HeuristicaB_F2, ..., MFR_Chart_HeuristicaF_F2]
-** Será utilizado o scipy.stats.wilcoxon(Lista1, Lista2) para obter a estatística W e o p-valor para cada projeto (Chart, etc).
-```
+```python
+import pandas as pd
+import numpy as np
+from scipy import stats
 
+# --- Configurações ---
+CSV_FILE_NAME = "experimento-1.csv"
+ALPHA = 0.05 # Nível de significância
+
+print(f"Análise estatística para o arquivo: {CSV_FILE_NAME}")
+print(f"Nível de significância (α): {ALPHA}\n")
+
+try:
+    # --- 1. Leitura dos Dados ---
+    df = pd.read_csv(CSV_FILE_NAME)
+
+    # --- 2. Identificar Projetos Únicos ---
+    projects = df['Projeto'].unique()
+
+    # --- 3. Iterar por cada Projeto e Aplicar o Teste ---
+    print("--- Resultados do Teste de Wilcoxon Signed-Rank por Projeto ---\n")
+    for project in projects:
+        print(f"### Projeto: {project} ###")
+
+        # Filtrar dados para o projeto atual
+        df_project = df[df['Projeto'] == project].copy()
+
+        # Garantir que os dados para e001_original e e007_NRS3 estão alinhados pela heurística
+        # Sort by Heuristica ensures correct pairing
+        mfr_format_i = df_project[df_project['Tipo da Matriz'] == 'e001_original'].sort_values(by='Heuristica')['MFR_Valor'].values
+        mfr_format_ii = df_project[df_project['Tipo da Matriz'] == 'e007_NRS3'].sort_values(by='Heuristica')['MFR_Valor'].values
+
+        # Verificar se há dados suficientes para o teste
+        if len(mfr_format_i) < 2 or len(mfr_format_ii) < 2:
+            print(f"  Não há dados suficientes para realizar o Teste de Wilcoxon para o Projeto {project}. Pelo menos 2 pares são necessários.")
+            print("-" * 40)
+            continue
+        
+        # --- Aplicação do Teste de Wilcoxon Signed-Rank ---
+        # alternative='two-sided' para um teste bicaudal (H1: diferença em qualquer direção)
+        wilcoxon_statistic, p_value = stats.wilcoxon(mfr_format_i, mfr_format_ii, alternative='two-sided')
+
+        # --- Resultados e Interpretação ---
+        print(f"  Estatística W: {wilcoxon_statistic}")
+        print(f"  P-valor: {p_value:.5f}")
+
+        # Verificação da Hipótese Nula
+        if p_value < ALPHA:
+            print(f"  Hipótese Nula (H₀): REJEITADA (p-valor < α)")
+            print(f"  Conclusão: Há evidências estatísticas significativas de uma diferença na mediana dos MFRs entre os tipos de matriz para o Projeto {project}.")
+            # Determinar a direção da diferença (qual é 'melhor' MFR)
+            mean_f1 = np.mean(mfr_format_i)
+            mean_f2 = np.mean(mfr_format_ii)
+            # Média_e007_NRS3 < Média_e001_original
+            if mean_f2 < mean_f1:
+                print(f"  O e007_NRS3 (Média MFR: {mean_f2:.3f}) tende a apresentar melhor desempenho que o e001_original (Média MFR: {mean_f1:.3f}).")
+            else:
+                print(f"  O e001_original (Média MFR: {mean_f1:.3f}) tende a apresentar melhor desempenho que o e007_NRS3 (Média MFR: {mean_f2:.3f}).")
+        else:
+            print(f"  Hipótese Nula (H₀): NÃO REJEITADA (p-valor ≥ α)")
+            print(f"  Conclusão: Não há evidências estatísticas significativas de uma diferença na mediana dos MFRs entre os tipos de matriz para o Projeto {project}.")
+            print(f"  (Média MFR e001_original: {np.mean(mfr_format_i):.3f}, Média MFR e007_NRS3: {np.mean(mfr_format_ii):.3f})")
+        print("-" * 40)
+
+except FileNotFoundError:
+    print(f"Erro: O arquivo '{CSV_FILE_NAME}' não foi encontrado. Certifique-se de que ele está no mesmo diretório do script.")
+except Exception as e:
+    print(f"Ocorreu um erro: {e}")
+```
+**Código - Teste Estatístico Wilcoxon Signed Rank**
+
+```
+Análise estatística para o arquivo: experimento-1.csv
+Nível de significância (α): 0.05
+
+--- Resultados do Teste de Wilcoxon Signed-Rank por Projeto ---
+
+### Projeto: Chart ###
+  Estatística W: 6.0
+  P-valor: 0.43750
+  Hipótese Nula (H₀): NÃO REJEITADA (p-valor ≥ α)
+  Conclusão: Não há evidências estatísticas significativas de uma diferença na mediana dos MFRs entre os tipos de matriz para o Projeto Chart.
+  (Média MFR e001_original: 416.208, Média MFR e007_NRS3: 400.522)
+----------------------------------------
+### Projeto: Math ###
+  Estatística W: 0.0
+  P-valor: 0.03125
+  Hipótese Nula (H₀): REJEITADA (p-valor < α)
+  Conclusão: Há evidências estatísticas significativas de uma diferença na mediana dos MFRs entre os tipos de matriz para o Projeto Math.
+  O e001_original (Média MFR: 226.257) tende a apresentar melhor desempenho que o e007_NRS3 (Média MFR: 470.400).
+----------------------------------------
+### Projeto: Time ###
+  Estatística W: 7.0
+  P-valor: 0.50000
+  Hipótese Nula (H₀): NÃO REJEITADA (p-valor ≥ α)
+  Conclusão: Não há evidências estatísticas significativas de uma diferença na mediana dos MFRs entre os tipos de matriz para o Projeto Time.
+  (Média MFR e001_original: 1153.758, Média MFR e007_NRS3: 1150.758)
+----------------------------------------
+### Projeto: Lang ###
+  Estatística W: 3.0
+  P-valor: 0.50000
+  Hipótese Nula (H₀): NÃO REJEITADA (p-valor ≥ α)
+  Conclusão: Não há evidências estatísticas significativas de uma diferença na mediana dos MFRs entre os tipos de matriz para o Projeto Lang.
+  (Média MFR e001_original: 49.750, Média MFR e007_NRS3: 47.417)
+----------------------------------------
+### Projeto: Mockito ###
+  Estatística W: 0.0
+  P-valor: 0.03125
+  Hipótese Nula (H₀): REJEITADA (p-valor < α)
+  Conclusão: Há evidências estatísticas significativas de uma diferença na mediana dos MFRs entre os tipos de matriz para o Projeto Mockito.
+  O e001_original (Média MFR: 471.055) tende a apresentar melhor desempenho que o e007_NRS3 (Média MFR: 574.057).
+----------------------------------------
+```
+**Saída do Código**
