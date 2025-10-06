@@ -19,8 +19,16 @@
 
 ![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_1_Proposta_Exploracao_III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
 
+**Tabela 1:** Tabela - Resultado do Experimento da Proposta de Exploração III
+
 ![Gráfico - Proposta de Exploração III (MFR)](img/Graf_1_Proposta_Exploracao_III.png "Gráfico - Proposta de Exploração III (MFR)")
+
+**Gráfico 1:** Proposta de Exploração III (MFR)
 
 ![Gráfico - Proposta de Exploração III (ACC@10)](img/Graf_2_Proposta_Exploracao_III.png "Gráfico - Proposta de Exploração III (ACC@10)")
 
+**Gráfico 2:** Proposta de Exploração III (ACC@10)
+
 ![Gráfico - Proposta de Exploração III (ACC_RAW@10)](img/Graf_3_Proposta_Exploracao_III.png "Gráfico - Proposta de Exploração III (ACC_RAW@10)")
+
+**Gráfico 3:** Proposta de Exploração III (ACC_RAW@10)
