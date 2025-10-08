@@ -29,7 +29,7 @@
 
 **Gráfico 2:** Proposta de Exploração III (ACC@10)
 
-![Gráfico - Proposta de Exploração III (ACC_RAW@10)](img/Graf_3_Proposta_Exploracao_III.png "Gráfico - Proposta de Exploração III (ACC_RAW@10)")
+![Gráfico - Proposta de Exploração III (ACC_RAW@10)](img/Graf_3_Proposta_Exploracao__III.png "Gráfico - Proposta de Exploração III (ACC_RAW@10)")
 
 **Gráfico 3:** Proposta de Exploração III (ACC_RAW@10)
 
