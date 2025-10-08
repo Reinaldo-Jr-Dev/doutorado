@@ -35,6 +35,6 @@
 
 ## Resultados - Vizinhos Gerados
 
-![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_2_Proposta_Exploracao_III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
+![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_2_Proposta_Exploracao__III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
 
 **Tabela 1:** Tabela - Análise da quantidade de Statements cobertos com Smote Original e Smote Modificado
