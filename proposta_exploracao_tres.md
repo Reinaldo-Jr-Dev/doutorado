@@ -8,6 +8,8 @@
 - Quantidade mínima de casos de teste: 8.
 - Quantidade mínima de casos de teste "+": 4.
 - Quantidade mínima de casos de teste "-": 4.
+- Parametrização do SMOTE:
+  - k: quantidade de casos de teste negativos - 2.
 
 ## Descrição dos Experimentos
 - **e100_smote_original**
