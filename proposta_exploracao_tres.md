@@ -37,4 +37,7 @@
 
 ![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_2_Proposta_Exploracao__III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
 
-**Tabela 1:** Tabela - Análise da quantidade de Statements cobertos com Smote Original e Smote Modificado
+**Tabela 2:** Tabela - Análise da quantidade de Statements cobertos com Smote Original e Smote Modificado
+
+### Conclusões:
+  - A comparação entre as formas de interpolação Trunc e Round evidencia que a utilização da interpolação Round promove um incremento no número de casos de teste com statements cobertos. Contudo, tal incremento não se estende à geração de vizinhos únicos, a qual não apresentou variação significativa com o uso da forma Round.
