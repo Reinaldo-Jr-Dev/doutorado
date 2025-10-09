@@ -56,7 +56,7 @@
 
 ## Resultados - Análise de Vizinhos Inéditos
 
-![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_3_Proposta_Exploracao__III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
+![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_3_Proposta_Exploracao_III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
 
 **Tabela 3:** Tabela - Análise de Vizinhos Inéditos
 
