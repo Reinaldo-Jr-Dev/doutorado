@@ -17,7 +17,7 @@
 - **e101_smote_changed**
   - Execução das heurísticas aplicadas à matriz de espectro com a técnica de balanceamento de dados SMOTE, porém com uma modificação no algoritmo responsável pela geração de novos vizinhos, de modo a produzir instâncias com maior cobertura — isto é, com maior incidência de valores “1” nas colunas da matriz.
 
-## Resultados - MFR, ACC@10 e ACC_RAW@10
+## Análise I - Métricas MFR, ACC@10 e ACC_RAW@10
 
 ![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_1_Proposta_Exploracao_III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
 
@@ -45,7 +45,7 @@
 ### Conclusões:
   - A análise comparativa entre os experimentos e100_smote_original e e101_smote_changed evidenciou que o comportamento da métrica ACC@10 manteve-se praticamente constante na maioria dos projetos e heurísticas avaliados. A única exceção foi o projeto Mockito, no qual o experimento e101_smote_changed apresentou desempenho superior para as heurísticas Tarantula e Barinel.
 
-## Resultados - Vizinhos Gerados
+## Análise II - Avaliação da cobertura dos novos vizinhos gerados
 
 ![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_2_Proposta_Exploracao__III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
 
@@ -54,7 +54,7 @@
 ### Conclusões:
   - A comparação entre as formas de interpolação Trunc e Round evidencia que a utilização da interpolação Round promove um incremento no número de casos de teste com statements cobertos. Contudo, tal incremento não se estende à geração de vizinhos únicos, a qual não apresentou variação significativa com o uso da forma Round.
 
-## Resultados - Análise de Vizinhos Inéditos
+## Análise III - Avaliação dos novos vizinhos inéditos gerados
 
 ![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_3_Proposta_Exploracao_III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
 
