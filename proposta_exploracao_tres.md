@@ -55,6 +55,7 @@ def _generate_samples(
   - A análise comparativa entre os experimentos e100_smote_original e e101_smote_changed evidenciou que o comportamento da métrica ACC@10 manteve-se praticamente constante na maioria dos projetos e heurísticas avaliados. A única exceção foi o projeto Mockito, no qual o experimento e101_smote_changed apresentou desempenho superior para as heurísticas Tarantula e Barinel.
 
 ## Análise II - Avaliação da cobertura dos novos vizinhos gerados
+Essa análise foi realizada apenas para o projeto Chart, nas versões 16 e 22. O projeto e as versões foram selecionados de forma aleatória. Optou-se por analisar apenas um projeto e duas versões, considerando que se trata de uma investigação bastante detalhada e trabalhosa, especialmente ao se pensar na análise de todos os projetos e suas respectivas versões.
 
 ![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_2_Proposta_Exploracao__III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
 
