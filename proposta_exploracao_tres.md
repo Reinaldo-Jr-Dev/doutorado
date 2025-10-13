@@ -82,4 +82,4 @@ Essa análise foi realizada apenas para o projeto Chart, nas versões 16 e 22. O
 Log com informações sobre o cálculo das distâncias - [Arquigo de Log](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/main/log/smote-log-distancia-vizinhos.txt)
 
 ### Conclusões:
-  - ???
+  - Ao avaliar a distância entre os novos casos de teste gerados pela técnica de balanceamento SMOTE, observou-se que a técnica de interpolação ROUND contribui tanto para a geração de vizinhos mais distantes quanto para a geração de vizinhos mais próximos.
