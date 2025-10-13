@@ -72,3 +72,12 @@ Essa análise foi realizada apenas para o projeto Chart, nas versões 16 e 22. O
 
 ### Conclusões:
   - A comparação entre as formas de interpolação Trunc (e100_smote_original) e Round (e101_smote_changed) evidencia que a utilização da interpolação Round não contribuiu, em sua maioria, para a geração de vizinhos únicos. O único projeto em que se observou um aumento na geração de vizinhos únicos, considerando o experimento e101_smote_changed, foi o Chart, versão 16.
+
+## Análise IV - Avaliação da distância dos novos casos de teste gerados pelo balanceamento
+
+![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_4_Proposta_Exploracao_III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
+
+**Tabela 4:** Tabela - Avaliação da distância dos novos casos de teste gerados pelo balanceamento
+
+### Conclusões:
+  - ???
