@@ -79,5 +79,7 @@ Essa análise foi realizada apenas para o projeto Chart, nas versões 16 e 22. O
 
 **Tabela 4:** Tabela - Avaliação da distância dos novos casos de teste gerados pelo balanceamento
 
+Log com informações sobre o cálculo das distâncias - [Arquigo de Log](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/main/log/smote-log-distancia-vizinhos.txt)
+
 ### Conclusões:
   - ???
