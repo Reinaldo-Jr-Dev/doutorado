@@ -12,7 +12,7 @@
   - k= Valor mínimo entre quantidade de casos de teste negativos - 2 e 5.
 
 ## Descrição dos Experimentos
-O objetivo principal desse experimento, é propor uma investigação comparativa acerca da aplicação de diferentes heurísticas (ochiai, tarantula, jaccard, op2, barinel e dstar) sobre a matriz de espectro de dados em seu formato original com a eliminação de ruídos, de acordo com as seguintes técnicas: NRS1, NRS2, NRS3, NRS4, NRS5, NRS6 e NRS7. Após isso, será avaliado também, o impacto da eliminação dos ruídos juntamente com a aplicação da técnica de balanceamento de dados SMOTE. Esses resultados serão medidos, de acordo com as métricas MFR (Mean First Rank), ACC@10 e ACC_RAW@10. Vale ressaltar que no arquivo de referência dessas técnicas de eliminação de ruídos, utilizou-se, somente a métrica EXAM. Segue o detalhamento dos itens de execução (experimentos) que serão criados.
+Esse experimento propõe uma investigação comparativa sobre a aplicação de diferentes heurísticas (Ochiai, Tarantula, Jaccard, Op2, Barinel e DStar) na matriz de espectro de dados em seu formato original com a eliminação de ruídos, de acordo com as seguintes técnicas: NRS1, NRS2, NRS3, NRS4, NRS5, NRS6 e NRS7. Após isso, será avaliado também, o impacto da eliminação dos ruídos juntamente com a aplicação da técnica de balanceamento de dados SMOTE. Esses resultados serão medidos, de acordo com as métricas MFR (Mean First Rank), ACC@10 e ACC_RAW@10. Vale ressaltar que, no artigo de referência dessas técnicas de eliminação de ruídos, foi utilizada apenas a métrica EXAM.
 
 - **e200_original**
   - Execução das heurísticas aplicadas à matriz de especrtro em seu formato original.
