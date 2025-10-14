@@ -12,19 +12,35 @@
   - k= Valor mínimo entre quantidade de casos de teste negativos - 2 e 5.
 
 ## Descrição dos Experimentos
+O objetivo principal desse experimento, é propor uma investigação comparativa acerca da aplicação de diferentes heurísticas (ochiai, tarantula, jaccard, op2, barinel e dstar) sobre a matriz de espectro de dados em seu formato original com a eliminação de ruídos, de acordo com as seguintes técnicas: NRS1, NRS2, NRS3, NRS4, NRS5, NRS6 e NRS7. Após isso, será avaliado também, o impacto da eliminação dos ruídos juntamente com a aplicação da técnica de balanceamento de dados SMOTE. Esses resultados serão medidos, de acordo com as métricas MFR (Mean First Rank), ACC@10 e ACC_RAW@10. Vale ressaltar que no arquivo de referência dessas técnicas de eliminação de ruídos, utilizou-se, somente a métrica EXAM. Segue o detalhamento dos itens de execução (experimentos) que serão criados.
+
 - **e200_original**
   - Execução das heurísticas aplicadas à matriz de especrtro em seu formato original.
-- **e201_smote_euclidian_NR4**
+- **e201_original_NRS1**
+  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS1 – Noise Reduction Scheme 1). 
+- **e202_original_NRS2**
+  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS2 – Noise Reduction Scheme 2). 
+- **e203_original_NRS3**
+  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS3 – Noise Reduction Scheme 3). 
+- **e204_original_NRS4**
   - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS4 – Noise Reduction Scheme 4). 
-- **e202_smote_euclidian_NR5**
-  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS5 – Noise Reduction Scheme 4). 
-- **e203_smote_euclidian_NR7**
-  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS7 – Noise Reduction Scheme 4). 
-- **e204_smote_euclidian_NR4_smote**
-  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS4 – Noise Reduction Scheme 4) e posteriormente, execução da técnica de balancamento Smote. 
-- **e205_smote_euclidian_NR5_smote**
-  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS5 – Noise Reduction Scheme 5) e posteriormente, execução da técnica de balancamento Smote. 
-- **e206_smote_euclidian_NR7_smote**
-  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS7 – Noise Reduction Scheme 7) e posteriormente, execução da técnica de balancamento Smote. 
-
-Foram selecionadas apenas as técnicas de eliminação de ruídos NRS4, NRS5 e NRS7, uma vez que essas apresentaram os melhores resultados no artigo de referência utilizado na pesquisa de referência dessa exploração.
+- **e205_original_NRS5**
+  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS5 – Noise Reduction Scheme 5). 
+- **e206_original_NRS6**
+  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS6 – Noise Reduction Scheme 6). 
+- **e207_original_NRS7**
+  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS7 – Noise Reduction Scheme 7). 
+- **e208_smote_euclidian_NRS1**
+  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS1 – Noise Reduction Scheme 1) e posteriormente aplicação da técnica de balanceamento de dados Smote. 
+- **e209_smote_euclidian_NRS2**
+  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS2 – Noise Reduction Scheme 2) e posteriormente aplicação da técnica de balanceamento de dados Smote. 
+- **e210_smote_euclidian_NRS3**
+  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS3 – Noise Reduction Scheme 3) e posteriormente aplicação da técnica de balanceamento de dados Smote. 
+- **e211_smote_euclidian_NRS4**
+  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS4 – Noise Reduction Scheme 4) e posteriormente aplicação da técnica de balanceamento de dados Smote. 
+- **e212_smote_euclidian_NRS5**
+  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS5 – Noise Reduction Scheme 5) e posteriormente aplicação da técnica de balanceamento de dados Smote. 
+- **e213_smote_euclidian_NRS6**
+  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS6 – Noise Reduction Scheme 6) e posteriormente aplicação da técnica de balanceamento de dados Smote. 
+- **e214_smote_euclidian_NR7**
+  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS7 – Noise Reduction Scheme 7) e posteriormente aplicação da técnica de balanceamento de dados Smote. 
