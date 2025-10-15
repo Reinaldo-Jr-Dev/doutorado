@@ -45,11 +45,8 @@ Cenário: Uma empresa de desenvolvimento de software está testando duas ferrame
 
 **Imagem 1** - Explicação do Teste Estatístico Wilcoxon Signed Rank
 
-**Pode-se também avaliar pelo resultado de valor-p (p-value). Se for menor que o seu nível de significância (geralmente 0.05), pode-se rejeitar a hipótese nula e concluir que há uma diferença estatisticamente significativa entre o desempenho das Ferramentas A e B para aquela combinação específica de projeto e heurística**
-
 Conclusão
-  - Como o valor de W calculado de 1,5 é menor ou igual ao valor crítico 2, rejeitamos a hipótese nula (é a afirmação a ser testada, que geralmente assume que não há efeito, não há diferença ou não há relação entre as variáveis na população).
-  - Com base neste exemplo, e considerando um nível de significância de 0.05, há evidências estatísticas significativas para rejeitar a hipótese nula. Isso significa que há uma diferença significativa na mediana do número de vulnerabilidades críticas não detectadas entre a Ferramenta A e a Ferramenta B.
+  - Se p-value < @, significa que a hipótese nula foi rejeitada, ou seja, com base nos dados do experimento, há evidências estatisticamente significativas de que existe uma diferença real, e não é apenas resultado do acaso.
 
 ## Teste Estatístico Wilcoxon Signed Rank aplicado ao cenario da pesquisa
 
