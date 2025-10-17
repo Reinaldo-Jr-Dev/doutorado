@@ -24,7 +24,7 @@ Importância de se trabalhar com Teste Estatíticos em SBFL
 Cenário de dados da proposta de pesquisa:
   - Variável Dependente: MFR (Mean First Rank).
   - Fatores Fixos (de Interesse) ou Variáveis Independentes:
-    - Heurísticas (6 níveis): Você quer comparar o desempenho médio das 6 heurísticas.
+    - Heurísticas (6 níveis): Quer comparar o desempenho médio das 6 heurísticas.
     - Formatos da Matriz de Espectro (N formatos).
   - Unidades Experimentais: Defects4J (Projetos + Versões).
 
