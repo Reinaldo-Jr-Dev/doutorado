@@ -65,6 +65,6 @@ Análise por projeto, considerando a métrica MFR
   - Mockito
     - Ao comparar o experimento e200_original com os demais, observa-se que, em todas as heurísticas, os outros experimentos apresentaram resultados superiores, exceto a heurística OP2. Destaca-se o experimento e202_original_NRS2, que obteve melhor desempenho em todas as heurísticas analisadas de melhor resultado (Ochiai, Tarantula, Jaccard, Barinel e Dstar).
 
-Próximos passos:
-  - Realizar a análise estrutural da matriz após a eliminação dos ruídos, considerando todos os experimentos (de e201_original_NRS1 a e207_original_NRS7). O objetivo dessa etapa é compreender, de forma mais aprofundada, o impacto ocasionado pela eliminação dos ruídos.
-  - Executar o experimento de eliminação dos ruídos em conjunto com o processo de balanceamento dos dados (de e208_NRS1_smote_euclidian a e214_NRS7_smote_euclidian). O objetivo dessa etapa é compreender o impacto do balanceamento sobre a matriz após a eliminação dos ruídos.
+<mark>Próximos passos</mark>:
+  - <mark>Realizar a análise estrutural da matriz após a eliminação dos ruídos, considerando todos os experimentos (de e201_original_NRS1 a e207_original_NRS7). O objetivo dessa etapa é compreender, de forma mais aprofundada, o impacto ocasionado pela eliminação dos ruídos.</mark>
+  - <mark>Executar o experimento de eliminação dos ruídos em conjunto com o processo de balanceamento dos dados (de e208_NRS1_smote_euclidian a e214_NRS7_smote_euclidian). O objetivo dessa etapa é compreender o impacto do balanceamento sobre a matriz após a eliminação dos ruídos.</mark>
