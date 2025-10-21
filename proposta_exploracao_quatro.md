@@ -50,3 +50,15 @@ Esse experimento propõe uma investigação comparativa sobre a aplicação de d
 
  ## Resultado dos dados dos experimentos
  [Planilha com resultados](https://docs.google.com/spreadsheets/d/e/2PACX-1vRxBhUWZfG_yJoFMpFyRFnhXbK-mqb16q55vAimD5zcNqWa0mhV8cuCYlT5bvuidQ/pubhtml?gid=727601908&single=true)
+
+Análise por projeto, considerando a métrica MFR
+  - Chart
+    - Ao comparar o experimento e200_original com os demais, observa-se que, em todas as heurísticas, os outros experimentos apresentaram resultados superiores. Destaca-se o experimento e203_original_NRS3, que obteve melhor desempenho em metade das heurísticas analisadas (Ochiai, Tarantula e Jaccard).
+  - Math
+    - Ao comparar o experimento e200_original com os demais, observa-se que, em todas as heurísticas, o experimento e200_original apresentou resultados superiores.
+  - Time
+    - Ao comparar o experimento e200_original com os demais, observa-se que, em todas as heurísticas, os outros experimentos apresentaram resultados superiores. Destaca-se o experimento e203_original_NRS3, que obteve melhor desempenho em metade das heurísticas analisadas (Ochiai, Jaccard e DStar).
+  - Lang
+    - Ao comparar o experimento e200_original com os demais, observa-se que, em todas as heurísticas, o experimento e200_original apresentou resultados superiores, exceto para as heurísticas Tarantula e Barinel.
+  - Mockito
+    - Ao comparar o experimento e200_original com os demais, observa-se que, em todas as heurísticas, os outros experimentos apresentaram resultados superiores, exceto a heurística OP2. Destaca-se o experimento e202_original_NRS2, que obteve melhor desempenho em todas as heurísticas analisadas de melhor resultado (Ochiai, Tarantula, Jaccard, Barinel e Dstar).
