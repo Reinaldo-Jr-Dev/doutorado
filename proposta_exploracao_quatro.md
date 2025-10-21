@@ -11,7 +11,7 @@
 - Parametrização do SMOTE:
   - k= Valor mínimo entre quantidade de casos de teste negativos - 2 e 5.
 
-## Descrição dos Experimentos
+## Descrição dos experimentos
 Esse experimento propõe uma investigação comparativa sobre a aplicação de diferentes heurísticas (Ochiai, Tarantula, Jaccard, Op2, Barinel e DStar) na matriz de espectro de dados em seu formato original com a eliminação de ruídos, de acordo com as seguintes técnicas: NRS1, NRS2, NRS3, NRS4, NRS5, NRS6 e NRS7. Após isso, será avaliado também, o impacto da eliminação dos ruídos juntamente com a aplicação da técnica de balanceamento de dados SMOTE. Esses resultados serão medidos, de acordo com as métricas MFR (Mean First Rank), ACC@10 e ACC_RAW@10. Vale ressaltar que, no artigo de referência dessas técnicas de eliminação de ruídos, foi utilizada apenas a métrica EXAM.
 
 - **e200_original**
@@ -43,4 +43,10 @@ Esse experimento propõe uma investigação comparativa sobre a aplicação de d
 - **e213_NRS6_smote_euclidian**
   - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS6 – Noise Reduction Scheme 6) e posteriormente aplicação da técnica de balanceamento de dados Smote. 
 - **e214_NRS7_smote_euclidian**
-  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS7 – Noise Reduction Scheme 7) e posteriormente aplicação da técnica de balanceamento de dados Smote. 
+  - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS7 – Noise Reduction Scheme 7) e posteriormente aplicação da técnica de balanceamento de dados Smote.
+ 
+ ## Análise Estrutural dos dados dos experimentos
+  [Planilha com resultados da análise estrutural](https://docs.google.com/spreadsheets/d/e/2PACX-1vRxBhUWZfG_yJoFMpFyRFnhXbK-mqb16q55vAimD5zcNqWa0mhV8cuCYlT5bvuidQ/pubhtml?gid=1774065543&single=true)
+
+ ## Resultado dos dados dos experimentos
+ [Planilha com resultados](https://docs.google.com/spreadsheets/d/e/2PACX-1vRxBhUWZfG_yJoFMpFyRFnhXbK-mqb16q55vAimD5zcNqWa0mhV8cuCYlT5bvuidQ/pubhtml?gid=727601908&single=true)
