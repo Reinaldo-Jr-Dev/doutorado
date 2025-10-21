@@ -51,6 +51,8 @@ Esse experimento propõe uma investigação comparativa sobre a aplicação de d
  ## Resultado dos dados dos experimentos
  [Planilha com resultados](https://docs.google.com/spreadsheets/d/e/2PACX-1vRxBhUWZfG_yJoFMpFyRFnhXbK-mqb16q55vAimD5zcNqWa0mhV8cuCYlT5bvuidQ/pubhtml?gid=727601908&single=true)
 
+Ao analisar os resultados das métricas Acc_raw@10 e Acc@10, observou-se uma elevada repetição de valores, o que inviabilizou uma análise comparativa consistente entre os experimentos avaliados.
+
 Análise por projeto, considerando a métrica MFR
   - Chart
     - Ao comparar o experimento e200_original com os demais, observa-se que, em todas as heurísticas, os outros experimentos apresentaram resultados superiores. Destaca-se o experimento e203_original_NRS3, que obteve melhor desempenho em metade das heurísticas analisadas (Ochiai, Tarantula e Jaccard).
