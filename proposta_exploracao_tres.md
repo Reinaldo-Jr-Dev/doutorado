@@ -75,7 +75,7 @@ Essa análise foi realizada apenas para o projeto Chart, nas versões 16 e 22. O
 
 ## Análise IV - Avaliação da distância dos novos casos de teste gerados pelo balanceamento
 
-![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_4_Proposta_Exploracao_III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
+![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_4_Proposta_Exploracao__III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
 
 **Tabela 4:** Tabela - Avaliação da distância dos novos casos de teste gerados pelo balanceamento
 
