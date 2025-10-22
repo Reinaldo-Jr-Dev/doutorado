@@ -25,7 +25,7 @@ Cenário de dados da proposta de pesquisa:
   - Variável Dependente: MFR (Mean First Rank).
   - Fatores Fixos (de Interesse) ou Variáveis Independentes:
     - Heurísticas (6 níveis): Quer comparar o desempenho médio das 6 heurísticas.
-    - Formatos da Matriz de Espectro (N formatos).
+    - Formatos da Matriz de Espectro (2 formatos - original x modificado).
   - Unidades Experimentais: Defects4J (Projetos + Versões).
 
 ## Teste Estatístico Wilcoxon Signed Rank
