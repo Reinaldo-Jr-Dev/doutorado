@@ -67,4 +67,5 @@ Análise por projeto, considerando a métrica MFR
 
 <mark>Próximos passos</mark>:
   - <mark>Realizar a análise estrutural da matriz após a eliminação dos ruídos, considerando todos os experimentos (de e201_original_NRS1 a e207_original_NRS7). O objetivo dessa etapa é compreender, de forma mais aprofundada, o impacto ocasionado pela eliminação dos ruídos.</mark>
-  - <mark>Executar o experimento de eliminação dos ruídos em conjunto com o processo de balanceamento dos dados (de e208_NRS1_smote_euclidian a e214_NRS7_smote_euclidian). O objetivo dessa etapa é compreender o impacto do balanceamento sobre a matriz após a eliminação dos ruídos.</mark>
+  - <mark>Executar o experimento de eliminação dos ruídos em conjunto com o processo de balanceamento dos dados (de e208_NRS1_smote_euclidian a e214_NRS7_smote_euclidian). O objetivo dessa etapa é compreender o impacto do balanceamento sobre a matriz após a eliminação dos ruídos. O artigo intitulado "A Theoretical Analysis on Cloning the Failed Test Cases to Improve Spectrum-based Fault Localization" representa a hipótese de que a geração de novos casos de teste negativos, ainda que duplicados, aprimora o desempenho das métricas de Localização de Falhas Baseada em Espectro (SBFL).
+</mark>
