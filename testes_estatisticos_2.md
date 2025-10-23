@@ -45,7 +45,6 @@ Cenário: Uma empresa de desenvolvimento de software está testando duas ferrame
 **Imagem 1** - Explicação do Teste Estatístico Wilcoxon Signed Rank
 
 ```python
-'''
 # Arquivo CSV
 Comparacao,Tipo da Distancia,Valor da Distancia
 comparacao I,distancia_TX_TY,12
@@ -108,7 +107,6 @@ for comparacao in sorted(comparacoes):
     print(f"    Significante (α = 0.05)? {'Há diferença estatisticamente significativa' if p_valor < 0.05 else 'Não há diferença estatisticamente significativa'}")
     print()
 
-'''
 #SAÍDA DO CÓDIGO
 ================================================================================
 TESTE DE WILCOXON SIGNED RANK
@@ -123,7 +121,6 @@ Tipos de distância: ['distancia_TX_TY' 'distancia_TX_TA']
     Estatística W: 1.5000
     P-valor: 0.046875
     Significante (α = 0.05)? Há diferença estatisticamente significativa
-'''
 ```
 **Código** - Implementação do Exemplo
 
