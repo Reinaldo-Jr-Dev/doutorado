@@ -107,6 +107,23 @@ for comparacao in sorted(comparacoes):
     print(f"    P-valor: {p_valor:.6f}")
     print(f"    Significante (α = 0.05)? {'Há diferença estatisticamente significativa' if p_valor < 0.05 else 'Não há diferença estatisticamente significativa'}")
     print()
+
+'''
+#SAÍDA DO CÓDIGO
+================================================================================
+TESTE DE WILCOXON SIGNED RANK
+================================================================================
+
+Comparação: comparacao I
+Tipos de distância: ['distancia_TX_TY' 'distancia_TX_TA']
+  distancia_TX_TY: [12  8 15 10  9 13 11]
+  distancia_TX_TA: [10  7 12 11  6 10  9]
+
+  Resultados:
+    Estatística W: 1.5000
+    P-valor: 0.046875
+    Significante (α = 0.05)? Há diferença estatisticamente significativa
+'''
 ```
 **Código** - Implementação do Exemplo
 
