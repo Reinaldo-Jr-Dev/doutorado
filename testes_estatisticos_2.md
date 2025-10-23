@@ -45,6 +45,24 @@ Cenário: Uma empresa de desenvolvimento de software está testando duas ferrame
 **Imagem 1** - Explicação do Teste Estatístico Wilcoxon Signed Rank
 
 ```python
+'''
+# Arquivo CSV
+Comparacao,Tipo da Distancia,Valor da Distancia
+comparacao I,distancia_TX_TY,12
+comparacao I,distancia_TX_TA,10
+comparacao I,distancia_TX_TY,8
+comparacao I,distancia_TX_TA,7
+comparacao I,distancia_TX_TY,15
+comparacao I,distancia_TX_TA,12
+comparacao I,distancia_TX_TY,10
+comparacao I,distancia_TX_TA,11
+comparacao I,distancia_TX_TY,9
+comparacao I,distancia_TX_TA,6
+comparacao I,distancia_TX_TY,13
+comparacao I,distancia_TX_TA,10
+comparacao I,distancia_TX_TY,11
+comparacao I,distancia_TX_TA,9
+
 import pandas as pd
 from scipy.stats import wilcoxon
 import numpy as np
