@@ -44,6 +44,54 @@ Cenário: Uma empresa de desenvolvimento de software está testando duas ferrame
 
 **Imagem 1** - Explicação do Teste Estatístico Wilcoxon Signed Rank
 
+```python
+import pandas as pd
+from scipy.stats import wilcoxon
+import numpy as np
+
+# 1. LER O CSV
+df = pd.read_csv('tabela-distancias2.csv')
+
+# 2. Agrupar por Comparacao e Tipo da Distancia
+comparacoes = df['Comparacao'].unique()
+
+# 3. APLICAR TESTE DE WILCOXON PARA CADA COMPARAÇÃO
+print("=" * 80)
+print("TESTE DE WILCOXON SIGNED RANK")
+print("=" * 80)
+print()
+
+for comparacao in sorted(comparacoes):
+    # Filtrar dados da comparação atual
+    dados_comparacao = df[df['Comparacao'] == comparacao].copy()
+
+    # Obter os tipos de distância únicos
+    tipos_distancia = dados_comparacao['Tipo da Distancia'].unique()
+    print(f"Comparação: {comparacao}")
+    print(f"Tipos de distância: {tipos_distancia}")
+
+    # Separar os valores para cada tipo de distância
+    tipo1 = tipos_distancia[0]
+    tipo2 = tipos_distancia[1]
+
+    valores_tipo1 = dados_comparacao[dados_comparacao['Tipo da Distancia'] == tipo1]['Valor da Distancia'].values
+    valores_tipo2 = dados_comparacao[dados_comparacao['Tipo da Distancia'] == tipo2]['Valor da Distancia'].values
+
+    print(f"  {tipo1}: {valores_tipo1}")
+    print(f"  {tipo2}: {valores_tipo2}")
+
+    # Aplicar teste de Wilcoxon
+    # alternative='two-sided' para teste bilateral (padrão)
+    estatistica_w, p_valor = wilcoxon(valores_tipo1, valores_tipo2, alternative='two-sided')
+
+    print(f"\n  Resultados:")
+    print(f"    Estatística W: {estatistica_w:.4f}")
+    print(f"    P-valor: {p_valor:.6f}")
+    print(f"    Significante (α = 0.05)? {'Há diferença estatisticamente significativa' if p_valor < 0.05 else 'Não há diferença estatisticamente significativa'}")
+    print()
+```
+**Código** - Implementação do Exemplo
+
 Conclusão
   - Se p-value < @, significa que a hipótese nula foi rejeitada, ou seja, com base nos dados do experimento, há evidências estatisticamente significativas de que existe uma diferença real, e não é apenas resultado do acaso.
 
