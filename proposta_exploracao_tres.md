@@ -119,6 +119,7 @@ distancia_TY_TC,1.414
 distancia_TY_TC,0.000
 distancia_TY_TC,1.414
 ```
+**CSV a ser lido pela implementação de Wilcoxon Signed Rank**
 
 ```Python
 import pandas as pd
@@ -182,6 +183,7 @@ for tipo1, tipo2 in pares_comparacao:
 
 print("=" * 80)
 ```
+**Implementação do Teste Estatístico de Wilcoxon Signed Rank**
 
 ```
 ================================================================================
@@ -243,7 +245,7 @@ distancia_TX_TY vs distancia_TY_TC
   Significante (α=0.05): NÃO
 ================================================================================
 ```
-
+**Resultado da Implementação do Teste Estatístico de Wilcoxon Signed Rank**
 
 ### Conclusões:
   - Ao comparar as distâncias calculadas entre as amostras e seus vizinhos com as distâncias entre as amostras e as novas amostras geradas por meio de interpolação (para os tipos "Trunc", "Round" e "Ceiling"), constatou-se que as distâncias em relação às novas amostras geradas foram, na maioria dos casos, inferiores às distâncias em relação aos vizinhos. Em particular, destaca-se o método de interpolação "Round" que resultou nas menores distâncias.
