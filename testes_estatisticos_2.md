@@ -35,7 +35,7 @@ Por que o Teste de Wilcoxon Signed-Rank é Ideal para o cenário da nossa pesqui
   - Natureza Não-Paramétrica:
     - Métricas como o MFR (Mean First Rank) não seguem uma distribuição normal.
   - Comparações de Medianas:
-    - O teste avalia se existe uma diferença estatisticamente significativa nas medianas das diferenças entre os pares. Essa medida de tendência central é utilizada pelo dato dos dados serem não-paramétricos.
+    - O teste avalia se existe uma diferença estatisticamente significativa nas medianas das diferenças entre os pares. Essa medida de tendência central é utilizada pelo fato dos dados serem não-paramétricos.
 
 ### Exemplo de aplicação (Teste Estatístico Wilcoxon Signed Rank)
 Cenário: Uma empresa de desenvolvimento de software está testando duas ferramentas de análise estática de código (Ferramenta A e Ferramenta B) para identificar vulnerabilidades. Eles aplicam ambas as ferramentas em 7 projetos diferentes e registram o "número de vulnerabilidades críticas não detectadas" por cada ferramenta (um valor menor é melhor).
