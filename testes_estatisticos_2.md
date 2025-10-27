@@ -46,28 +46,28 @@ Cenário: Uma empresa de desenvolvimento de software está testando duas ferrame
 
 ```python
 # Arquivo CSV
-Comparacao,Tipo da Distancia,Valor da Distancia
-comparacao I,distancia_TX_TY,12
-comparacao I,distancia_TX_TA,10
-comparacao I,distancia_TX_TY,8
-comparacao I,distancia_TX_TA,7
-comparacao I,distancia_TX_TY,15
-comparacao I,distancia_TX_TA,12
-comparacao I,distancia_TX_TY,10
-comparacao I,distancia_TX_TA,11
-comparacao I,distancia_TX_TY,9
-comparacao I,distancia_TX_TA,6
-comparacao I,distancia_TX_TY,13
-comparacao I,distancia_TX_TA,10
-comparacao I,distancia_TX_TY,11
-comparacao I,distancia_TX_TA,9
+Comparacao,Ferramenta,Valor
+comparacao I,Ferramenta_A,12
+comparacao I,Ferramenta_B,10
+comparacao I,Ferramenta_A,8
+comparacao I,Ferramenta_B,7
+comparacao I,Ferramenta_A,15
+comparacao I,Ferramenta_B,12
+comparacao I,Ferramenta_A,10
+comparacao I,Ferramenta_B,11
+comparacao I,Ferramenta_A,9
+comparacao I,Ferramenta_B,6
+comparacao I,Ferramenta_A,13
+comparacao I,Ferramenta_B,10
+comparacao I,Ferramenta_A,11
+comparacao I,Ferramenta_B,9
 
 import pandas as pd
 from scipy.stats import wilcoxon
 import numpy as np
 
 # 1. LER O CSV
-df = pd.read_csv('tabela-distancias2.csv')
+df = pd.read_csv('tabela-ferramenta_A_B.csv')
 
 # 2. Agrupar por Comparacao e Tipo da Distancia
 comparacoes = df['Comparacao'].unique()
@@ -83,16 +83,16 @@ for comparacao in sorted(comparacoes):
     dados_comparacao = df[df['Comparacao'] == comparacao].copy()
 
     # Obter os tipos de distância únicos
-    tipos_distancia = dados_comparacao['Tipo da Distancia'].unique()
+    tipos_ferramenta = dados_comparacao['Ferramenta'].unique()
     print(f"Comparação: {comparacao}")
-    print(f"Tipos de distância: {tipos_distancia}")
+    print(f"Ferramentas: {tipos_ferramenta}")
 
     # Separar os valores para cada tipo de distância
-    tipo1 = tipos_distancia[0]
-    tipo2 = tipos_distancia[1]
+    tipo1 = tipos_ferramenta[0]
+    tipo2 = tipos_ferramenta[1]
 
-    valores_tipo1 = dados_comparacao[dados_comparacao['Tipo da Distancia'] == tipo1]['Valor da Distancia'].values
-    valores_tipo2 = dados_comparacao[dados_comparacao['Tipo da Distancia'] == tipo2]['Valor da Distancia'].values
+    valores_tipo1 = dados_comparacao[dados_comparacao['Ferramenta'] == tipo1]['Valor'].values
+    valores_tipo2 = dados_comparacao[dados_comparacao['Ferramenta'] == tipo2]['Valor'].values
 
     print(f"  {tipo1}: {valores_tipo1}")
     print(f"  {tipo2}: {valores_tipo2}")
@@ -113,9 +113,9 @@ TESTE DE WILCOXON SIGNED RANK
 ================================================================================
 
 Comparação: comparacao I
-Tipos de distância: ['distancia_TX_TY' 'distancia_TX_TA']
-  distancia_TX_TY: [12  8 15 10  9 13 11]
-  distancia_TX_TA: [10  7 12 11  6 10  9]
+Ferramentas: ['Ferramenta_A' 'Ferramenta_B']
+  Ferramenta_A: [12  8 15 10  9 13 11]
+  Ferramenta_B: [10  7 12 11  6 10  9]
 
   Resultados:
     Estatística W: 1.5000
