@@ -81,5 +81,169 @@ Essa análise foi realizada apenas para o projeto Chart, nas versões 16 e 22. O
 
 Log com informações sobre o cálculo das distâncias - [Arquivo de Log](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/main/log/smote-log-distancia-vizinhos.txt)
 
+```
+Tipo da Distancia,Valor da Distancia
+distancia_TX_TY,2.236	
+distancia_TX_TY,2.236	
+distancia_TX_TY,1.732	
+distancia_TX_TY,0.000
+distancia_TX_TY,1.732
+distancia_TX_TA,2.000	
+distancia_TX_TA,1.732	
+distancia_TX_TA,1.414
+distancia_TX_TA,0.000
+distancia_TX_TA,1.414	
+distancia_TX_TB,2.236
+distancia_TX_TB,0.000
+distancia_TX_TB,0.000
+distancia_TX_TB,0.000
+distancia_TX_TB,1.732
+distancia_TX_TC,1.000
+distancia_TX_TC,1.414
+distancia_TX_TC,1.000
+distancia_TX_TC,0.000
+distancia_TX_TC,1.000
+distancia_TY_TA,1.000	
+distancia_TY_TA,1.414
+distancia_TY_TA,1.000
+distancia_TY_TA,0.000
+distancia_TY_TA,1.000
+distancia_TY_TB,0.000
+distancia_TY_TB,2.236
+distancia_TY_TB,1.732
+distancia_TY_TB,0.000
+distancia_TY_TB,0.000
+distancia_TY_TC,2.000
+distancia_TY_TC,1.732
+distancia_TY_TC,1.414
+distancia_TY_TC,0.000
+distancia_TY_TC,1.414
+```
+
+```Python
+import pandas as pd
+from scipy.stats import wilcoxon
+import numpy as np
+
+# ============================================================================
+# LER O CSV
+# ============================================================================
+df = pd.read_csv('distancias.csv')
+
+# ============================================================================
+# DEFINIR PARES DE COMPARAÇÃO
+# ============================================================================
+pares_comparacao = [
+    ('distancia_TX_TY', 'distancia_TX_TA'),
+    ('distancia_TX_TY', 'distancia_TX_TB'),
+    ('distancia_TX_TY', 'distancia_TX_TC'),
+    ('distancia_TX_TY', 'distancia_TY_TA'),
+    ('distancia_TX_TY', 'distancia_TY_TB'),
+    ('distancia_TX_TY', 'distancia_TY_TC'),
+]
+
+# ============================================================================
+# APLICAR TESTE DE WILCOXON
+# ============================================================================
+print("=" * 80)
+print("TESTE DE WILCOXON SIGNED RANK")
+print("=" * 80)
+print()
+
+for tipo1, tipo2 in pares_comparacao:
+    
+    valores_tipo1 = df[df['Tipo da Distancia'] == tipo1]['Valor da Distancia'].values
+    valores_tipo2 = df[df['Tipo da Distancia'] == tipo2]['Valor da Distancia'].values
+    
+    # Calcular diferenças
+    diferencas = valores_tipo1 - valores_tipo2
+    
+    # Contar zeros
+    zeros = np.sum(diferencas == 0)
+    n_total = len(diferencas)
+    n_nao_zero = n_total - zeros
+    
+    # Aplicar teste de Wilcoxon
+    w, p_valor = wilcoxon(valores_tipo1, valores_tipo2, alternative='two-sided')
+    
+    # Determinar significância
+    significante = 'SIM' if p_valor < 0.05 else 'NÃO'
+    
+    # Exibir resultado
+    print(f"{tipo1} vs {tipo2}")
+    print(f"  Diferenças: {diferencas}")
+    print(f"  Total de pares: {n_total}")
+    print(f"  Zeros descartados: {zeros}")
+    print(f"  Pares utilizados: {n_nao_zero}")
+    print(f"  W: {w:.2f}")
+    print(f"  P-valor: {p_valor:.6f}")
+    print(f"  Significante (α=0.05): {significante}")
+    print()
+
+print("=" * 80)
+```
+
+```
+================================================================================
+TESTE DE WILCOXON SIGNED RANK
+================================================================================
+
+distancia_TX_TY vs distancia_TX_TA
+  Diferenças: [0.236 0.504 0.318 0.    0.318]
+  Total de pares: 5
+  Zeros descartados: 1
+  Pares utilizados: 4
+  W: 0.00
+  P-valor: 0.125000
+  Significante (α=0.05): NÃO
+
+distancia_TX_TY vs distancia_TX_TB
+  Diferenças: [0.    2.236 1.732 0.    0.   ]
+  Total de pares: 5
+  Zeros descartados: 3
+  Pares utilizados: 2
+  W: 0.00
+  P-valor: 0.500000
+  Significante (α=0.05): NÃO
+
+distancia_TX_TY vs distancia_TX_TC
+  Diferenças: [1.236 0.822 0.732 0.    0.732]
+  Total de pares: 5
+  Zeros descartados: 1
+  Pares utilizados: 4
+  W: 0.00
+  P-valor: 0.125000
+  Significante (α=0.05): NÃO
+
+distancia_TX_TY vs distancia_TY_TA
+  Diferenças: [1.236 0.822 0.732 0.    0.732]
+  Total de pares: 5
+  Zeros descartados: 1
+  Pares utilizados: 4
+  W: 0.00
+  P-valor: 0.125000
+  Significante (α=0.05): NÃO
+
+distancia_TX_TY vs distancia_TY_TB
+  Diferenças: [2.236 0.    0.    0.    1.732]
+  Total de pares: 5
+  Zeros descartados: 3
+  Pares utilizados: 2
+  W: 0.00
+  P-valor: 0.500000
+  Significante (α=0.05): NÃO
+
+distancia_TX_TY vs distancia_TY_TC
+  Diferenças: [0.236 0.504 0.318 0.    0.318]
+  Total de pares: 5
+  Zeros descartados: 1
+  Pares utilizados: 4
+  W: 0.00
+  P-valor: 0.125000
+  Significante (α=0.05): NÃO
+================================================================================
+```
+
+
 ### Conclusões:
   - Ao comparar as distâncias calculadas entre as amostras e seus vizinhos com as distâncias entre as amostras e as novas amostras geradas por meio de interpolação (para os tipos "Trunc", "Round" e "Ceiling"), constatou-se que as distâncias em relação às novas amostras geradas foram, na maioria dos casos, inferiores às distâncias em relação aos vizinhos. Em particular, destaca-se o método de interpolação "Round" que resultou nas menores distâncias.
