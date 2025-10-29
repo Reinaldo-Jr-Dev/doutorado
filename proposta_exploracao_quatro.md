@@ -46,7 +46,7 @@ Esse experimento propõe uma investigação comparativa sobre a aplicação de d
   - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de eliminação de ruídos (NRS7 – Noise Reduction Scheme 7) e posteriormente aplicação da técnica de balanceamento de dados Smote.
  
  ## Análise Estrutural dos dados dos experimentos
-  [Planilha com resultados da análise estrutural](https://docs.google.com/spreadsheets/d/e/2PACX-1vRxBhUWZfG_yJoFMpFyRFnhXbK-mqb16q55vAimD5zcNqWa0mhV8cuCYlT5bvuidQ/pubhtml?gid=1774065543&single=true)
+  [Planilha com resultados da análise estrutural](https://docs.google.com/spreadsheets/d/e/2PACX-1vRxBhUWZfG_yJoFMpFyRFnhXbK-mqb16q55vAimD5zcNqWa0mhV8cuCYlT5bvuidQ/pubhtml?gid=2111861830&single=true)
 
  ## Resultado dos dados dos experimentos
  [Planilha com resultados](https://docs.google.com/spreadsheets/d/e/2PACX-1vRxBhUWZfG_yJoFMpFyRFnhXbK-mqb16q55vAimD5zcNqWa0mhV8cuCYlT5bvuidQ/pubhtml?gid=632368731&single=true)
