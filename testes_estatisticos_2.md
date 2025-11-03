@@ -38,7 +38,12 @@ Por que o Teste de Wilcoxon Signed-Rank é Ideal para o cenário da nossa pesqui
     - O teste avalia se existe uma diferença estatisticamente significativa nas medianas das diferenças entre os pares. Essa medida de tendência central é utilizada pelo fato dos dados serem não-paramétricos.
 
 ### Exemplo de aplicação (Teste Estatístico Wilcoxon Signed Rank)
+Um teste estatístico é um método formal e sistemático utilizado para tomar decisões sobre uma população com base em dados de uma amostra. Em sua essência, ele nos permite avaliar a probabilidade de que os resultados observados em um experimento ou estudo sejam devidos ao acaso ou se realmente existe uma relação real entre variáveis.
+
 Cenário: Uma empresa de desenvolvimento de software está testando duas ferramentas de análise estática de código (Ferramenta A e Ferramenta B) para identificar vulnerabilidades. Eles aplicam ambas as ferramentas em 7 projetos diferentes e registram o "número de vulnerabilidades críticas não detectadas" por cada ferramenta (um valor menor é melhor).
+
+  - Hipótese Nula (H₀): Não há diferença significativa no desempenho para identificar vulnerabilidades entre as ferramentas A e B.
+  - Hipótese Alternativa (H₁): A hipótese de que a Ferramenta B é melhor que a Ferramenta A se confirma?
 
 ![Explicação - Wilcoxon Signed Rank](img/Explicacao_Wilcoxon_Signed__Rank.png "Explicação - Wilcoxon Signed Rank")
 
