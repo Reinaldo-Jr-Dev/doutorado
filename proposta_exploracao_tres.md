@@ -261,4 +261,4 @@ distancia_TX_TY vs distancia_TY_TC
 **Resultado da Implementação do Teste Estatístico de Wilcoxon Signed Rank**
 
 ### Conclusões:
-  - Ao comparar as distâncias calculadas entre as amostras e seus vizinhos com as distâncias entre as amostras e as novas amostras geradas por meio de interpolação (para os tipos "Trunc", "Round" e "Ceiling"), constatou-se que as distâncias em relação às novas amostras geradas foram, na maioria dos casos, inferiores às distâncias em relação aos vizinhos. Em particular, destaca-se o método de interpolação "Round" que resultou nas menores distâncias.
+  - Conclusões: Não há diferença significativa entre as seguintes distâncias observadas: (Tx,Ty) x (Tx,Ta), (Tx,Ty) x (Tx,Tb), (Tx,Ty) x (Tx,Tc), (Tx,Ty) x (Ty,Ta), (Tx,Ty) x (Ty,Tb) e (Tx,Ty) x (Ty,Tc), portanto, as hipóteses alternativas não podem ser confirmadas.
