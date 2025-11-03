@@ -88,7 +88,7 @@ Cenário: Avaliar as distâncias dos novos vizinhos gerados (Ta, Tb e Tc) entre 
     - Hipótese Alternativa (H3.a): Hipótese de que as distâncias produzidas pelos novos vizinhos gerados pelo elemento Tc, em combinação com os elementos que compõem o par original de vizinhos (Tx, Ty), são superiores às distâncias observadas entre os próprios vizinhos originais. Em outras palavras, espera-se que: (Tx, Tc) > (Tx, Ty) e (Ty, Tc) > (Tx, Ty).
     - Hipótese Alternativa (H3.b): Hipótese de que as distâncias produzidas pelos novos vizinhos gerados pelo elemento Tc, em combinação com os elementos que compõem o par original de vizinhos (Tx, Ty), são inferiores às distâncias observadas entre os próprios vizinhos originais. Em outras palavras, espera-se que: (Tx, Tc) < (Tx, Ty) e (Ty, Tc) < (Tx, Ty).   
 
-![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_4_Proposta_Exploracao__III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
+![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_4_Proposta_Exploracao_III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
 
 **Tabela 4:** Tabela - Avaliação da distância dos novos casos de teste gerados pelo balanceamento
 
@@ -261,4 +261,4 @@ distancia_TX_TY vs distancia_TY_TC
 **Resultado da Implementação do Teste Estatístico de Wilcoxon Signed Rank**
 
 ### Conclusões:
-  - Conclusões: Não há diferença significativa entre as seguintes distâncias observadas: (Tx,Ty) x (Tx,Ta), (Tx,Ty) x (Tx,Tb), (Tx,Ty) x (Tx,Tc), (Tx,Ty) x (Ty,Ta), (Tx,Ty) x (Ty,Tb) e (Tx,Ty) x (Ty,Tc), portanto, as hipóteses alternativas não podem ser confirmadas.
+  - Não há diferença significativa entre as seguintes distâncias observadas: (Tx,Ty) x (Tx,Ta), (Tx,Ty) x (Tx,Tb), (Tx,Ty) x (Tx,Tc), (Tx,Ty) x (Ty,Ta), (Tx,Ty) x (Ty,Tb) e (Tx,Ty) x (Ty,Tc), portanto, as hipóteses alternativas não podem ser confirmadas.
