@@ -80,18 +80,13 @@ Um teste estatístico é um método formal e sistemático utilizado para tomar d
 Cenário: Avaliar as distâncias dos novos vizinhos gerados (Ta, Tb e Tc) entre os elementos que compõem o par de vizinhos que os geraram (Tx,Ty).
 
   - Hipótese Nula (H₀): Não há diferença significativa entre as seguintes distâncias observadas: (Tx,Ty) x (Tx,Ta), (Tx,Ty) x (Tx,Tb), (Tx,Ty) x (Tx,Tc), (Tx,Ty) x (Ty,Ta), (Tx,Ty) x (Ty,Tb) e (Tx,Ty) x (Ty,Tc).
-  - Hipótese Alternativa (H1.a): Hipótese de que as distâncias entre os vizinhos produzidos por (Tx,Ta) são maiores que os vizinhos produzidos por (Tx,Ty).
-  - Hipótese Alternativa (H1.b): Hipótese de que as distâncias entre os vizinhos produzidos por (Tx,Ta) são menores que os vizinhos produzidos por (Tx,Ty).
-  - Hipótese Alternativa (H2.a): Hipótese de que as distâncias entre os vizinhos produzidos por (Tx,Tb) são maiores que os vizinhos produzidos por (Tx,Ty).
-  - Hipótese Alternativa (H2.b): Hipótese de que as distâncias entre os vizinhos produzidos por (Tx,Tb) são menores que os vizinhos produzidos por (Tx,Ty).
-  - Hipótese Alternativa (H3.a): Hipótese de que as distâncias entre os vizinhos produzidos por (Tx,Tc) são maiores que os vizinhos produzidos por (Tx,Ty).
-  - Hipótese Alternativa (H3.b): Hipótese de que as distâncias entre os vizinhos produzidos por (Tx,Tc) são menores que os vizinhos produzidos por (Tx,Ty).
-  - Hipótese Alternativa (H4.a): Hipótese de que as distâncias entre os vizinhos produzidos por (Ty,Ta) são maiores que os vizinhos produzidos por (Tx,Ty).
-  - Hipótese Alternativa (H4.b): Hipótese de que as distâncias entre os vizinhos produzidos por (Ty,Ta) são menores que os vizinhos produzidos por (Tx,Ty).
-  - Hipótese Alternativa (H5.a): Hipótese de que as distâncias entre os vizinhos produzidos por (Ty,Tb) são maiores que os vizinhos produzidos por (Tx,Ty).
-  - Hipótese Alternativa (H5.b): Hipótese de que as distâncias entre os vizinhos produzidos por (Ty,Tb) são menores que os vizinhos produzidos por (Tx,Ty).
-  - Hipótese Alternativa (H6.a): Hipótese de que as distâncias entre os vizinhos produzidos por (Ty,Tc) são maiores que os vizinhos produzidos por (Tx,Ty).
-  - Hipótese Alternativa (H6.b): Hipótese de que as distâncias entre os vizinhos produzidos por (Ty,Tc) são menores que os vizinhos produzidos por (Tx,Ty).
+  - Hipóteses Alternativas
+    - Hipótese Alternativa (H1.a): Hipótese de que as distâncias produzidas pelos novos vizinhos gerados pelo elemento Ta, em combinação com os elementos que compõem o par original de vizinhos (Tx, Ty), são superiores às distâncias observadas entre os próprios vizinhos originais. Em outras palavras, espera-se que: (Tx, Ta) > (Tx, Ty) e (Ty, Ta) > (Tx, Ty).
+    - Hipótese Alternativa (H1.b): Hipótese de que as distâncias produzidas pelos novos vizinhos gerados pelo elemento Ta, em combinação com os elementos que compõem o par original de vizinhos (Tx, Ty), são inferiores às distâncias observadas entre os próprios vizinhos originais. Em outras palavras, espera-se que: (Tx, Ta) < (Tx, Ty) e (Ty, Ta) < (Tx, Ty).
+    - Hipótese Alternativa (H2.a): Hipótese de que as distâncias produzidas pelos novos vizinhos gerados pelo elemento Tb, em combinação com os elementos que compõem o par original de vizinhos (Tx, Ty), são superiores às distâncias observadas entre os próprios vizinhos originais. Em outras palavras, espera-se que: (Tx, Tb) > (Tx, Ty) e (Ty, Tb) > (Tx, Ty).
+    - Hipótese Alternativa (H2.b): Hipótese de que as distâncias produzidas pelos novos vizinhos gerados pelo elemento Tb, em combinação com os elementos que compõem o par original de vizinhos (Tx, Ty), são inferiores às distâncias observadas entre os próprios vizinhos originais. Em outras palavras, espera-se que: (Tx, Tb) < (Tx, Ty) e (Ty, Tb) < (Tx, Ty).
+    - Hipótese Alternativa (H3.a): Hipótese de que as distâncias produzidas pelos novos vizinhos gerados pelo elemento Tc, em combinação com os elementos que compõem o par original de vizinhos (Tx, Ty), são superiores às distâncias observadas entre os próprios vizinhos originais. Em outras palavras, espera-se que: (Tx, Tc) > (Tx, Ty) e (Ty, Tc) > (Tx, Ty).
+    - Hipótese Alternativa (H3.b): Hipótese de que as distâncias produzidas pelos novos vizinhos gerados pelo elemento Tc, em combinação com os elementos que compõem o par original de vizinhos (Tx, Ty), são inferiores às distâncias observadas entre os próprios vizinhos originais. Em outras palavras, espera-se que: (Tx, Tc) < (Tx, Ty) e (Ty, Tc) < (Tx, Ty).   
 
 ![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_4_Proposta_Exploracao__III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
 
