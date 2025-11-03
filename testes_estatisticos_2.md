@@ -50,7 +50,7 @@ Cenário: Uma empresa de desenvolvimento de software está testando duas ferrame
 **Imagem 1** - Explicação do Teste Estatístico Wilcoxon Signed Rank
 
 Conclusões: 
-  - Como p-value (0,0468) < @ (0,05), há evidências estatísticas significativas para rejeitar a hipótese nula (H₀). Isso significa que há uma diferença significativa no número de vulnerabilidades críticas não detectadas entre a Ferramenta A e a Ferramenta B.
+  - Como **p-value (0,0468) < @ (0,05)**, há evidências estatísticas significativas para rejeitar a hipótese nula (H₀). Isso significa que há uma diferença significativa no número de vulnerabilidades críticas não detectadas entre a Ferramenta A e a Ferramenta B.
   - Observando o rank médio sinalizado, vemos que a maioria das diferenças foi negativa (Ferramenta B - Ferramenta A), indicando que a Ferramenta B geralmente apresenta menos vulnerabilidades críticas não detectadas (o que é melhor).
 
 ```python
