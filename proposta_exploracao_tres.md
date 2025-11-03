@@ -73,7 +73,25 @@ Essa análise foi realizada apenas para o projeto Chart, nas versões 16 e 22. O
 ### Conclusões:
   - A comparação entre as formas de interpolação Trunc (e100_smote_original) e Round (e101_smote_changed) evidencia que a utilização da interpolação Round não contribuiu, em sua maioria, para a geração de vizinhos únicos. O único projeto em que se observou um aumento na geração de vizinhos únicos, considerando o experimento e101_smote_changed, foi o Chart, versão 16.
 
-## Análise IV - Avaliação da distância dos novos casos de teste gerados pelo balanceamento
+## Análise IV - Avaliação da distância dos novos casos de teste gerados pelo balanceamento com a aplicação do Teste Estatístico de Wilcoxon Signed Rank
+
+Um teste estatístico é um método formal e sistemático utilizado para tomar decisões sobre uma população com base em dados de uma amostra. Em sua essência, ele nos permite avaliar a probabilidade de que os resultados observados em um experimento ou estudo sejam devidos ao acaso ou se realmente existe uma relação real entre as variáveis.
+
+Cenário: Avaliar as distâncias dos novos vizinhos gerados (Ta, Tb e Tc) entre os elementos que compõem o par de vizinhos que os geraram (Tx,Ty).
+
+  - Hipótese Nula (H₀): Não há diferença significativa entre as seguintes distâncias observadas: (Tx,Ty) x (Tx,Ta), (Tx,Ty) x (Tx,Tb), (Tx,Ty) x (Tx,Tc), (Tx,Ty) x (Ty,Ta), (Tx,Ty) x (Ty,Tb) e (Tx,Ty) x (Ty,Tc).
+  - Hipótese Alternativa (H1.a): Hipótese de que as distâncias entre os vizinhos produzidos por (Tx,Ta) são maiores que os vizinhos produzidos por (Tx,Ty).
+  - Hipótese Alternativa (H1.b): Hipótese de que as distâncias entre os vizinhos produzidos por (Tx,Ta) são menores que os vizinhos produzidos por (Tx,Ty).
+  - Hipótese Alternativa (H2.a): Hipótese de que as distâncias entre os vizinhos produzidos por (Tx,Tb) são maiores que os vizinhos produzidos por (Tx,Ty).
+  - Hipótese Alternativa (H2.b): Hipótese de que as distâncias entre os vizinhos produzidos por (Tx,Tb) são menores que os vizinhos produzidos por (Tx,Ty).
+  - Hipótese Alternativa (H3.a): Hipótese de que as distâncias entre os vizinhos produzidos por (Tx,Tc) são maiores que os vizinhos produzidos por (Tx,Ty).
+  - Hipótese Alternativa (H3.b): Hipótese de que as distâncias entre os vizinhos produzidos por (Tx,Tc) são menores que os vizinhos produzidos por (Tx,Ty).
+  - Hipótese Alternativa (H4.a): Hipótese de que as distâncias entre os vizinhos produzidos por (Ty,Ta) são maiores que os vizinhos produzidos por (Tx,Ty).
+  - Hipótese Alternativa (H4.b): Hipótese de que as distâncias entre os vizinhos produzidos por (Ty,Ta) são menores que os vizinhos produzidos por (Tx,Ty).
+  - Hipótese Alternativa (H5.a): Hipótese de que as distâncias entre os vizinhos produzidos por (Ty,Tb) são maiores que os vizinhos produzidos por (Tx,Ty).
+  - Hipótese Alternativa (H5.b): Hipótese de que as distâncias entre os vizinhos produzidos por (Ty,Tb) são menores que os vizinhos produzidos por (Tx,Ty).
+  - Hipótese Alternativa (H6.a): Hipótese de que as distâncias entre os vizinhos produzidos por (Ty,Tc) são maiores que os vizinhos produzidos por (Tx,Ty).
+  - Hipótese Alternativa (H6.b): Hipótese de que as distâncias entre os vizinhos produzidos por (Ty,Tc) são menores que os vizinhos produzidos por (Tx,Ty).
 
 ![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_4_Proposta_Exploracao__III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
 
