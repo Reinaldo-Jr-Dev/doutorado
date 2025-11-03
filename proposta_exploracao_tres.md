@@ -88,7 +88,7 @@ Cenário: Avaliar as distâncias dos novos vizinhos gerados (Ta, Tb e Tc) entre 
     - Hipótese Alternativa (H3.a): Hipótese de que as distâncias produzidas pelos novos vizinhos gerados pelo elemento Tc, em combinação com os elementos que compõem o par original de vizinhos (Tx, Ty), são superiores às distâncias observadas entre os próprios vizinhos originais. Em outras palavras, espera-se que: (Tx, Tc) > (Tx, Ty) e (Ty, Tc) > (Tx, Ty).
     - Hipótese Alternativa (H3.b): Hipótese de que as distâncias produzidas pelos novos vizinhos gerados pelo elemento Tc, em combinação com os elementos que compõem o par original de vizinhos (Tx, Ty), são inferiores às distâncias observadas entre os próprios vizinhos originais. Em outras palavras, espera-se que: (Tx, Tc) < (Tx, Ty) e (Ty, Tc) < (Tx, Ty).   
 
-![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_4_Proposta_Exploracao_III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
+![Tabela - Resultado do Experimento da Proposta de Exploração III](img/Tab_4_Proposta_Exploracao___III.png "Tabela - Resultado do Experimento da Proposta de Exploração III")
 
 **Tabela 4:** Tabela - Avaliação da distância dos novos casos de teste gerados pelo balanceamento
 
