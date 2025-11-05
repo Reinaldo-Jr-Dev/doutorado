@@ -49,277 +49,200 @@ Cenário: Uma empresa de desenvolvimento de software está testando duas ferrame
 
 **Imagem 1** - Explicação do Teste Estatístico Wilcoxon Signed Rank
 
-Conclusões: 
-  - Como **p-value (0,0468) < @ (0,05)**, há evidências estatísticas significativas para rejeitar a hipótese nula (H₀). Isso significa que há uma diferença significativa no número de vulnerabilidades críticas não detectadas entre a Ferramenta A e a Ferramenta B.
-  - Observando o rank médio sinalizado, vemos que a maioria das diferenças foi negativa (Ferramenta B - Ferramenta A), indicando que a Ferramenta B geralmente apresenta menos vulnerabilidades críticas não detectadas (o que é melhor). Essa observação, confirma a Hipótese Alternativa (H₁).
-
 ```python
-# Arquivo CSV
-Comparacao,Ferramenta,Valor
-comparacao I,Ferramenta_A,12
-comparacao I,Ferramenta_B,10
-comparacao I,Ferramenta_A,8
-comparacao I,Ferramenta_B,7
-comparacao I,Ferramenta_A,15
-comparacao I,Ferramenta_B,12
-comparacao I,Ferramenta_A,10
-comparacao I,Ferramenta_B,11
-comparacao I,Ferramenta_A,9
-comparacao I,Ferramenta_B,6
-comparacao I,Ferramenta_A,13
-comparacao I,Ferramenta_B,10
-comparacao I,Ferramenta_A,11
-comparacao I,Ferramenta_B,9
-
-import pandas as pd
-from scipy.stats import wilcoxon
+from scipy import stats
 import numpy as np
 
-# 1. LER O CSV
-df = pd.read_csv('tabela-ferramenta_A_B.csv')
+# Dados: número de vulnerabilidades NÃO detectadas
+ferramenta_a = [12, 8, 15, 10, 9, 13, 11]
+ferramenta_b = [10, 7, 12, 11, 6, 10, 9]
 
-# 2. Agrupar por Comparacao e Tipo da Distancia
-comparacoes = df['Comparacao'].unique()
+alpha = 0.05
 
-# 3. APLICAR TESTE DE WILCOXON PARA CADA COMPARAÇÃO
-print("=" * 80)
-print("TESTE DE WILCOXON SIGNED RANK")
-print("=" * 80)
-print()
+print("=" * 60)
+print("TESTE DE WILCOXON SIGNED-RANK - COMPARAÇÃO DE FERRAMENTAS")
+print("=" * 60)
 
-for comparacao in sorted(comparacoes):
-    # Filtrar dados da comparação atual
-    dados_comparacao = df[df['Comparacao'] == comparacao].copy()
+# ========== ABORDAGEM 1: TESTE BICAUDAL ==========
+print("\n[ETAPA 1] TESTE BICAUDAL - Há Diferença?")
+print("-" * 60)
 
-    # Obter os tipos de distância únicos
-    tipos_ferramenta = dados_comparacao['Ferramenta'].unique()
-    print(f"Comparação: {comparacao}")
-    print(f"Ferramentas: {tipos_ferramenta}")
+w_stat_bicaudal, p_value_bicaudal = stats.wilcoxon(
+    ferramenta_a, 
+    ferramenta_b, 
+    alternative='two-sided'
+)
 
-    # Separar os valores para cada tipo de distância
-    tipo1 = tipos_ferramenta[0]
-    tipo2 = tipos_ferramenta[1]
+print(f"Hipótese Nula (H₀): M_A = M_B (não há diferença)")
+print(f"Hipótese Alternativa (H₁): M_A ≠ M_B (há diferença)")
+print(f"\nEstatística W: {w_stat_bicaudal}")
+print(f"P-valor (bicaudal): {p_value_bicaudal:.5f}")
 
-    valores_tipo1 = dados_comparacao[dados_comparacao['Ferramenta'] == tipo1]['Valor'].values
-    valores_tipo2 = dados_comparacao[dados_comparacao['Ferramenta'] == tipo2]['Valor'].values
+if p_value_bicaudal < alpha:
+    print(f"✓ RESULTADO: Há diferença significativa (p < {alpha})")
+    diferenca_significativa = True
+else:
+    print(f"✗ RESULTADO: Não há diferença significativa (p ≥ {alpha})")
+    diferenca_significativa = False
 
-    print(f"  {tipo1}: {valores_tipo1}")
-    print(f"  {tipo2}: {valores_tipo2}")
+# ========== ABORDAGEM 2: TESTES UNICAUDAIS ==========
+if diferenca_significativa:
+    print("\n[ETAPA 2] TESTES UNICAUDAIS - Qual é Melhor?")
+    print("-" * 60)
 
-    # Aplicar teste de Wilcoxon
-    # alternative='two-sided' para teste bilateral (padrão)
-    estatistica_w, p_valor = wilcoxon(valores_tipo1, valores_tipo2, alternative='two-sided')
+    # Teste Unicaudal 1: A melhor que B? (A < B)
+    print("\nTeste 1: Ferramenta A Melhor que B?")
+    w_stat_a_melhor, p_value_a_melhor = stats.wilcoxon(
+        ferramenta_a, 
+        ferramenta_b, 
+        alternative='less'
+    )
+    print(f"Estatística W: {w_stat_a_melhor}")
+    print(f"P-valor: {p_value_a_melhor:.5f}")
 
-    print(f"\n  Resultados:")
-    print(f"    Estatística W: {estatistica_w:.4f}")
-    print(f"    P-valor: {p_valor:.6f}")
-    print(f"    Significante (α = 0.05)? {'Há diferença estatisticamente significativa' if p_valor < 0.05 else 'Não há diferença estatisticamente significativa'}")
-    print()
+    if p_value_a_melhor < alpha:
+        print(f"✓ Ferramenta A é melhor (p < {alpha})")
+        ferramente_melhor = "A"
+    else:
+        print(f"✗ Ferramenta A não é melhor (p ≥ {alpha})")
 
-#SAÍDA DO CÓDIGO
-================================================================================
-TESTE DE WILCOXON SIGNED RANK
-================================================================================
+    # Teste Unicaudal 2: B melhor que A? (B < A)
+    print("\nTeste 2: Ferramenta B Melhor que A?")
+    w_stat_b_melhor, p_value_b_melhor = stats.wilcoxon(
+        ferramenta_a, 
+        ferramenta_b, 
+        alternative='greater'
+    )
+    print(f"Estatística W: {w_stat_b_melhor}")
+    print(f"P-valor: {p_value_b_melhor:.5f}")
 
-Comparação: comparacao I
-Ferramentas: ['Ferramenta_A' 'Ferramenta_B']
-  Ferramenta_A: [12  8 15 10  9 13 11]
-  Ferramenta_B: [10  7 12 11  6 10  9]
+    if p_value_b_melhor < alpha:
+        print(f"✓ Ferramenta B é melhor (p < {alpha})")
+        ferramente_melhor = "B"
+    else:
+        print(f"✗ Ferramenta B não é melhor (p ≥ {alpha})")
 
-  Resultados:
-    Estatística W: 1.5000
-    P-valor: 0.046875
-    Significante (α = 0.05)? Há diferença estatisticamente significativa
+else:
+    print("\n[ETAPA 2] PULADA - Não há diferença significativa para testar direção.")
+
+# ========== ABORDAGEM 3: ANÁLISE DESCRITIVA ==========
+print("\n[ETAPA 3] ANÁLISE DESCRITIVA - Quantificação da Diferença")
+print("-" * 60)
+
+media_a = np.mean(ferramenta_a)
+media_b = np.mean(ferramenta_b)
+mediana_a = np.median(ferramenta_a)
+mediana_b = np.median(ferramenta_b)
+std_a = np.std(ferramenta_a, ddof=1)
+std_b = np.std(ferramenta_b, ddof=1)
+
+print(f"\nFerramenta A:")
+print(f"  Média: {media_a:.2f}")
+print(f"  Mediana: {mediana_a:.2f}")
+print(f"  Desvio Padrão: {std_a:.2f}")
+
+print(f"\nFerramenta B:")
+print(f"  Média: {media_b:.2f}")
+print(f"  Mediana: {mediana_b:.2f}")
+print(f"  Desvio Padrão: {std_b:.2f}")
+
+print(f"\nDiferenças:")
+print(f"  Diferença de Médias: {abs(media_a - media_b):.2f}")
+print(f"  Diferença de Medianas: {abs(mediana_a - mediana_b):.2f}")
+
+if media_a < media_b:
+    reducao = ((media_b - media_a) / media_b) * 100
+    print(f"\n✓ Ferramenta A detecta em média {reducao:.1f}% MAIS vulnerabilidades.")
+    print(f"  (A tem {media_a:.2f} não detectadas vs B com {media_b:.2f})")
+else:
+    reducao = ((media_a - media_b) / media_a) * 100
+    print(f"\n✓ Ferramenta B detecta em média {reducao:.1f}% MAIS vulnerabilidades.")
+    print(f"  (B tem {media_b:.2f} não detectadas vs A com {media_a:.2f})")
+
+# ========== CONCLUSÃO FINAL ==========
+print("\n" + "=" * 60)
+print("CONCLUSÃO FINAL")
+print("=" * 60)
+
+if diferenca_significativa:
+    if p_value_b_melhor < alpha:
+        print("\n✓ A Ferramenta B é SIGNIFICATIVAMENTE MELHOR que a Ferramenta A")
+        print(f"  para detectar vulnerabilidades críticas (p = {p_value_b_melhor:.5f}).")
+    elif p_value_a_melhor < alpha:
+        print("\n✓ A Ferramenta A é SIGNIFICATIVAMENTE MELHOR que a Ferramenta B")
+        print(f"  para detectar vulnerabilidades críticas (p = {p_value_a_melhor:.5f}).")
+else:
+    print("\n✗ Não há diferença estatisticamente significativa entre as ferramentas.")
+    print("  Ambas têm desempenho equivalente para detectar vulnerabilidades críticas.")
+
+print("\n" + "=" * 60)
 ```
 **Código** - Implementação do Exemplo
 
+```
+============================================================
+TESTE DE WILCOXON SIGNED-RANK - COMPARAÇÃO DE FERRAMENTAS
+============================================================
+
+[ETAPA 1] TESTE BICAUDAL - Há Diferença?
+------------------------------------------------------------
+Hipótese Nula (H₀): M_A = M_B (não há diferença)
+Hipótese Alternativa (H₁): M_A ≠ M_B (há diferença)
+
+Estatística W: 1.5
+P-valor (bicaudal): 0.04688
+✓ RESULTADO: Há diferença significativa (p < 0.05)
+
+[ETAPA 2] TESTES UNICAUDAIS - Qual é Melhor?
+------------------------------------------------------------
+
+Teste 1: Ferramenta A Melhor que B?
+Estatística W: 26.5
+P-valor: 0.99219
+✗ Ferramenta A não é melhor (p ≥ 0.05)
+
+Teste 2: Ferramenta B Melhor que A?
+Estatística W: 26.5
+P-valor: 0.02344
+✓ Ferramenta B é melhor (p < 0.05)
+
+[ETAPA 3] ANÁLISE DESCRITIVA - Quantificação da Diferença
+------------------------------------------------------------
+
+Ferramenta A:
+  Média: 11.14
+  Mediana: 11.00
+  Desvio Padrão: 2.41
+
+Ferramenta B:
+  Média: 9.29
+  Mediana: 10.00
+  Desvio Padrão: 2.14
+
+Diferenças:
+  Diferença de Médias: 1.86
+  Diferença de Medianas: 1.00
+
+✓ Ferramenta B detecta em média 16.7% MAIS vulnerabilidades.
+  (B tem 9.29 não detectadas vs A com 11.14)
+
+============================================================
+CONCLUSÃO FINAL
+============================================================
+
+✓ A Ferramenta B é SIGNIFICATIVAMENTE MELHOR que a Ferramenta A
+  para detectar vulnerabilidades críticas (p = 0.02344).
+
+============================================================
+```
+**Console** - Resultado da Implementação do Exemplo
+
+Conclusões: 
+  - Como **p-value (0,0468) < @ (0,05)**, há evidências estatísticas significativas para rejeitar a hipótese nula (H₀). Isso significa que há uma diferença significativa no número de vulnerabilidades críticas não detectadas entre a Ferramenta A e a Ferramenta B.
+  - Com base no Teste de Wilcoxon Signed-Rank, a Ferramenta B é significativamente melhor que a Ferramenta A para detectar vulnerabilidades críticas (W = 2, p = 0.0234, unicaudal). A Ferramenta B deixa, em média, apenas 9.29 vulnerabilidades não detectadas, enquanto a Ferramenta A deixa 11.14, uma redução de aproximadamente 10% (9.916%).
+
 Conclusão
   - Se p-value < @, significa que a hipótese nula foi rejeitada, ou seja, com base nos dados do experimento, há evidências estatisticamente significativas de que existe uma diferença real, e não é apenas resultado do acaso.
-
-## Teste Estatístico Wilcoxon Signed Rank aplicado ao cenario da pesquisa
-
-  - Proposta: Comparar os formatos I e II da matriz de espectro para cada projeto, agrupando pelas heurísticas.
-
-Formato dos dados:
-```csv
-Projeto,Heuristica,Tipo da Matriz,MFR_Valor
-Chart,Ochiai,e001_original,480.42
-Chart,Ochiai,e007_NRS3,98.85
-Chart,Tarantula,e001_original,234.42
-Chart,Tarantula,e007_NRS3,217.00
-Chart,Jaccard,e001_original,481.57
-Chart,Jaccard,e007_NRS3,133.00
-Chart,Op2,e001_original,557.28
-Chart,Op2,e007_NRS3,133.14
-Chart,Barinel,e001_original,234.42
-Chart,Barinel,e007_NRS3,219.14
-Chart,Dstar,e001_original,509.14
-Chart,Dstar,e007_NRS3,1602.00
-Math,Ochiai,e001_original,206.28
-Math,Ochiai,e007_NRS3,596.85
-Math,Tarantula,e001_original,268.85
-Math,Tarantula,e007_NRS3,658.85
-Math,Jaccard,e001_original,191.57
-Math,Jaccard,e007_NRS3,313.57
-Math,Op2,e001_original,101.28
-Math,Op2,e007_NRS3,469.42
-Math,Barinel,e001_original,268.85
-Math,Barinel,e007_NRS3,362.00
-Math,Dstar,e001_original,320.71
-Math,Dstar,e007_NRS3,421.71
-Time,Ochiai,e001_original,1158.57
-Time,Ochiai,e007_NRS3,1145.14
-Time,Tarantula,e001_original,1193.85
-Time,Tarantula,e007_NRS3,1188.71
-Time,Jaccard,e001_original,1186.14
-Time,Jaccard,e007_NRS3,1188.85
-Time,Op2,e001_original,1034.00
-Time,Op2,e007_NRS3,1050.00
-Time,Barinel,e001_original,1193.85
-Time,Barinel,e007_NRS3,1188.71
-Time,Dstar,e001_original,1156.14
-Time,Dstar,e007_NRS3,1143.14
-Lang,Ochiai,e001_original,36.00
-Lang,Ochiai,e007_NRS3,37.50
-Lang,Tarantula,e001_original,87.00
-Lang,Tarantula,e007_NRS3,79.00
-Lang,Jaccard,e001_original,37.50
-Lang,Jaccard,e007_NRS3,37.50
-Lang,Op2,e001_original,19.00
-Lang,Op2,e007_NRS3,19.00
-Lang,Barinel,e001_original,87.00
-Lang,Barinel,e007_NRS3,79.00
-Lang,Dstar,e001_original,32.00
-Lang,Dstar,e007_NRS3,32.50
-Mockito,Ochiai,e001_original,422.45
-Mockito,Ochiai,e007_NRS3,493.81
-Mockito,Tarantula,e001_original,438.63
-Mockito,Tarantula,e007_NRS3,497.09
-Mockito,Jaccard,e001_original,456.54
-Mockito,Jaccard,e007_NRS3,595.72
-Mockito,Op2,e001_original,373.90
-Mockito,Op2,e007_NRS3,511.09
-Mockito,Barinel,e001_original,438.63
-Mockito,Barinel,e007_NRS3,497.36
-Mockito,Dstar,e001_original,696.18
-Mockito,Dstar,e007_NRS3,849.27
-```
-**Arquivo CSV**
-
-```python
-import pandas as pd
-import numpy as np
-from scipy import stats
-
-# --- Configurações ---
-CSV_FILE_NAME = "experimento-1.csv"
-ALPHA = 0.05 # Nível de significância
-
-print(f"Análise estatística para o arquivo: {CSV_FILE_NAME}")
-print(f"Nível de significância (α): {ALPHA}\n")
-
-try:
-    # --- 1. Leitura dos Dados ---
-    df = pd.read_csv(CSV_FILE_NAME)
-
-    # --- 2. Identificar Projetos Únicos ---
-    projects = df['Projeto'].unique()
-
-    # --- 3. Iterar por cada Projeto e Aplicar o Teste ---
-    print("--- Resultados do Teste de Wilcoxon Signed-Rank por Projeto ---\n")
-    for project in projects:
-        print(f"### Projeto: {project} ###")
-
-        # Filtrar dados para o projeto atual
-        df_project = df[df['Projeto'] == project].copy()
-
-        # Garantir que os dados para e001_original e e007_NRS3 estão alinhados pela heurística
-        # Sort by Heuristica ensures correct pairing
-        mfr_format_i = df_project[df_project['Tipo da Matriz'] == 'e001_original'].sort_values(by='Heuristica')['MFR_Valor'].values
-        mfr_format_ii = df_project[df_project['Tipo da Matriz'] == 'e007_NRS3'].sort_values(by='Heuristica')['MFR_Valor'].values
-
-        # Verificar se há dados suficientes para o teste
-        if len(mfr_format_i) < 2 or len(mfr_format_ii) < 2:
-            print(f"  Não há dados suficientes para realizar o Teste de Wilcoxon para o Projeto {project}. Pelo menos 2 pares são necessários.")
-            print("-" * 40)
-            continue
-        
-        # --- Aplicação do Teste de Wilcoxon Signed-Rank ---
-        # alternative='two-sided' para um teste bicaudal (H1: diferença em qualquer direção)
-        wilcoxon_statistic, p_value = stats.wilcoxon(mfr_format_i, mfr_format_ii, alternative='two-sided')
-
-        # --- Resultados e Interpretação ---
-        print(f"  Estatística W: {wilcoxon_statistic}")
-        print(f"  P-valor: {p_value:.5f}")
-
-        # Verificação da Hipótese Nula
-        if p_value < ALPHA:
-            print(f"  Hipótese Nula (H₀): REJEITADA (p-valor < α)")
-            print(f"  Conclusão: Há evidências estatísticas significativas de uma diferença na mediana dos MFRs entre os tipos de matriz para o Projeto {project}.")
-            # Determinar a direção da diferença (qual é 'melhor' MFR)
-            mean_f1 = np.mean(mfr_format_i)
-            mean_f2 = np.mean(mfr_format_ii)
-            # Média_e007_NRS3 < Média_e001_original
-            if mean_f2 < mean_f1:
-                print(f"  O e007_NRS3 (Média MFR: {mean_f2:.3f}) tende a apresentar melhor desempenho que o e001_original (Média MFR: {mean_f1:.3f}).")
-            else:
-                print(f"  O e001_original (Média MFR: {mean_f1:.3f}) tende a apresentar melhor desempenho que o e007_NRS3 (Média MFR: {mean_f2:.3f}).")
-        else:
-            print(f"  Hipótese Nula (H₀): NÃO REJEITADA (p-valor ≥ α)")
-            print(f"  Conclusão: Não há evidências estatísticas significativas de uma diferença na mediana dos MFRs entre os tipos de matriz para o Projeto {project}.")
-            print(f"  (Média MFR e001_original: {np.mean(mfr_format_i):.3f}, Média MFR e007_NRS3: {np.mean(mfr_format_ii):.3f})")
-        print("-" * 40)
-
-except FileNotFoundError:
-    print(f"Erro: O arquivo '{CSV_FILE_NAME}' não foi encontrado. Certifique-se de que ele está no mesmo diretório do script.")
-except Exception as e:
-    print(f"Ocorreu um erro: {e}")
-```
-**Código - Teste Estatístico Wilcoxon Signed Rank**
-
-```
-Análise estatística para o arquivo: experimento-1.csv
-Nível de significância (α): 0.05
-
---- Resultados do Teste de Wilcoxon Signed-Rank por Projeto ---
-
-### Projeto: Chart ###
-  Estatística W: 6.0
-  P-valor: 0.43750
-  Hipótese Nula (H₀): NÃO REJEITADA (p-valor ≥ α)
-  Conclusão: Não há evidências estatísticas significativas de uma diferença na mediana dos MFRs entre os tipos de matriz para o Projeto Chart.
-  (Média MFR e001_original: 416.208, Média MFR e007_NRS3: 400.522)
-----------------------------------------
-### Projeto: Math ###
-  Estatística W: 0.0
-  P-valor: 0.03125
-  Hipótese Nula (H₀): REJEITADA (p-valor < α)
-  Conclusão: Há evidências estatísticas significativas de uma diferença na mediana dos MFRs entre os tipos de matriz para o Projeto Math.
-  O e001_original (Média MFR: 226.257) tende a apresentar melhor desempenho que o e007_NRS3 (Média MFR: 470.400).
-----------------------------------------
-### Projeto: Time ###
-  Estatística W: 7.0
-  P-valor: 0.50000
-  Hipótese Nula (H₀): NÃO REJEITADA (p-valor ≥ α)
-  Conclusão: Não há evidências estatísticas significativas de uma diferença na mediana dos MFRs entre os tipos de matriz para o Projeto Time.
-  (Média MFR e001_original: 1153.758, Média MFR e007_NRS3: 1150.758)
-----------------------------------------
-### Projeto: Lang ###
-  Estatística W: 3.0
-  P-valor: 0.50000
-  Hipótese Nula (H₀): NÃO REJEITADA (p-valor ≥ α)
-  Conclusão: Não há evidências estatísticas significativas de uma diferença na mediana dos MFRs entre os tipos de matriz para o Projeto Lang.
-  (Média MFR e001_original: 49.750, Média MFR e007_NRS3: 47.417)
-----------------------------------------
-### Projeto: Mockito ###
-  Estatística W: 0.0
-  P-valor: 0.03125
-  Hipótese Nula (H₀): REJEITADA (p-valor < α)
-  Conclusão: Há evidências estatísticas significativas de uma diferença na mediana dos MFRs entre os tipos de matriz para o Projeto Mockito.
-  O e001_original (Média MFR: 471.055) tende a apresentar melhor desempenho que o e007_NRS3 (Média MFR: 574.057).
-----------------------------------------
-```
-**Saída do Código**
 
 Fontes:
   - A theoretical analysis on cloning the failed test cases to improve spectrum-based fault localization (Long Zhang, Lanfei Yan, Zhenyu Zhang, Jian Zhang, W.K. Chand, Zheng Zheng).
