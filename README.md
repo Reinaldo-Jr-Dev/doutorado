@@ -25,7 +25,7 @@ A localização de defeitos baseada no espectro utiliza informações de cobertu
 | Nome                        | E-mail                            |
 |-----------------------------|-----------------------------------|
 | Reinaldo de Souza Júnior    | reinaldo.junior@discente.ufg.br   |
-| Plínio de Sá Leitão Júnior  | plinio@inf.ufg.br                 |
+| Plínio de Sá Leitão Júnior  | plinioleitao@ufg.br               |
 </p>
 
 ---
