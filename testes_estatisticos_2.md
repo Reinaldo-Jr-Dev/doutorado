@@ -73,8 +73,6 @@ w_stat_bicaudal, p_value_bicaudal = stats.wilcoxon(
     alternative='two-sided'
 )
 
-print(f"Hipótese Nula (H₀): M_A = M_B (não há diferença)")
-print(f"Hipótese Alternativa (H₁): M_A ≠ M_B (há diferença)")
 print(f"\nEstatística W: {w_stat_bicaudal}")
 print(f"P-valor (bicaudal): {p_value_bicaudal:.5f}")
 
@@ -91,6 +89,9 @@ if diferenca_significativa:
     print("-" * 60)
 
     # Teste Unicaudal 1: A melhor que B? (A < B)
+    #  Ao calcular o valor de p_value_a_melhor, como a maioria dos dados estão 
+    #   na cauda direita (valores positivos dominam), então o cálculo dessa variável
+    #   ocorre da seguinte forma: p_value_a_melhor = 1 - p_value_b_melhor
     print("\nTeste 1: Ferramenta A Melhor que B?")
     w_stat_a_melhor, p_value_a_melhor = stats.wilcoxon(
         ferramenta_a, 
@@ -186,8 +187,6 @@ TESTE DE WILCOXON SIGNED-RANK - COMPARAÇÃO DE FERRAMENTAS
 
 [ETAPA 1] TESTE BICAUDAL - Há Diferença?
 ------------------------------------------------------------
-Hipótese Nula (H₀): M_A = M_B (não há diferença)
-Hipótese Alternativa (H₁): M_A ≠ M_B (há diferença)
 
 Estatística W: 1.5
 P-valor (bicaudal): 0.04688
