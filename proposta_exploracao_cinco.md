@@ -20,3 +20,7 @@ Este experimento propõe uma investigação comparativa sobre a aplicação de d
   - Execução das heurísticas aplicadas à matriz de espectro em seu formato transformado, por meio da técnica de balanceamento de dados SMOTE. 
 
 ![Planilha - Proposta de Exploração V](img/Tab_1_Proposta_Exploracao_V.png)
+
+## Resultado dos dados dos experimentos
+
+( ... )
