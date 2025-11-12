@@ -4,7 +4,7 @@
 - Projeto: Defects4J.
 - Programas: Chart, Lang, Math, Mockito e Time.
 - Métricas: pos-fault.
-- Heurísticas: ochiai e Op2.
+- Heurísticas: Ochiai e Op2.
 - Quantidade mínima de casos de teste: 6.
 - Quantidade mínima de casos de teste "+": 3.
 - Quantidade mínima de casos de teste "-": 3.
