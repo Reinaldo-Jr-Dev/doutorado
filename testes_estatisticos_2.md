@@ -240,6 +240,22 @@ Conclusões:
   - Como **p-value (0,0468) < @ (0,05)**, há evidências estatísticas significativas para rejeitar a hipótese nula (H₀). Isso significa que há uma diferença significativa no número de vulnerabilidades críticas não detectadas entre a Ferramenta A e a Ferramenta B.
   - Com base no Teste de Wilcoxon Signed-Rank, a Ferramenta B é significativamente melhor que a Ferramenta A para detectar vulnerabilidades críticas (W = 2, p = 0.0234, unicaudal). A Ferramenta B deixa, em média, apenas 9.29 vulnerabilidades não detectadas, enquanto a Ferramenta A deixa 11.14, uma redução de aproximadamente 10% (9.916%).
 
+## Teste Estatístico de Vargha & Delaney
+
+![Explicação - Vargha & Delaney](img/Vargha_&_Delaney_1.png)
+
+![Explicação - Vargha & Delaney](img/Vargha_&_Delaney_2.png)
+
+![Explicação - Vargha & Delaney](img/Vargha_&_Delaney_3.png)
+
+![Explicação - Vargha & Delaney](img/Vargha_&_Delaney_4.png)
+
+![Explicação - Vargha & Delaney](img/Vargha_&_Delaney_5.png)
+
+![Explicação - Vargha & Delaney](img/Vargha_&_Delaney_6.png)
+
+![Explicação - Vargha & Delaney](img/Vargha_&_Delaney_7.png)
+
 Fontes:
   - A theoretical analysis on cloning the failed test cases to improve spectrum-based fault localization (Long Zhang, Lanfei Yan, Zhenyu Zhang, Jian Zhang, W.K. Chand, Zheng Zheng).
   - MathWorld, W., The web’s most extensive mathematics resource, 2010Access on: http://mathworld.wolfram.com.
