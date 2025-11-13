@@ -2,7 +2,7 @@
 
 ## Características do ambiente de execução
 - Projeto: Defects4J.
-- Programas: Math.
+- Programas: Math, Time e Mockito.
 - Métricas: pos-fault.
 - Heurísticas: Ochiai e Op2.
 - Quantidade mínima de casos de teste: 6.
