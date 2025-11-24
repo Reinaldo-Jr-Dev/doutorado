@@ -36,10 +36,16 @@ Cenário: Uma empresa de desenvolvimento de software está testando duas ferrame
 
 Análise de qual Ferramenta é a melhor (Ferramenta A x Ferramenta B)
 
+![Wilcoxon Signed - Definição de Melhor Ferramenta](img/Explicacao_Wilcoxon_Signed_Melhor_I.png)
+
+![Wilcoxon Signed - Definição de Melhor Ferramenta](img/Explicacao_Wilcoxon_Signed_Melhor_II.png)
+
+![Wilcoxon Signed - Definição de Melhor Ferramenta](img/Explicacao_Wilcoxon_Signed_Melhor_III.png)
+
 Conclusões: 
   - Como **p-value (0,0468) < @ (0,05)**, há evidências estatísticas significativas para rejeitar a hipótese nula (H₀). Isso significa que há uma diferença significativa no número de vulnerabilidades críticas não detectadas entre a Ferramenta A e a Ferramenta B.
   - Considerando a análise realizada por meio da Tabela do teste Wilcoxon Signed-Ranks, com nível de significância α = 0,05 e tamanho amostral n = 7, observa-se que o valor crítico correspondente é 2. Dessa forma, como T (1,5) < T_crítico (2), rejeita-se a hipótese nula (H₀).
-  - Com base no Teste de Wilcoxon Signed-Rank, a Ferramenta B é significativamente melhor que a Ferramenta A para detectar vulnerabilidades críticas (W = 2, p = 0.0234, unicaudal). A Ferramenta B deixa, em média, apenas 9.29 vulnerabilidades não detectadas, enquanto a Ferramenta A deixa 11.14, uma redução de aproximadamente 10% (9.916%).
+  - Com base no Teste de Wilcoxon Signed-Rank, a Ferramenta B é melhor que a Ferramenta A para detectar vulnerabilidades críticas.
 
 ## Teste Estatístico de Vargha & Delaney
 O teste de Vargha e Delaney é um teste não paramétrico utilizado para medir o tamanho do efeito entre duas amostras independentes. Esse teste quantifica a magnitude da diferença observada entre as amostras, classificando-a em pequeno, médio, grande ou muito grande efeito. Em outras palavras, o teste não tem como objetivo verificar se existe uma diferença estatisticamente significativa entre as amostras, mas sim avaliar a relevância dessa diferença. Para maior clareza, o teste estatístico será aplicado ao cenário previamente descrito.
