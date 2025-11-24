@@ -40,6 +40,7 @@ Conclusões:
 
 ## Teste Estatístico de Vargha & Delaney
 O teste de Vargha e Delaney é um teste não paramétrico utilizado para medir o tamanho do efeito entre duas amostras independentes. Esse teste quantifica a magnitude da diferença observada entre as amostras, classificando-a em pequeno, médio, grande ou muito grande efeito. Em outras palavras, o teste não tem como objetivo verificar se existe uma diferença estatisticamente significativa entre as amostras, mas sim avaliar a relevância dessa diferença.
+Para maior clareza, o teste estatístico será aplicado ao cenário previamente descrito de forma formal.
 
 ![Vargha & Delaney - Cálculo](img/Vargha&Delaney_Calculo.png)
 
