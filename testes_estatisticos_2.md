@@ -15,19 +15,6 @@ Conceitos Fundamentais:
   - Nível de Significância (α): Também conhecido como alfa, é um limiar de probabilidade pré-definido (comumente 0.05 ou 5%) que representa o risco máximo que você está disposto a aceitar de cometer um erro.
   - Valor-p (p-value): **O p-value é a probabilidade de observar resultados extremos quanto aos dados coletados. Se (p-value < α), possui evidências suficientes para rejeitar a hipótese nula (H₀). Se (p-value ≥ α), não tem evidências suficientes para rejeitar a hipótese nula. Isso significa que os dados não fornecem suporte forte o suficiente para hipótese de H₁**.
     
-## Testes Estatísticos aplicado a SBFL
-
-Importância de se trabalhar com Teste Estatíticos em SBFL
-  - Permitem que as descobertas sejam generalizadas.
-  - Ajudam a realizar a comparação entre as variáveis independentes e a análise de sua relevância.
-    
-Cenário de dados da proposta de pesquisa:
-  - Variável Dependente: MFR (Mean First Rank).
-  - Fatores Fixos (de Interesse) ou Variáveis Independentes:
-    - Heurísticas (6 níveis): Quer comparar o desempenho médio das 6 heurísticas.
-    - Formatos da Matriz de Espectro (2 formatos - original x modificado).
-  - Unidades Experimentais: Defects4J (Projetos + Versões).
-
 ## Teste Estatístico Wilcoxon Signed Rank
 Por que o Teste de Wilcoxon Signed-Rank é Ideal para o cenário da nossa pesquisa?
   - Dados Emparelhados/Dependentes:
