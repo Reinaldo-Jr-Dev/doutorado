@@ -34,6 +34,8 @@ Cenário: Uma empresa de desenvolvimento de software está testando duas ferrame
 
 ![Explicação - Wilcoxon Signed Rank](img/Explicacao_Wilcoxon_Signed__Rank.png "Explicação - Wilcoxon Signed Rank")
 
+Análise de qual Ferramenta é a melhor (Ferramenta A x Ferramenta B)
+
 Conclusões: 
   - Como **p-value (0,0468) < @ (0,05)**, há evidências estatísticas significativas para rejeitar a hipótese nula (H₀). Isso significa que há uma diferença significativa no número de vulnerabilidades críticas não detectadas entre a Ferramenta A e a Ferramenta B.
   - Considerando a análise realizada por meio da Tabela do teste Wilcoxon Signed-Ranks, com nível de significância α = 0,05 e tamanho amostral n = 7, observa-se que o valor crítico correspondente é 2. Dessa forma, como T (1,5) < T_crítico (2), rejeita-se a hipótese nula (H₀).
