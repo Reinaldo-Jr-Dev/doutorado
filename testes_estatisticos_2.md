@@ -36,6 +36,7 @@ Cenário: Uma empresa de desenvolvimento de software está testando duas ferrame
 
 Conclusões: 
   - Como **p-value (0,0468) < @ (0,05)**, há evidências estatísticas significativas para rejeitar a hipótese nula (H₀). Isso significa que há uma diferença significativa no número de vulnerabilidades críticas não detectadas entre a Ferramenta A e a Ferramenta B.
+  - Considerando a análise realizada por meio da Tabela do teste Wilcoxon Signed-Ranks, com nível de significância α = 0,05 e tamanho amostral n = 7, observa-se que o valor crítico correspondente é 2. Dessa forma, como T (1,5) < T_crítico (2), rejeita-se a hipótese nula (H₀).
   - Com base no Teste de Wilcoxon Signed-Rank, a Ferramenta B é significativamente melhor que a Ferramenta A para detectar vulnerabilidades críticas (W = 2, p = 0.0234, unicaudal). A Ferramenta B deixa, em média, apenas 9.29 vulnerabilidades não detectadas, enquanto a Ferramenta A deixa 11.14, uma redução de aproximadamente 10% (9.916%).
 
 ## Teste Estatístico de Vargha & Delaney
