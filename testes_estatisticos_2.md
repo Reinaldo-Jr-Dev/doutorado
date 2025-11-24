@@ -48,3 +48,4 @@ O teste de Vargha e Delaney é um teste não paramétrico utilizado para medir o
 Fontes:
   - A theoretical analysis on cloning the failed test cases to improve spectrum-based fault localization (Long Zhang, Lanfei Yan, Zhenyu Zhang, Jian Zhang, W.K. Chand, Zheng Zheng).
   - MathWorld, W., The web’s most extensive mathematics resource, 2010Access on: http://mathworld.wolfram.com.
+  - A Critique and Improvement of the CL Common Language Effect Size Statistics of McGraw and Wong (Vargha, A. & Delaney, H. D.).
