@@ -27,7 +27,7 @@ Este experimento propõe uma investigação comparativa sobre a aplicação de d
 
   - Para a obtenção da significância estatística na análise da amostra, uma parte dos dados da planilha mencionada anteriormente foram tratados da seguinte maneira: inicialmente, a tabela de resultados do projeto Math, associada à heurística Ochiai, foi duplicada. Na cópia gerada, acrescentou-se o valor dez à métrica Pos-Fault, número escolhido de forma aleatória. Em seguida, todo esse conjunto de dados foi novamente duplicado, dessa vez sem qualquer alteração adicional nos valores. A adoção desse procedimento de manipulação dos dados fundamenta-se em evidências encontradas na literatura, que apontam que um dos principais fatores que dificultam a obtenção de significância estatística é o tamanho reduzido das amostras disponíveis para análise.
 
-Arquivo CSV
+Arquivo CSV - Conjunto de dados manipulado
 ```
 Projeto;Versão;Heurística;Experimento;Pos-Fault
 Math;66;Ochiai;e80_original;144
@@ -240,7 +240,7 @@ Math;22;Ochiai;e80_original;12
 Math;22;Ochiai;e81_smote;64
 ```
 
-Código Python
+Código Python aplicado ao CSV
 ```python
 import pandas as pd
 import numpy as np
@@ -554,7 +554,7 @@ if __name__ == "__main__":
     main()
 ```
 
-Resultado da execução do programa
+Resultado da execução do código Python
 ```
 🔄 Carregando dados...
 ✓ Dados carregados com sucesso! (208 linhas)
