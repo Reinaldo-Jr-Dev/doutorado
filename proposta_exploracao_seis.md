@@ -17,5 +17,8 @@ Este experimento propõe uma investigação comparativa sobre a aplicação de d
 - **e81_smote**
   - Execução das heurísticas aplicadas à matriz de espectro de cobertura em seu formato transformado, por meio da técnica de balanceamento de dados SMOTE. 
 
-## Resultado dos dados dos experimentos
-( ... )
+## Resultados dos dados dos experimentos
+
+[Planilha com resultados](https://docs.google.com/spreadsheets/d/e/2PACX-1vQt6L8Z9mk-be_DKJal9ZzuapgrugOYXGz0FqitBYko9ERinjRmeSsUgc85c_INeA/pubhtml?gid=855928177&single=true)
+
+  - Com base no teste estatístico de Wilcoxon Signed-Rank, verificou-se que, em todos os cenários analisados, o p-value foi superior ao nível de significância adotado (0,05). Dessa forma, conclui-se que não há diferença estatisticamente significativa entre os valores de Pos-Fault obtidos nos experimentos e80_original e e81_smote, considerando os projetos do experimento (Math, Time e Mockito) e as heurísticas Ochiai e Op2.
