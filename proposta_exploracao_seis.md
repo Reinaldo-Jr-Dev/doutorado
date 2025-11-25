@@ -25,6 +25,8 @@ Este experimento propõe uma investigação comparativa sobre a aplicação de d
 
 ## Experimento manipulado para obtenção de significância estatística
 
+  - Os dados foram tratados da seguinte maneira: inicialmente, a tabela de resultados do projeto Math, associada à heurística Ochiai, foi duplicada. Na cópia gerada, acrescentou-se o valor de 10 à métrica Pos-Fault. Em seguida, todo esse conjunto de dados foi novamente duplicado, desta vez sem qualquer alteração adicional nos valores.
+
 Arquivo CSV
 ```
 Projeto;Versão;Heurística;Experimento;Pos-Fault
