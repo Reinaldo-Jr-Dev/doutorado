@@ -570,8 +570,8 @@ PROJETO: Math                 | HEURÍSTICA: Ochiai
   Estatística (W): 768.0000
   Alfa (@): 0.05
   P-Valor: 0.013285
-  Mediana - Técnica 1: 27.50
-  Mediana - Técnica 2: 84.00
+  Mediana - Técnica e80_original: 27.50
+  Mediana - Técnica e81_smote: 84.00
   P-Valor Técnica: 0.006642
   ✓ Resultado: HÁ SIGNIFICÂNCIA ESTATÍSTICA (P-Valor < 0.05)
   ✓ A Técnica e80_original é melhor
