@@ -25,7 +25,7 @@ Este experimento propõe uma investigação comparativa sobre a aplicação de d
 
 ## Experimento manipulado para obtenção de significância estatística
 
-  - Os dados foram tratados da seguinte forma: inicialmente, a tabela de resultados do projeto Math, associada à heurística Ochiai, foi duplicada. Na cópia gerada, adicionou-se o valor 10 à métrica Pos-Fault, sendo esse número escolhido aleatoriamente. Em seguida, todo esse conjunto de dados foi novamente duplicado, desta vez sem qualquer modificação adicional nos valores.
+  - Para a obtenção da significância estatística na análise da amostra, uma parte dos dados da planilha mencionada anteriormente foram tratados da seguinte maneira: inicialmente, a tabela de resultados do projeto Math, associada à heurística Ochiai, foi duplicada. Na cópia gerada, acrescentou-se o valor dez à métrica Pos-Fault, número escolhido de forma aleatória. Em seguida, todo esse conjunto de dados foi novamente duplicado, dessa vez sem qualquer alteração adicional nos valores. A adoção desse procedimento de manipulação dos dados fundamenta-se em evidências encontradas na literatura, que apontam que um dos principais fatores que dificultam a obtenção de significância estatística é o tamanho reduzido das amostras disponíveis para análise.
 
 Arquivo CSV
 ```
