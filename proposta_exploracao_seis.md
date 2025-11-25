@@ -37,7 +37,7 @@ Math;35;Ochiai;e81_smote;9
 Math;102;Ochiai;e80_original;13
 Math;102;Ochiai;e81_smote;13
 Math;69;Ochiai;e80_original;75
-Math;69;Ochiai;e81_smote;5
+Math;69;Ochiai;e81_smote;75
 Math;29;Ochiai;e80_original;6
 Math;29;Ochiai;e81_smote;197
 Math;16;Ochiai;e80_original;6
@@ -89,7 +89,7 @@ Math;35;Ochiai;e81_smote;19
 Math;102;Ochiai;e80_original;23
 Math;102;Ochiai;e81_smote;23
 Math;69;Ochiai;e80_original;85
-Math;69;Ochiai;e81_smote;15
+Math;69;Ochiai;e81_smote;85
 Math;29;Ochiai;e80_original;16
 Math;29;Ochiai;e81_smote;207
 Math;16;Ochiai;e80_original;16
@@ -141,7 +141,7 @@ Math;35;Ochiai;e81_smote;9
 Math;102;Ochiai;e80_original;13
 Math;102;Ochiai;e81_smote;13
 Math;69;Ochiai;e80_original;75
-Math;69;Ochiai;e81_smote;5
+Math;69;Ochiai;e81_smote;75
 Math;29;Ochiai;e80_original;6
 Math;29;Ochiai;e81_smote;197
 Math;16;Ochiai;e80_original;6
@@ -193,7 +193,7 @@ Math;35;Ochiai;e81_smote;19
 Math;102;Ochiai;e80_original;23
 Math;102;Ochiai;e81_smote;23
 Math;69;Ochiai;e80_original;85
-Math;69;Ochiai;e81_smote;15
+Math;69;Ochiai;e81_smote;85
 Math;29;Ochiai;e80_original;16
 Math;29;Ochiai;e81_smote;207
 Math;16;Ochiai;e80_original;16
@@ -565,20 +565,19 @@ PROJETO: Math                 | HEURÍSTICA: Ochiai
 ============================================================
 
 📈 TESTE DE WILCOXON SIGNED RANK:
-  Estatística (W): 954.0000
+  Estatística (W): 768.0000
   Alfa (@): 0.05
-  P-Valor: 0.043261
+  P-Valor: 0.013285
   Mediana - Técnica 1: 27.50
-  Mediana - Técnica 2: 74.50
-  P-Valor Técnica: 0.021631
+  Mediana - Técnica 2: 84.00
+  P-Valor Técnica: 0.006642
   ✓ Resultado: HÁ SIGNIFICÂNCIA ESTATÍSTICA (P-Valor < 0.05)
   ✓ A Técnica e80_original é melhor
 
 📈 TESTE DE VARGHA & DELANEY:
-  Estatística A12: 0.6435
+  Estatística A12: 0.6586
   Classificação do Efeito: MÉDIO
-  ➜ Técnica e80_original é 64.3% mais provável de ser superior
+  ➜ Técnica e80_original é 65.9% mais provável de ser superior
 
 ============================================================
-
 ```
