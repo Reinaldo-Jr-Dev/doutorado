@@ -146,6 +146,8 @@ def aplicar_wilcoxon_teste(grupo_dados):
     significante     = p_valor < alfa
     p_value_a_melhor = 0
     p_value_b_melhor = 0
+    w_stat_tecnica   = 0
+    p_value_tecnica  = 0
 
     # SE p_valor < alfa ENTÃO Verificar qual é o melhor experimento
     if (significante):
