@@ -33,13 +33,13 @@ Projeto;Versão;Heurística;Experimento;Pos-Fault
 Math;66;Ochiai;e80_original;144
 Math;66;Ochiai;e81_smote;102
 Math;68;Ochiai;e80_original;128
-Math;68;Ochiai;e81_smote;128
+Math;68;Ochiai;e81_smote;138
 Math;35;Ochiai;e80_original;10
 Math;35;Ochiai;e81_smote;9
 Math;102;Ochiai;e80_original;13
-Math;102;Ochiai;e81_smote;13
+Math;102;Ochiai;e81_smote;23
 Math;69;Ochiai;e80_original;75
-Math;69;Ochiai;e81_smote;75
+Math;69;Ochiai;e81_smote;85
 Math;29;Ochiai;e80_original;6
 Math;29;Ochiai;e81_smote;197
 Math;16;Ochiai;e80_original;6
@@ -59,185 +59,29 @@ Math;36;Ochiai;e81_smote;356
 Math;31;Ochiai;e80_original;109
 Math;31;Ochiai;e81_smote;35
 Math;98;Ochiai;e80_original;19
-Math;98;Ochiai;e81_smote;19
+Math;98;Ochiai;e81_smote;29
 Math;37;Ochiai;e80_original;21
 Math;37;Ochiai;e81_smote;251
 Math;99;Ochiai;e80_original;4
 Math;99;Ochiai;e81_smote;27
 Math;101;Ochiai;e80_original;12
-Math;101;Ochiai;e81_smote;12
+Math;101;Ochiai;e81_smote;22
 Math;64;Ochiai;e80_original;252
-Math;64;Ochiai;e81_smote;252
+Math;64;Ochiai;e81_smote;262
 Math;46;Ochiai;e80_original;2
 Math;46;Ochiai;e81_smote;1
 Math;77;Ochiai;e80_original;26
 Math;77;Ochiai;e81_smote;28
 Math;84;Ochiai;e80_original;146
-Math;84;Ochiai;e81_smote;146
+Math;84;Ochiai;e81_smote;156
 Math;71;Ochiai;e80_original;2
 Math;71;Ochiai;e81_smote;280
 Math;76;Ochiai;e80_original;107
-Math;76;Ochiai;e81_smote;107
+Math;76;Ochiai;e81_smote;117
 Math;47;Ochiai;e80_original;2
-Math;47;Ochiai;e81_smote;2
+Math;47;Ochiai;e81_smote;12
 Math;22;Ochiai;e80_original;2
 Math;22;Ochiai;e81_smote;54
-Math;66;Ochiai;e80_original;154
-Math;66;Ochiai;e81_smote;112
-Math;68;Ochiai;e80_original;138
-Math;68;Ochiai;e81_smote;138
-Math;35;Ochiai;e80_original;20
-Math;35;Ochiai;e81_smote;19
-Math;102;Ochiai;e80_original;23
-Math;102;Ochiai;e81_smote;23
-Math;69;Ochiai;e80_original;85
-Math;69;Ochiai;e81_smote;85
-Math;29;Ochiai;e80_original;16
-Math;29;Ochiai;e81_smote;207
-Math;16;Ochiai;e80_original;16
-Math;16;Ochiai;e81_smote;714
-Math;6;Ochiai;e80_original;1189
-Math;6;Ochiai;e81_smote;912
-Math;1;Ochiai;e80_original;31
-Math;1;Ochiai;e81_smote;376
-Math;21;Ochiai;e80_original;98
-Math;21;Ochiai;e81_smote;93
-Math;86;Ochiai;e80_original;104
-Math;86;Ochiai;e81_smote;51
-Math;43;Ochiai;e80_original;81
-Math;43;Ochiai;e81_smote;66
-Math;36;Ochiai;e80_original;12
-Math;36;Ochiai;e81_smote;366
-Math;31;Ochiai;e80_original;119
-Math;31;Ochiai;e81_smote;45
-Math;98;Ochiai;e80_original;29
-Math;98;Ochiai;e81_smote;29
-Math;37;Ochiai;e80_original;31
-Math;37;Ochiai;e81_smote;261
-Math;99;Ochiai;e80_original;14
-Math;99;Ochiai;e81_smote;37
-Math;101;Ochiai;e80_original;22
-Math;101;Ochiai;e81_smote;22
-Math;64;Ochiai;e80_original;262
-Math;64;Ochiai;e81_smote;262
-Math;46;Ochiai;e80_original;12
-Math;46;Ochiai;e81_smote;11
-Math;77;Ochiai;e80_original;36
-Math;77;Ochiai;e81_smote;38
-Math;84;Ochiai;e80_original;156
-Math;84;Ochiai;e81_smote;156
-Math;71;Ochiai;e80_original;12
-Math;71;Ochiai;e81_smote;290
-Math;76;Ochiai;e80_original;117
-Math;76;Ochiai;e81_smote;117
-Math;47;Ochiai;e80_original;12
-Math;47;Ochiai;e81_smote;12
-Math;22;Ochiai;e80_original;12
-Math;22;Ochiai;e81_smote;64
-Math;66;Ochiai;e80_original;144
-Math;66;Ochiai;e81_smote;102
-Math;68;Ochiai;e80_original;128
-Math;68;Ochiai;e81_smote;128
-Math;35;Ochiai;e80_original;10
-Math;35;Ochiai;e81_smote;9
-Math;102;Ochiai;e80_original;13
-Math;102;Ochiai;e81_smote;13
-Math;69;Ochiai;e80_original;75
-Math;69;Ochiai;e81_smote;75
-Math;29;Ochiai;e80_original;6
-Math;29;Ochiai;e81_smote;197
-Math;16;Ochiai;e80_original;6
-Math;16;Ochiai;e81_smote;704
-Math;6;Ochiai;e80_original;1179
-Math;6;Ochiai;e81_smote;902
-Math;1;Ochiai;e80_original;21
-Math;1;Ochiai;e81_smote;366
-Math;21;Ochiai;e80_original;88
-Math;21;Ochiai;e81_smote;83
-Math;86;Ochiai;e80_original;94
-Math;86;Ochiai;e81_smote;41
-Math;43;Ochiai;e80_original;71
-Math;43;Ochiai;e81_smote;56
-Math;36;Ochiai;e80_original;2
-Math;36;Ochiai;e81_smote;356
-Math;31;Ochiai;e80_original;109
-Math;31;Ochiai;e81_smote;35
-Math;98;Ochiai;e80_original;19
-Math;98;Ochiai;e81_smote;19
-Math;37;Ochiai;e80_original;21
-Math;37;Ochiai;e81_smote;251
-Math;99;Ochiai;e80_original;4
-Math;99;Ochiai;e81_smote;27
-Math;101;Ochiai;e80_original;12
-Math;101;Ochiai;e81_smote;12
-Math;64;Ochiai;e80_original;252
-Math;64;Ochiai;e81_smote;252
-Math;46;Ochiai;e80_original;2
-Math;46;Ochiai;e81_smote;1
-Math;77;Ochiai;e80_original;26
-Math;77;Ochiai;e81_smote;28
-Math;84;Ochiai;e80_original;146
-Math;84;Ochiai;e81_smote;146
-Math;71;Ochiai;e80_original;2
-Math;71;Ochiai;e81_smote;280
-Math;76;Ochiai;e80_original;107
-Math;76;Ochiai;e81_smote;107
-Math;47;Ochiai;e80_original;2
-Math;47;Ochiai;e81_smote;2
-Math;22;Ochiai;e80_original;2
-Math;22;Ochiai;e81_smote;54
-Math;66;Ochiai;e80_original;154
-Math;66;Ochiai;e81_smote;112
-Math;68;Ochiai;e80_original;138
-Math;68;Ochiai;e81_smote;138
-Math;35;Ochiai;e80_original;20
-Math;35;Ochiai;e81_smote;19
-Math;102;Ochiai;e80_original;23
-Math;102;Ochiai;e81_smote;23
-Math;69;Ochiai;e80_original;85
-Math;69;Ochiai;e81_smote;85
-Math;29;Ochiai;e80_original;16
-Math;29;Ochiai;e81_smote;207
-Math;16;Ochiai;e80_original;16
-Math;16;Ochiai;e81_smote;714
-Math;6;Ochiai;e80_original;1189
-Math;6;Ochiai;e81_smote;912
-Math;1;Ochiai;e80_original;31
-Math;1;Ochiai;e81_smote;376
-Math;21;Ochiai;e80_original;98
-Math;21;Ochiai;e81_smote;93
-Math;86;Ochiai;e80_original;104
-Math;86;Ochiai;e81_smote;51
-Math;43;Ochiai;e80_original;81
-Math;43;Ochiai;e81_smote;66
-Math;36;Ochiai;e80_original;12
-Math;36;Ochiai;e81_smote;366
-Math;31;Ochiai;e80_original;119
-Math;31;Ochiai;e81_smote;45
-Math;98;Ochiai;e80_original;29
-Math;98;Ochiai;e81_smote;29
-Math;37;Ochiai;e80_original;31
-Math;37;Ochiai;e81_smote;261
-Math;99;Ochiai;e80_original;14
-Math;99;Ochiai;e81_smote;37
-Math;101;Ochiai;e80_original;22
-Math;101;Ochiai;e81_smote;22
-Math;64;Ochiai;e80_original;262
-Math;64;Ochiai;e81_smote;262
-Math;46;Ochiai;e80_original;12
-Math;46;Ochiai;e81_smote;11
-Math;77;Ochiai;e80_original;36
-Math;77;Ochiai;e81_smote;38
-Math;84;Ochiai;e80_original;156
-Math;84;Ochiai;e81_smote;156
-Math;71;Ochiai;e80_original;12
-Math;71;Ochiai;e81_smote;290
-Math;76;Ochiai;e80_original;117
-Math;76;Ochiai;e81_smote;117
-Math;47;Ochiai;e80_original;12
-Math;47;Ochiai;e81_smote;12
-Math;22;Ochiai;e80_original;12
-Math;22;Ochiai;e81_smote;64
 ```
 
 Código Python aplicado ao CSV
@@ -558,28 +402,23 @@ Resultado da execução do código Python
 ```
 🔄 Carregando dados...
 ✓ Dados carregados com sucesso! (208 linhas)
-
 🔄 Processando Teste de Wilcoxon Signed Rank...
-
-
 ============================================================
 PROJETO: Math                 | HEURÍSTICA: Ochiai
 ============================================================
-
 📈 TESTE DE WILCOXON SIGNED RANK:
-  Estatística (W): 768.0000
+  Estatística (W): 96.0000
   Alfa (@): 0.05
-  P-Valor: 0.013285
-  Mediana - Técnica e80_original: 27.50
+  P-Valor: 0.042452
+  Mediana - Técnica e80_original: 21.00
   Mediana - Técnica e81_smote: 84.00
-  P-Valor Técnica: 0.006642
+  P-Valor Técnica: 0.021226
   ✓ Resultado: HÁ SIGNIFICÂNCIA ESTATÍSTICA (P-Valor < 0.05)
   ✓ A Técnica e80_original é melhor
 
 📈 TESTE DE VARGHA & DELANEY:
-  Estatística A12: 0.6586
+  Estatística A12: 0.6930
   Classificação do Efeito: MÉDIO
-  ➜ Técnica e80_original é 65.9% mais provável de ser superior
-
+  ➜ Técnica e80_original é 69.3% mais provável de ser superior
 ============================================================
 ```
