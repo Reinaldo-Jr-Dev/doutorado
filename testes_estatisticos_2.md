@@ -16,13 +16,6 @@ Conceitos Fundamentais:
   - Valor-p (p-value): O p-value é a probabilidade de observar resultados extremos quanto aos dados coletados, assumindo que a hipótese nula é verdadeira. **Se (p-value < α), possui evidências suficientes para rejeitar a hipótese nula (H₀). Se (p-value ≥ α), não tem evidências suficientes para rejeitar a hipótese nula. Isso significa que os dados não fornecem suporte forte o suficiente para hipótese de H₁(Hipótese Alternativa)**.
     
 ## Teste Estatístico Wilcoxon Signed Rank
-Por que o Teste de Wilcoxon Signed-Rank é Ideal para o cenário da nossa pesquisa?
-  - Dados Emparelhados/Dependentes:
-    - Podemos comparar dois formatos da matriz de espectro de controle para a mesma versão de projeto e mesma heurística. Isso significa que as observações são naturalmente emparelhadas.
-  - Natureza Não-Paramétrica:
-    - Métricas como o MFR (Mean First Rank) não seguem uma distribuição normal.
-  - Comparações de Medianas:
-    - O teste avalia se existe uma diferença estatisticamente significativa nas medianas das diferenças entre os pares. Essa medida de tendência central é utilizada pelo fato dos dados serem não-paramétricos.
 
 ### Exemplo de aplicação (Teste Estatístico Wilcoxon Signed Rank)
 Um teste estatístico é um método formal e sistemático utilizado para tomar decisões sobre uma população com base em dados de uma amostra. Em sua essência, ele nos permite avaliar a probabilidade de que os resultados observados em um experimento ou estudo sejam devidos ao acaso ou se realmente existe uma relação real entre as variáveis.
