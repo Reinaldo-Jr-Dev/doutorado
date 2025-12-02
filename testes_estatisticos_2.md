@@ -150,15 +150,6 @@ print(f"\nDiferenças:")
 print(f"  Diferença de Médias: {abs(media_a - media_b):.2f}")
 print(f"  Diferença de Medianas: {abs(mediana_a - mediana_b):.2f}")
 
-if media_a < media_b:
-    reducao = ((media_b - media_a) / media_b) * 100
-    print(f"\n✓ Ferramenta A detecta em média {reducao:.1f}% MAIS vulnerabilidades.")
-    print(f"  (A tem {media_a:.2f} não detectadas vs B com {media_b:.2f})")
-else:
-    reducao = ((media_a - media_b) / media_a) * 100
-    print(f"\n✓ Ferramenta B detecta em média {reducao:.1f}% MAIS vulnerabilidades.")
-    print(f"  (B tem {media_b:.2f} não detectadas vs A com {media_a:.2f})")
-
 # ========== CONCLUSÃO FINAL ==========
 print("\n" + "=" * 60)
 print("CONCLUSÃO FINAL")
