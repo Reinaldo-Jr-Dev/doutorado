@@ -328,10 +328,10 @@ def exibir_resultado_individual(chave, resultado):
     print(f"\n📈 TESTE DE WILCOXON SIGNED RANK:")
     print(f"  Estatística (W): {resultado['estatistica']:.4f}")
     print(f"  Alfa (@): {resultado['alfa']:.2f}")
-    print(f"  P-Valor: {resultado['p_valor']:.6f}")
-    print(f"  Mediana - Técnica 1: {resultado['mediana_exp1']:.2f}")
-    print(f"  Mediana - Técnica 2: {resultado['mediana_exp2']:.2f}")
-    print(f"  P-Valor Técnica: {resultado['p_valor_tecnica']:.6f}")
+    print(f"  P-Valor (wilcoxon - 'two-sided'): {resultado['p_valor']:.6f}")
+    print(f"  Mediana - {resultado['experimento_1']}: {resultado['mediana_exp1']:.2f}")
+    print(f"  Mediana - {resultado['experimento_2']}: {resultado['mediana_exp2']:.2f}")
+    print(f"  P-Valor Direção (wilcoxon - 'greater' ou 'less'): {resultado['p_valor_tecnica']:.6f}")
 
     # INTERPRETAÇÃO
     # Se possui Significância Estatística (p_valor < 0,05)
@@ -413,13 +413,14 @@ Resultado da execução do código Python
 ============================================================
 PROJETO: Math                 | HEURÍSTICA: Ochiai
 ============================================================
+
 📈 TESTE DE WILCOXON SIGNED RANK:
   Estatística (W): 96.0000
   Alfa (@): 0.05
-  P-Valor: 0.042452
-  Mediana - Técnica e80_original: 21.00
-  Mediana - Técnica e81_smote: 84.00
-  P-Valor Técnica: 0.021226
+  P-Valor (wilcoxon - 'two-sided'): 0.042452
+  Mediana - e80_original: 21.00
+  Mediana - e81_smote: 84.00
+  P-Valor Direção (wilcoxon - 'greater' ou 'less'): 0.021226
   ✓ Resultado: HÁ SIGNIFICÂNCIA ESTATÍSTICA (P-Valor < 0.05)
   ✓ A Técnica e80_original é melhor
 
@@ -427,5 +428,5 @@ PROJETO: Math                 | HEURÍSTICA: Ochiai
   Estatística A12: 0.6930
   Classificação do Efeito: MÉDIO
   ➜ Técnica e80_original é 69.3% mais provável de ser superior
-============================================================
+
 ```
