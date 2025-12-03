@@ -347,6 +347,9 @@ def exibir_resultado_individual(chave, resultado):
             # Se mediana do experimento II < mediana do experimento I
             else:
               print("  ✓ A Técnica " + resultado['experimento_2'] + " é melhor")
+          # Não existe significância estatística na direção da técnica analisada (técnica >= 0,05)
+          else:
+            print("  ✗ Resultado: NÃO HÁ SIGNIFICÂNCIA ESTATÍSTICA na direção analisada")
         # Não existe diferença entre as medianas dos valores das técnicas I e II
         else:
           print("  ✓ As Técnicas abordadas nesse experimento são equivalentes")
