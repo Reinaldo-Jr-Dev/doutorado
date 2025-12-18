@@ -19,4 +19,4 @@ Nesta seção, serão apresentadas propostas de exploração com o objetivo de a
 - [Proposta de Exploração VII](proposta_exploracao_sete.md)
  	- Esse experimento propõe uma investigação comparativa sobre a aplicação de diferentes heurísticas (Ochiai, Tarantula, Jaccard, Op2, Barinel e DStar) na matriz de espectro de cobertura em seu formato original e com a eliminação de ruídos, de acordo com as seguintes técnicas: NRS1, NRS2, NRS3, NRS4, NRS5, NRS6 e NRS7. Esses resultados serão medidos, de acordo com a métrica Pos-Fault.
 - [Proposta de Exploração VIII](proposta_exploracao_oito.md)
- 	- Este experimento propõe uma investigação comparativa entre a técnica de balanceamento SMOTE, em sua versão canônica, e técnicas de balanceamento derivadas do SMOTE, tais como Smotenc, Smoten, Adasyn, BorderlineSmote, KMeansSmote e SVMSmote.
+ 	- Este experimento propõe uma investigação comparativa entre a técnica de balanceamento SMOTE, em sua versão canônica, e técnicas de balanceamento derivadas do SMOTE, tais como: Smotenc, Smoten, Adasyn, BorderlineSmote, KMeansSmote e SVMSmote.
