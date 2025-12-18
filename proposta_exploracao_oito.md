@@ -8,7 +8,7 @@
 - Quantidade mínima de casos de teste "+": 2.
 - Quantidade mínima de casos de teste "-": 2.
 
-## Descrição dos experimentos
+## Descrição dos experimento
 Este experimento propõe uma investigação comparativa entre a técnica de balanceamento SMOTE, em sua versão canônica, e técnicas de balanceamento derivadas do Smote, tais como: Smotenc, Smoten, Adasyn, BorderlineSmote, KMeansSmote e SVMSmote.
 
 - **Smote**
