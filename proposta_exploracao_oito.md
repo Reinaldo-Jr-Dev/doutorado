@@ -8,6 +8,11 @@
 - Quantidade mínima de casos de teste "+": 2.
 - Quantidade mínima de casos de teste "-": 2.
 
+## Análise estrutural do dataset (Chart-16)
+- Quantidade de Statements: 298
+- Quantidade de Testes "+": 13
+- Quantidade de Testes "-": 8
+
 ## Descrição dos experimento
 Este experimento propõe uma investigação comparativa entre a técnica de balanceamento SMOTE, em sua versão canônica, e técnicas de balanceamento derivadas do Smote, tais como: Smotenc, Smoten, Adasyn, BorderlineSmote, KMeansSmote e SVMSmote.
 
