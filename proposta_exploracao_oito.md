@@ -30,3 +30,9 @@ Este experimento propõe uma investigação comparativa entre a técnica de bala
   - Utiliza o algoritmo K-Means para agrupar os dados antes do over-sampling, gerando amostras apenas em clusters onde a classe minoritária é predominante, o que ajuda a evitar a criação de ruído.
 - **SVMSmote**
   - Usa um classificador SVM para encontrar os vetores de suporte (os pontos mais próximos da fronteira de decisão) e gera novas amostras ao redor desses pontos críticos.
+ 
+## Resultados
+Segue os resultados da execução das técnicas desse experimento.
+
+![Comparação das técnicas derivadas do Smote](img/Tab_1_Proposta_Exploracao_VIII.png)
+
