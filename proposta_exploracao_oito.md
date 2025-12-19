@@ -14,7 +14,7 @@
 - Quantidade de Casos de Testes "-": 8
 
 ## Descrição dos experimento
-Este experimento propõe uma investigação comparativa entre a técnica de balanceamento SMOTE, em sua versão canônica, e técnicas de balanceamento derivadas do Smote, tais como: Smotenc, Smoten, Adasyn, BorderlineSmote, KMeansSmote e SVMSmote.
+Este experimento propõe uma investigação comparativa entre a técnica de balanceamento SMOTE, em sua versão canônica, e técnicas de balanceamento derivadas do Smote, tais como: Smotenc, Smoten, Adasyn, BorderlineSmote, KMeansSmote e SVMSmote. Todas as técnicas foram implementadas e executadas utilizando seus parâmetros default, isto é, sem a adição de configurações ou ajustes adicionais.
 
 - **Smote (Synthetic Minority Over-sampling Technique)**
   - O algoritmo base que cria amostras sintéticas através da interpolação linear entre vizinhos próximos da classe minoritária.
