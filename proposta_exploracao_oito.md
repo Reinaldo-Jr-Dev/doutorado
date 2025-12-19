@@ -32,7 +32,7 @@ Este experimento propõe uma investigação comparativa entre a técnica de bala
   - Usa um classificador SVM para encontrar os vetores de suporte (os pontos mais próximos da fronteira de decisão) e gera novas amostras ao redor desses pontos críticos.
  
 ## Resultados
-Segue os resultados da execução das técnicas desse experimento.
+A seguir, são apresentados os resultados da execução das técnicas consideradas neste experimento.
 
 ![Comparação das técnicas derivadas do Smote](img/Tab_1_Proposta_Exploracao_VIII.png)
 
