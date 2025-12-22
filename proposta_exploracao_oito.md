@@ -32,7 +32,7 @@ Este experimento propõe uma investigação comparativa entre a técnica de bala
   - Usa um classificador SVM para encontrar os vetores de suporte (os pontos mais próximos da fronteira de decisão) e gera novas amostras ao redor desses pontos críticos.
  
 ## Resultados
-A seguir, são apresentados os resultados da execução das técnicas consideradas neste experimento.
+A seguir, são apresentados os resultados da execução das técnicas consideradas neste experimento. São apresentadas duas tabelas: a primeira tem como objetivo expor os resultados da nova matriz de casos de teste obtida a partir da aplicação das técnicas de balanceamento, a segunda apresenta a métrica Pos-Fault para cada técnica de balanceamento utilizada.
 
 ![Comparação das técnicas derivadas do Smote](img/Tab_1_Proposta_Exploracao_VIII.png)
 
