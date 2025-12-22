@@ -36,3 +36,5 @@ A seguir, são apresentados os resultados da execução das técnicas considerad
 
 ![Comparação das técnicas derivadas do Smote](img/Tab_1_Proposta_Exploracao_VIII.png)
 
+![Análise de Pos-Fault](img/Tab_2_Proposta_Exploracao_VIII.png)
+
