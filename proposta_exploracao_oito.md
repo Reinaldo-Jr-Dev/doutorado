@@ -38,6 +38,5 @@ Ao analisar os resultados apresentados nas duas tabelas, destacam-se os seguinte
   - a métrica Pos-Fault apresentou valores idênticos para todas as técnicas de balanceamento avaliadas, com exceção do SMOTENC, o qual não gerou novos casos de teste em função da natureza dos dados utilizados.
 
 ![Comparação das técnicas derivadas do Smote](img/Tab_1_Proposta_Exploracao_VIII.png)
-
 ![Análise de Pos-Fault](img/Tab_2_Proposta_Exploracao_VIII.png)
 
