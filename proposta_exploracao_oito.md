@@ -34,7 +34,7 @@ Este experimento propõe uma investigação comparativa entre a técnica de bala
 ## Resultados
 A seguir, são apresentados os resultados da execução das técnicas consideradas neste experimento. São apresentadas duas tabelas: a primeira tem como objetivo expor os resultados da nova matriz de casos de teste obtida a partir da aplicação das técnicas de balanceamento, a segunda apresenta a métrica Pos-Fault para cada técnica de balanceamento utilizada.
 Ao analisar os resultados apresentados nas duas tabelas, destacam-se os seguintes aspectos:
-  - a técnica de balanceamento SVMSMOTE gerou um menor número de casos de teste, entretanto, todos os casos produzidos foram distintos entre si.
+  - a técnica de balanceamento SVMSmote gerou um menor número de casos de teste, entretanto, todos os casos produzidos foram distintos entre si.
   - a métrica Pos-Fault apresentou valores idênticos para todas as técnicas de balanceamento avaliadas, com exceção do SMOTENC, o qual não gerou novos casos de teste em função da natureza dos dados utilizados.
 
 ![Comparação das técnicas derivadas do Smote](img/Tab_1_Proposta_Exploracao_VIII.png)
