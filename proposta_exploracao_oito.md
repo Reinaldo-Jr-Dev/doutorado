@@ -2,16 +2,12 @@
 
 ## Características do ambiente de execução
 - Projeto: Defects4J.
-- Programas: Chart.
-- Versão: 16.
+- Programas: Chart;Lang;Math;Mockito;Time.
+- Versão: Todas as versões.
 - Quantidade mínima de casos de teste: 4.
 - Quantidade mínima de casos de teste "+": 2.
 - Quantidade mínima de casos de teste "-": 2.
-
-## Análise estrutural do dataset (Chart-16)
-- Quantidade de Statements: 298
-- Quantidade de Casos de Testes "+": 13
-- Quantidade de Casos de Testes "-": 8
+- Heurísticas: ochiai;tarantula;jaccard;op2;barinel;dstar.
 
 ## Descrição dos experimento
 Este experimento propõe uma investigação comparativa entre a técnica de balanceamento SMOTE, em sua versão canônica, e técnicas de balanceamento derivadas do SMOTE, tais como SMOTENC, SMOTEN, ADASYN, Borderline-SMOTE, KMeans-SMOTE e SVM-SMOTE. A investigação tem como objetivo avaliar os novos casos de teste gerados por cada uma dessas técnicas de balanceamento. Todas as técnicas foram implementadas e executadas utilizando seus parâmetros default, isto é, sem a adição de configurações ou ajustes adicionais.
@@ -32,12 +28,10 @@ Este experimento propõe uma investigação comparativa entre a técnica de bala
   - Usa um classificador SVM para encontrar os vetores de suporte (os pontos mais próximos da fronteira de decisão) e gera novas amostras ao redor desses pontos críticos.
  
 ## Resultados
-A seguir, são apresentados os resultados da execução das técnicas consideradas neste experimento. São apresentadas duas tabelas: a primeira tem como objetivo expor os resultados da nova matriz de casos de teste, analisando especificamente os novos casos de testes gerados a partir da aplicação das técnicas de balanceamento; a segunda apresenta os valores da métrica Pos-Fault para cada técnica de balanceamento avaliada.
-Ao analisar os resultados apresentados nas duas tabelas, destacam-se os seguintes aspectos:
-  - a técnica de balanceamento SVMSmote gerou um menor número de casos de teste, entretanto, todos os casos produzidos foram distintos entre si.
-  - a métrica Pos-Fault apresentou valores idênticos para todas as técnicas de balanceamento avaliadas, com exceção do SMOTENC, o qual não gerou novos casos de teste em função da natureza dos dados utilizados.
+A seguir, são apresentados, por meio de uma tabela, os resultados da execução das técnicas consideradas neste experimento. Observou-se que algumas dessas técnicas mostraram-se incompatíveis com as características do conjunto de dados analisado, conforme descrito a seguir.
 
-![Comparação das técnicas derivadas do Smote](img/Tab_1_Proposta_Exploracao_VIII.png)
-
-![Análise de Pos-Fault](img/Tab_2_Proposta_Exploracao_VIII.png)
+- KMeans-SMOTE: apresenta limitações quando a classe minoritária for muito reduzida, uma vez que a técnica depende da formação de clusters representativos, o que se torna inviável nesse cenário.
+- SVM-SMOTE: baseia-se na identificação de vetores de suporte por meio de Máquinas de Vetores de Suporte (SVM). Entretanto, quando a classe minoritária é composta por poucos indivíduos, a técnica não consegue estimar de forma adequada as fronteiras de decisão entre as classes.
+- SMOTENC: foi desenvolvida especificamente para conjuntos de dados que apresentam atributos mistos (numéricos e categóricos), característica ausente no conjunto de dados considerado neste estudo, o que inviabiliza sua aplicação.
+- ADASYN: gera amostras sintéticas apenas para instâncias minoritárias consideradas difíceis de aprender, isto é, aquelas que possuem vizinhos pertencentes à classe majoritária. Na ausência dessa condição, nenhuma instância é classificada como "difícil", resultando na não geração de novos exemplos sintéticos.
 
