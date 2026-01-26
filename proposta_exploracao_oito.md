@@ -10,7 +10,7 @@
 - Heurísticas: ochiai;tarantula;jaccard;op2;barinel;dstar.
 
 ## Descrição dos experimento
-Este experimento propõe uma investigação comparativa entre a técnica de balanceamento SMOTE, em sua versão canônica, e técnicas de balanceamento derivadas do SMOTE, tais como SMOTENC, SMOTEN, ADASYN, Borderline-SMOTE, KMeans-SMOTE e SVM-SMOTE. A investigação tem como objetivo avaliar os novos casos de teste gerados por cada uma dessas técnicas de balanceamento. Todas as técnicas foram implementadas e executadas utilizando seus parâmetros default, isto é, sem a adição de configurações ou ajustes adicionais.
+Este experimento propõe uma investigação comparativa entre os dados sem aplicação de balanceamento, em sua versão original, e os dados obtidos a partir da aplicação de diversas técnicas de balanceamento, tais como SMOTE, SMOTENC, SMOTEN, ADASYN, Borderline-SMOTE, KMeans-SMOTE e SVM-SMOTE. A investigação tem como objetivo avaliar os novos casos de teste gerados por cada uma dessas técnicas de balanceamento, bem como os resultados da métrica POS-FAULT.
 
 - **Smote (Synthetic Minority Over-sampling Technique)**
   - O algoritmo base que cria amostras sintéticas através da interpolação linear entre vizinhos próximos da classe minoritária.
@@ -28,7 +28,7 @@ Este experimento propõe uma investigação comparativa entre a técnica de bala
   - Usa um classificador SVM para encontrar os vetores de suporte (os pontos mais próximos da fronteira de decisão) e gera novas amostras ao redor desses pontos críticos.
  
 ## Resultados
-A seguir, são apresentados, por meio de uma tabela, os resultados da execução das técnicas consideradas neste experimento. Observou-se que algumas dessas técnicas mostraram-se incompatíveis com as características do conjunto de dados analisado, conforme descrito a seguir.
+A seguir, são apresentados, por meio de uma tabela, os resultados da execução das técnicas consideradas neste experimento. Primeiramente, observou-se que algumas dessas técnicas mostraram-se incompatíveis com as características do conjunto de dados analisado, conforme descrito a seguir.
 
 - KMeans-SMOTE: apresenta limitações quando a classe minoritária for muito reduzida, uma vez que a técnica depende da formação de clusters representativos, o que se torna inviável nesse cenário.
 - SVM-SMOTE: baseia-se na identificação de vetores de suporte por meio de Máquinas de Vetores de Suporte (SVM). Entretanto, quando a classe minoritária é composta por poucos indivíduos, a técnica não consegue estimar de forma adequada as fronteiras de decisão entre as classes.
