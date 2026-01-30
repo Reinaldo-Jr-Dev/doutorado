@@ -31,7 +31,7 @@ Este experimento propõe uma investigação comparativa entre os dados sem aplic
 A seguir, são apresentados, por meio de uma tabela, os resultados da execução das técnicas consideradas neste experimento. Primeiramente, observou-se que algumas dessas técnicas mostraram-se incompatíveis com as características do conjunto de dados analisado, conforme descrito a seguir.
 
 - KMeans-SMOTE: apresenta limitações quando a classe minoritária for muito reduzida, uma vez que a técnica depende da formação de clusters representativos, o que se torna inviável nesse cenário.
-- SVM-SMOTE: baseia-se na identificação de vetores de suporte por meio de Máquinas de Vetores de Suporte (SVM). Entretanto, quando a classe minoritária é composta por poucos indivíduos, a técnica não consegue estimar de forma adequada as fronteiras de decisão entre as classes.
+- SVM-SMOTE: Quando a classe minoritária é composta por poucos indivíduos, a técnica não consegue estimar de forma adequada as fronteiras de decisão entre as classes.
 - SMOTENC: foi desenvolvida especificamente para conjuntos de dados que apresentam atributos mistos (numéricos e categóricos), característica ausente no conjunto de dados considerado neste estudo, o que inviabiliza sua aplicação.
 - ADASYN: gera amostras sintéticas apenas para instâncias minoritárias consideradas difíceis de aprender, isto é, aquelas que possuem vizinhos pertencentes à classe majoritária. Na ausência dessa condição, nenhuma instância é classificada como "difícil", resultando na não geração de novos exemplos sintéticos.
 
