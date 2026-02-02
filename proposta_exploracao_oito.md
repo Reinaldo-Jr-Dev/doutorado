@@ -17,11 +17,14 @@ Este experimento propõe uma investigação comparativa entre os dados sem aplic
 - **Smotenc (Synthetic Minority Over-sampling Technique for Nominal and Continuous)**
   - Essa técnica, é projetada para datasets mistos (Numéricos/Continuous e Categóricos/Nominal)). Ela identifica quais colunas são categóricas e aplica um tratamento diferenciado nelas durante a geração.
 - **Smoten (Synthetic Minority Over-sampling Technique for Nominal)**
-  - É uma variação do SMOTE dedicada exclusivamente a datasets onde todos os atributos são categóricos (Nominal), utilizando métricas de distância apropriadas para esses tipos de dados.
+  - A técnica Smoten é uma variante do SMOTE desenvolvida especificamente para lidar com conjuntos de dados onde todas as variáveis são categóricas (nominais). Os vizinhos mais próximos, são identificados pelo uso da métrica Value Difference Metric (VDM).
 - **Adasyn**
   - A técnica Adasyn (Adaptive Synthetic), prioriza a geração de dados para exemplos da classe minoritária que são "difíceis de aprender" (aqueles cercados por muitos pontos da classe majoritária).
 - **BorderlineSmote**
-  - A técnica concentra-se nos dados da classe minoritária localizados próximos à fronteira de decisão, isto é, naqueles mais suscetíveis a erros de classificação. Inicialmente, são identificadas as amostras minoritárias que possuem um grande número de vizinhos pertencentes à classe majoritária, utilizando o algoritmo k-NN. Com base nessa análise, tais amostras são classificadas como dangerous (cercadas predominantemente por instâncias da classe majoritária) ou safe (cercadas majoritariamente por instâncias da própria classe minoritária). A geração de amostras sintéticas é realizada exclusivamente a partir das instâncias classificadas como dangerous.
+  - Enquanto o SMOTE cria exemplos sintéticos para qualquer ponto da classe minoritária, o Borderline-SMOTE foca exclusivamente nos pontos que estão na fronteira de decisão ("borderline"), onde o classificador costuma ter mais dificuldade para distinguir qual classe determinado ponto pertence. Para cada ponto da classe minoritária, o algoritmo analisa seus k-vizinhos mais próximos (k-NN).
+     - Safe (Seguro): Se a maioria dos vizinhos pertence à própria classe minoritária. Esses pontos são ignorados, pois já estão em uma zona "fácil".
+     - Noise (Ruído): Se todos os vizinhos pertencem à classe majoritária. O algoritmo assume que esse ponto é um erro ou um outlier e não gera dados novos a partir dele.
+     - Danger (Perigo): Se o número de vizinhos da classe majoritária é maior ou igual ao da minoritária. É aqui que o BorderlineSmote atua, gerando dados sintéticos apenas para esses pontos, pois eles definem o limite entre as classes.
 - **KMeansSmote**
   - Utiliza o algoritmo K-Means para agrupar os dados antes do over-sampling, gerando amostras apenas em clusters onde a classe minoritária é predominante, o que ajuda a evitar a criação de ruído.
 - **SVMSmote**
@@ -38,15 +41,6 @@ A seguir, são apresentados, por meio de uma tabela, os resultados da execução
 Ao aplicar o teste estatístico de Wilcoxon Signed-Rank indicou que, em todas as simulações realizadas, não houve diferença estatisticamente significativa entre os dados analisados. Entretanto, ao empregar o teste estatístico de Vargha e Delaney, com o objetivo de identificar a técnica com melhor resultado, destaca-se:
 - Ao considerar o projeto Time, a técnica BorderlineSMOTE apresentou os melhores resultados em todas as heurísticas avaliadas, com exceção das heurísticas DStar e Op2.
 - Ao considerar o conjunto de todos os projetos analisados e as heurísticas Tarantula e Barinel, a técnica BorderlineSMOTE obteve os melhores resultados em todos os projetos, exceto no projeto Math.
-
-Como funciona o BorderlineSmote?
-
-Enquanto o SMOTE cria exemplos sintéticos para qualquer ponto da classe minoritária, o Borderline-SMOTE foca exclusivamente nos pontos que estão na fronteira de decisão ("borderline"), onde o classificador costuma ter mais dificuldade para distinguir qual classe determinado ponto pertence.
-Para cada ponto da classe minoritária, o algoritmo analisa seus k-vizinhos mais próximos (k-NN).
- - Safe (Seguro): Se a maioria dos vizinhos pertence à própria classe minoritária. Esses pontos são ignorados, pois já estão em uma zona "fácil".
- - Noise (Ruído): Se todos os vizinhos pertencem à classe majoritária. O algoritmo assume que esse ponto é um erro ou um outlier e não gera dados novos a partir dele.
- - Danger (Perigo): Se o número de vizinhos da classe majoritária é maior ou igual ao da minoritária. É aqui que o Borderline-SMOTE atua, gerando dados sintéticos apenas para esses pontos, pois eles definem o limite entre as classes.
- 
 Acredita-se que a priorização de determinados vizinhos para a geração de novos vizinhos seja o principal elemento responsável pela melhoria dos resultados da métrica Pos-Fault.
 
 [Planilha com resultados](https://docs.google.com/spreadsheets/d/1bzdg6RfBd2IG3oujupAd7J5J-6_RRSzg1PNKdmvn-zk/edit)
