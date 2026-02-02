@@ -39,6 +39,15 @@ Ao aplicar o teste estatístico de Wilcoxon Signed-Rank indicou que, em todas as
 - Ao considerar o projeto Time, a técnica BorderlineSMOTE apresentou os melhores resultados em todas as heurísticas avaliadas, com exceção das heurísticas DStar e Op2.
 - Ao considerar o conjunto de todos os projetos analisados e as heurísticas Tarantula e Barinel, a técnica BorderlineSMOTE obteve os melhores resultados em todos os projetos, exceto no projeto Math.
 
+Como funciona o BorderlineSmote?
+
+Enquanto o SMOTE cria exemplos sintéticos para qualquer ponto da classe minoritária, o Borderline-SMOTE foca exclusivamente nos pontos que estão na fronteira de decisão ("borderline"), onde o classificador costuma ter mais dificuldade para distinguir qual classe determinado ponto pertence.
+Para cada ponto da classe minoritária, o algoritmo analisa seus k-vizinhos mais próximos (k-NN).
+ - Safe (Seguro): Se a maioria dos vizinhos pertence à própria classe minoritária. Esses pontos são ignorados, pois já estão em uma zona "fácil".
+ - Noise (Ruído): Se todos os vizinhos pertencem à classe majoritária. O algoritmo assume que esse ponto é um erro ou um outlier e não gera dados novos a partir dele.
+ - Danger (Perigo): Se o número de vizinhos da classe majoritária é maior ou igual ao da minoritária. É aqui que o Borderline-SMOTE atua, gerando dados sintéticos apenas para esses pontos, pois eles definem o limite entre as classes.
+ 
+Acredita-se que a priorização de determinados vizinhos para a geração de novos vizinhos seja o principal elemento responsável pela melhoria dos resultados da métrica Pos-Fault.
 
 [Planilha com resultados](https://docs.google.com/spreadsheets/d/1bzdg6RfBd2IG3oujupAd7J5J-6_RRSzg1PNKdmvn-zk/edit)
 
