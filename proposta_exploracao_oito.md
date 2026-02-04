@@ -33,10 +33,10 @@ Este experimento propõe uma investigação comparativa entre os dados sem aplic
 ## Resultados
 A seguir, são apresentados, por meio de uma tabela, os resultados da execução das técnicas consideradas neste experimento. Primeiramente, observou-se que algumas dessas técnicas mostraram-se incompatíveis com as características do conjunto de dados analisado, conforme descrito a seguir.
 
-- KMeans-SMOTE: apresenta limitações quando a classe minoritária for muito reduzida, uma vez que a técnica depende da formação de clusters representativos, o que se torna inviável nesse cenário.
-- SVM-SMOTE: Quando a classe minoritária é composta por poucos indivíduos, a técnica não consegue estimar de forma adequada as fronteiras de decisão entre as classes.
-- SMOTENC: foi desenvolvida especificamente para conjuntos de dados que apresentam atributos mistos (numéricos e categóricos), característica ausente no conjunto de dados considerado neste estudo, o que inviabiliza sua aplicação.
-- ADASYN: gera amostras sintéticas apenas para instâncias minoritárias consideradas difíceis de aprender, isto é, aquelas que possuem vizinhos pertencentes à classe majoritária. Na ausência dessa condição, nenhuma instância é classificada como "difícil", resultando na não geração de novos exemplos sintéticos.
+- KMeansSmote: A técnica apresenta limitações quando a classe minoritária é muito reduzida, uma vez que depende da formação de clusters representativos, o que se torna inviável nesse cenário.
+- SVMSmote: Quando a classe minoritária é composta por poucos indivíduos, a técnica não consegue encontrar as instâncias da classe minoritária são mais informativas, o que se torna inviável nesse cenário.
+- Smotenc: Essa técnica foi desenvolvida especificamente para conjuntos de dados que apresentam atributos mistos (numéricos e categóricos), característica ausente no conjunto de dados considerado neste estudo, o que inviabiliza sua aplicação.
+- Adasyn: A técnica apresenta limitações quando a classe minoritária é muito reduzida, uma vez que depende da seleção de "elementos difíceis".
 
 A técnicas de balanceamento Smote e SmoteN, obtiveram os melhores resultados nos projetos envolvidos. Detaca-se o projeto Mockito, que obteve melhores resultados para a técnica SmoteN em todas as heurísticas, exceto a Op2.
 
