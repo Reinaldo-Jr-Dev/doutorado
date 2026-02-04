@@ -19,16 +19,16 @@ Este experimento propõe uma investigação comparativa entre os dados sem aplic
 - **Smoten (Synthetic Minority Over-sampling Technique for Nominal)**
   - A técnica Smoten é uma variante do SMOTE desenvolvida especificamente para lidar com conjuntos de dados onde todas as variáveis são categóricas (nominais). Os vizinhos mais próximos, são identificados pelo uso da métrica Value Difference Metric (VDM).
 - **Adasyn**
-  - A técnica Adasyn (Adaptive Synthetic), prioriza a geração de dados para exemplos da classe minoritária que são "difíceis de aprender" (aqueles cercados por muitos pontos da classe majoritária).
+  - O ADASYN (ADAptive SYNthetic sampling) é uma técnica de sobreamostragem derivada do SMOTE cujo objetivo é gerar mais exemplos sintéticos da classe minoritária justamente onde o problema é mais difícil, ou seja, é considerado somente os elementos que estão cercados por exemplos da classe majoritária.
 - **BorderlineSmote**
   - Enquanto o SMOTE cria exemplos sintéticos para qualquer ponto da classe minoritária, o Borderline-SMOTE foca exclusivamente nos pontos que estão na fronteira de decisão ("borderline"), onde o classificador costuma ter mais dificuldade para distinguir qual classe determinado ponto pertence. Para cada ponto da classe minoritária, o algoritmo analisa seus k-vizinhos mais próximos (k-NN).
      - Safe (Seguro): Se a maioria dos vizinhos pertence à própria classe minoritária. Esses pontos são ignorados, pois já estão em uma zona "fácil".
      - Noise (Ruído): Se todos os vizinhos pertencem à classe majoritária. O algoritmo assume que esse ponto é um erro ou um outlier e não gera dados novos a partir dele.
      - Danger (Perigo): Se o número de vizinhos da classe majoritária é maior ou igual ao da minoritária. É aqui que o BorderlineSmote atua, gerando dados sintéticos apenas para esses pontos, pois eles definem o limite entre as classes.
 - **KMeansSmote**
-  - Utiliza o algoritmo K-Means para agrupar os dados antes do over-sampling, gerando amostras apenas em clusters onde a classe minoritária é predominante, o que ajuda a evitar a criação de ruído.
+  - O KMeansSMOTE é uma técnica de sobreamostragem que combina métodos de clusterização, por meio do algoritmo K-Means, com o SMOTE. Nessa abordagem, o conjunto de dados é particionado em clusters, dos quais alguns são selecionados para a aplicação do processo de balanceamento. São priorizados os clusters que apresentam quantidade suficiente de instâncias da classe minoritária para a aplicação do SMOTE, bem como uma proporção de elementos minoritários que indique que o cluster não é predominantemente composto por instâncias da classe majoritária.
 - **SVMSmote**
-  - Usa um classificador SVM para encontrar os vetores de suporte (os pontos mais próximos da fronteira de decisão) e gera novas amostras ao redor desses pontos críticos.
+  - O SVMSMOTE é uma variação do SMOTE que utiliza uma Support Vector Machine (SVM) para identificar quais instâncias da classe minoritária são mais informativas para a geração de exemplos sintéticos. Essas instâncias são aquelas que mais contribuem para o aprendizado do modelo na tarefa de separação entre as classes. Em geral, não se tratam de pontos “óbvios”, isto é, instâncias localizadas no interior da região minoritária, mas sim daqueles que fornecem informações relevantes sobre a fronteira de decisão ou representam casos difíceis, por estarem próximas de instâncias da classe majoritária.
  
 ## Resultados
 A seguir, são apresentados, por meio de uma tabela, os resultados da execução das técnicas consideradas neste experimento. Primeiramente, observou-se que algumas dessas técnicas mostraram-se incompatíveis com as características do conjunto de dados analisado, conforme descrito a seguir.
