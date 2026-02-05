@@ -38,7 +38,7 @@ A seguir, são apresentados, por meio de uma tabela, os resultados da execução
 - Smotenc: Essa técnica foi desenvolvida especificamente para conjuntos de dados que apresentam atributos mistos (numéricos e categóricos), característica ausente no conjunto de dados considerado neste estudo, o que inviabiliza sua aplicação.
 - Adasyn: A técnica apresenta limitações quando a classe minoritária é muito reduzida, uma vez que depende da seleção de "elementos difíceis".
 
-A técnicas de balanceamento Smote e SmoteN, obtiveram os melhores resultados nos projetos envolvidos. Detaca-se o projeto Mockito, que obteve melhores resultados para a técnica SmoteN em todas as heurísticas, exceto a Op2.
+A técnicas de balanceamento Smote e SmoteN, obtiveram os melhores resultados nos projetos envolvidos. Detaca-se os projetos Math e Mockito, que obtiveram melhores resultados para a técnica SmoteN em todas as heurísticas, exceto a Op2.
 
 [Planilha com resultados](https://docs.google.com/spreadsheets/d/1bzdg6RfBd2IG3oujupAd7J5J-6_RRSzg1PNKdmvn-zk/edit)
 
