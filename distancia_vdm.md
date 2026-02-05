@@ -6,8 +6,7 @@ Este documento irá abordar os detalhes dos tópicos de estudo.
 
 ## Distância de VDM (Value Difference Metric)
 
-Smoten (Synthetic Minority Over-sampling Technique for Nominal)
-A técnica Smoten é uma variante do SMOTE desenvolvida especificamente para lidar com conjuntos de dados onde todas as variáveis são categóricas (nominais). Os vizinhos mais próximos, são identificados pelo uso da métrica Value Difference Metric (VDM).
+A técnica Smoten (Synthetic Minority Over-sampling Technique for Nominal) é uma variante do SMOTE desenvolvida especificamente para lidar com conjuntos de dados onde todas as variáveis são categóricas (nominais). Os vizinhos mais próximos, são identificados pelo uso da métrica Value Difference Metric (VDM).
 
 O VDM responde a seguinte pergunta: “Azul e Verde são parecidos… em relação ao que acontece com a classe (0 ou 1)”. Imagine que você olhou o seu histórico e viu isso: 
 
@@ -40,9 +39,12 @@ Comparação na classe 1
 
 Agora soma as duas diferenças:
   - Distância = 0,2 + 0,2 = 0,4
-  - 
+    
 ✅ Então o VDM diz: a distância entre Azul e Verde é 0,4.
 
 Como interpretar esse 0,4 (do jeito mais intuitivo)
   - Se Azul e Verde fossem muito parecidos, eles teriam quase a mesma “mistura” de classe 0 e 1. A distância ficaria perto de 0.
   - Se Azul fosse quase sempre classe 0 e Verde quase sempre classe 1, as diferenças seriam grandes e a distância ficaria bem maior.
+
+Após a definição dos vizinhos, como os novos vizinhos são gerados?
+  - Como não dá para “interpolar” categorias (como o SMOTE faz com números), o SMOTEN monta uma nova linha escolhendo, em cada coluna, a categoria mais comum (moda) entre a amostra base e seus vizinhos.
