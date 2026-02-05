@@ -9,6 +9,7 @@ Este documento serve como um índice centralizado para organizar meus tópicos d
 ### Técnicas de cálculo de distâncias
 - [Distância de Jaccard](distancia_jaccard.md)
 - [Distância de Hamming](distancia_hamming.md)
+- [VDM - Value Difference Metric](distancia_vdm.md)
 
 ### Testes Estatísticos
 - [Conceitos Gerais](testes_estatisticos_2.md)
