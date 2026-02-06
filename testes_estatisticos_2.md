@@ -6,8 +6,8 @@ Este documento irá abordar os detalhes dos tópicos de estudo.
 
 ## Testes Estatísticos
 
-Um teste estatístico é um método formal e sistemático utilizado para tomar decisões sobre uma população com base em dados de uma amostra. **Em sua essência, ele nos permite avaliar a probabilidade de que os resultados observados em um experimento ou estudo sejam devidos ao acaso ou se realmente representam uma relação real entre variáveis**.
-Imagine que se esteja desenvolvendo uma nova metodologia para um software e quer saber se ela realmente melhora o desempenho em comparação com a metodologia anterior. **Um teste estatístico pode te ajudar a determinar se a diferença observada entre os experimentos é estatisticamente significativa, e não apenas uma variação aleatória**.
+<mark>Um teste estatístico é um método formal e sistemático utilizado para tomar decisões sobre uma população com base em dados de uma amostra. **Em sua essência, ele nos permite avaliar a probabilidade de que os resultados observados em um experimento ou estudo sejam devidos ao acaso ou se realmente representam uma relação real entre variáveis**</mark>.
+Imagine que se esteja desenvolvendo uma nova metodologia para um software e quer saber se ela realmente melhora o desempenho em comparação com a metodologia anterior. <mark>**Um teste estatístico pode te ajudar a determinar se a diferença observada entre os experimentos é estatisticamente significativa, e não apenas uma variação aleatória**</mark>.
 
 Conceitos Fundamentais:
   - **Hipótese Nula (H₀): É a afirmação a ser testada, que geralmente assume que não há efeito, não há diferença ou não há relação entre as variáveis na população**. Exemplo: Considerando o cenário do evento de software, H₀ poderia representar que não há diferença significativa no desempenho entre a nova metodologia e a antiga.
@@ -41,7 +41,7 @@ Conclusões:
   - Com base no Teste de Wilcoxon Signed-Rank, a Ferramenta B é melhor que a Ferramenta A para detectar vulnerabilidades críticas.
 
 ## Teste Estatístico de Vargha & Delaney
-O teste de Vargha e Delaney é utilizado para medir o tamanho do efeito entre duas amostras independentes. Esse teste quantifica a magnitude da diferença observada entre as amostras, classificando-a em pequeno, médio, grande ou muito grande efeito. Em outras palavras, o teste não tem como objetivo verificar se existe uma diferença estatisticamente significativa entre as amostras, mas sim avaliar a relevância dessa diferença. Para maior clareza, o teste estatístico será aplicado ao cenário previamente descrito.
+<mark>O teste de Vargha e Delaney é utilizado para medir o tamanho do efeito entre duas amostras independentes. Esse teste quantifica a magnitude da diferença observada entre as amostras, classificando-a em pequeno, médio, grande ou muito grande efeito. Em outras palavras, o teste não tem como objetivo verificar se existe uma diferença estatisticamente significativa entre as amostras, mas sim avaliar a relevância dessa diferença.</mark> Para maior clareza, o teste estatístico será aplicado ao cenário previamente descrito.
 
 ![Vargha & Delaney - Cálculo](img/Vargha&Delaney_Calculo.png)
 
@@ -168,6 +168,8 @@ else:
 
 print("\n" + "=" * 60)
 ```
+
+<mark>Ambos os testes estatísticos podem ser utilizados de forma complementar, sendo essa uma combinação comum e recomendável. O teste de Wilcoxon é empregado para verificar a existência de significância estatística entre amostras, enquanto o teste de Vargha e Delaney é utilizado para mensurar a magnitude da diferença entre métodos ou técnicas analisadas de uma determinada amostra.</mark>
 
 Fontes:
   - A theoretical analysis on cloning the failed test cases to improve spectrum-based fault localization (Long Zhang, Lanfei Yan, Zhenyu Zhang, Jian Zhang, W.K. Chand, Zheng Zheng).
