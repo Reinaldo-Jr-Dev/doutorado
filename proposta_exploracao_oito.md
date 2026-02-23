@@ -38,7 +38,9 @@ A seguir, são apresentados, por meio de uma tabela, os resultados da execução
 - Smotenc: Essa técnica foi desenvolvida especificamente para conjuntos de dados que apresentam atributos mistos (numéricos e categóricos), característica ausente no conjunto de dados considerado neste estudo, o que inviabiliza sua aplicação.
 - Adasyn: A técnica apresenta limitações quando a classe minoritária é muito reduzida, uma vez que depende da seleção de "elementos difíceis".
 
-A técnicas de balanceamento Smote e SmoteN, obtiveram os melhores resultados nos projetos envolvidos. Detaca-se os projetos Math e Mockito, que obtiveram melhores resultados para a técnica SmoteN em todas as heurísticas, exceto a Op2.
+Ao analisar a planilha de resultados, destacam-se os seguintes aspectos:
+  - Por projeto: Observa-se que o projeto Time apresentou melhoria em 4 das 6 heurísticas avaliadas quando aplicada a técnica de balanceamento BorderlineSMOTE. Ressalta-se que esse projeto possui, proporcionalmente, a maior quantidade de casos de teste negativos em relação ao total de casos de teste positivos, o que pode ter influenciado positivamente o desempenho da técnica de balanceamento.
+  - Por heurística: Destacam-se as heurísticas Tarantula e Barinel, que apresentaram melhores resultados quando associadas às técnicas de balanceamento, especialmente à técnica BorderlineSMOTE. De modo geral, para todos os projetos analisados, com exceção do projeto Math, essas heurísticas demonstraram melhores resultados com a aplicação dessa técnica de balanceamento.
 
-[Planilha com resultados](https://docs.google.com/spreadsheets/d/1bzdg6RfBd2IG3oujupAd7J5J-6_RRSzg1PNKdmvn-zk/edit)
+[Planilha com resultados](https://docs.google.com/spreadsheets/d/1x7A23No1TfNor-CGn2YfgyXvPvBzVTQl/edit?gid=315647370#gid=315647370)
 
