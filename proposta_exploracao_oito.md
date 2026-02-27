@@ -39,8 +39,8 @@ A seguir, são apresentados, por meio de uma tabela, os resultados da execução
 - Adasyn: A técnica apresenta limitações quando a classe minoritária é muito reduzida, uma vez que depende da seleção de "elementos difíceis".
 
 Ao analisar a planilha de resultados, destacam-se os seguintes aspectos:
-  - Por projeto: Observa-se que o projeto Time apresentou melhoria em quatro das seis heurísticas avaliadas quando aplicada a técnica de balanceamento BorderlineSMOTE. Ressalta-se que esse projeto possui, proporcionalmente, a maior quantidade de casos de teste negativos em relação ao total de casos de teste positivos, o que pode ter influenciado positivamente o desempenho da técnica de balanceamento.
-  - Por heurística: Destacam-se as heurísticas Tarantula e Barinel, que apresentaram melhores resultados quando associadas às técnicas de balanceamento, especialmente à técnica BorderlineSMOTE. De modo geral, para todos os projetos analisados, com exceção do projeto Math, essas heurísticas demonstraram melhores resultados com a aplicação dessa técnica de balanceamento.
+  - Perspectiva de análise por projeto: Observa-se que o projeto Time apresentou melhoria em quatro das seis heurísticas avaliadas quando aplicada a técnica de balanceamento BorderlineSMOTE. Ressalta-se que esse projeto possui, proporcionalmente, a maior quantidade de casos de teste negativos em relação ao total de casos de teste positivos, o que pode ter influenciado positivamente o desempenho da técnica de balanceamento.
+  - Perspectiva de análise por heurística: Destacam-se as heurísticas Tarantula e Barinel, que apresentaram melhores resultados quando associadas às técnicas de balanceamento, especialmente à técnica BorderlineSMOTE. De modo geral, para todos os projetos analisados, com exceção do projeto Math, essas heurísticas demonstraram melhores resultados com a aplicação dessa técnica de balanceamento.
 
 [Planilha com resultados](https://docs.google.com/spreadsheets/d/1x7A23No1TfNor-CGn2YfgyXvPvBzVTQl/edit?gid=315647370#gid=315647370)
 
