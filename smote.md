@@ -8,7 +8,7 @@ Este documento irá abordar os detalhes dos tópicos de estudo.
 
 A técnica SMOTE propõe uma abordagem de sobreamostragem em que a classe minoritária é sobreamostrada através da criação de exemplos “sintéticos” em vez de sobreamostragem com substituição. Esta abordagem é inspirada em uma técnica que provou ser bem-sucedida no reconhecimento de caracteres manuscritos.
 
-Pseudo Código SMOTE
+Pseudo código SMOTE
 
 ![Pseudo Código SMOTE](img/Pseudo-Codigo-SMOTE.png "Pseudo Código SMOTE")
 
