@@ -12,6 +12,17 @@ Pseudo código SMOTE
 
 ![Pseudo Código SMOTE](img/Pseudo-Codigo-SMOTE.png "Pseudo Código SMOTE")
 
+```python
+    def _validate_estimator(self):
+        self.nn_k_ = check_neighbors_object(
+            "k_neighbors", self.k_neighbors, additional_neighbor=1, 
+        )
+        self.nn_k_.metric = "cosine"
+        #self.nn_k_.metric = "jaccard"
+        #self.nn_k_.metric = "hamming"
+```
+**Fragmento de Código 2** - Definição das métricas de cálculo dos vizinhos
+
 [Documento com passo a passo do SMOTE](https://docs.google.com/document/d/e/2PACX-1vR-ke46OkleIwcab4f2c_QsVwc1P7unB7kYyrwkPw8J_Wrsrg3p0-E2r2a_WRek42Ek7NuFPzV_i8Ya/pub)
     
 Fontes:
