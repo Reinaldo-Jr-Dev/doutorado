@@ -12,6 +12,7 @@ Pseudo código SMOTE
 
 ![Pseudo Código SMOTE](img/Pseudo-Codigo-SMOTE.png "Pseudo Código SMOTE")
 
+### Código do método _fit_resample
 ```python
 def _fit_resample(self, X, y):
     self._validate_estimator() # Realiza validaçõe gerais
@@ -54,7 +55,7 @@ def _fit_resample(self, X, y):
 ```
 **Fragmento de Código** - _fit_resample
 
-
+### Código do método _make_samples
 ```python
 def _make_samples(
     self, X, y_dtype, y_type, nn_data, nn_num, n_samples, step_size=1.0, y=None):
@@ -83,6 +84,7 @@ def _make_samples(
 ```
 **Fragmento de Código** - _make_samples
 
+### Código do método _generate_samples
 ```python
 def _generate_samples(
     self, X, nn_data, nn_num, rows, cols, steps, y_type=None, y=None):
