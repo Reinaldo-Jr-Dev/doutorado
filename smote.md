@@ -31,7 +31,7 @@ Pseudo código SMOTE
         # Converte a matriz X_new para o tipo (X.dtype) que é inteiro. Assim os valores são truncados (Ex: 0.84398136 = 0)        
         return X_new.astype(X.dtype)
 ```
-**Fragmento de Código 2** - Definição das métricas de cálculo dos vizinhos
+**Fragmento de Código** - Geração de X_new
 
 [Documento com passo a passo do SMOTE](https://docs.google.com/document/d/e/2PACX-1vR-ke46OkleIwcab4f2c_QsVwc1P7unB7kYyrwkPw8J_Wrsrg3p0-E2r2a_WRek42Ek7NuFPzV_i8Ya/pub)
 
