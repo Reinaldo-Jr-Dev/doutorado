@@ -13,13 +13,23 @@ Pseudo código SMOTE
 ![Pseudo Código SMOTE](img/Pseudo-Codigo-SMOTE.png "Pseudo Código SMOTE")
 
 ```python
-    def _validate_estimator(self):
-        self.nn_k_ = check_neighbors_object(
-            "k_neighbors", self.k_neighbors, additional_neighbor=1, 
-        )
-        self.nn_k_.metric = "cosine"
-        #self.nn_k_.metric = "jaccard"
-        #self.nn_k_.metric = "hamming"
+        # Se matriz (X) for esparsa
+        if sparse.issparse(X):
+            sparse_func = type(X).__name__ # recebe o nome da função, de acordo com o tipo da matriz (csr_matrix, csc_matrix e coo_matrix)
+            steps = getattr(sparse, sparse_func)(steps) # semelhante a "scipy.sparse.csr_matrix(steps)" 
+                                                        #  converte o array steps em uma matriz esparsa de acordo com o seu tipo (csr_matrix, csc_matrix e coo_matrix)
+                                                        #   para ficar do mesmo tipo que a matrix X, senão irá gerar um erro na multiplização steps.multiply(diffs).
+            # Cálculo da nova amostra 
+            #  X[rows]: amostra base ; steps: vetor com valores aleatórios ∈ [0, 1] ; diffs: cálculo da diferença entre vizinho e amostra 
+            X_new = X[rows] + steps.multiply(diffs)
+        else:
+            # Cálculo da nova amostra 
+            #  X[rows]: amostra base ; steps: vetor com valores aleatórios ∈ [0, 1] ; diffs: cálculo da diferença entre vizinho e amostra
+
+            X_new = X[rows] + steps * diffs   
+
+        # Converte a matriz X_new para o tipo (X.dtype) que é inteiro. Assim os valores são truncados (Ex: 0.84398136 = 0)        
+        return X_new.astype(X.dtype)
 ```
 **Fragmento de Código 2** - Definição das métricas de cálculo dos vizinhos
 
