@@ -12,6 +12,8 @@ Pseudo código SMOTE
 
 ![Pseudo Código SMOTE](img/Pseudo-Codigo-SMOTE.png "Pseudo Código SMOTE")
 
+## Sequência de execução dos métodos do código original: _fit_resample > _make_samples > _generate_samples
+
 ### Código do método _fit_resample
 ```python
 def _fit_resample(self, X, y):
