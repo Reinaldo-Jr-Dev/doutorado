@@ -120,7 +120,7 @@ def _generate_samples(
 ```
 **Fragmento de Código** - _generate_samples
 
-[Documento com passo a passo do SMOTE](https://docs.google.com/document/d/e/2PACX-1vRswL-V3U-dXEDBriFzImquPTo-f5JHw8zEa3IdVZ74am1Rx_4RjIlmtgHMV-Uebks4C1Vp-eHcTzfw/pub)
+[Documento com passo a passo do SMOTE](https://docs.google.com/document/d/e/2PACX-1vSVdjDTV00Ljt_XRSERzDLBPyZ-RXYZCrhOQdp9kuqND2zhc_icN4GG1IVHbkLcTEIW4GDoI7FXLiRl/pub)
 
 Fontes:
   - [N. V. CHAWLA, K. W. BOWYER, L. O. H. W. P. K. Smote: Synthetic minority over-sampling technique. Journal of Artificial Intelligence Research, 2002.](https://arxiv.org/abs/1106.1813)
