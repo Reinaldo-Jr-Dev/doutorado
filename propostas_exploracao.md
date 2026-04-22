@@ -4,19 +4,21 @@ Nesta seção, serão apresentadas propostas de exploração com o objetivo de a
 
 ---
 
-- [Proposta de Exploração I](propota_exploracao_um.md)
+- [Proposta de Exploração 1](propota_exploracao_um.md)
 	- Objetivo geral: O conjunto de experimentos foi criado para comparar o uso da técnica de balanceamento de dados SMOTE em função de diferentes métricas de distância utilizadas na seleção de vizinhos mais próximos: Euclidiana, Hamming, Jaccard e Cosine. Adicionalmente, foi proposto uma adaptação da implementação do algoritmo SMOTE: a geração das novas amostras sintéticas incorporou o arredondamento dos valores, em contraste com o truncamento usual.
-- [Proposta de Exploração II](proposta_exploracao_dois.md)
+- [Proposta de Exploração 2](proposta_exploracao_dois.md)
 	- Este estudo propõe uma investigação comparativa acerca da execução de algumas heurísticas sobre a matriz de espectro de dados: inicialmente, considerando-a em seu formato original e não processada; em seguida, comparando-a com as diferentes versões resultantes da aplicação de sete técnicas de eliminação de ruídos (Noise Reduction Scheme 1, Noise Reduction Scheme 2, Noise Reduction Scheme 3, Noise Reduction Scheme 4, Noise Reduction Scheme 5, Noise Reduction Scheme 6 e Noise Reduction Scheme 7), conforme descrito no artigo de referência [Improving Fault Localization Using Model-domain Synthesized Failing Test Generation](https://github.com/Reinaldo-Jr-Dev/doutorado/blob/article/IEEE-Improving_Fault_Localization_Using_Model-domain_Synthesized_Failing_Test_Generation.pdf). Essas técnicas têm como objetivo reduzir linhas redundantes de casos de teste.
-- [Proposta de Exploração III](proposta_exploracao_tres.md)
+- [Proposta de Exploração 3](proposta_exploracao_tres.md)
  	- Este estudo propõe uma investigação comparativa acerca da aplicação de diferentes heurísticas sobre a matriz de espectro de dados. Inicialmente, emprega-se a técnica de balanceamento de dados SMOTE em sua forma original. Em seguida, aplica-se novamente a técnica SMOTE, porém com uma modificação no algoritmo responsável pela geração de novos vizinhos, de modo a produzir instâncias com maior cobertura — isto é, com maior incidência de valores “1” nas colunas da matriz.
-- [Proposta de Exploração IV](proposta_exploracao_quatro.md)
+- [Proposta de Exploração 4](proposta_exploracao_quatro.md)
  	- Esse experimento propõe uma investigação comparativa sobre a aplicação de diferentes heurísticas (Ochiai, Tarantula, Jaccard, Op2, Barinel e DStar) na matriz de espectro de cobertura em seu formato original com a eliminação de ruídos, de acordo com as seguintes técnicas: NRS1, NRS2, NRS3, NRS4, NRS5, NRS6 e NRS7. Após isso, será avaliado também, o impacto da eliminação dos ruídos juntamente com a aplicação da técnica de balanceamento de dados SMOTE. Esses resultados serão medidos, de acordo com as métricas MFR (Mean First Rank), ACC@10 e ACC_RAW@10. Vale ressaltar que, no artigo de referência dessas técnicas de eliminação de ruídos, foi utilizada apenas a métrica EXAM.
-- [Proposta de Exploração V](proposta_exploracao_cinco.md)
+- [Proposta de Exploração 5](proposta_exploracao_cinco.md)
  	- Este experimento propõe uma investigação comparativa sobre a aplicação de diferentes heurísticas (Ochiai e Op2) à matriz de espectro de cobertura, tanto em seu formato original quanto com a aplicação da técnica de balanceamento de dados SMOTE. Os resultados serão avaliados de acordo com a métrica pos-fault (posição do elemento defeituoso). O teste estatístico Wilcoxon Signed-Rank foi aplicado para verificar se os resultados observados no experimento proposto podem ser atribuídos ao acaso ou se evidenciam uma relação significativa entre as variáveis.
-- [Proposta de Exploração VI](proposta_exploracao_seis.md)
+- [Proposta de Exploração 6](proposta_exploracao_seis.md)
  	- Este experimento propõe uma investigação comparativa sobre a aplicação de diferentes heurísticas (Ochiai e Op2) à matriz de espectro de cobertura, tanto em seu formato original quanto com a aplicação da técnica de balanceamento de dados SMOTE. Os resultados serão avaliados de acordo com a métrica pos-fault (posição do elemento defeituoso). O teste estatístico Wilcoxon Signed-Rank e Vargha & Delaney foram aplicados para verificar se os resultados observados no experimento proposto podem ser atribuídos ao acaso ou se evidenciam uma relação significativa entre as variáveis e também identificar a técnica de melhor eficácia.
-- [Proposta de Exploração VII](proposta_exploracao_sete.md)
+- [Proposta de Exploração 7](proposta_exploracao_sete.md)
  	- Esse experimento propõe uma investigação comparativa sobre a aplicação de diferentes heurísticas (Ochiai, Tarantula, Jaccard, Op2, Barinel e DStar) na matriz de espectro de cobertura em seu formato original e com a eliminação de ruídos, de acordo com as seguintes técnicas: NRS1, NRS2, NRS3, NRS4, NRS5, NRS6 e NRS7. Esses resultados serão medidos, de acordo com a métrica Pos-Fault.
-- [Proposta de Exploração VIII](proposta_exploracao_oito.md)
+- [Proposta de Exploração 8](proposta_exploracao_oito.md)
  	- Este experimento propõe uma investigação comparativa entre os dados sem aplicação de balanceamento, em sua versão original, e os dados obtidos a partir da aplicação de diversas técnicas de balanceamento, tais como SMOTE, SMOTENC, SMOTEN, ADASYN, Borderline-SMOTE, KMeans-SMOTE e SVM-SMOTE. A investigação tem como objetivo avaliar os novos casos de teste gerados por cada uma dessas técnicas de balanceamento, bem como os resultados da métrica POS-FAULT.
+- [Proposta de Exploração 9](proposta_exploracao_nove.md)
+ 	- Este experimento propõe investigar a análise da diversidade dos novos casos de teste gerados a partir da aplicação das seguintes técnicas de balanceamento: SMOTE, SMOTEN e Borderline-SMOTE.
