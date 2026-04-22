@@ -1,7 +1,7 @@
 # 🔬 Detalhamento da Proposta de Exploração 9
 
 ## Descrição dos experimento
-Este experimento propõe uma investigação comparativa entre os dados sem aplicação de balanceamento, em sua versão original, e os dados obtidos a partir da aplicação de diversas técnicas de balanceamento, tais como SMOTE, SMOTENC, SMOTEN, ADASYN, Borderline-SMOTE, KMeans-SMOTE e SVM-SMOTE. A investigação tem como objetivo avaliar os novos casos de teste gerados por cada uma dessas técnicas de balanceamento, bem como os resultados da métrica POS-FAULT.
+Este experimento propõe investigar a análise da diversidade dos novos casos de teste gerados a partir da aplicação das seguintes técnicas de balanceamento: SMOTE, SMOTEN e Borderline-SMOTE.
 
 - **Smote (Synthetic Minority Over-sampling Technique)**
   - O algoritmo base que cria amostras sintéticas através da interpolação linear entre vizinhos próximos da classe minoritária.
