@@ -16,5 +16,5 @@ Este experimento propõe investigar a análise da diversidade dos novos casos de
 ## Resultados
 ( ... )
 
-[Planilha com resultados](https://docs.google.com/spreadsheets/d/1x7A23No1TfNor-CGn2YfgyXvPvBzVTQl/edit?gid=315647370#gid=315647370)
+[Planilha com resultados](https://docs.google.com/spreadsheets/d/1ea8jWbpXR-TIQtAHo7GvPVDUQ8k4SQ6UTkLgyU9UJUk/edit?gid=1592280284#gid=1592280284)
 
