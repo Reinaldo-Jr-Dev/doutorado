@@ -66,17 +66,19 @@ def _make_samples(
     random_state = check_random_state(self.random_state)
 
     # Geração de n_samples, números aleatórios
-    samples_indices = random_state.randint(low=0, high=nn_num.size, size=n_samples)
+    samples_indices = random_state.randint(low=0, high=nn_num.size, size=n_samples) # <-- ** LINHA IMPORTANTE **
 
-    steps = step_size * random_state.uniform(size=n_samples)[:, np.newaxis] # gera uma matriz 2D de tamanho n_samples, preenchidos por numeros aleatórios entre 0 e 1. 
-                                                                            # [:, np.newaxis] transforma o vetor de 1D para uma matriz 2D
-                                                                            #  Depois multiplica cada elemento do vetor pela variável step_size (default=1)
-                                                                            # steps terá um vetor de tamanho n_samples (define o quao perto o novo ponto estará do vizinho)
+    # gera uma matriz 2D de tamanho n_samples, preenchidos por numeros aleatórios entre 0 e 1.     
+    steps = step_size * random_state.uniform(size=n_samples)[:, np.newaxis] # <-- ** LINHA IMPORTANTE **
 
-    rows = np.floor_divide(samples_indices, nn_num.shape[1]) # (samples_indices // qtde de colunas de nn_num) (divisão inteira)
-                                                             # obtem um vetor com as linhas da amostra de vizinhos
-    cols = np.mod(samples_indices, nn_num.shape[1]) # resto da divisão de samples_indices pelo número de colunas de nn_num
-                                                    # obtem um vetor com as colunas da amostra de vizinhos, ou seja, o vizinho a ser selecionado para cada amostra
+    # (samples_indices // qtde de colunas de nn_num) (divisão inteira)
+    # obtem um vetor com as linhas da amostra de vizinhos
+    rows = np.floor_divide(samples_indices, nn_num.shape[1]) # <-- ** LINHA IMPORTANTE **
+                                                             
+    # resto da divisão de samples_indices pelo número de colunas de nn_num
+    # obtem um vetor com as colunas da amostra de vizinhos, ou seja, o vizinho a ser selecionado para cada amostra
+    cols = np.mod(samples_indices, nn_num.shape[1]) # <-- ** LINHA IMPORTANTE **
+                                                
     X_new = self._generate_samples(X, nn_data, nn_num, rows, cols, steps, y_type, y)
 
     # realiza o preenchimento de um array (tamanho n_samples) com um valor (fill_value=y_type) e tipo (dtype=y_dtype) constante.
