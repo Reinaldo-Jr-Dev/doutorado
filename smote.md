@@ -115,10 +115,10 @@ def _generate_samples(
     else:
         # Cálculo da nova amostra 
         #  X[rows]: amostra base ; steps: vetor com valores aleatórios ∈ [0, 1] ; diffs: cálculo da diferença entre vizinho e amostra
-        X_new = X[rows] + steps * diffs   
+        X_new = X[rows] + steps * diffs  # <-- ** LINHA IMPORTANTE **
 
     # Converte a matriz X_new para o tipo (X.dtype) que é inteiro. Assim os valores são truncados (Ex: 0.84398136 = 0)        
-    return X_new.astype(X.dtype)
+    return X_new.astype(X.dtype) # <-- ** LINHA IMPORTANTE **
 ```
 **Fragmento de Código** - _generate_samples
 
