@@ -39,7 +39,7 @@ def _fit_resample(self, X, y):
         self.nn_k_.fit(X_class)
 
         # Obter os índices dos k vizinhos mais próximos de cada ponto de X_class, excluindo ele mesmo (vizinho dele mesmo)
-        distances, nns = self.nn_k_.kneighbors(X_class)
+        distances, nns = self.nn_k_.kneighbors(X_class) # <-- ** LINHA IMPORTANTE **
 
         X_new, y_new = self._make_samples(
             X_class, y.dtype, class_sample, X_class, nns, n_samples, 1.0)
