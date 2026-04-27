@@ -14,10 +14,11 @@ Pseudo código SMOTE
 
 ### Código do método - Definição de quantidade de amostras a serem geradas (N)
 Quando é chamaso o método fit_resample(X, y), o algoritmo analisa o vetor de rótulos y, deforma a saber qual é a classe minoritária.
-A quantidade de amostras sintéticas (n_samples) depende do parâmetro sampling_strategy (tipo de estratégia de geração dos novos casos de teste) configurado nos parâmetros de inicialicação do SMOTE.
-    - Estratégia "auto" (Padrão): O SMOTE calcula a diferença entre a classe majoritária e cada classe minoritária. 
-    - Estratégia por Proporção (Float): Se você definir 0.5, o algoritmo gerará amostras até que a classe minoritária tenha 50% do tamanho da majoritária.
-    - Estratégia por Dicionário: Você pode passar manualmente quais classes quer aumentar e quanto, como {'classe_A': 500}.
+
+A quantidade de amostras sintéticas (n_samples) depende do parâmetro sampling_strategy (tipo de estratégia de geração dos novos casos de teste) configurado nos atributos de inicialicação do SMOTE.
+- Estratégia "auto" (Padrão): O SMOTE calcula a diferença entre a classe majoritária e cada classe minoritária. 
+- Estratégia por Proporção (Float): Se você definir 0.5, o algoritmo gerará amostras até que a classe minoritária tenha 50% do tamanho da majoritária.
+- Estratégia por Dicionário: Você pode passar manualmente quais classes quer aumentar e quanto, como {'classe_A': 500}.
 ```python
     class BaseSMOTE(BaseOverSampler):
         # ( ... )
