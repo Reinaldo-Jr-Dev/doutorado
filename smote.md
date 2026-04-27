@@ -88,7 +88,7 @@ def _make_samples(
 ```
 **Fragmento de Código** - _make_samples
 
-### Código do método _generate_samples
+### Bloco de código - Interpolação e Realização do Trunc
 ```python
 def _generate_samples(
     self, X, nn_data, nn_num, rows, cols, steps, y_type=None, y=None):
@@ -120,7 +120,7 @@ def _generate_samples(
     # Converte a matriz X_new para o tipo (X.dtype) que é inteiro. Assim os valores são truncados (Ex: 0.84398136 = 0)        
     return X_new.astype(X.dtype) # <-- ** LINHA IMPORTANTE **
 ```
-**Fragmento de Código** - _generate_samples
+**Fragmento de Código** - Interpolação e Realização do Trunc
 
 [Documento com passo a passo do SMOTE](https://docs.google.com/document/d/e/2PACX-1vSVdjDTV00Ljt_XRSERzDLBPyZ-RXYZCrhOQdp9kuqND2zhc_icN4GG1IVHbkLcTEIW4GDoI7FXLiRl/pub)
 
