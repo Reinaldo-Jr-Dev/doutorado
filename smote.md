@@ -12,50 +12,34 @@ Pseudo código SMOTE
 
 ![Pseudo Código SMOTE](img/Pseudo-Codigo-SMOTE.png "Pseudo Código SMOTE")
 
-## Sequência de execução dos métodos do código original: _fit_resample > _make_samples > _generate_samples
-
-### Código do método _fit_resample
+### Código do método - Definição de quantidade de amostras a serem geradas (N)
+Quando é chamaso o método fit_resample(X, y), o algoritmo analisa o vetor de rótulos y, deforma a saber qual é a classe minoritária.
+A quantidade de amostras sintéticas (n_samples) depende do parâmetro sampling_strategy (tipo de estratégia de geração dos novos casos de teste) configurado nos parâmetros de inicialicação do SMOTE.
+    - Estratégia "auto" (Padrão): O SMOTE calcula a diferença entre a classe majoritária e cada classe minoritária. 
+    - Estratégia por Proporção (Float): Se você definir 0.5, o algoritmo gerará amostras até que a classe minoritária tenha 50% do tamanho da majoritária.
+    - Estratégia por Dicionário: Você pode passar manualmente quais classes quer aumentar e quanto, como {'classe_A': 500}.
 ```python
-def _fit_resample(self, X, y):
-    self._validate_estimator() # Realiza validaçõe gerais
-    
-    X_resampled = [X.copy()]
-    y_resampled = [y.copy()]
+    class BaseSMOTE(BaseOverSampler):
+        # ( ... )
+        def __init__(
+            self,
+            sampling_strategy="auto", # <-- ** LINHA IMPORTANTE **
+            random_state=None,
+            k_neighbors=5,
+        ):
+            super().__init__(sampling_strategy=sampling_strategy) # <-- ** LINHA IMPORTANTE **
+            self.random_state = random_state
+            self.k_neighbors = k_neighbors
+        # ( ... )
 
-    # n_samples: número de amostras da classe minoritaria a ser gerado
-    # class_sample: classe minoritária (Ex: "-")
-    for class_sample, n_samples in self.sampling_strategy_.items():            
-        if n_samples == 0:
-            continue
-
-        # retorna os índices das amostras que pertencem à classe class_sample (y == class_sample)
-        #  Se y = [0, 1, 2, 1, 2] e class_sample = 2, então: np.flatnonzero() retornará [2, 4]
-        target_class_indices = np.flatnonzero(y == class_sample)
-
-        # X_class será uma submatriz de X contendo apenas as amostras de acordo com os índice de target_class_indices
-        X_class = _safe_indexing(X, target_class_indices)
-
-        # self.nn_k_ é um objeto k_neighbors, que é utilizado através do método fit, para calcular os vizinhos dos elementos de X_class 
-        self.nn_k_.fit(X_class)
-
-        # Obter os índices dos k vizinhos mais próximos de cada ponto de X_class, excluindo ele mesmo (vizinho dele mesmo)
-        distances, nns = self.nn_k_.kneighbors(X_class) # <-- ** LINHA IMPORTANTE **
-
-        X_new, y_new = self._make_samples(
-            X_class, y.dtype, class_sample, X_class, nns, n_samples, 1.0)
-
-        X_resampled.append(X_new)
-        y_resampled.append(y_new)
-
-    if sparse.issparse(X):
-        X_resampled = sparse.vstack(X_resampled, format=X.format)
-    else:
-        X_resampled = np.vstack(X_resampled)
-        y_resampled = np.hstack(y_resampled)
-
-    return X_resampled, y_resampled
+    def _fit_resample(self, X, y):
+        # ( ... )
+        # n_samples: número de amostras da classe minoritaria a ser gerado
+        # class_sample: classe minoritária (Ex: "-")
+        for class_sample, n_samples in self.sampling_strategy_.items(): # <-- ** LINHA IMPORTANTE **
+        # ( ... )        
 ```
-**Fragmento de Código** - _fit_resample
+Fragmento de Código - Definição de quantidade de amostras a serem geradas (N)
 
 ### Bloco de código - Cálculo dos k vizinhos (nnarray)
 ```python
