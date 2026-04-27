@@ -57,7 +57,7 @@ def _fit_resample(self, X, y):
 ```
 **Fragmento de Código** - _fit_resample
 
-### Código do método _make_samples
+### Bloco de código - Cálculo dos k vizinhos (nnarray)
 ```python
 def _make_samples(
     self, X, y_dtype, y_type, nn_data, nn_num, n_samples, step_size=1.0, y=None):
@@ -86,7 +86,7 @@ def _make_samples(
     y_new = np.full(n_samples, fill_value=y_type, dtype=y_dtype)
     return X_new, y_new
 ```
-**Fragmento de Código** - _make_samples
+Fragmento de Código - Cálculo dos k vizinhos (nnarray)
 
 ### Bloco de código - Interpolação e Realização do Trunc
 ```python
