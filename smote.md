@@ -13,7 +13,7 @@ Pseudo código SMOTE
 ![Pseudo Código SMOTE](img/Pseudo-Codigo-SMOTE.png "Pseudo Código SMOTE")
 
 ### Código do método - Definição de quantidade de amostras a serem geradas (N)
-Quando é chamaso o método fit_resample(X, y), o algoritmo analisa o vetor de rótulos y, deforma a saber qual é a classe minoritária.
+Quando é chamado o método fit_resample(X, y), o algoritmo analisa o vetor de rótulos y, deforma a saber qual é a classe minoritária.
 
 A quantidade de amostras sintéticas (n_samples) depende do parâmetro sampling_strategy (tipo de estratégia de geração dos novos casos de teste) configurado nos atributos de inicialicação do SMOTE.
 - Estratégia "auto" (Padrão): O SMOTE calcula a diferença entre a classe majoritária e cada classe minoritária. 
