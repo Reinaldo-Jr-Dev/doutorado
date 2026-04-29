@@ -20,18 +20,18 @@ A quantidade de amostras sintéticas (n_samples) depende do parâmetro sampling_
 - Estratégia por Proporção (float): Se você definir 0.5, o algoritmo gerará amostras até que a classe minoritária tenha 50% do tamanho da majoritária.
 - Estratégia por Dicionário: Você pode passar manualmente quais classes quer aumentar juntamente com a quantidade. Exemplo: {'classe_A': 500}.
 ```python
-    class BaseSMOTE(BaseOverSampler):
-        # ( ... )
-        def __init__(
-            self,
-            sampling_strategy="auto", # <-- ** LINHA IMPORTANTE **
-            random_state=None,
-            k_neighbors=5,
-        ):
-            super().__init__(sampling_strategy=sampling_strategy) # <-- ** LINHA IMPORTANTE **
-            self.random_state = random_state
-            self.k_neighbors = k_neighbors
-        # ( ... )
+class BaseSMOTE(BaseOverSampler):
+	# ( ... )
+	def __init__(
+		self,
+		sampling_strategy="auto", # <-- ** LINHA IMPORTANTE **
+		random_state=None,
+		k_neighbors=5,
+	):
+		super().__init__(sampling_strategy=sampling_strategy) # <-- ** LINHA IMPORTANTE **
+		self.random_state = random_state
+		self.k_neighbors = k_neighbors
+	# ( ... )
 
     def _fit_resample(self, X, y):
         # ( ... )
@@ -46,7 +46,7 @@ Fragmento de Código - Definição de quantidade de amostras a serem geradas (N)
 ```python
 def _fit_resample(self, X, y):
     
-    ( ... )
+    # ( ... )
 
 	# self.nn_k_ é um objeto k_neighbors, que é utilizado através do método fit, para calcular os vizinhos dos elementos de X_class 
 	self.nn_k_.fit(X_class)
@@ -54,7 +54,7 @@ def _fit_resample(self, X, y):
 	# Obtendo os vizinhos mais próximos, juntamente com as suas distâncias
     distances, nns = self.nn_k_.kneighbors(X_class)
 
-    ( ... )
+    # ( ... )
 
 ```
 Fragmento de Código - Cálculo dos k vizinhos (nnarray)
