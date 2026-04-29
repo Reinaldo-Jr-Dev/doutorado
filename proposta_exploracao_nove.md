@@ -18,3 +18,7 @@ Este experimento propõe investigar a análise da diversidade dos novos casos de
 
 [Planilha com resultados](https://docs.google.com/spreadsheets/d/1ea8jWbpXR-TIQtAHo7GvPVDUQ8k4SQ6UTkLgyU9UJUk/edit?gid=1592280284#gid=1592280284)
 
+Artigos Seminais das técnicas SmoteN e BorderLineSmote
+  - [N. V. CHAWLA, K. W. BOWYER, L. O. H. W. P. K. Smote: Synthetic minority over-sampling technique. Journal of Artificial Intelligence Research, 2002.](https://arxiv.org/abs/1106.1813)
+  - [Hui Han, Wen-Yuan Wang, Bing-Huan Mao, Borderline-SMOTE: a new over-sampling method in imbalanced data sets learning. International Conference on Intelligent Computing (ICIC), 2005.](https://dl.acm.org/doi/10.1007/11538059_91)
+
