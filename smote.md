@@ -42,6 +42,23 @@ A quantidade de amostras sintéticas (n_samples) depende do parâmetro sampling_
 ```
 Fragmento de Código - Definição de quantidade de amostras a serem geradas (N)
 
+### Bloco de código - Cálculo dos k vizinhos (nnarray)
+```python
+def _fit_resample(self, X, y):
+    
+    ( ... )
+
+	# self.nn_k_ é um objeto k_neighbors, que é utilizado através do método fit, para calcular os vizinhos dos elementos de X_class 
+	self.nn_k_.fit(X_class)
+
+	# Obtendo os vizinhos mais próximos, juntamente com as suas distâncias
+    distances, nns = self.nn_k_.kneighbors(X_class)
+
+    ( ... )
+
+```
+Fragmento de Código - Cálculo dos k vizinhos (nnarray)
+
 ### Bloco de código - Cálculo das variáveis: cols, rows e steps
 ```python
 def _make_samples(
@@ -72,23 +89,6 @@ def _make_samples(
     return X_new, y_new
 ```
 Fragmento de Código - Cálculo das variáveis: cols, rows e steps
-
-### Bloco de código - Cálculo dos k vizinhos (nnarray)
-```python
-def _fit_resample(self, X, y):
-    
-    ( ... )
-
-	# self.nn_k_ é um objeto k_neighbors, que é utilizado através do método fit, para calcular os vizinhos dos elementos de X_class 
-	self.nn_k_.fit(X_class)
-
-	# Obtendo os vizinhos mais próximos, juntamente com as suas distâncias
-    distances, nns = self.nn_k_.kneighbors(X_class)
-
-    ( ... )
-
-```
-Fragmento de Código - Cálculo dos k vizinhos (nnarray)
 
 ### Bloco de código - Interpolação e Realização do Trunc
 ```python
