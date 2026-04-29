@@ -95,7 +95,9 @@ Fragmento de Código - Cálculo das variáveis: cols, rows e steps
 def _generate_samples(
     self, X, nn_data, nn_num, rows, cols, steps, y_type=None, y=None):
 
-    # Cálculo da diferença entre vizinho e amostra        
+	# nn_data: X_class (amostra com os dados da classe minoritaria)
+	# nn_num: Os vizinhos mais próximos de cada amostra da classe minoritaria X_class 
+	# Cálculo da diferença entre vizinho e amostra        
     diffs = nn_data[nn_num[rows, cols]] - X[rows]
 
     if y is not None:  # only entering for BorderlineSMOTE-2
