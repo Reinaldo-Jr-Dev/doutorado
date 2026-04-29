@@ -73,6 +73,23 @@ def _make_samples(
 ```
 Fragmento de Código - Cálculo das variáveis: cols, rows e steps
 
+### Bloco de código - Cálculo dos k vizinhos (nnarray)
+```python
+def _fit_resample(self, X, y):
+    
+    ( ... )
+
+	# self.nn_k_ é um objeto k_neighbors, que é utilizado através do método fit, para calcular os vizinhos dos elementos de X_class 
+	self.nn_k_.fit(X_class)
+
+	# Obtendo os vizinhos mais próximos, juntamente com as suas distâncias
+    distances, nns = self.nn_k_.kneighbors(X_class)
+
+    ( ... )
+
+```
+Fragmento de Código - Cálculo dos k vizinhos (nnarray)
+
 ### Bloco de código - Interpolação e Realização do Trunc
 ```python
 def _generate_samples(
