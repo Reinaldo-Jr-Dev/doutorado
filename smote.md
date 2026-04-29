@@ -42,7 +42,7 @@ A quantidade de amostras sintéticas (n_samples) depende do parâmetro sampling_
 ```
 Fragmento de Código - Definição de quantidade de amostras a serem geradas (N)
 
-### Bloco de código - Cálculo dos k vizinhos (nnarray)
+### Bloco de código - Cálculo das variáveis: cols, rows e steps
 ```python
 def _make_samples(
     self, X, y_dtype, y_type, nn_data, nn_num, n_samples, step_size=1.0, y=None):
@@ -71,7 +71,7 @@ def _make_samples(
     y_new = np.full(n_samples, fill_value=y_type, dtype=y_dtype)
     return X_new, y_new
 ```
-Fragmento de Código - Cálculo dos k vizinhos (nnarray)
+Fragmento de Código - Cálculo das variáveis: cols, rows e steps
 
 ### Bloco de código - Interpolação e Realização do Trunc
 ```python
