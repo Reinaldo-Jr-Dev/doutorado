@@ -15,4 +15,5 @@ Este experimento propõe uma investigação comparativa da aplicação de difere
 
 
 ## Conclusão
-( ... )
+Ao analisar as técnicas TomekLinks, Edited Nearest Neighbors (ENN), Cluster Based Undersampling e NearMiss-3, por meio da métrica A12 do teste estatístico de Vargha e Delaney, verificou-se que a técnica TomekLinks apresentou os melhores resultados em relação à métrica Pos-Fault.
+
