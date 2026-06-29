@@ -3,10 +3,20 @@
 ## Descrição dos experimento
 Este experimento propõe uma investigação comparativa da aplicação de diferentes heurísticas (Ochiai, Tarantula, Jaccard, Op2, Barinel e DStar) sobre a matriz de espectro de cobertura em seu formato original, considerando as técnicas de Oversampling SMOTE e BorderlineSMOTE. Adicionalmente, essas técnicas serão avaliadas sob diferentes configurações para a geração de novas instâncias sintéticas. O eficácia das abordagens será mensurado por meio da métrica Pos-Fault. Serão aplicados os testes estatísticos de Wilcoxon Signed-Rank e Vargha & Delaney, com o objetivo de avaliar se as diferenças observadas entre as abordagens são estatisticamente significativas, bem como identificar a técnica que apresenta maior eficácia.
 
+## Detalhamento das técnicas do experimento
+  - Smote
+  - Smote_100
+  - Smote_200
+  - Smote_300
+  - BorderLineSMOTE
+  - BorderLineSMOTE_100
+  - BorderLineSMOTE_200
+  - BorderLineSMOTE_300
+
 ## Resultados
 
 [Planilha com resultados](https://docs.google.com/spreadsheets/d/e/2PACX-1vQifHnXhC0HCvaU1_F-qGdNQowLEGuuAGYIsogYSkdrIcmiEB7bU_kMdaZ65hSx8w/pubhtml)
 
 
 ## Conclusão
-Ao analisar as técnicas Smote, Smote_100, Smote_200 e Smote_300 por meio da métrica A12 do teste estatístico de Vargha e Delaney, verificou-se que a técnica Smote_100 apresentou os melhores resultados em relação à métrica Pos-Fault.
+Ao analisar as técnicas Smote, Smote_100, Smote_200, Smote_300, BorderLineSMOTE, BorderLineSMOTE_100, BorderLineSMOTE_200 e BorderLineSMOTE_300, por meio da métrica A12 do teste estatístico de Vargha e Delaney, verificou-se que a técnica Smote_100 apresentou os melhores resultados em relação à métrica Pos-Fault.
