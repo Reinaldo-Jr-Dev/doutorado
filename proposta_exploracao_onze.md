@@ -6,7 +6,8 @@ Este experimento propõe uma investigação comparativa da aplicação de difere
 ## Resultados
 ( ... )
 
-[Planilha com resultados](https://docs.google.com/spreadsheets/d/1ea8jWbpXR-TIQtAHo7GvPVDUQ8k4SQ6UTkLgyU9UJUk/edit?gid=1592280284#gid=1592280284)
+[Planilha com resultados](https://docs.google.com/spreadsheets/d/e/2PACX-1vRy7YjC1LUN2qT5zGf8x-uGNxS2Rvtc_S1UriXLWkRIuRU5SW5Sbe0ou5pylmFsy4082N9SWXgZHbr-/pubhtml)
+
 
 ## Conclusão
 ( ... )
