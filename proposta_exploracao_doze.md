@@ -16,4 +16,5 @@ Este experimento propõe uma investigação comparativa da aplicação de difere
 [Planilha com resultados](https://docs.google.com/spreadsheets/d/1ea8jWbpXR-TIQtAHo7GvPVDUQ8k4SQ6UTkLgyU9UJUk/edit?gid=1592280284#gid=1592280284)
 
 ## Conclusão
-( ... )
+Ao analisar as técnicas TomekLinks, Smote, Smote_100, Smote_100_TomekLinks, Smote_100_editedNearestNeighbors e Smote_editedNearestNeighbors, por meio da métrica A12 do teste estatístico de Vargha e Delaney, verificou-se que a técnica Smote_100 apresentou os melhores resultados em relação à métrica Pos-Fault.
+
