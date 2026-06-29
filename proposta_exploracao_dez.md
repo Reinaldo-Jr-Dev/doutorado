@@ -9,4 +9,4 @@ Este experimento propõe uma investigação comparativa da aplicação de difere
 
 
 ## Conclusão
-( ... )
+Ao analisar as técnicas Smote, Smote_100, Smote_200 e Smote_300 por meio da métrica A12 do teste estatístico de Vargha e Delaney, verificou-se que a técnica Smote_100 apresentou os melhores resultados em relação à métrica Pos-Fault.
