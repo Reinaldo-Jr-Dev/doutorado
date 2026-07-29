@@ -5,10 +5,10 @@ Este experimento propõe uma investigação comparativa da aplicação de difere
 
 ## Detalhamento das técnicas
   - Sem duplicidades "+ "
-  - Original NRS1
-  - Original NRS4
-  - Smote100 NRS1
-  - Smote100 NRS4
+  - Original NRS1: Matriz de espectro de cobertura em seu formato original, com a aplicação da técnica Noise Reduction Scheme 1 (NRS1), na qual, para cada caso de teste reprovado, são removidos todos os casos de teste aprovados que apresentam espectros idênticos ao do caso de teste defeituoso.
+  - Original NRS4: Matriz de espectro de cobertura em seu formato original, com a aplicação da técnica Noise Reduction Scheme 4 (NRS4), na qual, para cada conjunto de casos de teste aprovados com espectros idênticos, todos, exceto um caso de teste, serão removidos.
+  - Smote100 NRS1: Matriz de espectro de cobertura em seu formato original, com a aplicação da técnica SMOTE100 e, posteriormente, a técnica Noise Reduction Scheme 1 (NRS1).
+  - Smote100 NRS4: Matriz de espectro de cobertura em seu formato original, com a aplicação da técnica SMOTE100 e, posteriormente, a técnica Noise Reduction Scheme 4 (NRS4).
 
 ## Resultados
 (...)
