@@ -12,7 +12,7 @@ Este experimento propõe uma investigação comparativa da aplicação de difere
 ## Resultados
 [Planilha com resultados - Pos-Fault](https://docs.google.com/spreadsheets/d/e/2PACX-1vQqa9EzvJNEiLfWGcnVyHSO4h8ew4f3qi3tS65MHuIQ4K37OZkQTfTIK32oT4mDLQ/pubhtml)
 
-[Planilha com resultados - MFR, EXAM e ACC](https://docs.google.com/spreadsheets/d/e/2PACX-1vR5MGQmJpbj-neZF-DzKmlvmRnqEGAColsvzbpdsxoPHwly5kN3OQBw812bMj3ygw/pubhtml](https://docs.google.com/spreadsheets/d/19pq_WAdMKEQ-T8e2m8yduKbA2ju8aEsz/edit?usp=sharing&ouid=117308842881598535622&rtpof=true&sd=true)
+[Planilha com resultados - MFR, EXAM e ACC](https://docs.google.com/spreadsheets/d/19pq_WAdMKEQ-T8e2m8yduKbA2ju8aEsz/edit?usp=sharing&ouid=117308842881598535622&rtpof=true&sd=true)
 
 ## Conclusão
 Ao analisar as técnicas SmoteN, SmoteN_100, SmoteN_200 e SmoteN_300, por meio da métrica A12 do teste estatístico de Vargha e Delaney, verificou-se que a técnica SmoteN_100 apresentou os melhores resultados em relação à métrica Pos-Fault.
