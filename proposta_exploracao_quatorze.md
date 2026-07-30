@@ -10,7 +10,9 @@ Este experimento propõe uma investigação comparativa da aplicação de difere
   - Smote100 NRS4: Matriz de espectro de cobertura em seu formato original, com a aplicação da técnica SMOTE100 e, posteriormente, a técnica Noise Reduction Scheme 4 (NRS4).
 
 ## Resultados
-[Planilha com resultados](https://docs.google.com/spreadsheets/d/e/2PACX-1vTIcniIKwYg5Hf1Y2hmkjRsqfDsiTl3PAgU-ExQLhb9uwy6K9yxxbyTlxIvYvOX1vrAg8c1e72VB-u1/pubhtml)
+[Planilha com resultados - Pos-Fault](https://docs.google.com/spreadsheets/d/1hiTpf27puy8WQwRuoLL-lGvaPQ3a0fOVrXnHi5s4XfU/edit?usp=sharing)
+
+[Planilha com resultados - MFR, EXAM e ACC](https://docs.google.com/spreadsheets/d/19pq_WAdMKEQ-T8e2m8yduKbA2ju8aEsz/edit?usp=sharing&ouid=117308842881598535622&rtpof=true&sd=true)
 
 ## Conclusão
 Ao analisar as técnicas Original NRS1, Original NRS4, Smote100 NRS1 e Smote100 NRS4, por meio da métrica A12 do teste estatístico de Vargha e Delaney, verificou-se que a técnica de eliminação de ruído NRS4 (Original NRS4 e Smote100 NRS4) apresentou os melhores resultados em relação à métrica Pos-Fault, sempre que a mesma foi aplicada.
