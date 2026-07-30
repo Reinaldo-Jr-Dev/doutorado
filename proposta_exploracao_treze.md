@@ -10,7 +10,7 @@ Este experimento propõe uma investigação comparativa da aplicação de difere
   - SmoteN_300: Considerando a quantidade de casos de teste pertencentes à classe minoritária da matriz de cobertura, a técnica SmoteN_300 gerará uma quantidade de instâncias sintéticas equivalente a 300% dessa classe, resultando na quadruplicação do número de instâncias da classe minoritária.
 
 ## Resultados
-[Planilha com resultados - Pos-Fault](https://docs.google.com/spreadsheets/d/e/2PACX-1vQqa9EzvJNEiLfWGcnVyHSO4h8ew4f3qi3tS65MHuIQ4K37OZkQTfTIK32oT4mDLQ/pubhtml)
+[Planilha com resultados - Pos-Fault](https://docs.google.com/spreadsheets/d/1Kvf2ixdK4Vrwb2ASPU9JkQplyiNc_H8E/edit?usp=sharing&ouid=117308842881598535622&rtpof=true&sd=true)
 
 [Planilha com resultados - MFR, EXAM e ACC](https://docs.google.com/spreadsheets/d/19pq_WAdMKEQ-T8e2m8yduKbA2ju8aEsz/edit?usp=sharing&ouid=117308842881598535622&rtpof=true&sd=true)
 
