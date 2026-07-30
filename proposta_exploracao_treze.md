@@ -10,7 +10,7 @@ Este experimento propõe uma investigação comparativa da aplicação de difere
   - SmoteN_300: Considerando a quantidade de casos de teste pertencentes à classe minoritária da matriz de cobertura, a técnica SmoteN_300 gerará uma quantidade de instâncias sintéticas equivalente a 300% dessa classe, resultando na quadruplicação do número de instâncias da classe minoritária.
 
 ## Resultados
-(...)
+[Planilha com resultados](https://docs.google.com/spreadsheets/d/e/2PACX-1vQqa9EzvJNEiLfWGcnVyHSO4h8ew4f3qi3tS65MHuIQ4K37OZkQTfTIK32oT4mDLQ/pubhtml)
 
 ## Conclusão
-(...)
+Ao analisar as técnicas SmoteN, SmoteN_100, SmoteN_200 e SmoteN_300, por meio da métrica A12 do teste estatístico de Vargha e Delaney, verificou-se que a técnica SmoteN_100 apresentou os melhores resultados em relação à métrica Pos-Fault.
