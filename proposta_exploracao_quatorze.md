@@ -21,7 +21,5 @@ Ao executar o experimento utilizando a técnica NRS2, o projeto Math (versão 10
 
 [Planilha com resultados - Pos-Fault](https://docs.google.com/spreadsheets/d/1hiTpf27puy8WQwRuoLL-lGvaPQ3a0fOVrXnHi5s4XfU/edit?usp=sharing)
 
-[Planilha com resultados - MFR, EXAM e ACC](https://docs.google.com/spreadsheets/d/19pq_WAdMKEQ-T8e2m8yduKbA2ju8aEsz/edit?usp=sharing&ouid=117308842881598535622&rtpof=true&sd=true)
-
 ## Conclusão
 Ao analisar as técnicas Original NRS1, Original NRS4, Smote100 NRS1 e Smote100 NRS4 por meio da métrica A12 do teste estatístico de Vargha e Delaney, verificou-se que a técnica de eliminação de ruído NRS4 (Original NRS4 e Smote100 NRS4) apresentou os melhores resultados em relação à métrica Pos-Fault em todos os cenários em que foi aplicada. Dessa forma, os resultados sugerem que a presença de coberturas idênticas entre os casos de teste classificados como "+" prejudica o desempenho da métrica Pos-Fault.
