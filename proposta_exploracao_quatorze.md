@@ -14,7 +14,7 @@
   - Smote100 NRS4: Matriz de espectro de cobertura em seu formato original, com a aplicação da técnica SMOTE100 e, posteriormente, a técnica Noise Reduction Scheme 4 (NRS4).
 
 
-Ao executar o experimento utilizando a técnica Noise Reduction Scheme 3 (NRS3), o projeto Math (versão 101) não pôde ser processado, pois ao eliminar os casos de teste de espectros idênticos, não restou nenhum caso de teste "-". Portanto as técnicas Original NRS3 e Smote100 NRS3, não foram consideradas para efeito de comparação.
+Ao executar o experimento utilizando a técnica Noise Reduction Scheme 3 (NRS3), o projeto Math (versão 101) não pôde ser processado, pois ao eliminar os casos de teste de espectros idênticos, não restou nenhum caso de teste "-". Portanto, as técnicas Original NRS3 e Smote100 NRS3, não foram consideradas para efeito de comparação.
 
 ## Resultados
 [Pasta com resultados](https://drive.google.com/drive/folders/1sleSIoWoovOXjiRDVmGVgNLtvSohnzyD)
