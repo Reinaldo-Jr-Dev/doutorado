@@ -17,7 +17,7 @@
 Ao executar o experimento utilizando a técnica NRS2, o projeto Math (versão 101) não pôde ser processado, pois todos os casos de teste com resultado "-" apresentavam espectros idênticos. Como consequência, a técnica NRS2 eliminou essas coberturas por considerá-las redundantes, resultando na ausência de casos de teste "-" para análise.
 
 ## Resultados
-[Pasta com resultados] (https://drive.google.com/drive/folders/1sleSIoWoovOXjiRDVmGVgNLtvSohnzyD)
+[Pasta com resultados](https://drive.google.com/drive/folders/1sleSIoWoovOXjiRDVmGVgNLtvSohnzyD)
 
 [Planilha com resultados - Pos-Fault](https://docs.google.com/spreadsheets/d/1hiTpf27puy8WQwRuoLL-lGvaPQ3a0fOVrXnHi5s4XfU/edit?usp=sharing)
 
