@@ -12,8 +12,8 @@
   - Smote100 NRS2: Matriz de espectro de cobertura em seu formato original, com a aplicação da técnica SMOTE100 e, posteriormente, a técnica Noise Reduction Scheme 2 (NRS2).
   - Smote100 NRS3: Matriz de espectro de cobertura em seu formato original, com a aplicação da técnica SMOTE100 e, posteriormente, a técnica Noise Reduction Scheme 3 (NRS3).
   - Smote100 NRS4: Matriz de espectro de cobertura em seu formato original, com a aplicação da técnica SMOTE100 e, posteriormente, a técnica Noise Reduction Scheme 4 (NRS4).
-Ao executar o experimento utilizando a técnica NRS2, o projeto Math (versão 101) não pôde ser processado, pois todos os casos de teste com resultado "-" apresentavam espectros idênticos. Como consequência, a técnica NRS2 eliminou essas coberturas por considerá-las redundantes, resultando na ausência de casos de teste "-" para análise.
 
+Ao executar o experimento utilizando a técnica NRS2, o projeto Math (versão 101) não pôde ser processado, pois todos os casos de teste com resultado "-" apresentavam espectros idênticos. Como consequência, a técnica NRS2 eliminou essas coberturas por considerá-las redundantes, resultando na ausência de casos de teste "-" para análise.
 
 ## Resultados
 [Planilha com resultados - Pos-Fault](https://docs.google.com/spreadsheets/d/1hiTpf27puy8WQwRuoLL-lGvaPQ3a0fOVrXnHi5s4XfU/edit?usp=sharing)
