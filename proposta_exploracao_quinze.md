@@ -8,9 +8,7 @@
   - SMOTE100 NRS4 2x: Experimento SMOTE100 NRS4, aplicado duas vezes.
 
 ## Resultados
-[Pasta com resultados](https://drive.google.com/drive/folders/1sleSIoWoovOXjiRDVmGVgNLtvSohnzyD)
-
-[Planilha com resultados - Pos-Fault](https://docs.google.com/spreadsheets/d/1hiTpf27puy8WQwRuoLL-lGvaPQ3a0fOVrXnHi5s4XfU/edit?usp=sharing)
+[Pasta com resultados](https://drive.google.com/drive/folders/1qT7Yll7jDveg8guIAjthd0cPZnb5z0hC?usp=drive_link)
 
 ## Conclusão
 Ao analisar as técnicas Original NRS4 2x e SMOTE100 NRS4 2x por meio da métrica A12, utilizada no teste estatístico de Vargha e Delaney, verificou-se que ambas as configurações, quando executadas duas vezes, não apresentaram resultados satisfatórios. 
