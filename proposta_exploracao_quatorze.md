@@ -17,9 +17,7 @@
 Ao executar o experimento utilizando a técnica Noise Reduction Scheme 3 (NRS3), o projeto Math (versão 101) não pôde ser processado, pois ao eliminar os casos de teste de espectros idênticos, não restou nenhum caso de teste "-". Portanto, as técnicas Original NRS3 e Smote100 NRS3, não foram consideradas para efeito de comparação.
 
 ## Resultados
-[Pasta com resultados](https://drive.google.com/drive/folders/1sleSIoWoovOXjiRDVmGVgNLtvSohnzyD)
-
-[Planilha com resultados - Pos-Fault](https://docs.google.com/spreadsheets/d/1hiTpf27puy8WQwRuoLL-lGvaPQ3a0fOVrXnHi5s4XfU/edit?usp=sharing)
+[Pasta com resultados](https://drive.google.com/drive/folders/1sleSIoWoovOXjiRDVmGVgNLtvSohnzyD?usp=drive_link)
 
 ## Conclusão
 Ao analisar as técnicas Original NRS1, Original NRS4, Smote100 NRS1 e Smote100 NRS4 por meio da métrica A12 do teste estatístico de Vargha e Delaney, verificou-se que a técnica de eliminação de ruído NRS4 (Original NRS4 e Smote100 NRS4) apresentou os melhores resultados em relação à métrica Pos-Fault em todos os cenários em que foi aplicada. Dessa forma, os resultados sugerem que a presença de coberturas idênticas entre os casos de teste classificados como "+" prejudica o desempenho da métrica Pos-Fault.
