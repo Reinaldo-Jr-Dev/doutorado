@@ -10,9 +10,7 @@ Este experimento propõe uma investigação comparativa da aplicação de difere
   - SmoteN_300: Considerando a quantidade de casos de teste pertencentes à classe minoritária da matriz de cobertura, a técnica SmoteN_300 gerará uma quantidade de instâncias sintéticas equivalente a 300% dessa classe, resultando na quadruplicação do número de instâncias da classe minoritária.
 
 ## Resultados
-[Planilha com resultados - Pos-Fault](https://docs.google.com/spreadsheets/d/1Kvf2ixdK4Vrwb2ASPU9JkQplyiNc_H8E/edit?usp=sharing&ouid=117308842881598535622&rtpof=true&sd=true)
-
-[Planilha com resultados - MFR, EXAM e ACC](https://docs.google.com/spreadsheets/d/19pq_WAdMKEQ-T8e2m8yduKbA2ju8aEsz/edit?usp=sharing&ouid=117308842881598535622&rtpof=true&sd=true)
+[Pasta com resultados](https://drive.google.com/drive/folders/1oi48HKshXEQX-j46OXEZzZcpDQf28_Hk?usp=drive_link)
 
 ## Conclusão
 Ao analisar as técnicas SmoteN, SmoteN_100, SmoteN_200 e SmoteN_300 por meio da métrica A12 do teste estatístico de Vargha e Delaney, verificou-se que a técnica SmoteN_100 apresentou os melhores resultados em relação à métrica Pos-Fault. Dessa forma, conclui-se que a geração de uma quantidade menor de casos de teste sintéticos a partir da matriz de cobertura contribui para um melhor desempenho na métrica Pos-Fault.
