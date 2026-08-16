@@ -1,7 +1,7 @@
 # 🔬 Detalhamento da Proposta de Exploração 14
 
 ## Descrição geral
-- Essa proposta de exploração propõe uma investigação comparativa da aplicação de diferentes heurísticas (Ochiai, Tarantula, Jaccard, Op2, Barinel e DStar) sobre a matriz de espectro de cobertura em seu formato original, considerando as seguintes técnicas de Oversampling e Undersampling: Original, Smote, SmoteN, SmoteN_100, SmoteN_200 e SmoteN_300, Original NRS1, Original NRS2, Original NRS3, Original NRS4, Smote100 NRS1, Smote100 NRS2, Smote100 NRS3 e Smote100 NRS4. A eficácia das abordagens será mensurado por meio da métrica Pos-Fault. Serão aplicados os testes estatísticos de Wilcoxon Signed-Rank e Vargha & Delaney, com o objetivo de avaliar se as diferenças observadas entre as abordagens são estatisticamente significativas, bem como identificar a técnica que apresenta maior eficácia.
+- Essa proposta de exploração propõe uma investigação comparativa da aplicação de diferentes heurísticas (Ochiai, Tarantula, Jaccard, Op2, Barinel e DStar) sobre a matriz de espectro de cobertura em seu formato original, considerando as seguintes técnicas de Oversampling e Undersampling: Smote, SmoteN, SmoteN_100, SmoteN_200 e SmoteN_300, Original NRS1, Original NRS2, Original NRS3, Original NRS4, Smote100 NRS1, Smote100 NRS2, Smote100 NRS3 e Smote100 NRS4.
 
 ## Detalhamento das técnicas
   - Original: Matriz sem balanceamento algum.
