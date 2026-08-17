@@ -1,12 +1,13 @@
 # 🔬 Detalhamento da Proposta de Exploração 14
 
 ## Descrição geral
-- Essa proposta de exploração propõe uma investigação comparativa da aplicação de diferentes heurísticas (Ochiai, Tarantula, Jaccard, Op2, Barinel e DStar) sobre a matriz de espectro de cobertura em seu formato original, considerando as seguintes técnicas de Oversampling e Undersampling: Smote, SmoteN, SmoteN_100, SmoteN_200 e SmoteN_300, Original NRS1, Original NRS2, Original NRS3, Original NRS4, Smote100 NRS1, Smote100 NRS2, Smote100 NRS3 e Smote100 NRS4.
+- Essa proposta de exploração propõe uma investigação comparativa da aplicação de diferentes heurísticas (Ochiai, Tarantula, Jaccard, Op2, Barinel e DStar) sobre a matriz de espectro de cobertura em seu formato original, considerando as seguintes técnicas de Oversampling e Undersampling: Smote, SmoteN, Smote100, SmoteN_100, SmoteN_200 e SmoteN_300, Original NRS1, Original NRS2, Original NRS3, Original NRS4, Smote100 NRS1, Smote100 NRS2, Smote100 NRS3 e Smote100 NRS4.
 
 ## Detalhamento das técnicas
   - Original: Matriz sem balanceamento algum.
   - Smote: Matriz original, com a aplicação da técnica de Oversampling, Smote.
   - SmoteN: Matriz original, com a aplicação da técnica de Oversampling, SmoteN.
+  - Smote100: Matriz original, com a aplicação da técnica de Oversampling, Smote100. Considerando a quantidade de casos de teste pertencentes à classe minoritária da matriz de cobertura, a técnica Smote100 gerará uma quantidade de instâncias sintéticas equivalente a 100% dessa classe, resultando na duplicação do número de elementos da classe minoritária.
   - SmoteN_100: Considerando a quantidade de casos de teste pertencentes à classe minoritária da matriz de cobertura, a técnica SmoteN_100 gerará uma quantidade de instâncias sintéticas equivalente a 100% dessa classe, resultando na duplicação do número de elementos da classe minoritária.
   - SmoteN_200: Considerando a quantidade de casos de teste pertencentes à classe minoritária da matriz de cobertura, a técnica SmoteN_200 gerará uma quantidade de instâncias sintéticas equivalente a 200% dessa classe, resultando na triplicação do número de instâncias da classe minoritária.
   - SmoteN_300: Considerando a quantidade de casos de teste pertencentes à classe minoritária da matriz de cobertura, a técnica SmoteN_300 gerará uma quantidade de instâncias sintéticas equivalente a 300% dessa classe, resultando na quadruplicação do número de instâncias da classe minoritária.
